@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:green_and_clean/service_binder.dart';
 import 'package:green_and_clean/utils/route_helper.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
   runApp(const MyApp());
 }
 
@@ -17,13 +20,10 @@ class MyApp extends StatelessWidget {
       title: 'Green & Clean',
       initialBinding: AppServiceBinder(),
       theme: ThemeData(
-        primarySwatch: Colors.green,
-        primaryColor: const Color(0xff009D06)
-      ),
+          primarySwatch: Colors.green, primaryColor: const Color(0xff009D06)),
       debugShowCheckedModeBanner: false,
       getPages: RouteHelper.routes,
       initialRoute: "/",
     );
   }
 }
-

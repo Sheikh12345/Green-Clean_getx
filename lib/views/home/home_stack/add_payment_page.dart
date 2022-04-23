@@ -26,15 +26,15 @@ class AddPaymentMethod extends StatelessWidget {
         SizedBox(height: height*0.02,),
         Expanded(child: Container(
           padding: EdgeInsets.symmetric(horizontal: width*0.05),
-          decoration: BoxDecoration(
+          decoration: const BoxDecoration(
               color: Colors.white,
-              borderRadius:  BorderRadius.only(topRight: Radius.circular(25),topLeft: Radius.circular(25))
+              borderRadius:  const BorderRadius.only(topRight: const Radius.circular(25),topLeft: const Radius.circular(25))
           ),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
             SizedBox(height: height*0.03,),
-            Center(child: const AutoSizeText("Please add credit card or debit card detail",style: TextStyle(color: Colors.grey,fontWeight: FontWeight.w500,fontSize: 16),)),
+            const Center(child: AutoSizeText("Please add credit card or debit card detail",style: TextStyle(color: Colors.grey,fontWeight: FontWeight.w500,fontSize: 16),)),
             SizedBox(height: height*0.02,),
               Card(child: Column(children: [],),)
           ],),
