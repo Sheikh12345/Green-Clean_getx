@@ -1,6 +1,7 @@
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:green_and_clean/views/addproperty/views/addproperty_page.dart';
 
 import '../dashboard_controller.dart';
 
@@ -67,27 +68,37 @@ class PropertiesListPage extends GetView<DashboardController> {
                                 Row(
                                   children: [
                                     Expanded(
-                                        child: Column(
-                                      children: [
-                                        Container(
-                                          padding: EdgeInsets.all(width * 0.07),
-                                          decoration: BoxDecoration(
-                                              color: Colors.blueGrey,
-                                              shape: BoxShape.circle),
-                                          child: Center(
-                                            child: AutoSizeText(
-                                              "3",
-                                              style: TextStyle(
-                                                  color: Colors.white),
-                                              presetFontSizes: [22],
+                                        child: GestureDetector(
+                                      onTap: () {
+                                        Get.find<DashboardController>()
+                                            .setIndex(
+                                                Get.find<DashboardController>()
+                                                        .dashboardStackIndex +
+                                                    1);
+                                      },
+                                      child: Column(
+                                        children: [
+                                          Container(
+                                            padding:
+                                                EdgeInsets.all(width * 0.07),
+                                            decoration: BoxDecoration(
+                                                color: Colors.blueGrey,
+                                                shape: BoxShape.circle),
+                                            child: Center(
+                                              child: AutoSizeText(
+                                                "3",
+                                                style: TextStyle(
+                                                    color: Colors.white),
+                                                presetFontSizes: [22],
+                                              ),
                                             ),
                                           ),
-                                        ),
-                                        SizedBox(
-                                          height: 10,
-                                        ),
-                                        AutoSizeText("Checking Out")
-                                      ],
+                                          SizedBox(
+                                            height: 10,
+                                          ),
+                                          AutoSizeText("Checking Out")
+                                        ],
+                                      ),
                                     )),
                                     Expanded(
                                         child: Column(
@@ -350,7 +361,9 @@ class PropertiesListPage extends GetView<DashboardController> {
                       ? Align(
                           alignment: Alignment.centerLeft,
                           child: TextButton.icon(
-                            onPressed: () {},
+                            onPressed: () {
+                              Get.to(() => AddPropertyPage());
+                            },
                             icon: Icon(Icons.add_circle_outline),
                             label: AutoSizeText("Add Properties"),
                             style: TextButton.styleFrom(primary: Colors.black),

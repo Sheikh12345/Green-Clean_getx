@@ -1,5 +1,6 @@
 import 'package:get/get.dart';
 import 'package:flutter/material.dart';
+import 'package:green_and_clean/views/dashboard/dashboard_stack/manage_offers.dart';
 import 'package:green_and_clean/views/dashboard/dashboard_stack/properties_list_page.dart';
 
 class DashboardController extends GetxController {
@@ -20,6 +21,8 @@ class DashboardController extends GetxController {
     switch (dashboardStackIndex) {
       case 0:
         return PropertiesListPage();
+      case 1:
+        return ManageOffers();
       default:
         //TODO implement reset page
         return SizedBox();

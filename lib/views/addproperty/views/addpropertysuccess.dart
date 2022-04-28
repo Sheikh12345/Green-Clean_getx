@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
 
-class OrderSuccessPage extends StatelessWidget {
-  const OrderSuccessPage({Key? key}) : super(key: key);
+class AddPropertySuccessPage extends StatelessWidget {
+  const AddPropertySuccessPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -17,25 +17,7 @@ class OrderSuccessPage extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
           SizedBox(
-            height: height * 0.1,
-          ),
-          AutoSizeText(
-            "Order Confirmation",
-            style: TextStyle(color: Colors.white),
-            presetFontSizes: [20],
-            textAlign: TextAlign.center,
-          ),
-          SizedBox(
-            height: height * 0.03,
-          ),
-          AutoSizeText(
-            "#3788876",
-            style: TextStyle(color: Colors.white),
-            presetFontSizes: [18],
-            textAlign: TextAlign.center,
-          ),
-          SizedBox(
-            height: height * 0.05,
+            height: height * 0.15,
           ),
           Icon(
             FontAwesomeIcons.faceGrin,
@@ -43,22 +25,13 @@ class OrderSuccessPage extends StatelessWidget {
             size: width * 0.6,
           ),
           SizedBox(
-            height: height * 0.02,
+            height: height * 0.05,
           ),
           AutoSizeText(
-            "Success !",
+            "Property Added Successfully !",
             textAlign: TextAlign.center,
             style: TextStyle(color: Color.fromARGB(255, 51, 245, 57)),
-            presetFontSizes: [30],
-          ),
-          SizedBox(
-            height: height * 0.02,
-          ),
-          AutoSizeText(
-            "Your order was successfully placed.",
-            presetFontSizes: [18],
-            style: TextStyle(color: Colors.white),
-            textAlign: TextAlign.center,
+            presetFontSizes: [20],
           ),
           SizedBox(
             height: height * 0.1,
