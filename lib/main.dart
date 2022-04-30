@@ -23,7 +23,7 @@ class MyApp extends StatelessWidget {
           primarySwatch: Colors.green, primaryColor: const Color(0xff009D06)),
       debugShowCheckedModeBanner: false,
       getPages: RouteHelper.routes,
-      initialRoute: "/",
+      initialRoute: "/login",
     );
   }
 }

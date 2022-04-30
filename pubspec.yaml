@@ -38,6 +38,7 @@ dependencies:
   auto_size_text: ^3.0.0
   font_awesome_flutter: ^10.1.0
   bottom_navy_bar: ^6.0.0
+  pin_code_fields: ^7.4.0
 
 dev_dependencies:
   flutter_test:

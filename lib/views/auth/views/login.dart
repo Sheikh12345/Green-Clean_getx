@@ -2,6 +2,8 @@ import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:green_and_clean/views/auth/views/newpassword.dart';
+import 'package:green_and_clean/views/auth/views/reset_password.dart';
 import 'package:green_and_clean/views/auth/views/signup.dart';
 
 class LoginPage extends StatelessWidget {
@@ -55,23 +57,32 @@ class LoginPage extends StatelessWidget {
               SizedBox(
                 height: height * 0.05,
               ),
-              Container(
-                decoration: BoxDecoration(
-                    color: theme.primaryColor,
-                    borderRadius: BorderRadius.circular(10)),
-                padding: EdgeInsets.all(15),
-                child: Center(
-                  child: AutoSizeText(
-                    "Login",
-                    style: TextStyle(color: Colors.white),
-                    presetFontSizes: [22, 20],
+              GestureDetector(
+                onTap: () {
+                  Get.offAllNamed("/");
+                },
+                child: Container(
+                  decoration: BoxDecoration(
+                      color: theme.primaryColor,
+                      borderRadius: BorderRadius.circular(10)),
+                  padding: EdgeInsets.all(15),
+                  child: Center(
+                    child: AutoSizeText(
+                      "Login",
+                      style: TextStyle(color: Colors.white),
+                      presetFontSizes: [22, 20],
+                    ),
                   ),
                 ),
               ),
               SizedBox(
                 height: height * 0.05,
               ),
-              AutoSizeText("Forgot your password?"),
+              GestureDetector(
+                  onTap: () {
+                    Get.to(() => ResetPasswordPage());
+                  },
+                  child: AutoSizeText("Forgot your password?")),
               Spacer(),
               Center(
                 child: AutoSizeText.rich(TextSpan(children: [

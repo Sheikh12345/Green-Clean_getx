@@ -1,6 +1,7 @@
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:pin_code_fields/pin_code_fields.dart';
 
 class SmsVerificationPage extends StatelessWidget {
   const SmsVerificationPage({Key? key}) : super(key: key);
@@ -42,6 +43,43 @@ class SmsVerificationPage extends StatelessWidget {
                 "Please check your mobile number 071*****12\n continue to reset your password",
                 textAlign: TextAlign.center,
                 style: TextStyle(color: Colors.grey[500]),
+              ),
+            ),
+            SizedBox(
+              height: height * 0.02,
+            ),
+            Padding(
+              padding: EdgeInsets.symmetric(horizontal: width * 0.1),
+              child: PinCodeTextField(
+                appContext: context,
+                length: 4,
+                obscureText: false,
+                animationType: AnimationType.fade,
+                textStyle: TextStyle(color: Colors.black),
+                pinTheme: PinTheme(
+                    shape: PinCodeFieldShape.box,
+                    borderRadius: BorderRadius.circular(10),
+                    fieldHeight: 50,
+                    fieldWidth: 40,
+                    activeFillColor: Colors.white,
+                    selectedFillColor: Colors.white,
+                    inactiveFillColor: Colors.white,
+                    borderWidth: 2,
+                    inactiveColor: Colors.grey[300]),
+                animationDuration: Duration(milliseconds: 300),
+                enableActiveFill: true,
+                onCompleted: (v) {
+                  print("Completed");
+                },
+                onChanged: (value) {
+                  print(value);
+                },
+                beforeTextPaste: (text) {
+                  print("Allowing to paste $text");
+                  //if you return true then it will show the paste confirmation dialog. Otherwise if false, then nothing will happen.
+                  //but you can show anything you want here, like your pop up saying wrong paste format or etc
+                  return true;
+                },
               ),
             ),
             SizedBox(

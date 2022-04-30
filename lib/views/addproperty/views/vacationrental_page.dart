@@ -2,6 +2,7 @@ import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:green_and_clean/views/addproperty/controller/addproperty_controller.dart';
+import 'package:green_and_clean/views/addproperty/views/addproperty_page.dart';
 import 'package:green_and_clean/views/home/home_controller.dart';
 
 import '../../widgets/category_thumbnail.dart';
@@ -30,7 +31,9 @@ class VacationRentalPage extends GetView<AddPropertyController> {
                   top: kToolbarHeight / 2,
                   left: 10,
                   child: IconButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Get.back();
+                      },
                       icon: const Icon(
                         Icons.arrow_back_sharp,
                         color: Colors.white,
@@ -139,12 +142,7 @@ class VacationRentalPage extends GetView<AddPropertyController> {
             ? Align(
                 alignment: Alignment.centerLeft,
                 child: TextButton.icon(
-                  onPressed: () {
-                    Get.to(() => VacationRentalPage(),
-                        binding: BindingsBuilder(() {
-                      Get.put(AddPropertyController());
-                    }));
-                  },
+                  onPressed: () => Get.to(() => AddPropertyPage()),
                   icon: Icon(Icons.add_circle_outline),
                   label: AutoSizeText("Add Properties"),
                   style: TextButton.styleFrom(primary: Colors.black),
