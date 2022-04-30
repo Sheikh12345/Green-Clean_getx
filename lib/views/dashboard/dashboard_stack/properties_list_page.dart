@@ -80,7 +80,7 @@ class PropertiesListPage extends GetView<DashboardController> {
                                         children: [
                                           Container(
                                             padding:
-                                                EdgeInsets.all(width * 0.07),
+                                                EdgeInsets.all(height * 0.035),
                                             decoration: BoxDecoration(
                                                 color: Colors.blueGrey,
                                                 shape: BoxShape.circle),
@@ -89,14 +89,19 @@ class PropertiesListPage extends GetView<DashboardController> {
                                                 "3",
                                                 style: TextStyle(
                                                     color: Colors.white),
-                                                presetFontSizes: [22],
+                                                presetFontSizes: [22, 20, 18],
                                               ),
                                             ),
                                           ),
                                           SizedBox(
                                             height: 10,
                                           ),
-                                          AutoSizeText("Checking Out")
+                                          AutoSizeText(
+                                            "Checking Out",
+                                            presetFontSizes: [14, 12, 10, 8],
+                                            maxLines: 1,
+                                            textAlign: TextAlign.center,
+                                          )
                                         ],
                                       ),
                                     )),
@@ -104,7 +109,8 @@ class PropertiesListPage extends GetView<DashboardController> {
                                         child: Column(
                                       children: [
                                         Container(
-                                          padding: EdgeInsets.all(width * 0.07),
+                                          padding:
+                                              EdgeInsets.all(height * 0.035),
                                           decoration: BoxDecoration(
                                               color: Colors.red,
                                               shape: BoxShape.circle),
@@ -120,14 +126,20 @@ class PropertiesListPage extends GetView<DashboardController> {
                                         SizedBox(
                                           height: 10,
                                         ),
-                                        AutoSizeText("Waiting for Cleaning")
+                                        AutoSizeText(
+                                          "Waiting for Cleaning",
+                                          presetFontSizes: [14, 12, 10, 8],
+                                          maxLines: 1,
+                                          textAlign: TextAlign.center,
+                                        )
                                       ],
                                     )),
                                     Expanded(
                                         child: Column(
                                       children: [
                                         Container(
-                                          padding: EdgeInsets.all(width * 0.07),
+                                          padding:
+                                              EdgeInsets.all(height * 0.035),
                                           decoration: BoxDecoration(
                                               color: theme.primaryColor,
                                               shape: BoxShape.circle),
@@ -143,7 +155,12 @@ class PropertiesListPage extends GetView<DashboardController> {
                                         SizedBox(
                                           height: 10,
                                         ),
-                                        AutoSizeText("Active Cleaning")
+                                        AutoSizeText(
+                                          "Active Cleaning",
+                                          presetFontSizes: [14, 12, 10, 8],
+                                          maxLines: 1,
+                                          textAlign: TextAlign.center,
+                                        )
                                       ],
                                     ))
                                   ],
@@ -278,74 +295,116 @@ class PropertiesListPage extends GetView<DashboardController> {
                         child: Obx(() => Row(
                               mainAxisAlignment: MainAxisAlignment.spaceAround,
                               children: [
-                                GestureDetector(
-                                  onTap: () {
-                                    controller.changePropertyListType(0);
-                                  },
-                                  child: AnimatedContainer(
-                                    padding: EdgeInsets.only(bottom: 5),
-                                    decoration: BoxDecoration(
-                                        border: Border(
-                                            bottom: BorderSide(
-                                                color: controller
-                                                            .propertiesListType ==
-                                                        0
-                                                    ? theme.primaryColor
-                                                    : Colors.white,
-                                                width: 2))),
-                                    duration: Duration(milliseconds: 500),
-                                    child: Center(
-                                      child: AutoSizeText(
-                                        "My Properties",
-                                        presetFontSizes: [16],
+                                Expanded(
+                                  child: Center(
+                                    child: GestureDetector(
+                                      onTap: () {
+                                        controller.changePropertyListType(0);
+                                      },
+                                      child: AnimatedContainer(
+                                        padding: EdgeInsets.only(
+                                          bottom: 5,
+                                        ),
+                                        margin: EdgeInsets.only(right: 10),
+                                        decoration: BoxDecoration(
+                                            border: Border(
+                                                bottom: BorderSide(
+                                                    color: controller
+                                                                .propertiesListType ==
+                                                            0
+                                                        ? theme.primaryColor
+                                                        : Colors.white,
+                                                    width: 2))),
+                                        duration: Duration(milliseconds: 500),
+                                        child: Center(
+                                          child: AutoSizeText(
+                                            "My Properties",
+                                            maxLines: 1,
+                                            presetFontSizes: [
+                                              16,
+                                              14,
+                                              12,
+                                              10,
+                                              8
+                                            ],
+                                          ),
+                                        ),
                                       ),
                                     ),
                                   ),
                                 ),
-                                GestureDetector(
-                                  onTap: () {
-                                    controller.changePropertyListType(1);
-                                  },
-                                  child: AnimatedContainer(
-                                    padding: EdgeInsets.only(bottom: 5),
-                                    decoration: BoxDecoration(
-                                        border: Border(
-                                            bottom: BorderSide(
-                                                color: controller
-                                                            .propertiesListType ==
-                                                        1
-                                                    ? theme.primaryColor
-                                                    : Colors.white,
-                                                width: 2))),
-                                    duration: Duration(milliseconds: 500),
+                                Expanded(
+                                  child: GestureDetector(
+                                    onTap: () {
+                                      controller.changePropertyListType(1);
+                                    },
                                     child: Center(
-                                      child: AutoSizeText(
-                                        "Active Cleaning",
-                                        presetFontSizes: [16],
+                                      child: AnimatedContainer(
+                                        padding: EdgeInsets.only(
+                                          bottom: 5,
+                                        ),
+                                        margin: EdgeInsets.only(right: 10),
+                                        decoration: BoxDecoration(
+                                            border: Border(
+                                                bottom: BorderSide(
+                                                    color: controller
+                                                                .propertiesListType ==
+                                                            1
+                                                        ? theme.primaryColor
+                                                        : Colors.white,
+                                                    width: 2))),
+                                        duration: Duration(milliseconds: 500),
+                                        child: Center(
+                                          child: AutoSizeText(
+                                            "Active Cleaning",
+                                            maxLines: 1,
+                                            presetFontSizes: [
+                                              16,
+                                              14,
+                                              12,
+                                              10,
+                                              8
+                                            ],
+                                          ),
+                                        ),
                                       ),
                                     ),
                                   ),
                                 ),
-                                GestureDetector(
-                                  onTap: () {
-                                    controller.changePropertyListType(2);
-                                  },
-                                  child: AnimatedContainer(
-                                    padding: EdgeInsets.only(bottom: 5),
-                                    decoration: BoxDecoration(
-                                        border: Border(
-                                            bottom: BorderSide(
-                                                color: controller
-                                                            .propertiesListType ==
-                                                        2
-                                                    ? theme.primaryColor
-                                                    : Colors.white,
-                                                width: 2))),
-                                    duration: Duration(milliseconds: 500),
+                                Expanded(
+                                  child: GestureDetector(
+                                    onTap: () {
+                                      controller.changePropertyListType(2);
+                                    },
                                     child: Center(
-                                      child: AutoSizeText(
-                                        "Future Cleaning",
-                                        presetFontSizes: [16],
+                                      child: AnimatedContainer(
+                                        padding: EdgeInsets.only(
+                                          bottom: 5,
+                                        ),
+                                        margin: EdgeInsets.only(right: 10),
+                                        decoration: BoxDecoration(
+                                            border: Border(
+                                                bottom: BorderSide(
+                                                    color: controller
+                                                                .propertiesListType ==
+                                                            2
+                                                        ? theme.primaryColor
+                                                        : Colors.white,
+                                                    width: 2))),
+                                        duration: Duration(milliseconds: 500),
+                                        child: Center(
+                                          child: AutoSizeText(
+                                            "Future Cleaning",
+                                            maxLines: 1,
+                                            presetFontSizes: [
+                                              16,
+                                              14,
+                                              12,
+                                              10,
+                                              8
+                                            ],
+                                          ),
+                                        ),
                                       ),
                                     ),
                                   ),
@@ -404,7 +463,7 @@ class MyProperties extends StatelessWidget {
                       Row(
                         children: [
                           Expanded(
-                            child: Icon(Icons.home_filled),
+                            child: Image.asset("assets/home.png"),
                             flex: 2,
                           ),
                           Expanded(
@@ -414,16 +473,21 @@ class MyProperties extends StatelessWidget {
                                 children: [
                                   AutoSizeText(
                                     "Glamourn 6BR@Midtown",
-                                    presetFontSizes: [16],
+                                    presetFontSizes: [14, 12, 10, 8],
+                                    maxLines: 1,
                                   ),
                                   SizedBox(
                                     height: 5,
                                   ),
                                   AutoSizeText(
                                     "327 Northwest 39th Street",
+                                    presetFontSizes: [14, 12, 10, 8],
+                                    maxLines: 1,
                                   ),
                                   AutoSizeText(
                                     "Miami, Florida 33127",
+                                    presetFontSizes: [12, 10, 8],
+                                    maxLines: 1,
                                   ),
                                   SizedBox(
                                     height: height * 0.02,
@@ -432,7 +496,7 @@ class MyProperties extends StatelessWidget {
                                     children: [
                                       Expanded(
                                           child: Container(
-                                        padding: EdgeInsets.all(5),
+                                        padding: EdgeInsets.all(width * 0.01),
                                         decoration: BoxDecoration(
                                             color: theme.primaryColor,
                                             borderRadius:
@@ -443,12 +507,12 @@ class MyProperties extends StatelessWidget {
                                                 child: Icon(
                                               Icons.restore,
                                               color: Colors.white,
-                                              size: 20,
+                                              size: width * 0.05,
                                             )),
                                             Expanded(
                                                 child: AutoSizeText(
                                               "Clean Now",
-                                              minFontSize: 6,
+                                              minFontSize: 10,
                                               maxLines: 1,
                                               style: TextStyle(
                                                   color: Colors.white),
@@ -461,7 +525,7 @@ class MyProperties extends StatelessWidget {
                                       ),
                                       Expanded(
                                           child: Container(
-                                        padding: EdgeInsets.all(5),
+                                        padding: EdgeInsets.all(width * 0.01),
                                         decoration: BoxDecoration(
                                             color: theme.primaryColor,
                                             borderRadius:
@@ -475,7 +539,7 @@ class MyProperties extends StatelessWidget {
                                                 child: Icon(
                                               Icons.calendar_today,
                                               color: Colors.white,
-                                              size: 20,
+                                              size: width * 0.05,
                                             )),
                                             SizedBox(
                                               width: 3,
@@ -484,7 +548,7 @@ class MyProperties extends StatelessWidget {
                                                 child: AutoSizeText(
                                               "Schedule",
                                               maxLines: 1,
-                                              minFontSize: 6,
+                                              minFontSize: 10,
                                               style: TextStyle(
                                                   color: Colors.white),
                                             )),
@@ -507,7 +571,6 @@ class MyProperties extends StatelessWidget {
                 Expanded(
                     flex: 2,
                     child: Container(
-                        height: height * 0.1,
                         decoration: BoxDecoration(
                             border:
                                 Border(left: BorderSide(color: Colors.grey))),

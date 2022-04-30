@@ -13,73 +13,76 @@ class OrderSuccessPage extends StatelessWidget {
     final theme = Theme.of(context);
     return Scaffold(
       backgroundColor: Color.fromARGB(255, 6, 140, 250),
-      body: Column(
-        crossAxisAlignment: CrossAxisAlignment.stretch,
-        children: [
-          SizedBox(
-            height: height * 0.1,
-          ),
-          AutoSizeText(
-            "Order Confirmation",
-            style: TextStyle(color: Colors.white),
-            presetFontSizes: [20],
-            textAlign: TextAlign.center,
-          ),
-          SizedBox(
-            height: height * 0.03,
-          ),
-          AutoSizeText(
-            "#3788876",
-            style: TextStyle(color: Colors.white),
-            presetFontSizes: [18],
-            textAlign: TextAlign.center,
-          ),
-          SizedBox(
-            height: height * 0.05,
-          ),
-          Icon(
-            FontAwesomeIcons.faceGrin,
-            color: Colors.white,
-            size: width * 0.6,
-          ),
-          SizedBox(
-            height: height * 0.02,
-          ),
-          AutoSizeText(
-            "Success !",
-            textAlign: TextAlign.center,
-            style: TextStyle(color: Color.fromARGB(255, 51, 245, 57)),
-            presetFontSizes: [30],
-          ),
-          SizedBox(
-            height: height * 0.02,
-          ),
-          AutoSizeText(
-            "Your order was successfully placed.",
-            presetFontSizes: [18],
-            style: TextStyle(color: Colors.white),
-            textAlign: TextAlign.center,
-          ),
-          SizedBox(
-            height: height * 0.1,
-          ),
-          Center(
-            child: Container(
-              width: width * 0.6,
-              padding: EdgeInsets.symmetric(vertical: 20),
-              decoration: BoxDecoration(
-                  border: Border.all(color: Colors.white),
-                  borderRadius: BorderRadius.circular(5)),
-              child: Center(
-                child: AutoSizeText(
-                  "Done",
-                  presetFontSizes: [18],
-                  style: TextStyle(color: Colors.white),
+      body: Container(
+        height: height,
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: [
+            SizedBox(
+              height: height * 0.1,
+            ),
+            AutoSizeText(
+              "Order Confirmation",
+              style: TextStyle(color: Colors.white),
+              presetFontSizes: [20],
+              textAlign: TextAlign.center,
+            ),
+            SizedBox(
+              height: height * 0.03,
+            ),
+            AutoSizeText(
+              "#3788876",
+              style: TextStyle(color: Colors.white),
+              presetFontSizes: [18],
+              textAlign: TextAlign.center,
+            ),
+            SizedBox(
+              height: height * 0.05,
+            ),
+            Icon(
+              FontAwesomeIcons.faceGrin,
+              color: Colors.white,
+              size: height * 0.3,
+            ),
+            SizedBox(
+              height: height * 0.02,
+            ),
+            AutoSizeText(
+              "Success !",
+              textAlign: TextAlign.center,
+              style: TextStyle(color: Color.fromARGB(255, 51, 245, 57)),
+              presetFontSizes: [30],
+            ),
+            SizedBox(
+              height: height * 0.02,
+            ),
+            AutoSizeText(
+              "Your order was successfully placed.",
+              presetFontSizes: [18],
+              style: TextStyle(color: Colors.white),
+              textAlign: TextAlign.center,
+            ),
+            SizedBox(
+              height: height * 0.1,
+            ),
+            Center(
+              child: Container(
+                width: width * 0.6,
+                padding: EdgeInsets.symmetric(vertical: height * 0.03),
+                decoration: BoxDecoration(
+                    border: Border.all(color: Colors.white),
+                    borderRadius: BorderRadius.circular(5)),
+                child: Center(
+                  child: AutoSizeText(
+                    "Done",
+                    presetFontSizes: [18],
+                    style: TextStyle(color: Colors.white),
+                  ),
                 ),
               ),
-            ),
-          )
-        ],
+            )
+          ],
+        ),
       ),
     );
   }

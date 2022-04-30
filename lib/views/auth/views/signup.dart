@@ -30,7 +30,7 @@ class SignUpPage extends StatelessWidget {
                 ],
               ),
               SizedBox(
-                height: height * 0.05,
+                height: height * 0.03,
               ),
               Center(
                 child: AutoSizeText(
@@ -40,25 +40,25 @@ class SignUpPage extends StatelessWidget {
               ),
               Center(
                 child: AutoSizeText(
-                  "Add your dtails to sign up",
+                  "Add your details to sign up",
                 ),
               ),
               SizedBox(
-                height: height * 0.02,
+                height: height * 0.01,
               ),
               TextField(
                 decoration: InputDecoration(
                     hintText: "Name", prefixIcon: Icon(Icons.person)),
               ),
               SizedBox(
-                height: height * 0.02,
+                height: height * 0.01,
               ),
               TextField(
                 decoration: InputDecoration(
                     hintText: "Email", prefixIcon: Icon(Icons.email)),
               ),
               SizedBox(
-                height: height * 0.02,
+                height: height * 0.01,
               ),
               TextField(
                 decoration: InputDecoration(
@@ -66,7 +66,7 @@ class SignUpPage extends StatelessWidget {
                     prefixIcon: Icon(FontAwesomeIcons.mobileScreen)),
               ),
               SizedBox(
-                height: height * 0.02,
+                height: height * 0.01,
               ),
               TextField(
                 decoration: InputDecoration(
@@ -74,7 +74,7 @@ class SignUpPage extends StatelessWidget {
                     prefixIcon: Icon(FontAwesomeIcons.key)),
               ),
               SizedBox(
-                height: height * 0.02,
+                height: height * 0.01,
               ),
               Row(
                 children: [
@@ -85,7 +85,7 @@ class SignUpPage extends StatelessWidget {
                 ],
               ),
               SizedBox(
-                height: height * 0.05,
+                height: height * 0.03,
               ),
               GestureDetector(
                 onTap: () {
@@ -95,7 +95,7 @@ class SignUpPage extends StatelessWidget {
                   decoration: BoxDecoration(
                       color: theme.primaryColor,
                       borderRadius: BorderRadius.circular(10)),
-                  padding: EdgeInsets.all(15),
+                  padding: EdgeInsets.all(height * 0.015),
                   child: Center(
                     child: AutoSizeText(
                       "Sign Up",
@@ -106,13 +106,13 @@ class SignUpPage extends StatelessWidget {
                 ),
               ),
               SizedBox(
-                height: height * 0.05,
+                height: height * 0.03,
               ),
               Center(
                 child: AutoSizeText.rich(TextSpan(children: [
-                  TextSpan(text: "Don't have an Account? "),
+                  TextSpan(text: "Already have an Account? "),
                   TextSpan(
-                      text: "Sign Up",
+                      text: "Login",
                       recognizer: new TapGestureRecognizer()
                         ..onTap = () => Get.back(),
                       style: TextStyle(

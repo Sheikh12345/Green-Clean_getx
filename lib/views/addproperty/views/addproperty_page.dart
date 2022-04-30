@@ -239,7 +239,58 @@ class AddPropertyPage extends StatelessWidget {
                         child: Row(
                           children: [
                             Image.asset(
-                              "assets/airbnb.png",
+                              "assets/vrbo.png",
+                              width: width * 0.3,
+                            ),
+                            Spacer(),
+                            Icon(Icons.arrow_forward_rounded)
+                          ],
+                        ),
+                      ),
+                      SizedBox(
+                        height: height * 0.02,
+                      ),
+                      Card(
+                        child: Padding(
+                          padding: const EdgeInsets.all(5.0),
+                          child: Row(
+                            children: [
+                              Image.asset(
+                                "assets/booking.png",
+                                width: width * 0.3,
+                              ),
+                              Spacer(),
+                              Icon(Icons.arrow_forward_rounded)
+                            ],
+                          ),
+                        ),
+                      ),
+                      SizedBox(
+                        height: height * 0.02,
+                      ),
+                      Card(
+                        child: Padding(
+                          padding: const EdgeInsets.all(5.0),
+                          child: Row(
+                            children: [
+                              Image.asset(
+                                "assets/tripadvisor.png",
+                                width: width * 0.3,
+                              ),
+                              Spacer(),
+                              Icon(Icons.arrow_forward_rounded)
+                            ],
+                          ),
+                        ),
+                      ),
+                      SizedBox(
+                        height: height * 0.02,
+                      ),
+                      Card(
+                        child: Row(
+                          children: [
+                            Image.asset(
+                              "assets/hostaway.png",
                               width: width * 0.3,
                             ),
                             Spacer(),
@@ -254,12 +305,30 @@ class AddPropertyPage extends StatelessWidget {
                         child: Row(
                           children: [
                             Image.asset(
-                              "assets/airbnb.png",
+                              "assets/guest.png",
                               width: width * 0.3,
                             ),
                             Spacer(),
                             Icon(Icons.arrow_forward_rounded)
                           ],
+                        ),
+                      ),
+                      SizedBox(
+                        height: height * 0.02,
+                      ),
+                      Card(
+                        child: Padding(
+                          padding: const EdgeInsets.all(5.0),
+                          child: Row(
+                            children: [
+                              Image.asset(
+                                "assets/lodgify.png",
+                                width: width * 0.3,
+                              ),
+                              Spacer(),
+                              Icon(Icons.arrow_forward_rounded)
+                            ],
+                          ),
                         ),
                       ),
                       SizedBox(

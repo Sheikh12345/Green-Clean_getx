@@ -1,4 +1,3 @@
-
 import 'package:get/get.dart';
 import 'package:flutter/material.dart';
 import 'package:green_and_clean/views/home/home_stack/add_payment_page.dart';
@@ -9,22 +8,23 @@ import 'package:green_and_clean/views/home/home_stack/cleaning_property_page.dar
 import 'package:green_and_clean/views/home/home_stack/cleaning_schedule_page.dart';
 import 'package:green_and_clean/views/home/home_stack/cleaning_type_page.dart';
 import 'package:green_and_clean/views/home/home_stack/clearner_detail_page.dart';
-class HomeController extends GetxController{
+import 'package:green_and_clean/views/home/home_stack/order_success_page.dart';
 
-  RxList cleaningAddons=RxList(['Fridge','Microwave','Cabinets','Ironing','Washing','Drying']);
+class HomeController extends GetxController {
+  RxList cleaningAddons = RxList(
+      ['Fridge', 'Microwave', 'Cabinets', 'Ironing', 'Washing', 'Drying']);
 
-  RxInt bedrooms=0.obs;
-  RxInt bathrooms=0.obs;
-  int homeStackIndex=0;
+  RxInt bedrooms = 0.obs;
+  RxInt bathrooms = 0.obs;
+  int homeStackIndex = 0;
 
-  setIndex(int index){
-    homeStackIndex=index;
+  setIndex(int index) {
+    homeStackIndex = index;
     update();
   }
 
-
-  getWidgetForIndex(){
-    switch(homeStackIndex){
+  getWidgetForIndex() {
+    switch (homeStackIndex) {
       case 0:
         return CleaningCategoryPage();
       case 1:
@@ -39,8 +39,6 @@ class HomeController extends GetxController{
         return CleanerDetailPage();
       case 6:
         return CleaningOrderSummary();
-      case 7:
-        return AddPaymentMethod();
       default:
         //TODO implement reset page
         return SizedBox();

@@ -25,7 +25,7 @@ class BookingThumbnail extends StatelessWidget {
                     children: [
                       AutoSizeText(
                         "22",
-                        presetFontSizes: [20],
+                        presetFontSizes: [18],
                         style: TextStyle(fontWeight: FontWeight.w600),
                       ),
                       SizedBox(
@@ -61,7 +61,8 @@ class BookingThumbnail extends StatelessWidget {
                             Expanded(
                                 child: AutoSizeText(
                               "Glomoum 6BR @Midtown",
-                              presetFontSizes: [16],
+                              presetFontSizes: [16, 14, 12, 10, 8],
+                              maxLines: 1,
                               style: TextStyle(fontWeight: FontWeight.w600),
                             )),
                             Icon(
@@ -86,11 +87,18 @@ class BookingThumbnail extends StatelessWidget {
                             ),
                             Row(
                               children: [
-                                Icon(Icons.home_filled),
+                                Image.asset(
+                                  "assets/home.png",
+                                  width: width * 0.07,
+                                ),
                                 SizedBox(
                                   width: 5,
                                 ),
-                                AutoSizeText("Houses")
+                                AutoSizeText(
+                                  "Houses",
+                                  presetFontSizes: [12, 10, 8],
+                                  maxLines: 1,
+                                )
                               ],
                             )
                           ],
@@ -103,7 +111,7 @@ class BookingThumbnail extends StatelessWidget {
                             ),
                             Icon(
                               Icons.bathtub,
-                              size: 20,
+                              size: height * 0.03,
                             ),
                             SizedBox(
                               width: 5,
@@ -114,7 +122,7 @@ class BookingThumbnail extends StatelessWidget {
                             ),
                             Icon(
                               Icons.bed_rounded,
-                              size: 20,
+                              size: height * 0.03,
                             ),
                             Spacer(),
                             AutoSizeText(

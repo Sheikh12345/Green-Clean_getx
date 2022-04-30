@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:green_and_clean/views/addproperty/views/addproperty_page.dart';
 import 'package:green_and_clean/views/addproperty/views/addpropertysuccess.dart';
+import 'package:green_and_clean/views/addproperty/views/amenities_one.dart';
 import 'package:green_and_clean/views/home/home_stack/order_success_page.dart';
 
 class AmenitiesPage extends StatelessWidget {
@@ -64,7 +65,7 @@ class AmenitiesPage extends StatelessWidget {
                         Row(
                           children: [
                             Expanded(
-                              child: Icon(Icons.home_filled),
+                              child: Image.asset("assets/home.png"),
                               flex: 2,
                             ),
                             Expanded(
@@ -74,16 +75,21 @@ class AmenitiesPage extends StatelessWidget {
                                   children: [
                                     AutoSizeText(
                                       "Glamourn 6BR@Midtown",
-                                      presetFontSizes: [16],
+                                      presetFontSizes: [16, 14, 12, 10],
+                                      maxLines: 1,
                                     ),
                                     SizedBox(
                                       height: 5,
                                     ),
                                     AutoSizeText(
                                       "327 Northwest 39th Street",
+                                      presetFontSizes: [12, 10, 8],
+                                      maxLines: 1,
                                     ),
                                     AutoSizeText(
                                       "Miami, Florida 33127",
+                                      presetFontSizes: [12, 10, 8],
+                                      maxLines: 1,
                                     ),
                                     SizedBox(
                                       height: height * 0.02,
@@ -94,7 +100,7 @@ class AmenitiesPage extends StatelessWidget {
                           ],
                         ),
                         SizedBox(
-                          height: height * 0.03,
+                          height: height * 0.02,
                         ),
                         Expanded(
                           child: ListView(
@@ -215,7 +221,7 @@ class AmenitiesPage extends StatelessWidget {
                               ),
                               GestureDetector(
                                 onTap: () {
-                                  Get.to(() => AddPropertySuccessPage());
+                                  Get.to(() => AmenitiesOnePage());
                                 },
                                 child: Container(
                                     padding: EdgeInsets.all(12),

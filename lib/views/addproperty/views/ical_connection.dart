@@ -47,105 +47,108 @@ class IcalConnectionPage extends StatelessWidget {
               height: height * 0.02,
             ),
             Expanded(
-                child: Container(
-                    padding: EdgeInsets.symmetric(horizontal: width * 0.05),
-                    decoration: BoxDecoration(
-                        color: Colors.white,
-                        borderRadius: BorderRadius.only(
-                            topRight: Radius.circular(25),
-                            topLeft: Radius.circular(25))),
-                    child: Column(
-                      children: [
-                        SizedBox(
-                          height: height * 0.02,
-                        ),
-                        Image.asset(
-                          "assets/airbnb.png",
-                          width: width * 0.6,
-                        ),
-                        SizedBox(
-                          height: height * 0.02,
-                        ),
-                        Card(
-                          child: Padding(
-                            padding: const EdgeInsets.all(8.0),
-                            child: Column(
-                              children: [
-                                Row(
-                                  children: [
-                                    Icon(Icons.connecting_airports_outlined),
-                                    SizedBox(
-                                      width: 5,
-                                    ),
-                                    AutoSizeText(
-                                        "Please select a connection option")
-                                  ],
-                                ),
-                                SizedBox(
-                                  height: 5,
-                                ),
-                                Row(
-                                  children: [
-                                    Checkbox(value: true, onChanged: (val) {}),
-                                    SizedBox(
-                                      width: 5,
-                                    ),
-                                    AutoSizeText("iCal")
-                                  ],
-                                ),
-                              ],
-                            ),
+                child: SingleChildScrollView(
+              child: Container(
+                  padding: EdgeInsets.symmetric(horizontal: width * 0.05),
+                  decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.only(
+                          topRight: Radius.circular(25),
+                          topLeft: Radius.circular(25))),
+                  child: Column(
+                    children: [
+                      SizedBox(
+                        height: height * 0.02,
+                      ),
+                      Image.asset(
+                        "assets/airbnb.png",
+                        width: width * 0.6,
+                      ),
+                      SizedBox(
+                        height: height * 0.02,
+                      ),
+                      Card(
+                        child: Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Column(
+                            children: [
+                              Row(
+                                children: [
+                                  Icon(Icons.connecting_airports_outlined),
+                                  SizedBox(
+                                    width: 5,
+                                  ),
+                                  AutoSizeText(
+                                      "Please select a connection option")
+                                ],
+                              ),
+                              SizedBox(
+                                height: 5,
+                              ),
+                              Row(
+                                children: [
+                                  Checkbox(value: true, onChanged: (val) {}),
+                                  SizedBox(
+                                    width: 5,
+                                  ),
+                                  AutoSizeText("iCal")
+                                ],
+                              ),
+                            ],
                           ),
                         ),
-                        SizedBox(
-                          height: height * 0.03,
-                        ),
-                        Row(
-                          children: [
-                            Icon(Icons.file_present),
-                            SizedBox(
-                              width: 5,
-                            ),
-                            AutoSizeText("iCal Connection")
-                          ],
-                        ),
-                        SizedBox(
-                          height: height * 0.03,
-                        ),
-                        Center(
-                          child: AutoSizeText(
-                            "Export an iCal link from AirBnb to automatically\nGet guest reservations from AirBnb",
-                            textAlign: TextAlign.center,
+                      ),
+                      SizedBox(
+                        height: height * 0.03,
+                      ),
+                      Row(
+                        children: [
+                          Icon(Icons.file_present),
+                          SizedBox(
+                            width: 5,
                           ),
-                        ),
-                        SizedBox(
-                          height: height * 0.03,
-                        ),
-                        TextField(
+                          AutoSizeText("iCal Connection")
+                        ],
+                      ),
+                      SizedBox(
+                        height: height * 0.03,
+                      ),
+                      Center(
+                        child: AutoSizeText(
+                          "Export an iCal link from AirBnb to automatically\nGet guest reservations from AirBnb",
                           textAlign: TextAlign.center,
-                          decoration: InputDecoration(
-                              hintText: "Enter iCal link",
-                              prefixIcon: Icon(Icons.file_present)),
+                          maxLines: 2,
                         ),
-                        SizedBox(
-                          height: height * 0.03,
-                        ),
-                        TextField(
-                          textAlign: TextAlign.center,
-                          decoration: InputDecoration(
-                              hintText: "Enter Address",
-                              prefixIcon: Icon(Icons.location_pin)),
-                        ),
-                        SizedBox(
-                          height: height * 0.03,
-                        ),
-                        ElevatedButton(
-                            onPressed: () {
-                              Get.to(() => AmenitiesPage());
-                            },
-                            child: AutoSizeText("Connect"))
-                      ],
-                    )))
+                      ),
+                      SizedBox(
+                        height: height * 0.03,
+                      ),
+                      TextField(
+                        textAlign: TextAlign.center,
+                        decoration: InputDecoration(
+                            hintText: "Enter iCal link",
+                            prefixIcon: Icon(Icons.file_present)),
+                      ),
+                      SizedBox(
+                        height: height * 0.03,
+                      ),
+                      TextField(
+                        textAlign: TextAlign.center,
+                        decoration: InputDecoration(
+                            hintText: "Enter Address",
+                            prefixIcon: Icon(Icons.location_pin)),
+                      ),
+                      SizedBox(
+                        height: height * 0.03,
+                      ),
+                      ElevatedButton(
+                          onPressed: () {
+                            Get.to(() => AmenitiesPage());
+                          },
+                          child: AutoSizeText("Connect"))
+                    ],
+                  )),
+            ))
           ],
         ),
       ),

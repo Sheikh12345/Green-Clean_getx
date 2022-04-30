@@ -72,7 +72,7 @@ class BookingDetail extends StatelessWidget {
                     Row(
                       children: [
                         Expanded(
-                          child: Icon(Icons.home_filled),
+                          child: Image.asset("assets/home.png"),
                           flex: 2,
                         ),
                         Expanded(
@@ -82,16 +82,21 @@ class BookingDetail extends StatelessWidget {
                               children: [
                                 AutoSizeText(
                                   "Glamourn 6BR@Midtown",
-                                  presetFontSizes: [16],
+                                  presetFontSizes: [14, 12, 10, 8],
+                                  maxLines: 1,
                                 ),
                                 SizedBox(
                                   height: 5,
                                 ),
                                 AutoSizeText(
                                   "327 Northwest 39th Street",
+                                  presetFontSizes: [12, 10, 8],
+                                  maxLines: 1,
                                 ),
                                 AutoSizeText(
                                   "Miami, Florida 33127",
+                                  presetFontSizes: [12, 10, 8],
+                                  maxLines: 1,
                                 ),
                                 SizedBox(
                                   height: height * 0.02,
@@ -225,8 +230,12 @@ class BookingDetail extends StatelessWidget {
                                       SizedBox(
                                         width: 5,
                                       ),
-                                      AutoSizeText(
-                                        "mayra.querals@gmail.com",
+                                      Flexible(
+                                        child: AutoSizeText(
+                                          "mayra.querals@gmail.com",
+                                          presetFontSizes: [14, 12, 10, 8],
+                                          maxLines: 1,
+                                        ),
                                       ),
                                     ],
                                   ),
@@ -251,7 +260,12 @@ class BookingDetail extends StatelessWidget {
                                       mainAxisAlignment:
                                           MainAxisAlignment.center,
                                       children: [
-                                        AutoSizeText('Chat'),
+                                        Flexible(
+                                            child: AutoSizeText(
+                                          'Chat',
+                                          presetFontSizes: [12, 10],
+                                          maxLines: 1,
+                                        )),
                                         SizedBox(
                                           width: 5,
                                         ),
@@ -270,6 +284,7 @@ class BookingDetail extends StatelessWidget {
                                       child: Center(
                                         child: AutoSizeText(
                                           "Re-Book",
+                                          maxLines: 1,
                                           minFontSize: 6,
                                           style: TextStyle(color: Colors.white),
                                         ),

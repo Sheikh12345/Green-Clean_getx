@@ -61,7 +61,7 @@ class ToDoList extends StatelessWidget {
                   Row(
                     children: [
                       Expanded(
-                        child: Icon(Icons.home_filled),
+                        child: Image.asset("assets/home.png"),
                         flex: 2,
                       ),
                       Expanded(

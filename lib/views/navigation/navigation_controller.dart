@@ -13,7 +13,6 @@ class NavigationController extends GetxController {
     DashboardPage(),
     BookingsPage(),
     SizedBox(),
-    SizedBox()
   ];
 
   setIndex(int index) {
