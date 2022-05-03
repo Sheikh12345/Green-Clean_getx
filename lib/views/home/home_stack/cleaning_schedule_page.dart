@@ -94,7 +94,7 @@ class CleaningSchedulePage extends StatelessWidget {
                                       Icon(
                                         FontAwesomeIcons.handPointer,
                                         color: Colors.white,
-                                        size: height * 0.06,
+                                        size: height * 0.05,
                                       ),
                                       SizedBox(
                                         height: height * 0.01,
@@ -134,7 +134,7 @@ class CleaningSchedulePage extends StatelessWidget {
                                       Icon(
                                         FontAwesomeIcons.calendarCheck,
                                         color: Colors.white,
-                                        size: height * 0.06,
+                                        size: height * 0.05,
                                       ),
                                       SizedBox(
                                         height: height * 0.01,
@@ -180,7 +180,7 @@ class CleaningSchedulePage extends StatelessWidget {
                                             .homeStackIndex +
                                         1),
                                 child: Container(
-                                  padding: EdgeInsets.all(height * 0.013),
+                                  padding: EdgeInsets.all(height * 0.011),
                                   decoration: BoxDecoration(
                                       shape: BoxShape.circle,
                                       border: Border.all(color: Colors.white)),
