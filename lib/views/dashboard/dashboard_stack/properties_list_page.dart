@@ -2,6 +2,7 @@ import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:green_and_clean/views/addproperty/views/addproperty_page.dart';
+import 'package:green_and_clean/views/widgets/appbar.dart';
 
 import '../dashboard_controller.dart';
 
@@ -17,18 +18,7 @@ class PropertiesListPage extends GetView<DashboardController> {
       color: theme.primaryColor,
       child: Column(
         children: [
-          const SizedBox(
-            height: kToolbarHeight / 2,
-          ),
-          Center(
-            child: AutoSizeText(
-              "Green & Clean",
-              style: TextStyle(color: Colors.white, fontSize: 20),
-            ),
-          ),
-          SizedBox(
-            height: height * 0.02,
-          ),
+          AppBarView(title: "Green & Clean", enableBackButton: false),
           Expanded(
               child: Container(
             decoration: const BoxDecoration(
@@ -80,7 +70,7 @@ class PropertiesListPage extends GetView<DashboardController> {
                                         children: [
                                           Container(
                                             padding:
-                                                EdgeInsets.all(height * 0.035),
+                                                EdgeInsets.all(height * 0.025),
                                             decoration: BoxDecoration(
                                                 color: Colors.blueGrey,
                                                 shape: BoxShape.circle),
@@ -110,7 +100,7 @@ class PropertiesListPage extends GetView<DashboardController> {
                                       children: [
                                         Container(
                                           padding:
-                                              EdgeInsets.all(height * 0.035),
+                                              EdgeInsets.all(height * 0.025),
                                           decoration: BoxDecoration(
                                               color: Colors.red,
                                               shape: BoxShape.circle),
@@ -139,7 +129,7 @@ class PropertiesListPage extends GetView<DashboardController> {
                                       children: [
                                         Container(
                                           padding:
-                                              EdgeInsets.all(height * 0.035),
+                                              EdgeInsets.all(height * 0.025),
                                           decoration: BoxDecoration(
                                               color: theme.primaryColor,
                                               shape: BoxShape.circle),

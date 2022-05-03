@@ -2,6 +2,7 @@ import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
+import 'package:green_and_clean/views/widgets/appbar.dart';
 
 import '../home_controller.dart';
 
@@ -19,36 +20,13 @@ class CleaningSchedulePage extends StatelessWidget {
         color: theme.primaryColor,
         child: Column(
           children: [
-            const SizedBox(
-              height: kToolbarHeight / 2,
-            ),
-            Row(
-              children: [
-                IconButton(
-                    onPressed: () {
-                      Get.find<HomeController>().setIndex(
-                          Get.find<HomeController>().homeStackIndex - 1);
-                    },
-                    icon: const Icon(
-                      Icons.arrow_back_sharp,
-                      color: Colors.white,
-                    )),
-                const Expanded(
-                  child: SizedBox(),
-                  flex: 2,
-                ),
-                const AutoSizeText(
-                  "Green & Clean",
-                  style: TextStyle(color: Colors.white, fontSize: 20),
-                ),
-                const Expanded(
-                  child: SizedBox(),
-                  flex: 3,
-                )
-              ],
-            ),
-            SizedBox(
-              height: height * 0.02,
+            AppBarView(
+              title: "Green & Clean",
+              enableBackButton: true,
+              onPressed: () {
+                Get.find<HomeController>()
+                    .setIndex(Get.find<HomeController>().homeStackIndex - 1);
+              },
             ),
             Expanded(
               child: Container(
@@ -96,24 +74,84 @@ class CleaningSchedulePage extends StatelessWidget {
                         children: [
                           Expanded(
                               child: Center(
-                            child: ServiceCard(
-                                onPressed: () => Get.find<HomeController>()
-                                    .setIndex(Get.find<HomeController>()
-                                            .homeStackIndex +
-                                        1),
-                                icon: FontAwesomeIcons.handPointer,
-                                text: "Now"),
-                          )),
+                                  child: GestureDetector(
+                            onTap: () {
+                              Get.find<HomeController>().scheduleType.value = 0;
+                            },
+                            child: Obx(() => Container(
+                                  height: height * 0.1,
+                                  width: height * 0.1,
+                                  decoration: BoxDecoration(
+                                      color: Get.find<HomeController>()
+                                                  .scheduleType ==
+                                              0
+                                          ? Colors.black
+                                          : theme.primaryColor,
+                                      borderRadius: BorderRadius.circular(10)),
+                                  child: Column(
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    children: [
+                                      Icon(
+                                        FontAwesomeIcons.handPointer,
+                                        color: Colors.white,
+                                        size: height * 0.06,
+                                      ),
+                                      SizedBox(
+                                        height: height * 0.01,
+                                      ),
+                                      AutoSizeText(
+                                        "Now",
+                                        style: const TextStyle(
+                                            color: Colors.white),
+                                        presetFontSizes: [18, 16, 14],
+                                        minFontSize: 8,
+                                        maxLines: 1,
+                                        textAlign: TextAlign.center,
+                                      )
+                                    ],
+                                  ),
+                                )),
+                          ))),
                           Expanded(
                               child: Center(
-                            child: ServiceCard(
-                                onPressed: () => Get.find<HomeController>()
-                                    .setIndex(Get.find<HomeController>()
-                                            .homeStackIndex +
-                                        1),
-                                icon: FontAwesomeIcons.calendarCheck,
-                                text: "Future"),
-                          ))
+                                  child: GestureDetector(
+                            onTap: () {
+                              Get.find<HomeController>().scheduleType.value = 1;
+                            },
+                            child: Obx(() => Container(
+                                  height: height * 0.1,
+                                  width: height * 0.1,
+                                  decoration: BoxDecoration(
+                                      color: Get.find<HomeController>()
+                                                  .scheduleType ==
+                                              1
+                                          ? Colors.black
+                                          : theme.primaryColor,
+                                      borderRadius: BorderRadius.circular(10)),
+                                  child: Column(
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    children: [
+                                      Icon(
+                                        FontAwesomeIcons.calendarCheck,
+                                        color: Colors.white,
+                                        size: height * 0.06,
+                                      ),
+                                      SizedBox(
+                                        height: height * 0.01,
+                                      ),
+                                      AutoSizeText(
+                                        "Future",
+                                        style: const TextStyle(
+                                            color: Colors.white),
+                                        presetFontSizes: [18, 16, 14],
+                                        minFontSize: 8,
+                                        maxLines: 1,
+                                        textAlign: TextAlign.center,
+                                      )
+                                    ],
+                                  ),
+                                )),
+                          )))
                         ],
                       ),
                     ),
@@ -142,7 +180,7 @@ class CleaningSchedulePage extends StatelessWidget {
                                             .homeStackIndex +
                                         1),
                                 child: Container(
-                                  padding: const EdgeInsets.all(5),
+                                  padding: EdgeInsets.all(height * 0.013),
                                   decoration: BoxDecoration(
                                       shape: BoxShape.circle,
                                       border: Border.all(color: Colors.white)),
@@ -220,11 +258,13 @@ class ServiceCard extends StatelessWidget {
       this.child,
       this.icon,
       required this.text,
+      this.fontSizes,
       this.onPressed})
       : super(key: key);
   final Color? backgroundColor;
   final Widget? child;
   final IconData? icon;
+  final List<double>? fontSizes;
   final Function()? onPressed;
   final String text;
   @override
@@ -236,8 +276,8 @@ class ServiceCard extends StatelessWidget {
     return GestureDetector(
       onTap: onPressed,
       child: Container(
-        height: width * 0.25,
-        width: width * 0.25,
+        height: height * 0.1,
+        width: height * 0.1,
         decoration: BoxDecoration(
             color: backgroundColor ?? theme.primaryColor,
             borderRadius: BorderRadius.circular(10)),
@@ -248,7 +288,7 @@ class ServiceCard extends StatelessWidget {
                 Icon(
                   icon,
                   color: Colors.white,
-                  size: width * 0.09,
+                  size: height * 0.06,
                 ),
             SizedBox(
               height: height * 0.01,
@@ -256,7 +296,7 @@ class ServiceCard extends StatelessWidget {
             AutoSizeText(
               text,
               style: const TextStyle(color: Colors.white),
-              presetFontSizes: const [14, 12, 10, 8],
+              presetFontSizes: fontSizes ?? [14, 12, 10, 8],
               minFontSize: 8,
               maxLines: 1,
               textAlign: TextAlign.center,

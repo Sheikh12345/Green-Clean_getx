@@ -4,6 +4,7 @@ import 'package:get/get.dart';
 import 'package:green_and_clean/views/bookings/bookings_controller.dart';
 import 'package:green_and_clean/views/bookings/bookings_stack/booking_detail.dart';
 import 'package:green_and_clean/views/dashboard/dashboard_controller.dart';
+import 'package:green_and_clean/views/widgets/appbar.dart';
 import 'package:green_and_clean/views/widgets/booking_thumbnail.dart';
 
 class BookingsList extends GetView<BookingsController> {
@@ -18,18 +19,7 @@ class BookingsList extends GetView<BookingsController> {
       color: theme.primaryColor,
       child: Column(
         children: [
-          const SizedBox(
-            height: kToolbarHeight / 2,
-          ),
-          Center(
-            child: AutoSizeText(
-              "Bookings",
-              style: TextStyle(color: Colors.white, fontSize: 20),
-            ),
-          ),
-          SizedBox(
-            height: height * 0.02,
-          ),
+          AppBarView(title: "Bookings", enableBackButton: false),
           Expanded(
               child: Container(
             decoration: const BoxDecoration(
@@ -40,17 +30,17 @@ class BookingsList extends GetView<BookingsController> {
             child: Column(
               children: [
                 SizedBox(
-                  height: height * 0.05,
+                  height: height * 0.04,
                 ),
                 Card(
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(50)),
                   child: Container(
                     decoration: BoxDecoration(
-                        color: theme.primaryColor.withOpacity(0.3),
+                        color: theme.primaryColor.withOpacity(0.2),
                         borderRadius: BorderRadius.circular(50)),
                     padding: EdgeInsets.symmetric(
-                        horizontal: width * 0.05, vertical: height * 0.01),
+                        horizontal: width * 0.05, vertical: height * 0.02),
                     width: width,
                     child: Obx(() => Row(
                           mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -62,18 +52,21 @@ class BookingsList extends GetView<BookingsController> {
                               child: AnimatedContainer(
                                 padding: EdgeInsets.only(bottom: 5),
                                 decoration: BoxDecoration(
-                                    border: Border(
-                                        bottom: BorderSide(
-                                            color: controller.bookingType == 0
-                                                ? theme.primaryColor
-                                                : theme.primaryColor
-                                                    .withOpacity(0.3),
-                                            width: 2))),
+                                    border: controller.bookingType == 0
+                                        ? Border(
+                                            bottom: BorderSide(
+                                                color: theme.primaryColor,
+                                                width: 2))
+                                        : null),
                                 duration: Duration(milliseconds: 500),
                                 child: Center(
                                   child: AutoSizeText(
                                     "Fixed",
                                     presetFontSizes: [16],
+                                    style: TextStyle(
+                                        color: controller.bookingType == 0
+                                            ? Colors.black
+                                            : Colors.black38),
                                   ),
                                 ),
                               ),
@@ -85,18 +78,21 @@ class BookingsList extends GetView<BookingsController> {
                               child: AnimatedContainer(
                                 padding: EdgeInsets.only(bottom: 5),
                                 decoration: BoxDecoration(
-                                    border: Border(
-                                        bottom: BorderSide(
-                                            color: controller.bookingType == 1
-                                                ? theme.primaryColor
-                                                : theme.primaryColor
-                                                    .withOpacity(0.3),
-                                            width: 2))),
+                                    border: controller.bookingType == 1
+                                        ? Border(
+                                            bottom: BorderSide(
+                                                color: theme.primaryColor,
+                                                width: 2))
+                                        : null),
                                 duration: Duration(milliseconds: 500),
                                 child: Center(
                                   child: AutoSizeText(
                                     "Offers",
                                     presetFontSizes: [16],
+                                    style: TextStyle(
+                                        color: controller.bookingType == 1
+                                            ? Colors.black
+                                            : Colors.black38),
                                   ),
                                 ),
                               ),
@@ -108,18 +104,21 @@ class BookingsList extends GetView<BookingsController> {
                               child: AnimatedContainer(
                                 padding: EdgeInsets.only(bottom: 5),
                                 decoration: BoxDecoration(
-                                    border: Border(
-                                        bottom: BorderSide(
-                                            color: controller.bookingType == 2
-                                                ? theme.primaryColor
-                                                : theme.primaryColor
-                                                    .withOpacity(0.3),
-                                            width: 2))),
+                                    border: controller.bookingType == 2
+                                        ? Border(
+                                            bottom: BorderSide(
+                                                color: theme.primaryColor,
+                                                width: 2))
+                                        : null),
                                 duration: Duration(milliseconds: 500),
                                 child: Center(
                                   child: AutoSizeText(
                                     "Per Hour",
                                     presetFontSizes: [16],
+                                    style: TextStyle(
+                                        color: controller.bookingType == 2
+                                            ? Colors.black
+                                            : Colors.black38),
                                   ),
                                 ),
                               ),

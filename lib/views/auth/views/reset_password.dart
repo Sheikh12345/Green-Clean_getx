@@ -12,78 +12,87 @@ class ResetPasswordPage extends StatelessWidget {
     final height = Get.height;
     final width = Get.width;
     final theme = Theme.of(context);
-    return Scaffold(
-      body: SingleChildScrollView(
-        child: Container(
-          height: height,
-          child: Padding(
-            padding: EdgeInsets.symmetric(horizontal: width * 0.05),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                SizedBox(
-                  height: kToolbarHeight / 2,
-                ),
-                Row(
-                  children: [
-                    IconButton(
-                        onPressed: () {
-                          Get.back();
-                        },
-                        icon: Icon(Icons.arrow_back_ios))
-                  ],
-                ),
-                SizedBox(
-                  height: height * 0.05,
-                ),
-                Center(
-                  child: AutoSizeText(
-                    "Reset Password",
-                    textAlign: TextAlign.center,
-                    presetFontSizes: [20],
+    return SafeArea(
+      child: Scaffold(
+        body: SingleChildScrollView(
+          child: Container(
+            height: height - MediaQuery.of(context).padding.top,
+            child: Padding(
+              padding: EdgeInsets.symmetric(horizontal: width * 0.05),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  SizedBox(
+                    height: kToolbarHeight / 3,
                   ),
-                ),
-                SizedBox(
-                  height: height * 0.03,
-                ),
-                Center(
-                  child: AutoSizeText(
-                    "Please enter your email to recieve a\nlink to create a new password via email",
-                    textAlign: TextAlign.center,
-                    style: TextStyle(color: Colors.grey[500]),
+                  Row(
+                    children: [
+                      IconButton(
+                          onPressed: () {
+                            Get.back();
+                          },
+                          icon: Icon(FontAwesomeIcons.circleArrowLeft))
+                    ],
                   ),
-                ),
-                SizedBox(
-                  height: height * 0.02,
-                ),
-                TextField(
-                  decoration: InputDecoration(
-                      hintText: "Email",
-                      prefixIcon: Icon(
-                        Icons.email,
-                        size: 20,
-                      )),
-                ),
-                SizedBox(
-                  height: height * 0.05,
-                ),
-                GestureDetector(
-                  onTap: () {},
-                  child: Container(
-                    decoration: BoxDecoration(
-                        color: theme.primaryColor,
-                        borderRadius: BorderRadius.circular(10)),
-                    padding: EdgeInsets.all(height * 0.015),
-                    child: Center(
-                      child: AutoSizeText(
-                        "Send",
-                        style: TextStyle(color: Colors.white),
-                        presetFontSizes: [22, 20],
-                      ),
+                  SizedBox(
+                    height: height * 0.05,
+                  ),
+                  Padding(
+                    padding: EdgeInsets.symmetric(horizontal: width * 0.1),
+                    child: Column(
+                      children: [
+                        Center(
+                          child: AutoSizeText(
+                            "Reset Password",
+                            textAlign: TextAlign.center,
+                            presetFontSizes: [30, 20],
+                          ),
+                        ),
+                        SizedBox(
+                          height: height * 0.03,
+                        ),
+                        Center(
+                          child: AutoSizeText(
+                            "Please enter your email to recieve a\nlink to create a new password via email",
+                            textAlign: TextAlign.center,
+                            style: TextStyle(color: Colors.grey[500]),
+                          ),
+                        ),
+                        SizedBox(
+                          height: height * 0.08,
+                        ),
+                        TextField(
+                          decoration: InputDecoration(
+                              hintText: "Email",
+                              prefixIcon: Icon(
+                                Icons.email,
+                                size: 20,
+                              )),
+                        ),
+                        SizedBox(
+                          height: height * 0.08,
+                        ),
+                        GestureDetector(
+                          onTap: () {},
+                          child: Container(
+                            decoration: BoxDecoration(
+                                color: theme.primaryColor,
+                                borderRadius: BorderRadius.circular(10)),
+                            padding: EdgeInsets.all(height * 0.015),
+                            child: Center(
+                              child: AutoSizeText(
+                                "Send",
+                                style: TextStyle(color: Colors.white),
+                                presetFontSizes: [22, 20],
+                              ),
+                            ),
+                          ),
+                        ),
+                      ],
                     ),
-                  ),
-                ),
-              ],
+                  )
+                ],
+              ),
             ),
           ),
         ),

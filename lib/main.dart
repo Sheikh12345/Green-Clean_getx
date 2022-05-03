@@ -20,7 +20,12 @@ class MyApp extends StatelessWidget {
       title: 'Green & Clean',
       initialBinding: AppServiceBinder(),
       theme: ThemeData(
-          primarySwatch: Colors.green, primaryColor: const Color(0xff009D06)),
+          fontFamily: 'LuxoraGrotest',
+          inputDecorationTheme: InputDecorationTheme(
+              hintStyle: TextStyle(color: Color(0xffb6b7b7)),
+              prefixIconColor: Color(0xffb6b7b7)),
+          primarySwatch: Colors.green,
+          primaryColor: const Color(0xff009D06)),
       debugShowCheckedModeBanner: false,
       getPages: RouteHelper.routes,
       initialRoute: "/login",

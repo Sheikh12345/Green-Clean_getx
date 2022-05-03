@@ -18,6 +18,8 @@ class HomeController extends GetxController {
   RxInt bathrooms = 0.obs;
   int homeStackIndex = 0;
 
+  RxInt scheduleType = 0.obs;
+
   setIndex(int index) {
     homeStackIndex = index;
     update();

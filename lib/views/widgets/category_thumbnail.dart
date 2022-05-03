@@ -7,10 +7,12 @@ class CategoryThumbnail extends StatelessWidget {
       {Key? key,
       this.halfWidth = false,
       required this.title,
+      required this.image,
       required this.onPressed})
       : super(key: key);
   final bool halfWidth;
   final String title;
+  final String image;
   final Function()? onPressed;
 
   @override
@@ -30,7 +32,14 @@ class CategoryThumbnail extends StatelessWidget {
             borderRadius: BorderRadius.circular(25.0),
           ),
           child: Stack(
+            fit: StackFit.expand,
             children: [
+              Positioned.fill(
+                  child: Image.asset(
+                image,
+                fit: BoxFit.fill,
+                height: height * 0.2,
+              )),
               Positioned(
                 bottom: 0,
                 left: 0,

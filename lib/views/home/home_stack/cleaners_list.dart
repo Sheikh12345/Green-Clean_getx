@@ -2,6 +2,7 @@ import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
+import 'package:green_and_clean/views/widgets/appbar.dart';
 
 import '../home_controller.dart';
 
@@ -17,36 +18,13 @@ class CleanersList extends StatelessWidget {
       color: theme.primaryColor,
       child: Column(
         children: [
-          const SizedBox(
-            height: kToolbarHeight / 2,
-          ),
-          Row(
-            children: [
-              IconButton(
-                  onPressed: () {
-                    Get.find<HomeController>().setIndex(
-                        Get.find<HomeController>().homeStackIndex - 1);
-                  },
-                  icon: const Icon(
-                    Icons.arrow_back_sharp,
-                    color: Colors.white,
-                  )),
-              const Expanded(
-                child: SizedBox(),
-                flex: 2,
-              ),
-              const AutoSizeText(
-                "Available Cleaners",
-                style: TextStyle(color: Colors.white, fontSize: 20),
-              ),
-              const Expanded(
-                child: SizedBox(),
-                flex: 3,
-              )
-            ],
-          ),
-          SizedBox(
-            height: height * 0.02,
+          AppBarView(
+            title: "Available Cleaners",
+            enableBackButton: true,
+            onPressed: () {
+              Get.find<HomeController>()
+                  .setIndex(Get.find<HomeController>().homeStackIndex - 1);
+            },
           ),
           Expanded(
             child: Container(
@@ -56,7 +34,8 @@ class CleanersList extends StatelessWidget {
                       topRight: Radius.circular(25),
                       topLeft: Radius.circular(25))),
               child: ListView.builder(
-                padding: EdgeInsets.symmetric(horizontal: width * 0.05),
+                padding: EdgeInsets.symmetric(
+                    horizontal: width * 0.05, vertical: height * 0.02),
                 itemBuilder: (_, index) => CleanerDetailThumbnail(),
               ),
             ),
@@ -148,7 +127,7 @@ class CleanerDetailThumbnail extends StatelessWidget {
                           child: AutoSizeText(
                             "English/Spanish",
                             maxLines: 1,
-                            presetFontSizes: [16, 14, 12, 10, 8],
+                            presetFontSizes: [14, 12, 10, 8],
                           ),
                         ),
                         SizedBox(
@@ -167,7 +146,7 @@ class CleanerDetailThumbnail extends StatelessWidget {
                       Center(
                         child: AutoSizeText(
                           "Mayra Q.",
-                          presetFontSizes: [20, 18],
+                          presetFontSizes: [16],
                         ),
                       ),
                       SizedBox(
@@ -185,15 +164,27 @@ class CleanerDetailThumbnail extends StatelessWidget {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceAround,
                         children: [
-                          AutoSizeText(
-                            "\$60.00\nFixed Price",
+                          AutoSizeText.rich(
+                            TextSpan(children: [
+                              TextSpan(
+                                  text: "\$60.00",
+                                  style: TextStyle(fontSize: 18)),
+                              TextSpan(
+                                  text: "\nFixed Price",
+                                  style: TextStyle(fontSize: 11))
+                            ]),
                             textAlign: TextAlign.center,
-                            presetFontSizes: [12, 10],
                           ),
-                          AutoSizeText(
-                            "\$20.00\nHourly Price",
+                          AutoSizeText.rich(
+                            TextSpan(children: [
+                              TextSpan(
+                                  text: "\$20.00",
+                                  style: TextStyle(fontSize: 18)),
+                              TextSpan(
+                                  text: "\nHourly Price",
+                                  style: TextStyle(fontSize: 11))
+                            ]),
                             textAlign: TextAlign.center,
-                            presetFontSizes: [12, 10],
                           ),
                           IconButton(
                               onPressed: () {},
@@ -219,6 +210,8 @@ class CleanerDetailThumbnail extends StatelessWidget {
                                 presetFontSizes: [14, 12, 10],
                               ),
                               style: ElevatedButton.styleFrom(
+                                  elevation: 0,
+                                  fixedSize: Size(width * 0.5, height * 0.5),
                                   shape: RoundedRectangleBorder(
                                       borderRadius: BorderRadius.zero)),
                             )),
@@ -232,6 +225,8 @@ class CleanerDetailThumbnail extends StatelessWidget {
                                 presetFontSizes: [14, 12, 10],
                               ),
                               style: ElevatedButton.styleFrom(
+                                  elevation: 0,
+                                  fixedSize: Size(width * 0.5, height * 0.5),
                                   shape: RoundedRectangleBorder(
                                       borderRadius: BorderRadius.only(
                                           bottomRight: Radius.circular(10))),

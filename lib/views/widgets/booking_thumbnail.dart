@@ -1,5 +1,6 @@
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
 
 class BookingThumbnail extends StatelessWidget {
@@ -29,11 +30,11 @@ class BookingThumbnail extends StatelessWidget {
                         style: TextStyle(fontWeight: FontWeight.w600),
                       ),
                       SizedBox(
-                        height: 5,
+                        height: height * 0.015,
                       ),
                       AutoSizeText("February"),
                       SizedBox(
-                        height: 3,
+                        height: height * 0.01,
                       ),
                       AutoSizeText(
                         "Start at 2:00 PM",
@@ -41,7 +42,7 @@ class BookingThumbnail extends StatelessWidget {
                         presetFontSizes: [10],
                       ),
                       SizedBox(
-                        height: 3,
+                        height: height * 0.01,
                       ),
                       AutoSizeText(
                         "End at 5:00 PM",
@@ -66,7 +67,8 @@ class BookingThumbnail extends StatelessWidget {
                               style: TextStyle(fontWeight: FontWeight.w600),
                             )),
                             Icon(
-                              Icons.arrow_circle_right,
+                              FontAwesomeIcons.circleArrowRight,
+                              size: height * 0.02,
                               color: Colors.black,
                             )
                           ],
@@ -83,7 +85,7 @@ class BookingThumbnail extends StatelessWidget {
                               maxLines: 2,
                             )),
                             SizedBox(
-                              width: 6,
+                              width: width * 0.05,
                             ),
                             Row(
                               children: [
@@ -102,6 +104,9 @@ class BookingThumbnail extends StatelessWidget {
                               ],
                             )
                           ],
+                        ),
+                        SizedBox(
+                          height: height * 0.02,
                         ),
                         Row(
                           children: [

@@ -2,6 +2,7 @@ import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:green_and_clean/views/dashboard/dashboard_controller.dart';
+import 'package:green_and_clean/views/widgets/appbar.dart';
 import 'package:green_and_clean/views/widgets/booking_thumbnail.dart';
 
 class ManageOffers extends StatelessWidget {
@@ -16,40 +17,17 @@ class ManageOffers extends StatelessWidget {
       color: theme.primaryColor,
       child: Column(
         children: [
-          const SizedBox(
-            height: kToolbarHeight / 2,
-          ),
-          Row(
-            children: [
-              IconButton(
-                  onPressed: () {
-                    Get.find<DashboardController>().setIndex(
-                        Get.find<DashboardController>().dashboardStackIndex -
-                            1);
-                  },
-                  icon: const Icon(
-                    Icons.arrow_back_sharp,
-                    color: Colors.white,
-                  )),
-              const Expanded(
-                child: SizedBox(),
-                flex: 2,
-              ),
-              const AutoSizeText(
-                "Manage Offers",
-                style: TextStyle(color: Colors.white, fontSize: 20),
-              ),
-              const Expanded(
-                child: SizedBox(),
-                flex: 3,
-              )
-            ],
-          ),
-          SizedBox(
-            height: height * 0.02,
+          AppBarView(
+            title: "Manage Offers",
+            enableBackButton: true,
+            onPressed: () {
+              Get.find<DashboardController>().setIndex(
+                  Get.find<DashboardController>().dashboardStackIndex - 1);
+            },
           ),
           Expanded(
               child: Container(
+            padding: EdgeInsets.only(top: 10),
             decoration: const BoxDecoration(
                 color: Colors.white,
                 borderRadius: BorderRadius.only(

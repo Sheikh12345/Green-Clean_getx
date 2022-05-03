@@ -4,6 +4,7 @@ import 'package:get/get.dart';
 import 'package:green_and_clean/views/home/home_controller.dart';
 import 'package:green_and_clean/views/home/home_stack/add_payment_page.dart';
 import 'package:green_and_clean/views/home/home_stack/order_success_page.dart';
+import 'package:green_and_clean/views/widgets/appbar.dart';
 
 class CleaningOrderSummary extends StatelessWidget {
   const CleaningOrderSummary({Key? key}) : super(key: key);
@@ -17,36 +18,13 @@ class CleaningOrderSummary extends StatelessWidget {
       color: theme.primaryColor,
       child: Column(
         children: [
-          const SizedBox(
-            height: kToolbarHeight / 2,
-          ),
-          Row(
-            children: [
-              IconButton(
-                  onPressed: () {
-                    Get.find<HomeController>().setIndex(
-                        Get.find<HomeController>().homeStackIndex - 1);
-                  },
-                  icon: const Icon(
-                    Icons.arrow_back_sharp,
-                    color: Colors.white,
-                  )),
-              const Expanded(
-                child: SizedBox(),
-                flex: 2,
-              ),
-              const AutoSizeText(
-                "Summary",
-                style: TextStyle(color: Colors.white, fontSize: 20),
-              ),
-              const Expanded(
-                child: SizedBox(),
-                flex: 3,
-              )
-            ],
-          ),
-          SizedBox(
-            height: height * 0.02,
+          AppBarView(
+            title: "Summary",
+            enableBackButton: true,
+            onPressed: () {
+              Get.find<HomeController>()
+                  .setIndex(Get.find<HomeController>().homeStackIndex - 1);
+            },
           ),
           Expanded(
               child: Container(
