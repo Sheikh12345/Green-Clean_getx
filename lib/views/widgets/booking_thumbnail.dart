@@ -90,7 +90,7 @@ class BookingThumbnail extends StatelessWidget {
                             Row(
                               children: [
                                 Image.asset(
-                                  "assets/home.png",
+                                  "assets/images/home.png",
                                   width: width * 0.07,
                                 ),
                                 SizedBox(

@@ -7,6 +7,10 @@ import 'package:green_and_clean/utils/route_helper.dart';
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
+  SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
+      statusBarBrightness: Brightness.dark,
+      statusBarIconBrightness: Brightness.dark,
+      statusBarColor: Colors.transparent));
   runApp(const MyApp());
 }
 

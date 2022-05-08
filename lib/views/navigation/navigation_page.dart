@@ -9,38 +9,36 @@ class NavigationPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
-    return SafeArea(
-      child: GetBuilder<NavigationController>(
-          init: NavigationController(),
-          builder: (controller) => Scaffold(
-                body: controller.navigationWidgets[controller.selectedIndex],
-                bottomNavigationBar: BottomNavyBar(
-                  selectedIndex: controller.selectedIndex,
-                  showElevation: true, // use this to remove appBar's elevation
-                  onItemSelected: controller.setIndex,
-                  backgroundColor: theme.primaryColor,
-                  items: [
-                    BottomNavyBarItem(
-                      icon: const Icon(Icons.home),
-                      title: const Text('Home'),
-                      activeColor: Colors.white,
-                    ),
-                    BottomNavyBarItem(
-                      icon: const Icon(Icons.speed),
-                      title: const Text('Dashboard'),
-                      activeColor: Colors.white,
-                    ),
-                    BottomNavyBarItem(
-                        icon: const Icon(Icons.insert_invitation),
-                        title: const Text('Bookings'),
-                        activeColor: Colors.white),
-                    BottomNavyBarItem(
-                        icon: const Icon(Icons.person),
-                        title: const Text('Profile'),
-                        activeColor: Colors.white),
-                  ],
-                ),
-              )),
-    );
+    return GetBuilder<NavigationController>(
+        init: NavigationController(),
+        builder: (controller) => Scaffold(
+              body: controller.navigationWidgets[controller.selectedIndex],
+              bottomNavigationBar: BottomNavyBar(
+                selectedIndex: controller.selectedIndex,
+                showElevation: true, // use this to remove appBar's elevation
+                onItemSelected: controller.setIndex,
+                backgroundColor: theme.primaryColor,
+                items: [
+                  BottomNavyBarItem(
+                    icon: const Icon(Icons.home),
+                    title: const Text('Home'),
+                    activeColor: Colors.white,
+                  ),
+                  BottomNavyBarItem(
+                    icon: const Icon(Icons.speed),
+                    title: const Text('Dashboard'),
+                    activeColor: Colors.white,
+                  ),
+                  BottomNavyBarItem(
+                      icon: const Icon(Icons.insert_invitation),
+                      title: const Text('Bookings'),
+                      activeColor: Colors.white),
+                  BottomNavyBarItem(
+                      icon: const Icon(Icons.person),
+                      title: const Text('Profile'),
+                      activeColor: Colors.white),
+                ],
+              ),
+            ));
   }
 }

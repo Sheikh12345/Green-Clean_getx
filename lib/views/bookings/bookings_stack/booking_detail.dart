@@ -51,7 +51,7 @@ class BookingDetail extends StatelessWidget {
                     Row(
                       children: [
                         Expanded(
-                          child: Image.asset("assets/home.png"),
+                          child: Image.asset("assets/images/home.png"),
                           flex: 2,
                         ),
                         Expanded(
@@ -150,7 +150,7 @@ class BookingDetail extends StatelessWidget {
                                 child: ClipRRect(
                                     borderRadius: BorderRadius.circular(100),
                                     child: Image.asset(
-                                      "assets/person.png",
+                                      "assets/images/person.png",
                                       width: width * 0.15,
                                     )),
                               ),

@@ -184,7 +184,7 @@ class PropertiesListPage extends GetView<DashboardController> {
                                     ClipRRect(
                                       borderRadius: BorderRadius.circular(10),
                                       child: Image.asset(
-                                        "assets/home.jpeg",
+                                        "assets/images/home.jpeg",
                                         fit: BoxFit.cover,
                                         height: width * 0.2,
                                       ),
@@ -207,7 +207,8 @@ class PropertiesListPage extends GetView<DashboardController> {
                                   children: [
                                     ClipRRect(
                                       borderRadius: BorderRadius.circular(10),
-                                      child: Image.asset("assets/home.jpeg",
+                                      child: Image.asset(
+                                          "assets/images/home.jpeg",
                                           height: width * 0.2,
                                           fit: BoxFit.cover),
                                     ),
@@ -229,7 +230,8 @@ class PropertiesListPage extends GetView<DashboardController> {
                                   children: [
                                     ClipRRect(
                                       borderRadius: BorderRadius.circular(10),
-                                      child: Image.asset("assets/home.jpeg",
+                                      child: Image.asset(
+                                          "assets/images/home.jpeg",
                                           height: width * 0.2,
                                           fit: BoxFit.cover),
                                     ),
@@ -252,7 +254,7 @@ class PropertiesListPage extends GetView<DashboardController> {
                                     ClipRRect(
                                       borderRadius: BorderRadius.circular(10),
                                       child: Image.asset(
-                                        "assets/home.jpeg",
+                                        "assets/images/home.jpeg",
                                         fit: BoxFit.cover,
                                         height: width * 0.2,
                                       ),
@@ -453,7 +455,7 @@ class MyProperties extends StatelessWidget {
                       Row(
                         children: [
                           Expanded(
-                            child: Image.asset("assets/home.png"),
+                            child: Image.asset("assets/images/home.png"),
                             flex: 2,
                           ),
                           Expanded(

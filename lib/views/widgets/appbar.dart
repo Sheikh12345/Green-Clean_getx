@@ -18,7 +18,9 @@ class AppBarView extends StatelessWidget {
     final height = Get.height;
     final width = Get.width;
     return Padding(
-      padding: EdgeInsets.symmetric(vertical: height * 0.03),
+      padding: EdgeInsets.only(
+          top: (height * 0.03) + MediaQuery.of(context).padding.top,
+          bottom: height * 0.03),
       child: Row(
         children: [
           enableBackButton

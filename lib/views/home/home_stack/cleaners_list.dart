@@ -86,7 +86,7 @@ class CleanerDetailThumbnail extends StatelessWidget {
                           child: ClipRRect(
                               borderRadius: BorderRadius.circular(100),
                               child: Image.asset(
-                                "assets/person.png",
+                                "assets/images/person.png",
                                 width: width * 0.18,
                               )),
                         ),
