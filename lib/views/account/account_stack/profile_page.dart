@@ -18,7 +18,6 @@ class ProfilePage extends StatelessWidget {
       child : Column(children: [
         Container(
           width: width,
-          height: height*0.25,
           color: theme.primaryColor,
           child: Stack(
             clipBehavior: Clip.none,
@@ -29,7 +28,8 @@ class ProfilePage extends StatelessWidget {
                   SizedBox(height:(height*0.03)+MediaQuery.of(context).padding.top,),
                   Row(children: [Expanded(child: SizedBox(),flex: 3,),AutoSizeText("Profile",style: TextStyle(color: Colors.white,fontSize: 18),textAlign: TextAlign.center,),Expanded(child: SizedBox(),flex: 2,),Icon(Icons.notifications_outlined,color: Colors.white,),SizedBox(width: width*0.05,)],),
                   SizedBox(height: height*0.04,),
-                    AutoSizeText("mayra.querales@gmail.com",style: TextStyle(color: Colors.white,fontSize: 14),textAlign: TextAlign.center)
+                    AutoSizeText("mayra.querales@gmail.com",style: TextStyle(color: Colors.white,fontSize: 14),textAlign: TextAlign.center),
+                  SizedBox(height: height*0.06,)
                 ],),
               Positioned(
                   bottom: - height*0.04,

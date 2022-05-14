@@ -17,7 +17,7 @@ class AccountsList extends StatelessWidget {
       child : Column(children: [
         Container(
           width: width,
-          height: height*0.25,
+
           color: theme.primaryColor,
           child: Stack(
             clipBehavior: Clip.none,
@@ -30,7 +30,8 @@ class AccountsList extends StatelessWidget {
                 SizedBox(height: height*0.03,),
                 AutoSizeText("Maria Querales",style: TextStyle(color: Colors.white,fontSize: 14),textAlign: TextAlign.center),
                    SizedBox(height: height*0.01,),
-                   AutoSizeText("mayra.querales@gmail.com",style: TextStyle(color: Colors.white,fontSize: 14),textAlign: TextAlign.center)
+                   AutoSizeText("mayra.querales@gmail.com",style: TextStyle(color: Colors.white,fontSize: 14),textAlign: TextAlign.center),
+                   SizedBox(height: height*0.06,)
               ],),
               Positioned(
                   bottom: - height*0.04,
