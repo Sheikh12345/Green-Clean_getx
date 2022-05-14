@@ -28,8 +28,9 @@ class MyApp extends StatelessWidget {
           inputDecorationTheme: InputDecorationTheme(
               hintStyle: TextStyle(color: Color(0xffb6b7b7)),
               prefixIconColor: Color(0xffb6b7b7)),
-          primarySwatch: Colors.green,
-          primaryColor: const Color(0xff009D06)),
+          primarySwatch: Colors.blue,
+          primaryColor: const Color(0xff4623F0
+          )),
       debugShowCheckedModeBanner: false,
       getPages: RouteHelper.routes,
       initialRoute: "/login",

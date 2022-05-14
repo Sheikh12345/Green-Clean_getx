@@ -35,7 +35,7 @@ class NavigationPage extends StatelessWidget {
                       activeColor: Colors.white),
                   BottomNavyBarItem(
                       icon: const Icon(Icons.person),
-                      title: const Text('Profile'),
+                      title: const Text('Account'),
                       activeColor: Colors.white),
                 ],
               ),

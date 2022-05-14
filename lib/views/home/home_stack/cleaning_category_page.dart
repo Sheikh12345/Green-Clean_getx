@@ -59,7 +59,7 @@ class CleaningCategoryPage extends StatelessWidget {
                   })),
                 ),
                 SizedBox(
-                  height: height * 0.02,
+                  height: height * 0.015,
                 ),
                 CategoryThumbnail(
                     image: "assets/images/hotel.png",
@@ -67,7 +67,7 @@ class CleaningCategoryPage extends StatelessWidget {
                     onPressed: () => Get.find<HomeController>().setIndex(
                         Get.find<HomeController>().homeStackIndex + 1)),
                 SizedBox(
-                  height: height * 0.02,
+                  height: height * 0.015,
                 ),
                 Row(
                   children: [

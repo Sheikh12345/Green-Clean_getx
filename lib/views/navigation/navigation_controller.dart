@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
+import 'package:green_and_clean/views/account/account_page.dart';
 import 'package:green_and_clean/views/bookings/bookings_page.dart';
 import 'package:green_and_clean/views/dashboard/dashboard_page.dart';
 
@@ -13,7 +14,7 @@ class NavigationController extends GetxController {
     HomePage(),
     DashboardPage(),
     BookingsPage(),
-    SizedBox(),
+    AccountPage(),
   ];
 
   setIndex(int index) {

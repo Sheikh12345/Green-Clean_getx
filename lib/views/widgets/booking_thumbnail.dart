@@ -4,7 +4,8 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
 
 class BookingThumbnail extends StatelessWidget {
-  const BookingThumbnail({Key? key, required this.onPressed}) : super(key: key);
+  const BookingThumbnail({Key? key, required this.onPressed,required this.accountBooking}) : super(key: key);
+  final bool accountBooking;
   final void Function() onPressed;
   @override
   Widget build(BuildContext context) {
@@ -81,28 +82,14 @@ class BookingThumbnail extends StatelessWidget {
                             Expanded(
                                 child: AutoSizeText(
                               "327 Northwest 39th Street\nMiami, Florida 33127",
+                              presetFontSizes: [14,12],
                               minFontSize: 8,
                               maxLines: 2,
                             )),
                             SizedBox(
                               width: width * 0.05,
                             ),
-                            Row(
-                              children: [
-                                Image.asset(
-                                  "assets/images/home.png",
-                                  width: width * 0.07,
-                                ),
-                                SizedBox(
-                                  width: 5,
-                                ),
-                                AutoSizeText(
-                                  "Houses",
-                                  presetFontSizes: [12, 10, 8],
-                                  maxLines: 1,
-                                )
-                              ],
-                            )
+
                           ],
                         ),
                         SizedBox(
@@ -110,25 +97,29 @@ class BookingThumbnail extends StatelessWidget {
                         ),
                         Row(
                           children: [
-                            AutoSizeText("3"),
-                            SizedBox(
-                              width: 5,
-                            ),
-                            Icon(
-                              Icons.bathtub,
-                              size: height * 0.03,
-                            ),
-                            SizedBox(
-                              width: 5,
-                            ),
-                            AutoSizeText("6"),
-                            SizedBox(
-                              width: 5,
-                            ),
-                            Icon(
-                              Icons.bed_rounded,
-                              size: height * 0.03,
-                            ),
+                            accountBooking?Row(children: [
+                              Icon(Icons.star,size: 20,color: Colors.orange,),
+                              SizedBox(width: 5,),
+                              Text("3.5",style: TextStyle(color: Color(0xff999999)),)
+                            ],):Row(children: [AutoSizeText("3"),
+                              SizedBox(
+                                width: 5,
+                              ),
+                              Icon(
+                                Icons.bathtub,
+                                size: height * 0.03,
+                              ),
+                              SizedBox(
+                                width: 5,
+                              ),
+                              AutoSizeText("6"),
+                              SizedBox(
+                                width: 5,
+                              ),
+                              Icon(
+                                Icons.bed_rounded,
+                                size: height * 0.03,
+                              ),],),
                             Spacer(),
                             AutoSizeText(
                               "Total: \$45.00",

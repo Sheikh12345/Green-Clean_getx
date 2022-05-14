@@ -23,10 +23,10 @@ class CategoryThumbnail extends StatelessWidget {
       onTap: onPressed,
       child: Container(
         width: halfWidth ? width / 2 : width,
-        height: height * 0.2,
+        height: halfWidth ?height*0.15 : height * 0.17,
         decoration: BoxDecoration(borderRadius: BorderRadius.circular(25)),
         child: Card(
-          elevation: 12,
+          elevation: 5,
           clipBehavior: Clip.antiAlias,
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(25.0),

@@ -34,7 +34,7 @@ class ManageOffers extends StatelessWidget {
                     topRight: Radius.circular(25),
                     topLeft: Radius.circular(25))),
             child: ListView.builder(
-                itemBuilder: (_, index) => BookingThumbnail(onPressed: () {})),
+                itemBuilder: (_, index) => BookingThumbnail(accountBooking: false,onPressed: () {})),
           ))
         ],
       ),
