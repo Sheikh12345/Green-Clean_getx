@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
-import 'package:green_and_clean/service_binder.dart';
+import 'package:green_and_clean/Utils/service_binder.dart';
 import 'package:green_and_clean/utils/route_helper.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
-  SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
+  SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(
       statusBarBrightness: Brightness.dark,
       statusBarIconBrightness: Brightness.dark,
       statusBarColor: Colors.transparent));
@@ -25,12 +25,11 @@ class MyApp extends StatelessWidget {
       initialBinding: AppServiceBinder(),
       theme: ThemeData(
           fontFamily: 'LuxoraGrotest',
-          inputDecorationTheme: InputDecorationTheme(
+          inputDecorationTheme: const InputDecorationTheme(
               hintStyle: TextStyle(color: Color(0xffb6b7b7)),
               prefixIconColor: Color(0xffb6b7b7)),
           primarySwatch: Colors.blue,
-          primaryColor: const Color(0xff4623F0
-          )),
+          primaryColor: const Color(0xff4623F0)),
       debugShowCheckedModeBanner: false,
       getPages: RouteHelper.routes,
       initialRoute: "/login",
