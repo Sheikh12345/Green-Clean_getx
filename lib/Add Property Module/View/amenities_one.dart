@@ -5,8 +5,8 @@ import 'package:green_and_clean/Utils/widgets/appbar.dart';
 import 'addpropertysuccess.dart';
 
 class AmenitiesOnePage extends StatelessWidget {
-  const AmenitiesOnePage({Key? key}) : super(key: key);
-
+  AmenitiesOnePage({Key? key}) : super(key: key);
+  final List<String> _dropdownValues = ["House Keeper", "Owner"];
   @override
   Widget build(BuildContext context) {
     final height = Get.height;
@@ -23,7 +23,8 @@ class AmenitiesOnePage extends StatelessWidget {
               AppBarView(
                 title: "Amenities",
                 enableBackButton: true,
-                onPressed: () => Get.back(),
+                backButtonOnPressed: () => Get.back(),
+                enableTrailingButton: false,
               ),
               Expanded(
                   child: Container(
@@ -94,13 +95,27 @@ class AmenitiesOnePage extends StatelessWidget {
                           Row(
                             children: [
                               Expanded(
-                                child: TextFormField(
-                                  initialValue: "House Keeper",
-                                  decoration: InputDecoration(
-                                    focusedBorder: UnderlineInputBorder(
-                                      borderSide: BorderSide(
-                                          color: Colors.blue.shade800,
-                                          width: 1.5),
+                                child: Container(
+                                  padding: const EdgeInsets.symmetric(
+                                      horizontal: 10.0),
+                                  decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(15.0),
+                                    border: Border.all(
+                                        color: Colors.grey,
+                                        style: BorderStyle.solid,
+                                        width: 0.80),
+                                  ),
+                                  child: DropdownButtonHideUnderline(
+                                    child: DropdownButton(
+                                      items: _dropdownValues
+                                          .map((value) => DropdownMenuItem(
+                                                child: Text(value),
+                                                value: value,
+                                              ))
+                                          .toList(),
+                                      onChanged: (String? value) {},
+                                      isExpanded: false,
+                                      value: _dropdownValues.first,
                                     ),
                                   ),
                                 ),

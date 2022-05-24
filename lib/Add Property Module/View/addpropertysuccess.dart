@@ -2,7 +2,6 @@ import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
-import 'package:green_and_clean/Add%20Property%20Module/View/vacationrental_page.dart';
 
 class AddPropertySuccessPage extends StatelessWidget {
   const AddPropertySuccessPage({Key? key}) : super(key: key);
@@ -35,7 +34,7 @@ class AddPropertySuccessPage extends StatelessWidget {
           const SizedBox(height: 60),
           GestureDetector(
             onTap: () {
-              Get.off(const VacationRentalPage());
+              Get.back();
             },
             child: Center(
               child: Container(

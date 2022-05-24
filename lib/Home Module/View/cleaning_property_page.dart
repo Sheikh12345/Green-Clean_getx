@@ -155,16 +155,60 @@ class CleaningPropertyPage extends StatelessWidget {
           SizedBox(
             height: height * 0.02,
           ),
-          for (String addOn in Get.find<HomeController>().cleaningAddons)
-            ListTile(
-              leading: const FaIcon(FontAwesomeIcons.kitchenSet),
-              title: AutoSizeText(addOn),
-              trailing: Checkbox(
-                value: false,
-                onChanged: (val) {},
-              ),
-              dense: true,
+          ListTile(
+            leading: const Icon(Icons.kitchen_outlined),
+            title: const Text("Fridge"),
+            trailing: Checkbox(
+              value: false,
+              onChanged: (val) {},
             ),
+            dense: true,
+          ),
+          ListTile(
+            leading: const Icon(Icons.microwave_outlined),
+            title: const Text("Microwave"),
+            trailing: Checkbox(
+              value: false,
+              onChanged: (val) {},
+            ),
+            dense: true,
+          ),
+          ListTile(
+            leading: const Icon(Icons.inventory_2_outlined),
+            title: const Text("Cabinets"),
+            trailing: Checkbox(
+              value: false,
+              onChanged: (val) {},
+            ),
+            dense: true,
+          ),
+          ListTile(
+            leading: const Icon(Icons.iron_outlined),
+            title: const Text("Ironing"),
+            trailing: Checkbox(
+              value: false,
+              onChanged: (val) {},
+            ),
+            dense: true,
+          ),
+          ListTile(
+            leading: const Icon(Icons.local_laundry_service_outlined),
+            title: const Text("Washing"),
+            trailing: Checkbox(
+              value: false,
+              onChanged: (val) {},
+            ),
+            dense: true,
+          ),
+          ListTile(
+            leading: const Icon(Icons.dry_cleaning_outlined),
+            title: const Text("Drying"),
+            trailing: Checkbox(
+              value: false,
+              onChanged: (val) {},
+            ),
+            dense: true,
+          ),
           SizedBox(
             height: height * 0.02,
           ),

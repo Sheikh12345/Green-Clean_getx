@@ -2,10 +2,10 @@ import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
-import 'package:green_and_clean/Add%20Property%20Module/View/addproperty_page.dart';
+import 'package:green_and_clean/Add%20Property%20Module/View/select_property_type.dart';
 import 'package:green_and_clean/Utils/Constants/size.dart';
 
-import 'addproperty_controller.dart';
+import '../View Model/addproperty_controller.dart';
 
 class VacationRentalPage extends GetView<AddPropertyController> {
   const VacationRentalPage({Key? key}) : super(key: key);
@@ -167,7 +167,7 @@ class VacationRentalPage extends GetView<AddPropertyController> {
             ? Align(
                 alignment: Alignment.centerLeft,
                 child: TextButton.icon(
-                  onPressed: () => Get.to(() => const AddPropertyPage()),
+                  onPressed: () => Get.to(() => const SelectPropertyTypePage()),
                   icon: const Icon(Icons.add_circle_outline),
                   label: const AutoSizeText("Add Properties"),
                   style: TextButton.styleFrom(primary: Colors.black),

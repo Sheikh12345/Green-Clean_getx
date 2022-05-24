@@ -22,7 +22,8 @@ class AddPaymentMethod extends StatelessWidget {
               AppBarView(
                 title: "Add payment method",
                 enableBackButton: true,
-                onPressed: () => Get.back(),
+                backButtonOnPressed: () => Get.back(),
+                enableTrailingButton: false,
               ),
               Expanded(
                   child: Container(
@@ -61,11 +62,19 @@ class AddPaymentMethod extends StatelessWidget {
                           children: [
                             TextField(
                               textAlign: TextAlign.center,
+                              keyboardType: TextInputType.number,
+                              maxLength: 20,
                               style: const TextStyle(color: Colors.white),
                               decoration: InputDecoration(
                                   fillColor: Colors.black,
                                   filled: true,
+                                  counterText: "",
                                   contentPadding: const EdgeInsets.symmetric(),
+                                  focusedBorder: const OutlineInputBorder(
+                                      borderSide: BorderSide(
+                                          color: Colors.white, width: 1.5),
+                                      borderRadius: BorderRadius.all(
+                                          Radius.circular(10))),
                                   border: OutlineInputBorder(
                                       borderRadius: BorderRadius.circular(10)),
                                   hintText: "Card Number",
@@ -81,11 +90,22 @@ class AddPaymentMethod extends StatelessWidget {
                                     flex: 1,
                                     child: TextField(
                                       textAlign: TextAlign.center,
+                                      keyboardType: TextInputType.number,
+                                      maxLength: 2,
                                       style:
                                           const TextStyle(color: Colors.white),
                                       decoration: InputDecoration(
                                           fillColor: Colors.black,
+                                          counterText: "",
                                           filled: true,
+                                          focusedBorder:
+                                              const OutlineInputBorder(
+                                                  borderSide: BorderSide(
+                                                      color: Colors.white,
+                                                      width: 1.5),
+                                                  borderRadius:
+                                                      BorderRadius.all(
+                                                          Radius.circular(10))),
                                           contentPadding:
                                               const EdgeInsets.symmetric(),
                                           border: OutlineInputBorder(
@@ -102,11 +122,22 @@ class AddPaymentMethod extends StatelessWidget {
                                     flex: 1,
                                     child: TextField(
                                       textAlign: TextAlign.center,
+                                      keyboardType: TextInputType.number,
+                                      maxLength: 2,
                                       style:
                                           const TextStyle(color: Colors.white),
                                       decoration: InputDecoration(
                                           fillColor: Colors.black,
+                                          counterText: "",
                                           filled: true,
+                                          focusedBorder:
+                                              const OutlineInputBorder(
+                                                  borderSide: BorderSide(
+                                                      color: Colors.white,
+                                                      width: 1.5),
+                                                  borderRadius:
+                                                      BorderRadius.all(
+                                                          Radius.circular(10))),
                                           contentPadding:
                                               const EdgeInsets.symmetric(),
                                           border: OutlineInputBorder(
@@ -123,10 +154,21 @@ class AddPaymentMethod extends StatelessWidget {
                                     flex: 2,
                                     child: TextField(
                                       textAlign: TextAlign.center,
+                                      keyboardType: TextInputType.number,
+                                      maxLength: 3,
                                       style:
                                           const TextStyle(color: Colors.white),
                                       decoration: InputDecoration(
+                                          counterText: "",
                                           fillColor: Colors.black,
+                                          focusedBorder:
+                                              const OutlineInputBorder(
+                                                  borderSide: BorderSide(
+                                                      color: Colors.white,
+                                                      width: 1.5),
+                                                  borderRadius:
+                                                      BorderRadius.all(
+                                                          Radius.circular(10))),
                                           filled: true,
                                           contentPadding:
                                               const EdgeInsets.symmetric(),

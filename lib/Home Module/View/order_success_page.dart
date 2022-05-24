@@ -65,18 +65,23 @@ class OrderSuccessPage extends StatelessWidget {
             SizedBox(
               height: height * 0.1,
             ),
-            Center(
-              child: Container(
-                width: width * 0.6,
-                padding: EdgeInsets.symmetric(vertical: height * 0.03),
-                decoration: BoxDecoration(
-                    border: Border.all(color: Colors.white),
-                    borderRadius: BorderRadius.circular(5)),
-                child: const Center(
-                  child: AutoSizeText(
-                    "Done",
-                    presetFontSizes: [18],
-                    style: TextStyle(color: Colors.white),
+            GestureDetector(
+              onTap: () {
+                Get.back();
+              },
+              child: Center(
+                child: Container(
+                  width: width * 0.6,
+                  padding: EdgeInsets.symmetric(vertical: height * 0.03),
+                  decoration: BoxDecoration(
+                      border: Border.all(color: Colors.white),
+                      borderRadius: BorderRadius.circular(5)),
+                  child: const Center(
+                    child: AutoSizeText(
+                      "Done",
+                      presetFontSizes: [18],
+                      style: TextStyle(color: Colors.white),
+                    ),
                   ),
                 ),
               ),

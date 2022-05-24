@@ -23,7 +23,7 @@ class CategoryThumbnail extends StatelessWidget {
       onTap: onPressed,
       child: Container(
         width: halfWidth ? width / 2 : width,
-        height: halfWidth ?height*0.15 : height * 0.17,
+        height: halfWidth ? 130 : 130,
         decoration: BoxDecoration(borderRadius: BorderRadius.circular(25)),
         child: Card(
           elevation: 5,
@@ -54,7 +54,7 @@ class CategoryThumbnail extends StatelessWidget {
                       child: AutoSizeText(
                     title,
                     style: const TextStyle(color: Colors.white),
-                    presetFontSizes: [16, 14, 12, 10],
+                    presetFontSizes: const [16, 14, 12, 10],
                     maxLines: 1,
                     overflow: TextOverflow.ellipsis,
                   )),

@@ -25,8 +25,7 @@ class AccountsList extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.stretch,
                   children: [
                     SizedBox(
-                      height:
-                          (height * 0.03) + MediaQuery.of(context).padding.top,
+                      height: 30 + MediaQuery.of(context).padding.top,
                     ),
                     Row(
                       children: [
@@ -52,21 +51,17 @@ class AccountsList extends StatelessWidget {
                         )
                       ],
                     ),
-                    SizedBox(
-                      height: height * 0.03,
+                    const SizedBox(
+                      height: 25,
                     ),
                     const AutoSizeText("Maria Querales",
                         style: TextStyle(color: Colors.white, fontSize: 14),
                         textAlign: TextAlign.center),
-                    SizedBox(
-                      height: height * 0.01,
-                    ),
+                    const SizedBox(height: 10),
                     const AutoSizeText("mayra.querales@gmail.com",
                         style: TextStyle(color: Colors.white, fontSize: 14),
                         textAlign: TextAlign.center),
-                    SizedBox(
-                      height: height * 0.06,
-                    )
+                    const SizedBox(height: 50)
                   ],
                 ),
                 Positioned(
@@ -101,14 +96,17 @@ class AccountsList extends StatelessWidget {
                   side: const BorderSide(color: Colors.black38)),
               borderOnForeground: true,
               child: Padding(
-                padding: const EdgeInsets.all(8.0),
+                padding: const EdgeInsets.symmetric(horizontal: 8),
                 child: Column(
                   children: [
+                    const SizedBox(
+                      height: 10,
+                    ),
                     GestureDetector(
                       onTap: () => Get.find<AccountController>().setIndex(
                           Get.find<AccountController>().accountStackIndex + 1),
                       child: Padding(
-                        padding: const EdgeInsets.symmetric(vertical: 5.0),
+                        padding: const EdgeInsets.symmetric(vertical: 6.0),
                         child: Row(
                           children: [
                             const Expanded(
@@ -123,7 +121,10 @@ class AccountsList extends StatelessWidget {
                                 child: Container(
                                   child: Row(
                                     children: const [
-                                      AutoSizeText("Profile"),
+                                      Text(
+                                        "Profile",
+                                        style: TextStyle(fontSize: 16),
+                                      ),
                                       Spacer(),
                                       Icon(Icons.arrow_right_alt)
                                     ],
@@ -142,7 +143,7 @@ class AccountsList extends StatelessWidget {
                       onTap: () => Get.find<AccountController>().setIndex(
                           Get.find<AccountController>().accountStackIndex + 2),
                       child: Padding(
-                        padding: const EdgeInsets.symmetric(vertical: 5.0),
+                        padding: const EdgeInsets.symmetric(vertical: 6.0),
                         child: Row(
                           children: [
                             const Expanded(
@@ -157,7 +158,10 @@ class AccountsList extends StatelessWidget {
                                 child: Container(
                                   child: Row(
                                     children: const [
-                                      AutoSizeText("Bookings"),
+                                      Text(
+                                        "Bookings",
+                                        style: TextStyle(fontSize: 16),
+                                      ),
                                       Spacer(),
                                       Icon(Icons.arrow_right_alt)
                                     ],
@@ -173,7 +177,7 @@ class AccountsList extends StatelessWidget {
                       ),
                     ),
                     Padding(
-                      padding: const EdgeInsets.symmetric(vertical: 5.0),
+                      padding: const EdgeInsets.symmetric(vertical: 6.0),
                       child: Row(
                         children: [
                           const Expanded(
@@ -188,7 +192,10 @@ class AccountsList extends StatelessWidget {
                               child: Container(
                                 child: Row(
                                   children: const [
-                                    AutoSizeText("Notifications"),
+                                    Text(
+                                      "Notifications",
+                                      style: TextStyle(fontSize: 16),
+                                    ),
                                     Spacer(),
                                     Icon(Icons.arrow_right_alt)
                                   ],
@@ -202,34 +209,49 @@ class AccountsList extends StatelessWidget {
                         ],
                       ),
                     ),
-                    Row(
-                      children: [
-                        const Expanded(
-                          child: Icon(
-                            Icons.message,
-                            color: Color(0xff19E6FF),
+                    Padding(
+                      padding: const EdgeInsets.symmetric(vertical: 6.0),
+                      child: Row(
+                        children: [
+                          const Expanded(
+                            child: Icon(
+                              Icons.chat_bubble,
+                              color: Color(0xff19E6FF),
+                            ),
+                            flex: 2,
                           ),
-                          flex: 2,
-                        ),
-                        Expanded(
-                          flex: 8,
-                          child: Row(
-                            children: const [
-                              AutoSizeText("Messages"),
-                              Spacer(),
-                              Icon(Icons.arrow_right_alt)
-                            ],
-                          ),
-                        )
-                      ],
+                          Expanded(
+                              flex: 8,
+                              child: Container(
+                                child: Row(
+                                  children: const [
+                                    Text(
+                                      "Messages",
+                                      style: TextStyle(fontSize: 16),
+                                    ),
+                                    Spacer(),
+                                    Icon(Icons.arrow_right_alt)
+                                  ],
+                                ),
+                                decoration: BoxDecoration(
+                                    border: Border(
+                                        bottom: BorderSide(
+                                            color: const Color(0xff707070)
+                                                .withOpacity(0.3)))),
+                              ))
+                        ],
+                      ),
+                    ),
+                    const SizedBox(
+                      height: 20,
                     )
                   ],
                 ),
               ),
             ),
           ),
-          SizedBox(
-            height: height * 0.02,
+          const SizedBox(
+            height: 20,
           ),
           Padding(
             padding: EdgeInsets.symmetric(horizontal: width * 0.03),
@@ -240,11 +262,14 @@ class AccountsList extends StatelessWidget {
                   side: const BorderSide(color: Colors.black38)),
               borderOnForeground: true,
               child: Padding(
-                padding: const EdgeInsets.all(8.0),
+                padding: const EdgeInsets.symmetric(horizontal: 8.0),
                 child: Column(
                   children: [
+                    const SizedBox(
+                      height: 10,
+                    ),
                     Padding(
-                      padding: const EdgeInsets.symmetric(vertical: 5.0),
+                      padding: const EdgeInsets.symmetric(vertical: 6.0),
                       child: Row(
                         children: [
                           const Expanded(
@@ -259,7 +284,10 @@ class AccountsList extends StatelessWidget {
                               child: Container(
                                 child: Row(
                                   children: const [
-                                    AutoSizeText("Settings"),
+                                    Text(
+                                      "Settings",
+                                      style: TextStyle(fontSize: 16),
+                                    ),
                                     Spacer(),
                                     Icon(Icons.arrow_right_alt)
                                   ],
@@ -274,7 +302,7 @@ class AccountsList extends StatelessWidget {
                       ),
                     ),
                     Padding(
-                      padding: const EdgeInsets.symmetric(vertical: 5.0),
+                      padding: const EdgeInsets.symmetric(vertical: 6.0),
                       child: Row(
                         children: [
                           const Expanded(
@@ -289,7 +317,10 @@ class AccountsList extends StatelessWidget {
                               child: Container(
                                 child: Row(
                                   children: const [
-                                    AutoSizeText("Payment Method"),
+                                    Text(
+                                      "Payment Method",
+                                      style: TextStyle(fontSize: 16),
+                                    ),
                                     Spacer(),
                                     Icon(Icons.arrow_right_alt)
                                   ],
@@ -304,7 +335,7 @@ class AccountsList extends StatelessWidget {
                       ),
                     ),
                     Padding(
-                      padding: const EdgeInsets.symmetric(vertical: 5.0),
+                      padding: const EdgeInsets.symmetric(vertical: 6.0),
                       child: Row(
                         children: [
                           const Expanded(
@@ -319,7 +350,10 @@ class AccountsList extends StatelessWidget {
                               child: Container(
                                 child: Row(
                                   children: const [
-                                    AutoSizeText("Channel Manager"),
+                                    Text(
+                                      "Channel Manager",
+                                      style: TextStyle(fontSize: 16),
+                                    ),
                                     Spacer(),
                                     Icon(Icons.arrow_right_alt)
                                   ],
@@ -333,8 +367,8 @@ class AccountsList extends StatelessWidget {
                         ],
                       ),
                     ),
-                    SizedBox(
-                      height: height * 0.02,
+                    const SizedBox(
+                      height: 20,
                     )
                   ],
                 ),

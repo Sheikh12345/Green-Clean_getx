@@ -20,7 +20,8 @@ class AddPropertyPage extends StatelessWidget {
             AppBarView(
               title: "Add Property",
               enableBackButton: true,
-              onPressed: () => Get.back(),
+              backButtonOnPressed: () => Get.back(),
+              enableTrailingButton: false,
             ),
             Expanded(
                 child: SingleChildScrollView(

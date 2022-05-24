@@ -7,11 +7,9 @@ import '../View/cleaning_property_page.dart';
 import '../View/cleaning_schedule_page.dart';
 import '../View/cleaning_type_page.dart';
 import '../View/clearner_detail_page.dart';
+import '../View/make_offer_page.dart';
 
 class HomeController extends GetxController {
-  RxList cleaningAddons = RxList(
-      ['Fridge', 'Microwave', 'Cabinets', 'Ironing', 'Washing', 'Drying']);
-
   RxInt bedrooms = 0.obs;
   RxInt bathrooms = 0.obs;
   int homeStackIndex = 0;
@@ -39,7 +37,10 @@ class HomeController extends GetxController {
         return const CleanersList();
       case 5:
         return const CleanerDetailPage();
+
       case 6:
+        return const MakeOfferPage();
+      case 7:
         return const CleaningOrderSummary();
       default:
         //TODO implement reset page

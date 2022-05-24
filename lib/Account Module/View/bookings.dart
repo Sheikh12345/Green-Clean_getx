@@ -20,8 +20,9 @@ class BookingsPage extends GetView<AccountController> {
           AppBarView(
             title: "Bookings",
             enableBackButton: true,
-            onPressed: () => Get.find<AccountController>()
+            backButtonOnPressed: () => Get.find<AccountController>()
                 .setIndex(Get.find<AccountController>().accountStackIndex - 2),
+            enableTrailingButton: false,
           ),
           Expanded(
               child: Container(
@@ -55,7 +56,7 @@ class BookingsPage extends GetView<AccountController> {
                               child: AnimatedContainer(
                                 padding: const EdgeInsets.only(bottom: 5),
                                 decoration: BoxDecoration(
-                                    border: controller.bookingType == 0
+                                    border: controller.bookingType.value == 0
                                         ? Border(
                                             bottom: BorderSide(
                                                 color: theme.primaryColor,
@@ -67,7 +68,7 @@ class BookingsPage extends GetView<AccountController> {
                                     "Accepted",
                                     presetFontSizes: const [16],
                                     style: TextStyle(
-                                        color: controller.bookingType == 0
+                                        color: controller.bookingType.value == 0
                                             ? Colors.black
                                             : Colors.black38),
                                   ),
@@ -81,7 +82,7 @@ class BookingsPage extends GetView<AccountController> {
                               child: AnimatedContainer(
                                 padding: const EdgeInsets.only(bottom: 5),
                                 decoration: BoxDecoration(
-                                    border: controller.bookingType == 1
+                                    border: controller.bookingType.value == 1
                                         ? Border(
                                             bottom: BorderSide(
                                                 color: theme.primaryColor,
@@ -93,7 +94,7 @@ class BookingsPage extends GetView<AccountController> {
                                     "In Progress",
                                     presetFontSizes: const [16],
                                     style: TextStyle(
-                                        color: controller.bookingType == 1
+                                        color: controller.bookingType.value == 1
                                             ? Colors.black
                                             : Colors.black38),
                                   ),
@@ -107,7 +108,7 @@ class BookingsPage extends GetView<AccountController> {
                               child: AnimatedContainer(
                                 padding: const EdgeInsets.only(bottom: 5),
                                 decoration: BoxDecoration(
-                                    border: controller.bookingType == 2
+                                    border: controller.bookingType.value == 2
                                         ? Border(
                                             bottom: BorderSide(
                                                 color: theme.primaryColor,
@@ -119,7 +120,7 @@ class BookingsPage extends GetView<AccountController> {
                                     "Completed",
                                     presetFontSizes: const [16],
                                     style: TextStyle(
-                                        color: controller.bookingType == 2
+                                        color: controller.bookingType.value == 2
                                             ? Colors.black
                                             : Colors.black38),
                                   ),
@@ -134,11 +135,14 @@ class BookingsPage extends GetView<AccountController> {
                   height: height * 0.03,
                 ),
                 Expanded(
-                    child: ListView.builder(
-                        itemBuilder: (_, index) => BookingThumbnail(
-                              accountBooking: true,
-                              onPressed: () {},
-                            )))
+                  child: ListView.builder(
+                    padding: const EdgeInsets.all(0),
+                    itemBuilder: (_, index) => BookingThumbnail(
+                      accountBooking: true,
+                      onPressed: () {},
+                    ),
+                  ),
+                )
               ],
             ),
           ))

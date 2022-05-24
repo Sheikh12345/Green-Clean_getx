@@ -20,10 +20,12 @@ class CleanersList extends StatelessWidget {
           AppBarView(
             title: "Available Cleaners",
             enableBackButton: true,
-            onPressed: () {
+            backButtonOnPressed: () {
               Get.find<HomeController>()
                   .setIndex(Get.find<HomeController>().homeStackIndex - 1);
             },
+            enableTrailingButton: true,
+            trailingButtonOnPressed: () {},
           ),
           Expanded(
             child: Container(
@@ -202,7 +204,8 @@ class CleanerDetailThumbnail extends StatelessWidget {
                             Expanded(
                                 child: ElevatedButton.icon(
                               onPressed: () {},
-                              icon: const Icon(Icons.chat),
+                              icon: const Icon(
+                                  Icons.chat_bubble_outline_outlined),
                               label: const AutoSizeText(
                                 "Chat",
                                 maxLines: 1,

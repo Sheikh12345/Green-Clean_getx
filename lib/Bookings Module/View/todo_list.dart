@@ -20,7 +20,8 @@ class ToDoList extends StatelessWidget {
             AppBarView(
               title: "ToDo List",
               enableBackButton: true,
-              onPressed: () => Get.back(),
+              backButtonOnPressed: () => Get.back(),
+              enableTrailingButton: false,
             ),
             Expanded(
                 child: Container(

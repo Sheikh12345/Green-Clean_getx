@@ -22,7 +22,8 @@ class AmenitiesPage extends StatelessWidget {
               AppBarView(
                 title: "Amenities",
                 enableBackButton: true,
-                onPressed: () => Get.back(),
+                backButtonOnPressed: () => Get.back(),
+                enableTrailingButton: false,
               ),
               Expanded(
                 child: Container(
@@ -373,7 +374,7 @@ class AmenitiesPage extends StatelessWidget {
                             ),
                             GestureDetector(
                               onTap: () {
-                                Get.to(() => const AmenitiesOnePage());
+                                Get.to(() => AmenitiesOnePage());
                               },
                               child: Container(
                                   padding: const EdgeInsets.all(12),

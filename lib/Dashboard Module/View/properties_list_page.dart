@@ -1,7 +1,7 @@
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:green_and_clean/Add%20Property%20Module/View/addproperty_page.dart';
+import 'package:green_and_clean/Add%20Property%20Module/View/select_property_type.dart';
 import 'package:green_and_clean/Utils/widgets/appbar.dart';
 import '../../../Dashboard Module/View Model/dashboard_controller.dart';
 
@@ -17,7 +17,11 @@ class PropertiesListPage extends GetView<DashboardController> {
       color: theme.primaryColor,
       child: Column(
         children: [
-          const AppBarView(title: "Green & Clean", enableBackButton: false),
+          const AppBarView(
+            title: "Green & Clean",
+            enableBackButton: false,
+            enableTrailingButton: false,
+          ),
           Expanded(
               child: Container(
             decoration: const BoxDecoration(
@@ -88,6 +92,7 @@ class PropertiesListPage extends GetView<DashboardController> {
                                           const Text(
                                             "Checking Out",
                                             maxLines: 1,
+                                            style: TextStyle(fontSize: 10),
                                             textAlign: TextAlign.center,
                                           )
                                         ],
@@ -117,6 +122,7 @@ class PropertiesListPage extends GetView<DashboardController> {
                                         const Text(
                                           "Waiting for Cleaning",
                                           maxLines: 1,
+                                          style: TextStyle(fontSize: 10),
                                           textAlign: TextAlign.center,
                                         )
                                       ],
@@ -145,6 +151,7 @@ class PropertiesListPage extends GetView<DashboardController> {
                                         const Text(
                                           "Active Cleaning",
                                           maxLines: 1,
+                                          style: TextStyle(fontSize: 10),
                                           textAlign: TextAlign.center,
                                         )
                                       ],
@@ -166,7 +173,7 @@ class PropertiesListPage extends GetView<DashboardController> {
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          const AutoSizeText("What do you want to clean?"),
+                          const Text("What do you want to clean?"),
                           SizedBox(
                             height: height * 0.02,
                           ),
@@ -188,8 +195,9 @@ class PropertiesListPage extends GetView<DashboardController> {
                                     const SizedBox(
                                       height: 5,
                                     ),
-                                    const AutoSizeText(
+                                    const Text(
                                       "House",
+                                      style: TextStyle(fontSize: 12),
                                       textAlign: TextAlign.center,
                                       maxLines: 1,
                                     )
@@ -204,15 +212,16 @@ class PropertiesListPage extends GetView<DashboardController> {
                                     ClipRRect(
                                       borderRadius: BorderRadius.circular(10),
                                       child: Image.asset(
-                                          "assets/images/home.jpeg",
+                                          "assets/images/apartment.png",
                                           height: width * 0.2,
                                           fit: BoxFit.cover),
                                     ),
                                     const SizedBox(
                                       height: 5,
                                     ),
-                                    const AutoSizeText(
+                                    const Text(
                                       "Apartment",
+                                      style: TextStyle(fontSize: 12),
                                       textAlign: TextAlign.center,
                                       maxLines: 1,
                                     )
@@ -227,15 +236,16 @@ class PropertiesListPage extends GetView<DashboardController> {
                                     ClipRRect(
                                       borderRadius: BorderRadius.circular(10),
                                       child: Image.asset(
-                                          "assets/images/home.jpeg",
+                                          "assets/images/vacation.png",
                                           height: width * 0.2,
                                           fit: BoxFit.cover),
                                     ),
                                     const SizedBox(
                                       height: 5,
                                     ),
-                                    const AutoSizeText(
+                                    const Text(
                                       "Vacation Rental",
+                                      style: TextStyle(fontSize: 12),
                                       textAlign: TextAlign.center,
                                       maxLines: 1,
                                     )
@@ -250,7 +260,7 @@ class PropertiesListPage extends GetView<DashboardController> {
                                     ClipRRect(
                                       borderRadius: BorderRadius.circular(10),
                                       child: Image.asset(
-                                        "assets/images/home.jpeg",
+                                        "assets/images/hotel.png",
                                         fit: BoxFit.cover,
                                         height: width * 0.2,
                                       ),
@@ -258,8 +268,9 @@ class PropertiesListPage extends GetView<DashboardController> {
                                     const SizedBox(
                                       height: 5,
                                     ),
-                                    const AutoSizeText(
+                                    const Text(
                                       "Hotel",
+                                      style: TextStyle(fontSize: 12),
                                       textAlign: TextAlign.center,
                                       maxLines: 1,
                                     )
@@ -275,9 +286,10 @@ class PropertiesListPage extends GetView<DashboardController> {
                 ),
                 SliverToBoxAdapter(
                   child: Card(
+                    elevation: 4,
                     child: Padding(
-                      padding: EdgeInsets.symmetric(
-                          horizontal: width * 0.05, vertical: height * 0.01),
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 10, vertical: 10),
                       child: SizedBox(
                         width: width,
                         child: Obx(() => Row(
@@ -291,15 +303,15 @@ class PropertiesListPage extends GetView<DashboardController> {
                                       },
                                       child: AnimatedContainer(
                                         padding: const EdgeInsets.only(
-                                          bottom: 5,
-                                        ),
+                                            bottom: 5, top: 5),
                                         margin:
                                             const EdgeInsets.only(right: 10),
                                         decoration: BoxDecoration(
                                             border: Border(
                                                 bottom: BorderSide(
                                                     color: controller
-                                                                .propertiesListType ==
+                                                                .propertiesListType
+                                                                .value ==
                                                             0
                                                         ? theme.primaryColor
                                                         : Colors.white,
@@ -307,16 +319,10 @@ class PropertiesListPage extends GetView<DashboardController> {
                                         duration:
                                             const Duration(milliseconds: 500),
                                         child: const Center(
-                                          child: AutoSizeText(
-                                            "My Properties",
+                                          child: Text(
+                                            "Properties",
                                             maxLines: 1,
-                                            presetFontSizes: [
-                                              16,
-                                              14,
-                                              12,
-                                              10,
-                                              8
-                                            ],
+                                            style: TextStyle(fontSize: 14),
                                           ),
                                         ),
                                       ),
@@ -331,15 +337,15 @@ class PropertiesListPage extends GetView<DashboardController> {
                                     child: Center(
                                       child: AnimatedContainer(
                                         padding: const EdgeInsets.only(
-                                          bottom: 5,
-                                        ),
+                                            bottom: 5, top: 5),
                                         margin:
                                             const EdgeInsets.only(right: 10),
                                         decoration: BoxDecoration(
                                             border: Border(
                                                 bottom: BorderSide(
                                                     color: controller
-                                                                .propertiesListType ==
+                                                                .propertiesListType
+                                                                .value ==
                                                             1
                                                         ? theme.primaryColor
                                                         : Colors.white,
@@ -347,16 +353,10 @@ class PropertiesListPage extends GetView<DashboardController> {
                                         duration:
                                             const Duration(milliseconds: 500),
                                         child: const Center(
-                                          child: AutoSizeText(
+                                          child: Text(
                                             "Active Cleaning",
                                             maxLines: 1,
-                                            presetFontSizes: [
-                                              16,
-                                              14,
-                                              12,
-                                              10,
-                                              8
-                                            ],
+                                            style: TextStyle(fontSize: 14),
                                           ),
                                         ),
                                       ),
@@ -372,6 +372,7 @@ class PropertiesListPage extends GetView<DashboardController> {
                                       child: AnimatedContainer(
                                         padding: const EdgeInsets.only(
                                           bottom: 5,
+                                          top: 5,
                                         ),
                                         margin:
                                             const EdgeInsets.only(right: 10),
@@ -379,7 +380,8 @@ class PropertiesListPage extends GetView<DashboardController> {
                                             border: Border(
                                                 bottom: BorderSide(
                                                     color: controller
-                                                                .propertiesListType ==
+                                                                .propertiesListType
+                                                                .value ==
                                                             2
                                                         ? theme.primaryColor
                                                         : Colors.white,
@@ -387,16 +389,10 @@ class PropertiesListPage extends GetView<DashboardController> {
                                         duration:
                                             const Duration(milliseconds: 500),
                                         child: const Center(
-                                          child: AutoSizeText(
+                                          child: Text(
                                             "Future Cleaning",
                                             maxLines: 1,
-                                            presetFontSizes: [
-                                              16,
-                                              14,
-                                              12,
-                                              10,
-                                              8
-                                            ],
+                                            style: TextStyle(fontSize: 14),
                                           ),
                                         ),
                                       ),
@@ -410,12 +406,12 @@ class PropertiesListPage extends GetView<DashboardController> {
                   ),
                 ),
                 SliverToBoxAdapter(
-                  child: Obx(() => controller.propertiesListType == 0
+                  child: Obx(() => controller.propertiesListType.value == 0
                       ? Align(
                           alignment: Alignment.centerLeft,
                           child: TextButton.icon(
                             onPressed: () {
-                              Get.to(() => const AddPropertyPage());
+                              Get.to(() => const SelectPropertyTypePage());
                             },
                             icon: const Icon(Icons.add_circle_outline),
                             label: const AutoSizeText("Add Properties"),
@@ -490,27 +486,24 @@ class MyProperties extends StatelessWidget {
                                     children: [
                                       Expanded(
                                           child: Container(
-                                        padding: EdgeInsets.all(width * 0.01),
+                                        padding: const EdgeInsets.all(4),
                                         decoration: BoxDecoration(
                                             color: theme.primaryColor,
                                             borderRadius:
                                                 BorderRadius.circular(50)),
                                         child: Row(
                                           children: [
-                                            Flexible(
-                                                child: Icon(
+                                            Icon(
                                               Icons.restore,
                                               color: Colors.white,
                                               size: width * 0.05,
-                                            )),
-                                            const Expanded(
-                                                child: AutoSizeText(
+                                            ),
+                                            const Text(
                                               "Clean Now",
-                                              minFontSize: 10,
-                                              maxLines: 1,
                                               style: TextStyle(
-                                                  color: Colors.white),
-                                            ))
+                                                  color: Colors.white,
+                                                  fontSize: 10),
+                                            )
                                           ],
                                         ),
                                       )),
@@ -519,7 +512,7 @@ class MyProperties extends StatelessWidget {
                                       ),
                                       Expanded(
                                           child: Container(
-                                        padding: EdgeInsets.all(width * 0.01),
+                                        padding: const EdgeInsets.all(4),
                                         decoration: BoxDecoration(
                                             color: theme.primaryColor,
                                             borderRadius:
@@ -529,23 +522,20 @@ class MyProperties extends StatelessWidget {
                                             const SizedBox(
                                               width: 3,
                                             ),
-                                            Flexible(
-                                                child: Icon(
+                                            Icon(
                                               Icons.calendar_today,
                                               color: Colors.white,
                                               size: width * 0.05,
-                                            )),
+                                            ),
                                             const SizedBox(
                                               width: 3,
                                             ),
-                                            const Expanded(
-                                                child: AutoSizeText(
+                                            const Text(
                                               "Schedule",
-                                              maxLines: 1,
-                                              minFontSize: 10,
                                               style: TextStyle(
-                                                  color: Colors.white),
-                                            )),
+                                                  color: Colors.white,
+                                                  fontSize: 10),
+                                            ),
                                           ],
                                         ),
                                       )),

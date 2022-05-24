@@ -22,10 +22,11 @@ class CleaningSchedulePage extends StatelessWidget {
             AppBarView(
               title: "Green & Clean",
               enableBackButton: true,
-              onPressed: () {
+              backButtonOnPressed: () {
                 Get.find<HomeController>()
                     .setIndex(Get.find<HomeController>().homeStackIndex - 1);
               },
+              enableTrailingButton: false,
             ),
             Expanded(
               child: Container(
@@ -48,11 +49,18 @@ class CleaningSchedulePage extends StatelessWidget {
                               prefixIcon: const Icon(Icons.location_on_sharp,
                                   color: Colors.grey),
                               hintText: "Enter cleaning location",
-                              suffixIcon: const Icon(Icons.location_searching),
+                              suffixIcon: Icon(
+                                Icons.location_searching,
+                                color: Colors.blue.shade800,
+                              ),
+                              focusedBorder: OutlineInputBorder(
+                                  borderRadius: BorderRadius.circular(10),
+                                  borderSide:
+                                      BorderSide(color: Colors.blue.shade800)),
                               border: OutlineInputBorder(
                                   borderRadius: BorderRadius.circular(10),
                                   borderSide:
-                                      BorderSide(color: theme.primaryColor))),
+                                      BorderSide(color: Colors.blue.shade800))),
                         )),
                     SizedBox(
                       height: height * 0.03,
@@ -68,7 +76,7 @@ class CleaningSchedulePage extends StatelessWidget {
                       height: height * 0.02,
                     ),
                     Padding(
-                      padding: EdgeInsets.symmetric(horizontal: width * 0.1),
+                      padding: const EdgeInsets.symmetric(horizontal: 40),
                       child: Row(
                         children: [
                           Expanded(
@@ -82,7 +90,8 @@ class CleaningSchedulePage extends StatelessWidget {
                                   width: height * 0.1,
                                   decoration: BoxDecoration(
                                       color: Get.find<HomeController>()
-                                                  .scheduleType ==
+                                                  .scheduleType
+                                                  .value ==
                                               0
                                           ? Colors.black
                                           : theme.primaryColor,
@@ -121,7 +130,8 @@ class CleaningSchedulePage extends StatelessWidget {
                                   width: height * 0.1,
                                   decoration: BoxDecoration(
                                       color: Get.find<HomeController>()
-                                                  .scheduleType ==
+                                                  .scheduleType
+                                                  .value ==
                                               1
                                           ? Colors.black
                                           : theme.primaryColor,
@@ -166,7 +176,7 @@ class CleaningSchedulePage extends StatelessWidget {
                       height: height * 0.02,
                     ),
                     Padding(
-                      padding: EdgeInsets.symmetric(horizontal: width * 0.1),
+                      padding: const EdgeInsets.symmetric(horizontal: 40),
                       child: Row(
                         children: [
                           Expanded(
@@ -208,7 +218,7 @@ class CleaningSchedulePage extends StatelessWidget {
                       height: height * 0.02,
                     ),
                     Padding(
-                      padding: EdgeInsets.symmetric(horizontal: width * 0.1),
+                      padding: const EdgeInsets.symmetric(horizontal: 40),
                       child: Row(
                         children: [
                           Expanded(
@@ -290,11 +300,9 @@ class ServiceCard extends StatelessWidget {
             SizedBox(
               height: height * 0.01,
             ),
-            AutoSizeText(
+            Text(
               text,
-              style: const TextStyle(color: Colors.white),
-              presetFontSizes: fontSizes ?? [14, 12, 10, 8],
-              minFontSize: 8,
+              style: const TextStyle(color: Colors.white, fontSize: 10),
               maxLines: 1,
               textAlign: TextAlign.center,
             )

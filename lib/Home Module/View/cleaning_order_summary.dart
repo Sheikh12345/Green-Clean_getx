@@ -21,10 +21,11 @@ class CleaningOrderSummary extends StatelessWidget {
           AppBarView(
             title: "Summary",
             enableBackButton: true,
-            onPressed: () {
+            backButtonOnPressed: () {
               Get.find<HomeController>()
                   .setIndex(Get.find<HomeController>().homeStackIndex - 1);
             },
+            enableTrailingButton: false,
           ),
           Expanded(
               child: Container(
@@ -317,23 +318,40 @@ class CleaningOrderSummary extends StatelessWidget {
                   ),
                   Row(
                     children: [
-                      TextButton.icon(
-                        onPressed: () {
-                          Get.to(() => const AddPaymentMethod());
-                        },
-                        icon: const Icon(Icons.add_circle),
-                        label: const AutoSizeText("Add Payment"),
-                        style: TextButton.styleFrom(primary: Colors.black),
+                      Expanded(
+                        child: TextButton.icon(
+                          onPressed: () {
+                            Get.to(() => const AddPaymentMethod());
+                          },
+                          icon: const Icon(Icons.add_circle),
+                          label: const AutoSizeText("Add Payment"),
+                          style: TextButton.styleFrom(primary: Colors.black),
+                        ),
                       ),
-                      const Spacer(),
-                      TextButton(
-                        onPressed: () {},
-                        child: const AutoSizeText("Promo Code"),
-                        style: TextButton.styleFrom(
-                            shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(10),
-                                side: const BorderSide(color: Colors.black38)),
-                            primary: Colors.black38),
+                      // const Spacer(),
+                      Expanded(
+                        child: TextField(
+                          textAlign: TextAlign.center,
+                          keyboardType: TextInputType.number,
+                          maxLength: 2,
+                          style: const TextStyle(color: Colors.white),
+                          decoration: InputDecoration(
+                              counterText: "",
+                              fillColor: Colors.white,
+                              filled: true,
+                              focusedBorder: const OutlineInputBorder(
+                                  borderSide:
+                                      BorderSide(color: Colors.grey, width: 1),
+                                  borderRadius:
+                                      BorderRadius.all(Radius.circular(10))),
+                              contentPadding: const EdgeInsets.symmetric(),
+                              border: OutlineInputBorder(
+                                  borderSide: const BorderSide(
+                                      color: Colors.grey, width: 1),
+                                  borderRadius: BorderRadius.circular(10)),
+                              hintText: "Promo code",
+                              hintStyle: const TextStyle(color: Colors.grey)),
+                        ),
                       )
                     ],
                   ),

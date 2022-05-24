@@ -1,7 +1,7 @@
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:green_and_clean/Add%20Property%20Module/View/addproperty_controller.dart';
+import 'package:green_and_clean/Add%20Property%20Module/View%20Model/addproperty_controller.dart';
 import 'package:green_and_clean/Add%20Property%20Module/View/vacationrental_page.dart';
 import 'package:green_and_clean/Home%20Module/View%20Model/home_controller.dart';
 import 'package:green_and_clean/Utils/widgets/appbar.dart';
@@ -25,6 +25,7 @@ class CleaningCategoryPage extends StatelessWidget {
           const AppBarView(
             title: "Green & Clean",
             enableBackButton: false,
+            enableTrailingButton: false,
           ),
           Expanded(
               child: Container(

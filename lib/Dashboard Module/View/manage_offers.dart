@@ -17,13 +17,13 @@ class ManageOffers extends StatelessWidget {
       child: Column(
         children: [
           AppBarView(
-            title: "Manage Offers",
-            enableBackButton: true,
-            onPressed: () {
-              Get.find<DashboardController>().setIndex(
-                  Get.find<DashboardController>().dashboardStackIndex - 1);
-            },
-          ),
+              title: "Manage Offers",
+              enableBackButton: true,
+              backButtonOnPressed: () {
+                Get.find<DashboardController>().setIndex(
+                    Get.find<DashboardController>().dashboardStackIndex - 1);
+              },
+              enableTrailingButton: false),
           Expanded(
               child: Container(
             padding: const EdgeInsets.only(top: 10),

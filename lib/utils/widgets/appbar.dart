@@ -8,11 +8,15 @@ class AppBarView extends StatelessWidget {
       {Key? key,
       required this.title,
       required this.enableBackButton,
-      this.onPressed})
+      this.backButtonOnPressed,
+      this.trailingButtonOnPressed,
+      required this.enableTrailingButton})
       : super(key: key);
   final String title;
   final bool enableBackButton;
-  final Function()? onPressed;
+  final bool enableTrailingButton;
+  final Function()? backButtonOnPressed;
+  final Function()? trailingButtonOnPressed;
   @override
   Widget build(BuildContext context) {
     final height = Get.height;
@@ -25,7 +29,7 @@ class AppBarView extends StatelessWidget {
         children: [
           enableBackButton
               ? GestureDetector(
-                  onTap: onPressed,
+                  onTap: backButtonOnPressed,
                   child: Padding(
                     padding: EdgeInsets.only(left: width * 0.05, right: 5),
                     child: const FaIcon(
@@ -46,7 +50,20 @@ class AppBarView extends StatelessWidget {
           const Expanded(
             child: SizedBox(),
             flex: 3,
-          )
+          ),
+          enableTrailingButton
+              ? GestureDetector(
+                  onTap: trailingButtonOnPressed,
+                  child: Padding(
+                    padding: EdgeInsets.only(left: width * 0.05, right: 5),
+                    child: const FaIcon(
+                      FontAwesomeIcons.filter,
+                      size: 20,
+                      color: Colors.white,
+                    ),
+                  ),
+                )
+              : const SizedBox(),
         ],
       ),
     );

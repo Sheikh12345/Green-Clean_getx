@@ -21,10 +21,11 @@ class BookingDetail extends StatelessWidget {
           AppBarView(
             title: "Booking Detail",
             enableBackButton: true,
-            onPressed: () {
+            backButtonOnPressed: () {
               Get.find<BookingsController>().setIndex(
                   Get.find<BookingsController>().bookingStackIndex - 1);
             },
+            enableTrailingButton: false,
           ),
           Expanded(
               child: SingleChildScrollView(
@@ -485,29 +486,41 @@ class BookingDetail extends StatelessWidget {
                       children: [
                         Flexible(
                           child: MaterialButton(
-                            color: const Color(0xff60EF06),
-                            minWidth: width * 0.4,
-                            onPressed: () {},
-                            height: height * 0.06,
-                            shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(5)),
-                            child: const AutoSizeText("ACCEPT"),
-                          ),
-                        ),
-                        Flexible(
-                          child: MaterialButton(
                             color: Colors.red,
                             minWidth: width * 0.4,
                             height: height * 0.06,
                             shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(5)),
-                            onPressed: () {},
+                            onPressed: () {
+                              Get.find<BookingsController>().setIndex(
+                                  Get.find<BookingsController>()
+                                          .bookingStackIndex -
+                                      1);
+                            },
                             child: const AutoSizeText(
                               "DECLINE",
                               style: TextStyle(color: Colors.white),
                             ),
                           ),
-                        )
+                        ),
+                        Flexible(
+                          child: MaterialButton(
+                            color: const Color(0xff60EF06),
+                            minWidth: width * 0.4,
+                            onPressed: () {
+                              Get.find<BookingsController>().setIndex(
+                                  Get.find<BookingsController>()
+                                          .bookingStackIndex +
+                                      1);
+                            },
+                            height: height * 0.06,
+                            shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(5)),
+                            child: const AutoSizeText(
+                              "ACCEPT",
+                            ),
+                          ),
+                        ),
                       ],
                     ),
                     SizedBox(

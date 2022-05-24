@@ -22,7 +22,8 @@ class IcalConnectionPage extends StatelessWidget {
               AppBarView(
                 title: "Vacation Rental Connection",
                 enableBackButton: true,
-                onPressed: () => Get.back(),
+                backButtonOnPressed: () => Get.back(),
+                enableTrailingButton: false,
               ),
               Expanded(
                   child: Container(
@@ -49,7 +50,7 @@ class IcalConnectionPage extends StatelessWidget {
                                 children: [
                                   Row(
                                     children: const [
-                                      Icon(Icons.connecting_airports_outlined),
+                                      Icon(Icons.link_outlined),
                                       SizedBox(
                                         width: 5,
                                       ),

@@ -17,7 +17,11 @@ class BookingsList extends GetView<BookingsController> {
       color: theme.primaryColor,
       child: Column(
         children: [
-          const AppBarView(title: "Bookings", enableBackButton: false),
+          const AppBarView(
+            title: "Bookings",
+            enableBackButton: false,
+            enableTrailingButton: false,
+          ),
           Expanded(
               child: Container(
             decoration: const BoxDecoration(
@@ -131,6 +135,7 @@ class BookingsList extends GetView<BookingsController> {
                 ),
                 Expanded(
                     child: ListView.builder(
+                        padding: const EdgeInsets.all(0),
                         itemBuilder: (_, index) => BookingThumbnail(
                               accountBooking: false,
                               onPressed: () => Get.find<BookingsController>()

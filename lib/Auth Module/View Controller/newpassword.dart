@@ -62,7 +62,6 @@ class NewPasswordPage extends StatelessWidget {
                         const SizedBox(height: 40),
                         Obx(
                           () => TextField(
-                            textAlign: TextAlign.center,
                             obscureText: authController.isPasswordVisible.value,
                             decoration: InputDecoration(
                               hintText: "New Password",
@@ -76,7 +75,8 @@ class NewPasswordPage extends StatelessWidget {
                                   authController.isPasswordVisible.value
                                       ? Icons.visibility
                                       : Icons.visibility_off,
-                                  // color: Colors.blue.shade800,
+                                  color: Colors.blue.shade800,
+
                                   size: 22,
                                 ),
                                 onPressed: () {
@@ -93,8 +93,8 @@ class NewPasswordPage extends StatelessWidget {
                         const SizedBox(height: 30),
                         Obx(
                           () => TextField(
-                            textAlign: TextAlign.center,
-                            obscureText: authController.isPasswordVisible.value,
+                            obscureText:
+                                authController.isConfirmPasswordVisible.value,
                             decoration: InputDecoration(
                               hintText: "Confirm Password",
                               prefixIcon: const Icon(
@@ -104,7 +104,7 @@ class NewPasswordPage extends StatelessWidget {
                               suffixIcon: IconButton(
                                 icon: Icon(
                                   // Based on passwordVisible state choose the icon
-                                  authController.isPasswordVisible.value
+                                  authController.isConfirmPasswordVisible.value
                                       ? Icons.visibility
                                       : Icons.visibility_off,
                                   color: Colors.blue.shade800,
@@ -112,7 +112,8 @@ class NewPasswordPage extends StatelessWidget {
                                 ),
                                 onPressed: () {
                                   // Update the state i.e. toogle the state of passwordVisible variable
-                                  authController.changePasswordVisibility();
+                                  authController
+                                      .changeConfirmPasswordVisibility();
                                 },
                               ),
                               focusedBorder: UnderlineInputBorder(

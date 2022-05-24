@@ -42,23 +42,21 @@ class LoginPage extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       TextField(
-                          textAlign: TextAlign.center,
                           decoration: InputDecoration(
-                            hintText: "Your Email / Mobile Number",
-                            prefixIcon: const Icon(
-                              Icons.email,
-                              size: 22,
-                            ),
-                            focusedBorder: UnderlineInputBorder(
-                                borderSide: BorderSide(
-                                    color: Colors.blue.shade800, width: 1.5)),
-                          )),
+                        hintText: "Your Email / Mobile Number",
+                        prefixIcon: const Icon(
+                          Icons.email,
+                          size: 22,
+                        ),
+                        focusedBorder: UnderlineInputBorder(
+                            borderSide: BorderSide(
+                                color: Colors.blue.shade800, width: 1.5)),
+                      )),
                       const SizedBox(
                         height: 40,
                       ),
                       Obx(
                         () => TextField(
-                          textAlign: TextAlign.center,
                           obscureText: authController.isPasswordVisible.value,
                           decoration: InputDecoration(
                             hintText: "Password",
