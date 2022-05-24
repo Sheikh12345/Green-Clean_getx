@@ -1,4 +1,3 @@
-import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:green_and_clean/Add%20Property%20Module/View/addproperty_page.dart';
@@ -40,68 +39,70 @@ class SelectPropertyTypePage extends StatelessWidget {
                         topRight: Radius.circular(25),
                         topLeft: Radius.circular(25))),
                 padding: const EdgeInsets.symmetric(horizontal: 10),
-                child: Column(
-                  children: [
-                    SizedBox(
-                      height: height * 0.02,
-                    ),
-                    const AutoSizeText(
-                      "Please select the type of property",
-                      style: TextStyle(
-                          color: Colors.grey,
-                          fontWeight: FontWeight.w500,
-                          fontSize: 16),
-                    ),
-                    SizedBox(
-                      height: height * 0.02,
-                    ),
-                    Column(
-                      children: [
-                        Row(
-                          children: [
-                            Expanded(
+                child: SingleChildScrollView(
+                  child: Column(
+                    children: [
+                      SizedBox(
+                        height: height * 0.02,
+                      ),
+                      const Text(
+                        "Please select the type of property",
+                        style: TextStyle(
+                            color: Colors.grey,
+                            fontWeight: FontWeight.w500,
+                            fontSize: 16),
+                      ),
+                      SizedBox(
+                        height: height * 0.02,
+                      ),
+                      Column(
+                        children: [
+                          Row(
+                            children: [
+                              Expanded(
+                                  child: CategoryThumbnail(
+                                      image: "assets/images/vacation.png",
+                                      halfWidth: true,
+                                      title: "Vacation Rental",
+                                      onPressed: () => Get.to(
+                                          () => const AddPropertyPage()))),
+                              Expanded(
                                 child: CategoryThumbnail(
-                                    image: "assets/images/vacation.png",
+                                    image: "assets/images/hotel.png",
                                     halfWidth: true,
-                                    title: "Vacation Rental",
+                                    title: "Hotel",
                                     onPressed: () =>
-                                        Get.to(() => const AddPropertyPage()))),
-                            Expanded(
-                              child: CategoryThumbnail(
-                                  image: "assets/images/hotel.png",
-                                  halfWidth: true,
-                                  title: "Hotel",
-                                  onPressed: () =>
-                                      Get.to(() => const AddPropertyPage())),
-                            ),
-                          ],
-                        ),
-                        const SizedBox(
-                          height: 20,
-                        ),
-                        Row(
-                          children: [
-                            Expanded(
-                              child: CategoryThumbnail(
-                                  image: "assets/images/house.png",
-                                  halfWidth: true,
-                                  title: "House",
-                                  onPressed: () =>
-                                      Get.to(() => const AddPropertyPage())),
-                            ),
-                            Expanded(
-                              child: CategoryThumbnail(
-                                  image: "assets/images/apartment.png",
-                                  halfWidth: true,
-                                  title: "Apartment",
-                                  onPressed: () =>
-                                      Get.to(() => const AddPropertyPage())),
-                            ),
-                          ],
-                        ),
-                      ],
-                    )
-                  ],
+                                        Get.to(() => const AddPropertyPage())),
+                              ),
+                            ],
+                          ),
+                          const SizedBox(
+                            height: 20,
+                          ),
+                          Row(
+                            children: [
+                              Expanded(
+                                child: CategoryThumbnail(
+                                    image: "assets/images/house.png",
+                                    halfWidth: true,
+                                    title: "House",
+                                    onPressed: () =>
+                                        Get.to(() => const AddPropertyPage())),
+                              ),
+                              Expanded(
+                                child: CategoryThumbnail(
+                                    image: "assets/images/apartment.png",
+                                    halfWidth: true,
+                                    title: "Apartment",
+                                    onPressed: () =>
+                                        Get.to(() => const AddPropertyPage())),
+                              ),
+                            ],
+                          ),
+                        ],
+                      )
+                    ],
+                  ),
                 ),
               ),
             ),

@@ -1,9 +1,8 @@
-import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
-
 import '../../../Account Module/View Model/account_controller.dart';
+import '../../Utils/Constants/size.dart';
 
 class ProfilePage extends StatelessWidget {
   const ProfilePage({Key? key}) : super(key: key);
@@ -35,7 +34,7 @@ class ProfilePage extends StatelessWidget {
                           child: SizedBox(),
                           flex: 3,
                         ),
-                        const AutoSizeText(
+                        const Text(
                           "Profile",
                           style: TextStyle(color: Colors.white, fontSize: 18),
                           textAlign: TextAlign.center,
@@ -56,7 +55,7 @@ class ProfilePage extends StatelessWidget {
                     SizedBox(
                       height: height * 0.04,
                     ),
-                    const AutoSizeText("mayra.querales@gmail.com",
+                    const Text("mayra.querales@gmail.com",
                         style: TextStyle(color: Colors.white, fontSize: 14),
                         textAlign: TextAlign.center),
                     SizedBox(
@@ -281,6 +280,31 @@ class ProfilePage extends StatelessWidget {
                   )),
               textAlign: TextAlign.center,
             ),
+          ),
+          const SizedBox(
+            height: 10,
+          ),
+          GestureDetector(
+            onTap: () {
+              // Get.find<HomeController>().setIndex(
+              //     Get.find<HomeController>().homeStackIndex + 1);
+            },
+            child: Container(
+              width: AppConfig(context).width * 0.6,
+              height: 50,
+              decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(10),
+                  color: theme.primaryColor),
+              child: const Center(
+                child: Text(
+                  "Update",
+                  style: TextStyle(color: Colors.white),
+                ),
+              ),
+            ),
+          ),
+          const SizedBox(
+            height: 10,
           )
         ],
       ),

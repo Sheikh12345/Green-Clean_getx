@@ -69,7 +69,7 @@ class ReviewPage extends StatelessWidget {
                               Row(
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: const [
-                                  AutoSizeText(
+                                  Text(
                                     "4.0",
                                     style: TextStyle(color: Color(0xff0707070)),
                                   ),
@@ -144,10 +144,10 @@ class ReviewPage extends StatelessWidget {
                                       borderRadius: BorderRadius.circular(10),
                                       color: Colors.lightBlue),
                                   child: const Center(
-                                    child: AutoSizeText(
+                                    child: Text(
                                       "Submit",
-                                      style: TextStyle(color: Colors.white),
-                                      presetFontSizes: [20, 18],
+                                      style: TextStyle(
+                                          color: Colors.white, fontSize: 16),
                                     ),
                                   ),
                                 ),

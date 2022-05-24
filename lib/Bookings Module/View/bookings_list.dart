@@ -1,4 +1,3 @@
-import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:green_and_clean/Bookings%20Module/View%20Model/bookings_controller.dart';
@@ -62,9 +61,8 @@ class BookingsList extends GetView<BookingsController> {
                                         : null),
                                 duration: const Duration(milliseconds: 500),
                                 child: Center(
-                                  child: AutoSizeText(
+                                  child: Text(
                                     "Fixed",
-                                    presetFontSizes: const [16],
                                     style: TextStyle(
                                         color: controller.bookingType.value == 0
                                             ? Colors.black
@@ -88,9 +86,8 @@ class BookingsList extends GetView<BookingsController> {
                                         : null),
                                 duration: const Duration(milliseconds: 500),
                                 child: Center(
-                                  child: AutoSizeText(
+                                  child: Text(
                                     "Offers",
-                                    presetFontSizes: const [16],
                                     style: TextStyle(
                                         color: controller.bookingType.value == 1
                                             ? Colors.black
@@ -115,9 +112,8 @@ class BookingsList extends GetView<BookingsController> {
                                         : null),
                                 duration: const Duration(milliseconds: 500),
                                 child: Center(
-                                  child: AutoSizeText(
+                                  child: Text(
                                     "Per Hour",
-                                    presetFontSizes: const [16],
                                     style: TextStyle(
                                         color: controller.bookingType.value == 2
                                             ? Colors.black

@@ -1,4 +1,3 @@
-import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:green_and_clean/Add%20Property%20Module/View/select_property_type.dart';
@@ -37,9 +36,11 @@ class PropertiesListPage extends GetView<DashboardController> {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        const AutoSizeText(
+                        const Text(
                           "Dashboard",
-                          presetFontSizes: [22, 20],
+                          style: TextStyle(
+                            fontSize: 20,
+                          ),
                         ),
                         SizedBox(
                           height: height * 0.01,
@@ -51,9 +52,11 @@ class PropertiesListPage extends GetView<DashboardController> {
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
-                                const AutoSizeText(
+                                const Text(
                                   "Properties",
-                                  presetFontSizes: [22, 20],
+                                  style: TextStyle(
+                                    fontSize: 16,
+                                  ),
                                 ),
                                 SizedBox(
                                   height: height * 0.01,
@@ -78,11 +81,11 @@ class PropertiesListPage extends GetView<DashboardController> {
                                                 color: Colors.blueGrey,
                                                 shape: BoxShape.circle),
                                             child: const Center(
-                                              child: AutoSizeText(
+                                              child: Text(
                                                 "3",
                                                 style: TextStyle(
-                                                    color: Colors.white),
-                                                presetFontSizes: [22, 20, 18],
+                                                    color: Colors.white,
+                                                    fontSize: 14),
                                               ),
                                             ),
                                           ),
@@ -92,7 +95,7 @@ class PropertiesListPage extends GetView<DashboardController> {
                                           const Text(
                                             "Checking Out",
                                             maxLines: 1,
-                                            style: TextStyle(fontSize: 10),
+                                            style: TextStyle(fontSize: 12),
                                             textAlign: TextAlign.center,
                                           )
                                         ],
@@ -108,11 +111,11 @@ class PropertiesListPage extends GetView<DashboardController> {
                                               color: Colors.red,
                                               shape: BoxShape.circle),
                                           child: const Center(
-                                            child: AutoSizeText(
+                                            child: Text(
                                               "3",
                                               style: TextStyle(
-                                                  color: Colors.white),
-                                              presetFontSizes: [22],
+                                                  color: Colors.white,
+                                                  fontSize: 14),
                                             ),
                                           ),
                                         ),
@@ -122,7 +125,7 @@ class PropertiesListPage extends GetView<DashboardController> {
                                         const Text(
                                           "Waiting for Cleaning",
                                           maxLines: 1,
-                                          style: TextStyle(fontSize: 10),
+                                          style: TextStyle(fontSize: 12),
                                           textAlign: TextAlign.center,
                                         )
                                       ],
@@ -137,11 +140,11 @@ class PropertiesListPage extends GetView<DashboardController> {
                                               color: theme.primaryColor,
                                               shape: BoxShape.circle),
                                           child: const Center(
-                                            child: AutoSizeText(
+                                            child: Text(
                                               "3",
                                               style: TextStyle(
+                                                  fontSize: 14,
                                                   color: Colors.white),
-                                              presetFontSizes: [22],
                                             ),
                                           ),
                                         ),
@@ -151,7 +154,7 @@ class PropertiesListPage extends GetView<DashboardController> {
                                         const Text(
                                           "Active Cleaning",
                                           maxLines: 1,
-                                          style: TextStyle(fontSize: 10),
+                                          style: TextStyle(fontSize: 12),
                                           textAlign: TextAlign.center,
                                         )
                                       ],
@@ -169,7 +172,7 @@ class PropertiesListPage extends GetView<DashboardController> {
                 SliverToBoxAdapter(
                   child: Card(
                     child: Padding(
-                      padding: EdgeInsets.all(width * 0.03),
+                      padding: const EdgeInsets.all(5),
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
@@ -285,126 +288,117 @@ class PropertiesListPage extends GetView<DashboardController> {
                   ),
                 ),
                 SliverToBoxAdapter(
-                  child: Card(
-                    elevation: 4,
-                    child: Padding(
-                      padding: const EdgeInsets.symmetric(
-                          horizontal: 10, vertical: 10),
-                      child: SizedBox(
-                        width: width,
-                        child: Obx(() => Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceAround,
-                              children: [
-                                Expanded(
-                                  child: Center(
-                                    child: GestureDetector(
-                                      onTap: () {
-                                        controller.changePropertyListType(0);
-                                      },
-                                      child: AnimatedContainer(
-                                        padding: const EdgeInsets.only(
-                                            bottom: 5, top: 5),
-                                        margin:
-                                            const EdgeInsets.only(right: 10),
-                                        decoration: BoxDecoration(
-                                            border: Border(
-                                                bottom: BorderSide(
-                                                    color: controller
-                                                                .propertiesListType
-                                                                .value ==
-                                                            0
-                                                        ? theme.primaryColor
-                                                        : Colors.white,
-                                                    width: 2))),
-                                        duration:
-                                            const Duration(milliseconds: 500),
-                                        child: const Center(
-                                          child: Text(
-                                            "Properties",
-                                            maxLines: 1,
-                                            style: TextStyle(fontSize: 14),
-                                          ),
+                    child: Card(
+                        elevation: 4,
+                        child: Padding(
+                          padding: const EdgeInsets.symmetric(
+                              horizontal: 10, vertical: 10),
+                          child: SizedBox(
+                            width: width,
+                            child: Obx(
+                              () => Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceAround,
+                                children: [
+                                  GestureDetector(
+                                    onTap: () {
+                                      controller.changePropertyListType(0);
+                                    },
+                                    child: AnimatedContainer(
+                                      padding: const EdgeInsets.only(bottom: 5),
+                                      decoration: BoxDecoration(
+                                          border: controller.propertiesListType
+                                                      .value ==
+                                                  0
+                                              ? Border(
+                                                  bottom: BorderSide(
+                                                      color: theme.primaryColor,
+                                                      width: 1.5))
+                                              : null),
+                                      duration:
+                                          const Duration(milliseconds: 500),
+                                      child: Center(
+                                        child: Text(
+                                          "Properties",
+                                          style: TextStyle(
+                                              color: controller
+                                                          .propertiesListType
+                                                          .value ==
+                                                      0
+                                                  ? Colors.black
+                                                  : Colors.black38),
                                         ),
                                       ),
                                     ),
                                   ),
-                                ),
-                                Expanded(
-                                  child: GestureDetector(
+                                  GestureDetector(
                                     onTap: () {
                                       controller.changePropertyListType(1);
                                     },
-                                    child: Center(
-                                      child: AnimatedContainer(
-                                        padding: const EdgeInsets.only(
-                                            bottom: 5, top: 5),
-                                        margin:
-                                            const EdgeInsets.only(right: 10),
-                                        decoration: BoxDecoration(
-                                            border: Border(
-                                                bottom: BorderSide(
-                                                    color: controller
-                                                                .propertiesListType
-                                                                .value ==
-                                                            1
-                                                        ? theme.primaryColor
-                                                        : Colors.white,
-                                                    width: 2))),
-                                        duration:
-                                            const Duration(milliseconds: 500),
-                                        child: const Center(
-                                          child: Text(
-                                            "Active Cleaning",
-                                            maxLines: 1,
-                                            style: TextStyle(fontSize: 14),
-                                          ),
+                                    child: AnimatedContainer(
+                                      padding: const EdgeInsets.only(bottom: 5),
+                                      decoration: BoxDecoration(
+                                          border: controller.propertiesListType
+                                                      .value ==
+                                                  1
+                                              ? Border(
+                                                  bottom: BorderSide(
+                                                      color: theme.primaryColor,
+                                                      width: 1.5))
+                                              : null),
+                                      duration:
+                                          const Duration(milliseconds: 500),
+                                      child: Center(
+                                        child: Text(
+                                          "Active Cleaning",
+                                          style: TextStyle(
+                                              color: controller
+                                                          .propertiesListType
+                                                          .value ==
+                                                      1
+                                                  ? Colors.black
+                                                  : Colors.black38),
                                         ),
                                       ),
                                     ),
                                   ),
-                                ),
-                                Expanded(
-                                  child: GestureDetector(
+                                  GestureDetector(
                                     onTap: () {
                                       controller.changePropertyListType(2);
                                     },
-                                    child: Center(
-                                      child: AnimatedContainer(
-                                        padding: const EdgeInsets.only(
-                                          bottom: 5,
-                                          top: 5,
-                                        ),
-                                        margin:
-                                            const EdgeInsets.only(right: 10),
-                                        decoration: BoxDecoration(
-                                            border: Border(
-                                                bottom: BorderSide(
-                                                    color: controller
-                                                                .propertiesListType
-                                                                .value ==
-                                                            2
-                                                        ? theme.primaryColor
-                                                        : Colors.white,
-                                                    width: 2))),
-                                        duration:
-                                            const Duration(milliseconds: 500),
-                                        child: const Center(
-                                          child: Text(
-                                            "Future Cleaning",
-                                            maxLines: 1,
-                                            style: TextStyle(fontSize: 14),
-                                          ),
+                                    child: AnimatedContainer(
+                                      padding: const EdgeInsets.only(bottom: 5),
+                                      decoration: BoxDecoration(
+                                          border: controller.propertiesListType
+                                                      .value ==
+                                                  2
+                                              ? Border(
+                                                  bottom: BorderSide(
+                                                      color: theme.primaryColor,
+                                                      width: 1.5),
+                                                )
+                                              : null),
+                                      duration:
+                                          const Duration(milliseconds: 500),
+                                      child: Center(
+                                        child: Text(
+                                          "Future Cleaning",
+                                          style: TextStyle(
+                                              color: controller
+                                                          .propertiesListType
+                                                          .value ==
+                                                      2
+                                                  ? Colors.black
+                                                  : Colors.black38),
                                         ),
                                       ),
                                     ),
-                                  ),
-                                )
-                              ],
-                            )),
-                      ),
-                    ),
-                  ),
-                ),
+                                  )
+                                ],
+                              ),
+                            ),
+                          ),
+                        ))),
                 SliverToBoxAdapter(
                   child: Obx(() => controller.propertiesListType.value == 0
                       ? Align(
@@ -414,7 +408,7 @@ class PropertiesListPage extends GetView<DashboardController> {
                               Get.to(() => const SelectPropertyTypePage());
                             },
                             icon: const Icon(Icons.add_circle_outline),
-                            label: const AutoSizeText("Add Properties"),
+                            label: const Text("Add Properties"),
                             style: TextButton.styleFrom(primary: Colors.black),
                           ),
                         )
@@ -461,22 +455,19 @@ class MyProperties extends StatelessWidget {
                               child: Column(
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
-                                  const AutoSizeText(
+                                  const Text(
                                     "Glamourn 6BR@Midtown",
-                                    presetFontSizes: [14, 12, 10, 8],
                                     maxLines: 1,
                                   ),
                                   const SizedBox(
                                     height: 5,
                                   ),
-                                  const AutoSizeText(
+                                  const Text(
                                     "327 Northwest 39th Street",
-                                    presetFontSizes: [14, 12, 10, 8],
                                     maxLines: 1,
                                   ),
-                                  const AutoSizeText(
+                                  const Text(
                                     "Miami, Florida 33127",
-                                    presetFontSizes: [12, 10, 8],
                                     maxLines: 1,
                                   ),
                                   SizedBox(
@@ -570,7 +561,7 @@ class MyProperties extends StatelessWidget {
                                 SizedBox(
                                   width: 5,
                                 ),
-                                AutoSizeText('6')
+                                Text('6')
                               ],
                             ),
                             SizedBox(
@@ -583,7 +574,7 @@ class MyProperties extends StatelessWidget {
                                 SizedBox(
                                   width: 5,
                                 ),
-                                AutoSizeText('3')
+                                Text('3')
                               ],
                             )
                           ],

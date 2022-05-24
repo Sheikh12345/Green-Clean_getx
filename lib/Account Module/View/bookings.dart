@@ -1,13 +1,12 @@
-import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:green_and_clean/Account%20Module/View%20Model/account_controller.dart';
 import 'package:green_and_clean/Utils/widgets/appbar.dart';
 import 'package:green_and_clean/Utils/widgets/booking_thumbnail.dart';
 
-class BookingsPage extends GetView<AccountController> {
-  const BookingsPage({Key? key}) : super(key: key);
-
+class BookingsPage extends StatelessWidget {
+  BookingsPage({Key? key}) : super(key: key);
+  final controller = Get.put(AccountController());
   @override
   Widget build(BuildContext context) {
     final height = Get.height;
@@ -64,9 +63,8 @@ class BookingsPage extends GetView<AccountController> {
                                         : null),
                                 duration: const Duration(milliseconds: 500),
                                 child: Center(
-                                  child: AutoSizeText(
+                                  child: Text(
                                     "Accepted",
-                                    presetFontSizes: const [16],
                                     style: TextStyle(
                                         color: controller.bookingType.value == 0
                                             ? Colors.black
@@ -90,9 +88,8 @@ class BookingsPage extends GetView<AccountController> {
                                         : null),
                                 duration: const Duration(milliseconds: 500),
                                 child: Center(
-                                  child: AutoSizeText(
+                                  child: Text(
                                     "In Progress",
-                                    presetFontSizes: const [16],
                                     style: TextStyle(
                                         color: controller.bookingType.value == 1
                                             ? Colors.black
@@ -116,9 +113,8 @@ class BookingsPage extends GetView<AccountController> {
                                         : null),
                                 duration: const Duration(milliseconds: 500),
                                 child: Center(
-                                  child: AutoSizeText(
+                                  child: Text(
                                     "Completed",
-                                    presetFontSizes: const [16],
                                     style: TextStyle(
                                         color: controller.bookingType.value == 2
                                             ? Colors.black

@@ -1,4 +1,3 @@
-import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:green_and_clean/Add%20Property%20Module/View%20Model/addproperty_controller.dart';
@@ -40,7 +39,7 @@ class CleaningCategoryPage extends StatelessWidget {
                 SizedBox(
                   height: height * 0.02,
                 ),
-                const AutoSizeText(
+                const Text(
                   "Please select a cleaning category",
                   style: TextStyle(
                       color: Colors.grey,

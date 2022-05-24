@@ -33,8 +33,8 @@ class ToDoList extends StatelessWidget {
                       topLeft: Radius.circular(25))),
               child: Column(
                 children: [
-                  SizedBox(
-                    height: height * 0.02,
+                  const SizedBox(
+                    height: 20,
                   ),
                   Row(
                     children: [
@@ -46,30 +46,32 @@ class ToDoList extends StatelessWidget {
                           flex: 6,
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              const AutoSizeText(
+                            children: const [
+                              Text(
                                 "Glamourn 6BR@Midtown",
-                                presetFontSizes: [16],
-                              ),
-                              const SizedBox(
-                                height: 5,
-                              ),
-                              const AutoSizeText(
-                                "327 Northwest 39th Street",
-                              ),
-                              const AutoSizeText(
-                                "Miami, Florida 33127",
+                                style: TextStyle(fontSize: 14),
                               ),
                               SizedBox(
-                                height: height * 0.02,
+                                height: 5,
+                              ),
+                              Text(
+                                "327 Northwest 39th Street",
+                                style: TextStyle(fontSize: 12),
+                              ),
+                              Text(
+                                "Miami, Florida 33127",
+                                style: TextStyle(fontSize: 12),
+                              ),
+                              SizedBox(
+                                height: 10,
                               ),
                             ],
                           )),
                       const Expanded(flex: 2, child: SizedBox())
                     ],
                   ),
-                  SizedBox(
-                    height: height * 0.03,
+                  const SizedBox(
+                    height: 10,
                   ),
                   Expanded(
                     child: ListView(
@@ -80,9 +82,8 @@ class ToDoList extends StatelessWidget {
                                 flex: 1,
                                 child: Row(
                                   children: const [
-                                    AutoSizeText(
+                                    Text(
                                       "2",
-                                      presetFontSizes: [18],
                                     ),
                                     SizedBox(
                                       width: 5,
@@ -97,7 +98,7 @@ class ToDoList extends StatelessWidget {
                             const Expanded(
                                 flex: 2,
                                 child: Center(
-                                  child: AutoSizeText(
+                                  child: Text(
                                     'Bedrooms',
                                     style: TextStyle(color: Color(0xff0707070)),
                                   ),
@@ -113,7 +114,7 @@ class ToDoList extends StatelessWidget {
                                     const Spacer(),
                                     Row(
                                       children: const [
-                                        AutoSizeText(
+                                        Text(
                                           "View",
                                           style: TextStyle(
                                             color: Color(0xff0c93d0),
@@ -137,9 +138,8 @@ class ToDoList extends StatelessWidget {
                                 flex: 1,
                                 child: Row(
                                   children: const [
-                                    AutoSizeText(
+                                    Text(
                                       "2",
-                                      presetFontSizes: [18],
                                     ),
                                     SizedBox(
                                       width: 5,
@@ -154,7 +154,7 @@ class ToDoList extends StatelessWidget {
                             const Expanded(
                                 flex: 2,
                                 child: Center(
-                                  child: AutoSizeText(
+                                  child: Text(
                                     'Bedrooms',
                                     style: TextStyle(color: Color(0xff0707070)),
                                   ),
@@ -170,7 +170,7 @@ class ToDoList extends StatelessWidget {
                                     const Spacer(),
                                     Row(
                                       children: const [
-                                        AutoSizeText(
+                                        Text(
                                           "View",
                                           style: TextStyle(
                                             color: Color(0xff0c93d0),
@@ -194,9 +194,8 @@ class ToDoList extends StatelessWidget {
                                 flex: 1,
                                 child: Row(
                                   children: const [
-                                    AutoSizeText(
+                                    Text(
                                       "2",
-                                      presetFontSizes: [18],
                                     ),
                                     SizedBox(
                                       width: 5,
@@ -211,7 +210,7 @@ class ToDoList extends StatelessWidget {
                             const Expanded(
                                 flex: 2,
                                 child: Center(
-                                  child: AutoSizeText(
+                                  child: Text(
                                     'Bedrooms',
                                     style: TextStyle(color: Color(0xff0707070)),
                                   ),
@@ -227,14 +226,14 @@ class ToDoList extends StatelessWidget {
                                     const Spacer(),
                                     Row(
                                       children: const [
-                                        AutoSizeText(
+                                        Text(
                                           "View",
                                           style: TextStyle(
                                             color: Color(0xff0c93d0),
                                           ),
                                         ),
                                         Icon(
-                                          Icons.arrow_forward_ios,
+                                          FontAwesomeIcons.anglesRight,
                                           size: 14,
                                           color: Color(0xff0c93d0),
                                         ),

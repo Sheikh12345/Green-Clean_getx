@@ -1,4 +1,3 @@
-import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
@@ -43,7 +42,7 @@ class AppBarView extends StatelessWidget {
             child: const SizedBox(),
             flex: enableBackButton ? 2 : 3,
           ),
-          AutoSizeText(
+          Text(
             title,
             style: const TextStyle(color: Colors.white, fontSize: 20),
           ),

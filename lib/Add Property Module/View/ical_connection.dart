@@ -1,4 +1,3 @@
-import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:green_and_clean/Utils/widgets/appbar.dart';
@@ -13,26 +12,26 @@ class IcalConnectionPage extends StatelessWidget {
     final width = Get.width;
     final theme = Theme.of(context);
     return Scaffold(
-      body: SingleChildScrollView(
-        child: Container(
-          color: theme.primaryColor,
-          height: height - MediaQuery.of(context).padding.top,
-          child: Column(
-            children: [
-              AppBarView(
-                title: "Vacation Rental Connection",
-                enableBackButton: true,
-                backButtonOnPressed: () => Get.back(),
-                enableTrailingButton: false,
-              ),
-              Expanded(
-                  child: Container(
-                      padding: EdgeInsets.symmetric(horizontal: width * 0.05),
-                      decoration: const BoxDecoration(
-                          color: Colors.white,
-                          borderRadius: BorderRadius.only(
-                              topRight: Radius.circular(25),
-                              topLeft: Radius.circular(25))),
+      body: Container(
+        color: theme.primaryColor,
+        height: height - MediaQuery.of(context).padding.top,
+        child: Column(
+          children: [
+            AppBarView(
+              title: "Vacation Rental Connection",
+              enableBackButton: true,
+              backButtonOnPressed: () => Get.back(),
+              enableTrailingButton: false,
+            ),
+            Expanded(
+                child: Container(
+                    padding: EdgeInsets.symmetric(horizontal: width * 0.05),
+                    decoration: const BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.only(
+                            topRight: Radius.circular(25),
+                            topLeft: Radius.circular(25))),
+                    child: SingleChildScrollView(
                       child: Column(
                         children: [
                           const SizedBox(height: 20),
@@ -54,8 +53,7 @@ class IcalConnectionPage extends StatelessWidget {
                                       SizedBox(
                                         width: 5,
                                       ),
-                                      AutoSizeText(
-                                          "Please select a connection option")
+                                      Text("Please select a connection option")
                                     ],
                                   ),
                                   const SizedBox(
@@ -68,7 +66,7 @@ class IcalConnectionPage extends StatelessWidget {
                                       const SizedBox(
                                         width: 5,
                                       ),
-                                      const AutoSizeText("iCal")
+                                      const Text("iCal")
                                     ],
                                   ),
                                 ],
@@ -84,14 +82,14 @@ class IcalConnectionPage extends StatelessWidget {
                               SizedBox(
                                 width: 5,
                               ),
-                              AutoSizeText("iCal Connection")
+                              Text("iCal Connection")
                             ],
                           ),
                           const SizedBox(
                             height: 25,
                           ),
                           const Center(
-                            child: AutoSizeText(
+                            child: Text(
                               "Export an iCal link from AirBnb to automatically\nGet guest reservations from AirBnb",
                               textAlign: TextAlign.center,
                               maxLines: 2,
@@ -129,20 +127,21 @@ class IcalConnectionPage extends StatelessWidget {
                               Get.to(() => const AmenitiesPage());
                             },
                             child: Container(
-                                padding: const EdgeInsets.all(12),
+                                padding: const EdgeInsets.all(15),
                                 decoration: BoxDecoration(
                                     color: theme.primaryColor,
                                     borderRadius: BorderRadius.circular(10)),
                                 child: const Center(
                                     child: Text(
                                   "Connect",
-                                  style: TextStyle(color: Colors.white),
+                                  style: TextStyle(
+                                      color: Colors.white, fontSize: 16),
                                 ))),
                           ),
                         ],
-                      )))
-            ],
-          ),
+                      ),
+                    )))
+          ],
         ),
       ),
     );

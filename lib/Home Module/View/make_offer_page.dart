@@ -1,4 +1,3 @@
-import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
@@ -22,7 +21,10 @@ class MakeOfferPage extends StatelessWidget {
             fit: StackFit.expand,
             children: [
               Positioned.fill(
-                  child: Image.asset("assets/images/cleaning_bg.png")),
+                  child: Image.asset(
+                "assets/images/cleaning_bg.png",
+                fit: BoxFit.fill,
+              )),
               Positioned(
                   top: kToolbarHeight / 3,
                   left: 10,
@@ -40,9 +42,9 @@ class MakeOfferPage extends StatelessWidget {
                   height: height * 0.06,
                   color: Colors.black45,
                   child: const Center(
-                      child: AutoSizeText(
+                      child: Text(
                     "Available HouseKeepers",
-                    style: TextStyle(color: Colors.white, fontSize: 20),
+                    style: TextStyle(color: Colors.white, fontSize: 18),
                   )),
                 ),
                 bottom: 0,
@@ -106,10 +108,9 @@ class MakeOfferPage extends StatelessWidget {
                         borderRadius: BorderRadius.circular(10),
                         color: Colors.black45),
                     child: const Center(
-                      child: AutoSizeText(
+                      child: Text(
                         "Submit",
-                        style: TextStyle(color: Colors.white),
-                        presetFontSizes: [20, 18],
+                        style: TextStyle(color: Colors.white, fontSize: 18),
                       ),
                     ),
                   ),

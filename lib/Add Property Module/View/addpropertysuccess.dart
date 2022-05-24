@@ -1,4 +1,3 @@
-import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
@@ -25,11 +24,11 @@ class AddPropertySuccessPage extends StatelessWidget {
           const SizedBox(
             height: 60,
           ),
-          const AutoSizeText(
+          const Text(
             "Property Added Successfully !",
             textAlign: TextAlign.center,
-            style: TextStyle(color: Color.fromARGB(255, 51, 245, 57)),
-            presetFontSizes: [20],
+            style: TextStyle(
+                color: Color.fromARGB(255, 51, 245, 57), fontSize: 18),
           ),
           const SizedBox(height: 60),
           GestureDetector(
@@ -44,10 +43,9 @@ class AddPropertySuccessPage extends StatelessWidget {
                     border: Border.all(color: Colors.white),
                     borderRadius: BorderRadius.circular(5)),
                 child: const Center(
-                  child: AutoSizeText(
+                  child: Text(
                     "Done",
-                    presetFontSizes: [18],
-                    style: TextStyle(color: Colors.white),
+                    style: TextStyle(color: Colors.white, fontSize: 16),
                   ),
                 ),
               ),

@@ -1,4 +1,3 @@
-import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -51,10 +50,9 @@ class CategoryThumbnail extends StatelessWidget {
                       borderRadius:
                           BorderRadius.only(topRight: Radius.circular(25))),
                   child: Center(
-                      child: AutoSizeText(
+                      child: Text(
                     title,
-                    style: const TextStyle(color: Colors.white),
-                    presetFontSizes: const [16, 14, 12, 10],
+                    style: const TextStyle(color: Colors.white, fontSize: 13),
                     maxLines: 1,
                     overflow: TextOverflow.ellipsis,
                   )),

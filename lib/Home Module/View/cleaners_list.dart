@@ -1,4 +1,3 @@
-import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
@@ -97,7 +96,7 @@ class CleanerDetailThumbnail extends StatelessWidget {
                         Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: const [
-                            AutoSizeText("4.0"),
+                            Text("4.0"),
                             Icon(
                               Icons.star,
                               color: Colors.orange,
@@ -115,9 +114,8 @@ class CleanerDetailThumbnail extends StatelessWidget {
                               Icons.location_on_sharp,
                               size: 14,
                             ),
-                            AutoSizeText(
+                            Text(
                               "3.3 Mi",
-                              presetFontSizes: [14, 12, 10, 8],
                             )
                           ],
                         ),
@@ -125,10 +123,10 @@ class CleanerDetailThumbnail extends StatelessWidget {
                           height: height * 0.02,
                         ),
                         const Center(
-                          child: AutoSizeText(
+                          child: Text(
                             "English/Spanish",
+                            style: TextStyle(fontSize: 12),
                             maxLines: 1,
-                            presetFontSizes: [14, 12, 10, 8],
                           ),
                         ),
                         SizedBox(
@@ -145,18 +143,16 @@ class CleanerDetailThumbnail extends StatelessWidget {
                         height: height * 0.01,
                       ),
                       const Center(
-                        child: AutoSizeText(
+                        child: Text(
                           "Mayra Q.",
-                          presetFontSizes: [16],
                         ),
                       ),
                       SizedBox(
                         height: height * 0.01,
                       ),
                       const Center(
-                        child: AutoSizeText(
+                        child: Text(
                           "House/Standard Cleaning",
-                          presetFontSizes: [14, 12, 10],
                         ),
                       ),
                       SizedBox(
@@ -165,22 +161,25 @@ class CleanerDetailThumbnail extends StatelessWidget {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceAround,
                         children: [
-                          const AutoSizeText.rich(
+                          const SizedBox(
+                            width: 5,
+                          ),
+                          const Text.rich(
                             TextSpan(children: [
                               TextSpan(
                                   text: "\$60.00",
-                                  style: TextStyle(fontSize: 18)),
+                                  style: TextStyle(fontSize: 16)),
                               TextSpan(
                                   text: "\nFixed Price",
                                   style: TextStyle(fontSize: 11))
                             ]),
                             textAlign: TextAlign.center,
                           ),
-                          const AutoSizeText.rich(
+                          const Text.rich(
                             TextSpan(children: [
                               TextSpan(
                                   text: "\$20.00",
-                                  style: TextStyle(fontSize: 18)),
+                                  style: TextStyle(fontSize: 16)),
                               TextSpan(
                                   text: "\nHourly Price",
                                   style: TextStyle(fontSize: 11))
@@ -206,10 +205,9 @@ class CleanerDetailThumbnail extends StatelessWidget {
                               onPressed: () {},
                               icon: const Icon(
                                   Icons.chat_bubble_outline_outlined),
-                              label: const AutoSizeText(
+                              label: const Text(
                                 "Chat",
                                 maxLines: 1,
-                                presetFontSizes: [14, 12, 10],
                               ),
                               style: ElevatedButton.styleFrom(
                                   elevation: 0,
@@ -221,10 +219,9 @@ class CleanerDetailThumbnail extends StatelessWidget {
                                 child: ElevatedButton.icon(
                               onPressed: () {},
                               icon: const FaIcon(FontAwesomeIcons.eye),
-                              label: const AutoSizeText(
+                              label: const Text(
                                 "Profile",
                                 maxLines: 1,
-                                presetFontSizes: [14, 12, 10],
                               ),
                               style: ElevatedButton.styleFrom(
                                   elevation: 0,

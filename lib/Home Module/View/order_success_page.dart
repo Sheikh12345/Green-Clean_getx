@@ -1,4 +1,3 @@
-import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
@@ -21,19 +20,17 @@ class OrderSuccessPage extends StatelessWidget {
             SizedBox(
               height: height * 0.1,
             ),
-            const AutoSizeText(
+            const Text(
               "Order Confirmation",
-              style: TextStyle(color: Colors.white),
-              presetFontSizes: [20],
+              style: TextStyle(color: Colors.white, fontSize: 20),
               textAlign: TextAlign.center,
             ),
             SizedBox(
               height: height * 0.03,
             ),
-            const AutoSizeText(
+            const Text(
               "#3788876",
-              style: TextStyle(color: Colors.white),
-              presetFontSizes: [18],
+              style: TextStyle(color: Colors.white, fontSize: 16),
               textAlign: TextAlign.center,
             ),
             SizedBox(
@@ -47,19 +44,18 @@ class OrderSuccessPage extends StatelessWidget {
             SizedBox(
               height: height * 0.02,
             ),
-            const AutoSizeText(
+            const Text(
               "Success !",
               textAlign: TextAlign.center,
-              style: TextStyle(color: Color.fromARGB(255, 51, 245, 57)),
-              presetFontSizes: [30],
+              style: TextStyle(
+                  color: Color.fromARGB(255, 51, 245, 57), fontSize: 22),
             ),
             SizedBox(
               height: height * 0.02,
             ),
-            const AutoSizeText(
+            const Text(
               "Your order was successfully placed.",
-              presetFontSizes: [18],
-              style: TextStyle(color: Colors.white),
+              style: TextStyle(color: Colors.white, fontSize: 18),
               textAlign: TextAlign.center,
             ),
             SizedBox(
@@ -72,15 +68,14 @@ class OrderSuccessPage extends StatelessWidget {
               child: Center(
                 child: Container(
                   width: width * 0.6,
-                  padding: EdgeInsets.symmetric(vertical: height * 0.03),
+                  padding: const EdgeInsets.symmetric(vertical: 20),
                   decoration: BoxDecoration(
                       border: Border.all(color: Colors.white),
                       borderRadius: BorderRadius.circular(5)),
                   child: const Center(
-                    child: AutoSizeText(
+                    child: Text(
                       "Done",
-                      presetFontSizes: [18],
-                      style: TextStyle(color: Colors.white),
+                      style: TextStyle(color: Colors.white, fontSize: 16),
                     ),
                   ),
                 ),

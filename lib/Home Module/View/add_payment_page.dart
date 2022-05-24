@@ -1,4 +1,3 @@
-import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:green_and_clean/Utils/widgets/appbar.dart';
@@ -44,7 +43,7 @@ class AddPaymentMethod extends StatelessWidget {
                       height: height * 0.03,
                     ),
                     const Center(
-                        child: AutoSizeText(
+                        child: Text(
                       "Please add credit card or debit card detail",
                       style: TextStyle(
                           color: Colors.grey,
@@ -200,10 +199,9 @@ class AddPaymentMethod extends StatelessWidget {
                             borderRadius: BorderRadius.circular(10),
                             color: theme.primaryColor),
                         child: const Center(
-                          child: AutoSizeText(
+                          child: Text(
                             "Add",
-                            style: TextStyle(color: Colors.white),
-                            presetFontSizes: [18, 16],
+                            style: TextStyle(fontSize: 18, color: Colors.white),
                           ),
                         ),
                       ),

@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
-import 'package:green_and_clean/Utils/service_binder.dart';
 import 'package:green_and_clean/utils/route_helper.dart';
 
 void main() async {
@@ -22,7 +21,6 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       title: 'Green & Clean',
-      initialBinding: AppServiceBinder(),
       theme: ThemeData(
           fontFamily: 'LuxoraGrotest',
           inputDecorationTheme: const InputDecorationTheme(

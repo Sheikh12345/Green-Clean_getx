@@ -25,7 +25,7 @@ class AccountController extends GetxController {
       case 1:
         return const ProfilePage();
       case 2:
-        return const BookingsPage();
+        return BookingsPage();
       default:
         //TODO implement reset page
         return const SizedBox();

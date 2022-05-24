@@ -1,4 +1,3 @@
-import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
@@ -19,7 +18,11 @@ class CleaningTypePage extends StatelessWidget {
         child: Stack(
           fit: StackFit.expand,
           children: [
-            Positioned.fill(child: Image.asset(imageURL)),
+            Positioned.fill(
+                child: Image.asset(
+              imageURL,
+              fit: BoxFit.fill,
+            )),
             Positioned(
                 top: kToolbarHeight / 3,
                 left: 10,
@@ -37,9 +40,9 @@ class CleaningTypePage extends StatelessWidget {
                 height: height * 0.06,
                 color: Colors.black45,
                 child: const Center(
-                    child: AutoSizeText(
+                    child: Text(
                   "House",
-                  style: TextStyle(color: Colors.white, fontSize: 20),
+                  style: TextStyle(color: Colors.white, fontSize: 18),
                 )),
               ),
               bottom: 0,
@@ -52,7 +55,7 @@ class CleaningTypePage extends StatelessWidget {
       SizedBox(
         height: height * 0.02,
       ),
-      const AutoSizeText(
+      const Text(
         "Please select type of cleaning",
         style: TextStyle(
             color: Colors.grey, fontWeight: FontWeight.w500, fontSize: 16),

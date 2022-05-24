@@ -1,4 +1,3 @@
-import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:green_and_clean/Home%20Module/View%20Model/home_controller.dart';
@@ -80,13 +79,13 @@ class CleaningOrderSummary extends StatelessWidget {
                                         mainAxisAlignment:
                                             MainAxisAlignment.center,
                                         children: const [
-                                          AutoSizeText("4.0"),
+                                          Text("4.0"),
                                           Icon(
                                             Icons.star,
                                             color: Colors.orange,
                                             size: 14,
                                           ),
-                                          AutoSizeText("(125)")
+                                          Text("(125)")
                                         ],
                                       ),
                                     ],
@@ -102,13 +101,11 @@ class CleaningOrderSummary extends StatelessWidget {
                                       Expanded(
                                           child: Column(
                                         children: const [
-                                          AutoSizeText(
+                                          Text(
                                             "Mayra Q.",
-                                            presetFontSizes: [20, 18],
                                           ),
-                                          AutoSizeText(
+                                          Text(
                                             "Miami, Florida",
-                                            presetFontSizes: [16, 14],
                                           ),
                                         ],
                                       )),
@@ -122,9 +119,8 @@ class CleaningOrderSummary extends StatelessWidget {
                                     height: height * 0.01,
                                   ),
                                   const Center(
-                                    child: AutoSizeText(
+                                    child: Text(
                                       "House/Standard Cleaning",
-                                      presetFontSizes: [14, 12],
                                     ),
                                   ),
                                   SizedBox(
@@ -137,14 +133,14 @@ class CleaningOrderSummary extends StatelessWidget {
                                         Icons.location_on_sharp,
                                         size: 14,
                                       ),
-                                      AutoSizeText("3.3 Mi")
+                                      Text("3.3 Mi")
                                     ],
                                   ),
                                   SizedBox(
                                     height: height * 0.02,
                                   ),
                                   const Center(
-                                    child: AutoSizeText("English/Spanish"),
+                                    child: Text("English/Spanish"),
                                   ),
                                   SizedBox(
                                     height: height * 0.03,
@@ -169,18 +165,16 @@ class CleaningOrderSummary extends StatelessWidget {
                           height: height * 0.01,
                         ),
                         const Center(
-                          child: AutoSizeText(
+                          child: Text(
                             "Order Summary",
-                            presetFontSizes: [18, 16],
                           ),
                         ),
                         SizedBox(
                           height: height * 0.01,
                         ),
                         const Center(
-                          child: AutoSizeText(
+                          child: Text(
                             "House/Standard Cleaning",
-                            presetFontSizes: [14, 12],
                           ),
                         ),
                         SizedBox(
@@ -193,15 +187,13 @@ class CleaningOrderSummary extends StatelessWidget {
                             child: Row(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: const [
-                                AutoSizeText(
+                                Text(
                                   "Qty/Items",
                                   style: TextStyle(color: Colors.white),
-                                  presetFontSizes: [14],
                                 ),
-                                AutoSizeText(
+                                Text(
                                   "Prices",
                                   style: TextStyle(color: Colors.white),
-                                  presetFontSizes: [14],
                                 )
                               ],
                             )),
@@ -211,13 +203,11 @@ class CleaningOrderSummary extends StatelessWidget {
                             child: Row(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: const [
-                                AutoSizeText(
+                                Text(
                                   "1 Hour Standard Cleaning",
-                                  presetFontSizes: [14],
                                 ),
-                                AutoSizeText(
+                                Text(
                                   "\$60.00/Fixed",
-                                  presetFontSizes: [14],
                                 )
                               ],
                             )),
@@ -228,13 +218,11 @@ class CleaningOrderSummary extends StatelessWidget {
                             child: Row(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: const [
-                                AutoSizeText(
+                                Text(
                                   "Service Add-Ons",
-                                  presetFontSizes: [14],
                                 ),
-                                AutoSizeText(
+                                Text(
                                   "None",
-                                  presetFontSizes: [14],
                                 )
                               ],
                             )),
@@ -244,13 +232,11 @@ class CleaningOrderSummary extends StatelessWidget {
                             child: Row(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: const [
-                                AutoSizeText(
+                                Text(
                                   "Booking Fee",
-                                  presetFontSizes: [14],
                                 ),
-                                AutoSizeText(
+                                Text(
                                   "\$2.10",
-                                  presetFontSizes: [14],
                                 )
                               ],
                             )),
@@ -261,13 +247,11 @@ class CleaningOrderSummary extends StatelessWidget {
                             child: Row(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: const [
-                                AutoSizeText(
+                                Text(
                                   "Discount",
-                                  presetFontSizes: [14],
                                 ),
-                                AutoSizeText(
+                                Text(
                                   "\$0.00",
-                                  presetFontSizes: [14],
                                 )
                               ],
                             )),
@@ -277,13 +261,11 @@ class CleaningOrderSummary extends StatelessWidget {
                             child: Row(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: const [
-                                AutoSizeText(
+                                Text(
                                   "Tax",
-                                  presetFontSizes: [14],
                                 ),
-                                AutoSizeText(
+                                Text(
                                   "\$2.10",
-                                  presetFontSizes: [14],
                                 )
                               ],
                             )),
@@ -298,16 +280,14 @@ class CleaningOrderSummary extends StatelessWidget {
                             child: Row(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: const [
-                                AutoSizeText(
+                                Text(
                                   "TOTAL",
                                   style: TextStyle(color: Colors.white),
-                                  presetFontSizes: [18],
                                 ),
-                                AutoSizeText(
+                                Text(
                                   "\$62.10",
                                   style: TextStyle(color: Colors.white),
-                                  presetFontSizes: [18],
-                                )
+                                ),
                               ],
                             )),
                       ],
@@ -324,7 +304,7 @@ class CleaningOrderSummary extends StatelessWidget {
                             Get.to(() => const AddPaymentMethod());
                           },
                           icon: const Icon(Icons.add_circle),
-                          label: const AutoSizeText("Add Payment"),
+                          label: const Text("Add Payment"),
                           style: TextButton.styleFrom(primary: Colors.black),
                         ),
                       ),
@@ -362,15 +342,14 @@ class CleaningOrderSummary extends StatelessWidget {
                     onTap: () => Get.to(() => const OrderSuccessPage()),
                     child: Container(
                       width: width,
-                      height: height * 0.07,
+                      height: 50,
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(10),
                           color: theme.primaryColor),
                       child: const Center(
-                        child: AutoSizeText(
+                        child: Text(
                           "Confirm & Pay",
-                          style: TextStyle(color: Colors.white),
-                          presetFontSizes: [18, 16],
+                          style: TextStyle(color: Colors.white, fontSize: 16),
                         ),
                       ),
                     ),

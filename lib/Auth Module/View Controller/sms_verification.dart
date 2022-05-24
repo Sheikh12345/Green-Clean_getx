@@ -1,4 +1,3 @@
-import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
@@ -37,17 +36,17 @@ class SmsVerificationPage extends StatelessWidget {
                 height: 30,
               ),
               const Center(
-                child: AutoSizeText(
+                child: Text(
                   "We have sent an SMS\nverification code to\nyour Mobile.",
+                  style: TextStyle(fontSize: 18),
                   textAlign: TextAlign.center,
-                  presetFontSizes: [20],
                 ),
               ),
               const SizedBox(
                 height: 20,
               ),
               Center(
-                child: AutoSizeText(
+                child: Text(
                   "Please check your mobile number 071*****12\n continue to reset your password",
                   textAlign: TextAlign.center,
                   style: TextStyle(color: Colors.grey[500]),
@@ -95,7 +94,7 @@ class SmsVerificationPage extends StatelessWidget {
                 height: 40,
               ),
               const Center(
-                child: AutoSizeText.rich(TextSpan(children: [
+                child: Text.rich(TextSpan(children: [
                   TextSpan(
                       text: "Didn't Receive? ",
                       style: TextStyle(color: Colors.grey)),

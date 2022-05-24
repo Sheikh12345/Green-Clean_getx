@@ -1,4 +1,3 @@
-import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -39,16 +38,16 @@ class SignUpPage extends StatelessWidget {
                 child: Column(
                   children: [
                     const Center(
-                      child: AutoSizeText(
+                      child: Text(
                         "Sign Up",
-                        presetFontSizes: [30, 28, 24, 22],
+                        style: TextStyle(fontSize: 25),
                       ),
                     ),
                     const SizedBox(
                       height: 20,
                     ),
                     const Center(
-                      child: AutoSizeText(
+                      child: Text(
                         "Add your details to sign up",
                         style: TextStyle(color: Color(0xffb6b7b7)),
                       ),
@@ -128,7 +127,7 @@ class SignUpPage extends StatelessWidget {
                       children: [
                         Checkbox(value: true, onChanged: (val) {}),
                         const Flexible(
-                            child: AutoSizeText(
+                            child: Text(
                                 "I accept terms & conditions and privacy policy."))
                       ],
                     ),
@@ -141,12 +140,11 @@ class SignUpPage extends StatelessWidget {
                         decoration: BoxDecoration(
                             color: theme.primaryColor,
                             borderRadius: BorderRadius.circular(10)),
-                        padding: EdgeInsets.all(height * 0.015),
+                        padding: const EdgeInsets.all(15),
                         child: const Center(
-                          child: AutoSizeText(
+                          child: Text(
                             "Sign Up",
-                            style: TextStyle(color: Colors.white),
-                            presetFontSizes: [22, 20],
+                            style: TextStyle(fontSize: 18, color: Colors.white),
                           ),
                         ),
                       ),
@@ -155,7 +153,7 @@ class SignUpPage extends StatelessWidget {
                       height: 30,
                     ),
                     Center(
-                      child: AutoSizeText.rich(TextSpan(children: [
+                      child: Text.rich(TextSpan(children: [
                         const TextSpan(text: "Already have an Account? "),
                         TextSpan(
                             text: "Login",

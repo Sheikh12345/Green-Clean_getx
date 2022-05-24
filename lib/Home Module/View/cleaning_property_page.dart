@@ -1,8 +1,6 @@
-import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
-
 import '../../../Home Module/View Model/home_controller.dart';
 
 class CleaningPropertyPage extends StatelessWidget {
@@ -22,7 +20,10 @@ class CleaningPropertyPage extends StatelessWidget {
               fit: StackFit.expand,
               children: [
                 Positioned.fill(
-                    child: Image.asset("assets/images/house_bg.png")),
+                    child: Image.asset(
+                  "assets/images/house_bg.png",
+                  fit: BoxFit.fill,
+                )),
                 Positioned(
                     top: kToolbarHeight / 3,
                     left: 10,
@@ -40,9 +41,9 @@ class CleaningPropertyPage extends StatelessWidget {
                     height: height * 0.06,
                     color: Colors.black45,
                     child: const Center(
-                        child: AutoSizeText(
+                        child: Text(
                       "House",
-                      style: TextStyle(color: Colors.white, fontSize: 20),
+                      style: TextStyle(color: Colors.white, fontSize: 18),
                     )),
                   ),
                   bottom: 0,
@@ -55,7 +56,7 @@ class CleaningPropertyPage extends StatelessWidget {
           SizedBox(
             height: height * 0.02,
           ),
-          const AutoSizeText(
+          const Text(
             "How many bedrooms?",
             style: TextStyle(
                 color: Colors.grey, fontWeight: FontWeight.w500, fontSize: 16),
@@ -83,8 +84,7 @@ class CleaningPropertyPage extends StatelessWidget {
                               }
                             },
                             icon: const Icon(Icons.remove_circle)),
-                        AutoSizeText(
-                            Get.find<HomeController>().bedrooms.toString()),
+                        Text(Get.find<HomeController>().bedrooms.toString()),
                         IconButton(
                             onPressed: () {
                               Get.find<HomeController>().bedrooms++;
@@ -99,7 +99,7 @@ class CleaningPropertyPage extends StatelessWidget {
           SizedBox(
             height: height * 0.02,
           ),
-          const AutoSizeText(
+          const Text(
             "How many bathrooms?",
             style: TextStyle(
                 color: Colors.grey, fontWeight: FontWeight.w500, fontSize: 16),
@@ -127,8 +127,7 @@ class CleaningPropertyPage extends StatelessWidget {
                               }
                             },
                             icon: const Icon(Icons.remove_circle)),
-                        AutoSizeText(
-                            Get.find<HomeController>().bathrooms.toString()),
+                        Text(Get.find<HomeController>().bathrooms.toString()),
                         IconButton(
                             onPressed: () {
                               Get.find<HomeController>().bathrooms++;
@@ -147,9 +146,9 @@ class CleaningPropertyPage extends StatelessWidget {
             height: height * 0.06,
             color: Colors.black45,
             child: const Center(
-                child: AutoSizeText(
+                child: Text(
               "Add - Ons",
-              style: TextStyle(color: Colors.white, fontSize: 20),
+              style: TextStyle(color: Colors.white, fontSize: 18),
             )),
           ),
           SizedBox(
@@ -230,7 +229,10 @@ class CleaningPropertyPage extends StatelessWidget {
                     Expanded(
                         flex: 2,
                         child: Center(
-                          child: AutoSizeText("Next"),
+                          child: Text(
+                            "Next",
+                            style: TextStyle(fontSize: 16),
+                          ),
                         )),
                     Expanded(child: Icon(Icons.arrow_forward_ios_rounded))
                   ],
@@ -238,8 +240,8 @@ class CleaningPropertyPage extends StatelessWidget {
               ),
             ),
           ),
-          SizedBox(
-            height: height * 0.02,
+          const SizedBox(
+            height: 10,
           ),
         ],
       ),

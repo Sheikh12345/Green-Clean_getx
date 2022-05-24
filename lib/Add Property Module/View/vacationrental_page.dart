@@ -1,4 +1,3 @@
-import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
@@ -24,7 +23,10 @@ class VacationRentalPage extends GetView<AddPropertyController> {
             fit: StackFit.expand,
             children: [
               Positioned.fill(
-                  child: Image.asset("assets/images/vacation_bg.png")),
+                  child: Image.asset(
+                "assets/images/vacation_bg.png",
+                fit: BoxFit.fill,
+              )),
               Positioned(
                   top: kToolbarHeight / 3,
                   left: 10,
@@ -41,9 +43,9 @@ class VacationRentalPage extends GetView<AddPropertyController> {
                   height: 50,
                   color: Colors.black45,
                   child: const Center(
-                      child: AutoSizeText(
+                      child: Text(
                     "Vacation Rentals",
-                    style: TextStyle(color: Colors.white, fontSize: 20),
+                    style: TextStyle(color: Colors.white, fontSize: 18),
                   )),
                 ),
                 bottom: 0,
@@ -57,119 +59,106 @@ class VacationRentalPage extends GetView<AddPropertyController> {
           height: height * 0.02,
         ),
         Card(
-          elevation: 4,
-          child: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
-            child: SizedBox(
-              width: width,
-              child: Obx(() => Row(
+            elevation: 4,
+            child: Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
+              child: SizedBox(
+                width: width,
+                child: Obx(
+                  () => Row(
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
-                      Expanded(
-                        child: Center(
-                          child: GestureDetector(
-                            onTap: () {
-                              controller.changePropertyListType(0);
-                            },
-                            child: AnimatedContainer(
-                              padding: const EdgeInsets.only(bottom: 5, top: 5),
-                              margin: const EdgeInsets.only(right: 10),
-                              decoration: BoxDecoration(
-                                  border: Border(
+                      GestureDetector(
+                        onTap: () {
+                          controller.changePropertyListType(0);
+                        },
+                        child: AnimatedContainer(
+                          padding: const EdgeInsets.only(bottom: 5),
+                          decoration: BoxDecoration(
+                              border: controller.propertiesListType.value == 0
+                                  ? Border(
                                       bottom: BorderSide(
-                                          color: controller.propertiesListType
-                                                      .value ==
-                                                  0
-                                              ? theme.primaryColor
-                                              : Colors.white,
-                                          width: 2))),
-                              duration: const Duration(milliseconds: 500),
-                              child: const Center(
-                                child: Text(
-                                  "Properties",
-                                  maxLines: 1,
-                                  style: TextStyle(fontSize: 14),
-                                ),
-                              ),
+                                          color: theme.primaryColor,
+                                          width: 1.5))
+                                  : null),
+                          duration: const Duration(milliseconds: 500),
+                          child: Center(
+                            child: Text(
+                              "Properties",
+                              style: TextStyle(
+                                  color:
+                                      controller.propertiesListType.value == 0
+                                          ? Colors.black
+                                          : Colors.black38),
                             ),
                           ),
                         ),
                       ),
-                      Expanded(
-                        child: GestureDetector(
-                          onTap: () {
-                            controller.changePropertyListType(1);
-                          },
-                          child: Center(
-                            child: AnimatedContainer(
-                              padding: const EdgeInsets.only(bottom: 5, top: 5),
-                              margin: const EdgeInsets.only(right: 10),
-                              decoration: BoxDecoration(
-                                  border: Border(
+                      GestureDetector(
+                        onTap: () {
+                          controller.changePropertyListType(1);
+                        },
+                        child: AnimatedContainer(
+                          padding: const EdgeInsets.only(bottom: 5),
+                          decoration: BoxDecoration(
+                              border: controller.propertiesListType.value == 1
+                                  ? Border(
                                       bottom: BorderSide(
-                                          color: controller.propertiesListType
-                                                      .value ==
-                                                  1
-                                              ? theme.primaryColor
-                                              : Colors.white,
-                                          width: 2))),
-                              duration: const Duration(milliseconds: 500),
-                              child: const Center(
-                                child: Text(
-                                  "Active Cleaning",
-                                  maxLines: 1,
-                                  style: TextStyle(fontSize: 14),
-                                ),
-                              ),
+                                          color: theme.primaryColor,
+                                          width: 1.5))
+                                  : null),
+                          duration: const Duration(milliseconds: 500),
+                          child: Center(
+                            child: Text(
+                              "Active Cleaning",
+                              style: TextStyle(
+                                  color:
+                                      controller.propertiesListType.value == 1
+                                          ? Colors.black
+                                          : Colors.black38),
                             ),
                           ),
                         ),
                       ),
-                      Expanded(
-                        child: GestureDetector(
-                          onTap: () {
-                            controller.changePropertyListType(2);
-                          },
-                          child: Center(
-                            child: AnimatedContainer(
-                              padding: const EdgeInsets.only(
-                                bottom: 5,
-                                top: 5,
-                              ),
-                              margin: const EdgeInsets.only(right: 10),
-                              decoration: BoxDecoration(
-                                  border: Border(
+                      GestureDetector(
+                        onTap: () {
+                          controller.changePropertyListType(2);
+                        },
+                        child: AnimatedContainer(
+                          padding: const EdgeInsets.only(bottom: 5),
+                          decoration: BoxDecoration(
+                              border: controller.propertiesListType.value == 2
+                                  ? Border(
                                       bottom: BorderSide(
-                                          color: controller.propertiesListType
-                                                      .value ==
-                                                  2
-                                              ? theme.primaryColor
-                                              : Colors.white,
-                                          width: 2))),
-                              duration: const Duration(milliseconds: 500),
-                              child: const Center(
-                                child: Text(
-                                  "Future Cleaning",
-                                  maxLines: 1,
-                                  style: TextStyle(fontSize: 14),
-                                ),
-                              ),
+                                          color: theme.primaryColor,
+                                          width: 1.5),
+                                    )
+                                  : null),
+                          duration: const Duration(milliseconds: 500),
+                          child: Center(
+                            child: Text(
+                              "Future Cleaning",
+                              style: TextStyle(
+                                  color:
+                                      controller.propertiesListType.value == 2
+                                          ? Colors.black
+                                          : Colors.black38),
                             ),
                           ),
                         ),
                       )
                     ],
-                  )),
-            ),
-          ),
-        ),
+                  ),
+                ),
+              ),
+            )),
         Obx(() => controller.propertiesListType.value == 0
             ? Align(
                 alignment: Alignment.centerLeft,
                 child: TextButton.icon(
                   onPressed: () => Get.to(() => const SelectPropertyTypePage()),
                   icon: const Icon(Icons.add_circle_outline),
-                  label: const AutoSizeText("Add Properties"),
+                  label: const Text("Add Properties"),
                   style: TextButton.styleFrom(primary: Colors.black),
                 ),
               )
@@ -201,32 +190,25 @@ class VacationRentalPage extends GetView<AddPropertyController> {
                                               crossAxisAlignment:
                                                   CrossAxisAlignment.start,
                                               children: [
-                                                const AutoSizeText(
+                                                const Text(
                                                   "Glamourn 6BR@Midtown",
-                                                  presetFontSizes: [
-                                                    14,
-                                                    12,
-                                                    10,
-                                                    8
-                                                  ],
+                                                  style:
+                                                      TextStyle(fontSize: 14),
                                                   maxLines: 1,
                                                 ),
                                                 const SizedBox(
                                                   height: 5,
                                                 ),
-                                                const AutoSizeText(
+                                                const Text(
                                                   "327 Northwest 39th Street",
-                                                  presetFontSizes: [
-                                                    14,
-                                                    12,
-                                                    10,
-                                                    8
-                                                  ],
+                                                  style:
+                                                      TextStyle(fontSize: 12),
                                                   maxLines: 1,
                                                 ),
-                                                const AutoSizeText(
+                                                const Text(
                                                   "Miami, Florida 33127",
-                                                  presetFontSizes: [12, 10, 8],
+                                                  style:
+                                                      TextStyle(fontSize: 12),
                                                   maxLines: 1,
                                                 ),
                                                 SizedBox(
@@ -260,7 +242,7 @@ class VacationRentalPage extends GetView<AddPropertyController> {
                                               SizedBox(
                                                 width: 5,
                                               ),
-                                              AutoSizeText('6')
+                                              Text('6')
                                             ],
                                           ),
                                           SizedBox(
@@ -274,7 +256,7 @@ class VacationRentalPage extends GetView<AddPropertyController> {
                                               SizedBox(
                                                 width: 5,
                                               ),
-                                              AutoSizeText('3')
+                                              Text('3')
                                             ],
                                           )
                                         ],

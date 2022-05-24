@@ -1,4 +1,3 @@
-import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -28,9 +27,11 @@ class LoginPage extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 const Center(
-                  child: AutoSizeText(
+                  child: Text(
                     "Login",
-                    presetFontSizes: [24, 22],
+                    style: TextStyle(
+                      fontSize: 25,
+                    ),
                   ),
                 ),
                 const SizedBox(
@@ -97,10 +98,10 @@ class LoginPage extends StatelessWidget {
                               borderRadius: BorderRadius.circular(10)),
                           padding: const EdgeInsets.all(15),
                           child: const Center(
-                            child: AutoSizeText(
+                            child: Text(
                               "Login",
-                              style: TextStyle(color: Colors.white),
-                              presetFontSizes: [22, 20],
+                              style:
+                                  TextStyle(fontSize: 18, color: Colors.white),
                             ),
                           ),
                         ),
@@ -108,7 +109,7 @@ class LoginPage extends StatelessWidget {
                       const SizedBox(
                         height: 30,
                       ),
-                      AutoSizeText.rich(TextSpan(children: [
+                      Text.rich(TextSpan(children: [
                         TextSpan(
                             text: "Forgot your password?",
                             recognizer: TapGestureRecognizer()
@@ -125,7 +126,7 @@ class LoginPage extends StatelessWidget {
                   height: 100,
                 ),
                 Center(
-                  child: AutoSizeText.rich(TextSpan(children: [
+                  child: Text.rich(TextSpan(children: [
                     const TextSpan(text: "Don't have an Account? "),
                     TextSpan(
                         text: "Sign Up",

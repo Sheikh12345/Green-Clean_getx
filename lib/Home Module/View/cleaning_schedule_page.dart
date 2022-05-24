@@ -1,4 +1,3 @@
-import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
@@ -13,28 +12,28 @@ class CleaningSchedulePage extends StatelessWidget {
     final height = Get.height;
     final width = Get.width;
     final theme = Theme.of(context);
-    return SingleChildScrollView(
-      child: Container(
-        height: height,
-        color: theme.primaryColor,
-        child: Column(
-          children: [
-            AppBarView(
-              title: "Green & Clean",
-              enableBackButton: true,
-              backButtonOnPressed: () {
-                Get.find<HomeController>()
-                    .setIndex(Get.find<HomeController>().homeStackIndex - 1);
-              },
-              enableTrailingButton: false,
-            ),
-            Expanded(
-              child: Container(
-                decoration: const BoxDecoration(
-                    color: Colors.white,
-                    borderRadius: BorderRadius.only(
-                        topRight: Radius.circular(25),
-                        topLeft: Radius.circular(25))),
+    return Container(
+      height: height,
+      color: theme.primaryColor,
+      child: Column(
+        children: [
+          AppBarView(
+            title: "Green & Clean",
+            enableBackButton: true,
+            backButtonOnPressed: () {
+              Get.find<HomeController>()
+                  .setIndex(Get.find<HomeController>().homeStackIndex - 1);
+            },
+            enableTrailingButton: false,
+          ),
+          Expanded(
+            child: Container(
+              decoration: const BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.only(
+                      topRight: Radius.circular(25),
+                      topLeft: Radius.circular(25))),
+              child: SingleChildScrollView(
                 child: Column(
                   children: [
                     SizedBox(
@@ -65,15 +64,15 @@ class CleaningSchedulePage extends StatelessWidget {
                     SizedBox(
                       height: height * 0.03,
                     ),
-                    const AutoSizeText(
+                    const Text(
                       "When would you like the service?",
                       style: TextStyle(
                           color: Colors.grey,
                           fontWeight: FontWeight.w500,
                           fontSize: 16),
                     ),
-                    SizedBox(
-                      height: height * 0.02,
+                    const SizedBox(
+                      height: 20,
                     ),
                     Padding(
                       padding: const EdgeInsets.symmetric(horizontal: 40),
@@ -86,8 +85,8 @@ class CleaningSchedulePage extends StatelessWidget {
                               Get.find<HomeController>().scheduleType.value = 0;
                             },
                             child: Obx(() => Container(
-                                  height: height * 0.1,
-                                  width: height * 0.1,
+                                  height: 80,
+                                  width: width * 0.22,
                                   decoration: BoxDecoration(
                                       color: Get.find<HomeController>()
                                                   .scheduleType
@@ -98,20 +97,19 @@ class CleaningSchedulePage extends StatelessWidget {
                                       borderRadius: BorderRadius.circular(10)),
                                   child: Column(
                                     mainAxisAlignment: MainAxisAlignment.center,
-                                    children: [
+                                    children: const [
                                       Icon(
                                         FontAwesomeIcons.handPointer,
                                         color: Colors.white,
-                                        size: height * 0.05,
+                                        size: 40,
                                       ),
                                       SizedBox(
-                                        height: height * 0.01,
+                                        height: 8,
                                       ),
-                                      const AutoSizeText(
+                                      Text(
                                         "Now",
-                                        style: TextStyle(color: Colors.white),
-                                        presetFontSizes: [18, 16, 14],
-                                        minFontSize: 8,
+                                        style: TextStyle(
+                                            color: Colors.white, fontSize: 12),
                                         maxLines: 1,
                                         textAlign: TextAlign.center,
                                       )
@@ -126,8 +124,8 @@ class CleaningSchedulePage extends StatelessWidget {
                               Get.find<HomeController>().scheduleType.value = 1;
                             },
                             child: Obx(() => Container(
-                                  height: height * 0.1,
-                                  width: height * 0.1,
+                                  height: 80,
+                                  width: width * 0.22,
                                   decoration: BoxDecoration(
                                       color: Get.find<HomeController>()
                                                   .scheduleType
@@ -138,20 +136,19 @@ class CleaningSchedulePage extends StatelessWidget {
                                       borderRadius: BorderRadius.circular(10)),
                                   child: Column(
                                     mainAxisAlignment: MainAxisAlignment.center,
-                                    children: [
+                                    children: const [
                                       Icon(
                                         FontAwesomeIcons.calendarCheck,
                                         color: Colors.white,
-                                        size: height * 0.05,
+                                        size: 40,
                                       ),
                                       SizedBox(
-                                        height: height * 0.01,
+                                        height: 8,
                                       ),
-                                      const AutoSizeText(
+                                      Text(
                                         "Future",
-                                        style: TextStyle(color: Colors.white),
-                                        presetFontSizes: [18, 16, 14],
-                                        minFontSize: 8,
+                                        style: TextStyle(
+                                            color: Colors.white, fontSize: 12),
                                         maxLines: 1,
                                         textAlign: TextAlign.center,
                                       )
@@ -162,18 +159,18 @@ class CleaningSchedulePage extends StatelessWidget {
                         ],
                       ),
                     ),
-                    SizedBox(
-                      height: height * 0.05,
+                    const SizedBox(
+                      height: 30,
                     ),
-                    const AutoSizeText(
+                    const Text(
                       "How often do you want this service?",
                       style: TextStyle(
                           color: Colors.grey,
                           fontWeight: FontWeight.w500,
                           fontSize: 16),
                     ),
-                    SizedBox(
-                      height: height * 0.02,
+                    const SizedBox(
+                      height: 20,
                     ),
                     Padding(
                       padding: const EdgeInsets.symmetric(horizontal: 40),
@@ -187,15 +184,15 @@ class CleaningSchedulePage extends StatelessWidget {
                                             .homeStackIndex +
                                         1),
                                 child: Container(
-                                  padding: EdgeInsets.all(height * 0.011),
+                                  padding: const EdgeInsets.all(12),
                                   decoration: BoxDecoration(
                                       shape: BoxShape.circle,
                                       border: Border.all(color: Colors.white)),
                                   child: const Center(
-                                    child: AutoSizeText(
+                                    child: Text(
                                       "1",
-                                      style: TextStyle(color: Colors.white),
-                                      presetFontSizes: [18, 16, 14],
+                                      style: TextStyle(
+                                          color: Colors.white, fontSize: 16),
                                     ),
                                   ),
                                 ),
@@ -250,9 +247,9 @@ class CleaningSchedulePage extends StatelessWidget {
                   ],
                 ),
               ),
-            )
-          ],
-        ),
+            ),
+          )
+        ],
       ),
     );
   }
@@ -283,8 +280,8 @@ class ServiceCard extends StatelessWidget {
     return GestureDetector(
       onTap: onPressed,
       child: Container(
-        height: height * 0.1,
-        width: height * 0.1,
+        height: 80,
+        width: width * 0.22,
         decoration: BoxDecoration(
             color: backgroundColor ?? theme.primaryColor,
             borderRadius: BorderRadius.circular(10)),
@@ -295,10 +292,10 @@ class ServiceCard extends StatelessWidget {
                 Icon(
                   icon,
                   color: Colors.white,
-                  size: height * 0.06,
+                  size: 40,
                 ),
-            SizedBox(
-              height: height * 0.01,
+            const SizedBox(
+              height: 10,
             ),
             Text(
               text,

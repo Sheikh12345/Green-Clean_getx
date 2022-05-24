@@ -1,4 +1,3 @@
-import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
@@ -22,7 +21,10 @@ class CleanerDetailPage extends StatelessWidget {
               fit: StackFit.expand,
               children: [
                 Positioned.fill(
-                    child: Image.asset("assets/images/cleaning_bg.png")),
+                    child: Image.asset(
+                  "assets/images/cleaning_bg.png",
+                  fit: BoxFit.fill,
+                )),
                 Positioned(
                     top: kToolbarHeight / 3,
                     left: 10,
@@ -40,9 +42,9 @@ class CleanerDetailPage extends StatelessWidget {
                     height: height * 0.06,
                     color: Colors.black45,
                     child: const Center(
-                        child: AutoSizeText(
+                        child: Text(
                       "Available HouseKeepers",
-                      style: TextStyle(color: Colors.white, fontSize: 20),
+                      style: TextStyle(color: Colors.white, fontSize: 18),
                     )),
                   ),
                   bottom: 0,
@@ -97,13 +99,13 @@ class CleanerDetailPage extends StatelessWidget {
                                       mainAxisAlignment:
                                           MainAxisAlignment.center,
                                       children: const [
-                                        AutoSizeText("4.0"),
+                                        Text("4.0"),
                                         Icon(
                                           Icons.star,
                                           color: Colors.orange,
                                           size: 14,
                                         ),
-                                        AutoSizeText("(125)")
+                                        Text("(125)")
                                       ],
                                     ),
                                   ],
@@ -119,13 +121,11 @@ class CleanerDetailPage extends StatelessWidget {
                                     Expanded(
                                         child: Column(
                                       children: const [
-                                        AutoSizeText(
+                                        Text(
                                           "Mayra Q.",
-                                          presetFontSizes: [20, 18],
                                         ),
-                                        AutoSizeText(
+                                        Text(
                                           "Miami, Florida",
-                                          presetFontSizes: [16, 14],
                                         ),
                                       ],
                                     )),
@@ -139,9 +139,8 @@ class CleanerDetailPage extends StatelessWidget {
                                   height: height * 0.01,
                                 ),
                                 const Center(
-                                  child: AutoSizeText(
+                                  child: Text(
                                     "House/Standard Cleaning",
-                                    presetFontSizes: [14, 12],
                                   ),
                                 ),
                                 SizedBox(
@@ -154,14 +153,14 @@ class CleanerDetailPage extends StatelessWidget {
                                       Icons.location_on_sharp,
                                       size: 14,
                                     ),
-                                    AutoSizeText("3.3 Mi")
+                                    Text("3.3 Mi")
                                   ],
                                 ),
                                 SizedBox(
                                   height: height * 0.02,
                                 ),
                                 const Center(
-                                  child: AutoSizeText("English/Spanish"),
+                                  child: Text("English/Spanish"),
                                 ),
                                 SizedBox(
                                   height: height * 0.03,
@@ -179,15 +178,15 @@ class CleanerDetailPage extends StatelessWidget {
                     SizedBox(
                       height: height * 0.01,
                     ),
-                    const AutoSizeText(
+                    const Text(
                       "Please select your prefered pricing option",
                       style: TextStyle(
                           color: Colors.grey,
                           fontWeight: FontWeight.w500,
-                          fontSize: 16),
+                          fontSize: 14),
                     ),
-                    SizedBox(
-                      height: height * 0.02,
+                    const SizedBox(
+                      height: 20,
                     ),
                     GestureDetector(
                       onTap: () => Get.find<HomeController>().setIndex(
@@ -199,10 +198,9 @@ class CleanerDetailPage extends StatelessWidget {
                             borderRadius: BorderRadius.circular(10),
                             color: theme.primaryColor),
                         child: const Center(
-                          child: AutoSizeText(
+                          child: Text(
                             "\$60.00/Total",
-                            style: TextStyle(color: Colors.white),
-                            presetFontSizes: [20, 18],
+                            style: TextStyle(color: Colors.white, fontSize: 16),
                           ),
                         ),
                       ),
@@ -220,10 +218,9 @@ class CleanerDetailPage extends StatelessWidget {
                             borderRadius: BorderRadius.circular(10),
                             color: Colors.lightBlue),
                         child: const Center(
-                          child: AutoSizeText(
+                          child: Text(
                             "\$20.00/Hour",
-                            style: TextStyle(color: Colors.white),
-                            presetFontSizes: [20, 18],
+                            style: TextStyle(color: Colors.white, fontSize: 16),
                           ),
                         ),
                       ),
@@ -241,10 +238,9 @@ class CleanerDetailPage extends StatelessWidget {
                             borderRadius: BorderRadius.circular(10),
                             color: Colors.black54),
                         child: const Center(
-                          child: AutoSizeText(
+                          child: Text(
                             "Make Offer",
-                            style: TextStyle(color: Colors.white),
-                            presetFontSizes: [20, 18],
+                            style: TextStyle(color: Colors.white, fontSize: 16),
                           ),
                         ),
                       ),

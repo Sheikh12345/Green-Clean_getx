@@ -1,4 +1,3 @@
-import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:green_and_clean/Utils/widgets/appbar.dart';
@@ -13,27 +12,27 @@ class AmenitiesOnePage extends StatelessWidget {
     final width = Get.width;
     final theme = Theme.of(context);
     return Scaffold(
-      body: SingleChildScrollView(
-        child: Container(
-          height: height - MediaQuery.of(context).padding.top,
-          color: theme.primaryColor,
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              AppBarView(
-                title: "Amenities",
-                enableBackButton: true,
-                backButtonOnPressed: () => Get.back(),
-                enableTrailingButton: false,
-              ),
-              Expanded(
-                  child: Container(
-                      padding: EdgeInsets.symmetric(horizontal: width * 0.05),
-                      decoration: const BoxDecoration(
-                          color: Colors.white,
-                          borderRadius: BorderRadius.only(
-                              topRight: Radius.circular(25),
-                              topLeft: Radius.circular(25))),
+      body: Container(
+        height: height - MediaQuery.of(context).padding.top,
+        color: theme.primaryColor,
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            AppBarView(
+              title: "Amenities",
+              enableBackButton: true,
+              backButtonOnPressed: () => Get.back(),
+              enableTrailingButton: false,
+            ),
+            Expanded(
+                child: Container(
+                    padding: EdgeInsets.symmetric(horizontal: width * 0.05),
+                    decoration: const BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.only(
+                            topRight: Radius.circular(25),
+                            topLeft: Radius.circular(25))),
+                    child: SingleChildScrollView(
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
@@ -52,22 +51,21 @@ class AmenitiesOnePage extends StatelessWidget {
                                     crossAxisAlignment:
                                         CrossAxisAlignment.start,
                                     children: const [
-                                      AutoSizeText(
+                                      Text(
                                         "Glamourn 6BR@Midtown",
-                                        presetFontSizes: [16, 14, 12, 10, 8],
                                         maxLines: 1,
+                                        style: TextStyle(fontSize: 14),
                                       ),
                                       SizedBox(
                                         height: 5,
                                       ),
-                                      AutoSizeText(
+                                      Text(
                                         "327 Northwest 39th Street",
-                                        presetFontSizes: [12, 10, 8],
-                                        maxLines: 1,
+                                        style: TextStyle(fontSize: 12),
                                       ),
-                                      AutoSizeText(
+                                      Text(
                                         "Miami, Florida 33127",
-                                        presetFontSizes: [12, 10, 8],
+                                        style: TextStyle(fontSize: 12),
                                         maxLines: 1,
                                       ),
                                       SizedBox(
@@ -87,8 +85,7 @@ class AmenitiesOnePage extends StatelessWidget {
                           SizedBox(
                             height: height * 0.02,
                           ),
-                          const AutoSizeText(
-                              "Who provide the cleaning products?"),
+                          const Text("Who provide the cleaning products?"),
                           SizedBox(
                             height: height * 0.02,
                           ),
@@ -130,7 +127,7 @@ class AmenitiesOnePage extends StatelessWidget {
                           SizedBox(
                             height: height * 0.04,
                           ),
-                          const AutoSizeText(
+                          const Text(
                               "Do you want the booking to be automatic?"),
                           Row(
                             children: [
@@ -144,7 +141,7 @@ class AmenitiesOnePage extends StatelessWidget {
                                   const SizedBox(
                                     width: 5,
                                   ),
-                                  const AutoSizeText("Yes")
+                                  const Text("Yes")
                                 ],
                               ),
                               const Spacer(
@@ -160,7 +157,7 @@ class AmenitiesOnePage extends StatelessWidget {
                                   const SizedBox(
                                     width: 5,
                                   ),
-                                  const AutoSizeText("No")
+                                  const Text("No")
                                 ],
                               ),
                               const Spacer(
@@ -168,21 +165,23 @@ class AmenitiesOnePage extends StatelessWidget {
                               )
                             ],
                           ),
-                          const Spacer(),
+                          const SizedBox(
+                            height: 50,
+                          ),
                           GestureDetector(
                             onTap: () {
                               Get.to(() => const AddPropertySuccessPage());
                             },
                             child: Container(
-                                padding: const EdgeInsets.all(12),
+                                padding: const EdgeInsets.all(15),
                                 decoration: BoxDecoration(
                                     color: theme.primaryColor,
                                     borderRadius: BorderRadius.circular(10)),
                                 child: const Center(
-                                  child: AutoSizeText(
+                                  child: Text(
                                     "Next",
-                                    presetFontSizes: [18],
-                                    style: TextStyle(color: Colors.white),
+                                    style: TextStyle(
+                                        color: Colors.white, fontSize: 16),
                                   ),
                                 )),
                           ),
@@ -190,9 +189,9 @@ class AmenitiesOnePage extends StatelessWidget {
                             height: height * 0.04,
                           ),
                         ],
-                      )))
-            ],
-          ),
+                      ),
+                    )))
+          ],
         ),
       ),
     );

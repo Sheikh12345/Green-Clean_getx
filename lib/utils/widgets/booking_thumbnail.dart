@@ -1,4 +1,3 @@
-import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
@@ -27,30 +26,28 @@ class BookingThumbnail extends StatelessWidget {
                   flex: 3,
                   child: Column(
                     children: [
-                      const AutoSizeText(
+                      const Text(
                         "22",
-                        presetFontSizes: [18],
-                        style: TextStyle(fontWeight: FontWeight.w600),
+                        style: TextStyle(
+                            fontWeight: FontWeight.w600, fontSize: 18),
                       ),
                       SizedBox(
                         height: height * 0.015,
                       ),
-                      const AutoSizeText("February"),
+                      const Text("February"),
                       SizedBox(
                         height: height * 0.01,
                       ),
-                      const AutoSizeText(
+                      const Text(
                         "Start at 2:00 PM",
-                        minFontSize: 6,
-                        presetFontSizes: [10],
+                        style: TextStyle(fontSize: 12),
                       ),
                       SizedBox(
                         height: height * 0.01,
                       ),
-                      const AutoSizeText(
+                      const Text(
                         "End at 5:00 PM",
-                        minFontSize: 6,
-                        presetFontSizes: [10],
+                        style: TextStyle(fontSize: 12),
                       )
                     ],
                   )),
@@ -63,11 +60,11 @@ class BookingThumbnail extends StatelessWidget {
                         Row(
                           children: [
                             const Expanded(
-                                child: AutoSizeText(
+                                child: Text(
                               "Glomoum 6BR @Midtown",
-                              presetFontSizes: [16, 14, 12, 10, 8],
+                              style: TextStyle(
+                                  fontSize: 14, fontWeight: FontWeight.w600),
                               maxLines: 1,
-                              style: TextStyle(fontWeight: FontWeight.w600),
                             )),
                             Icon(
                               FontAwesomeIcons.circleArrowRight,
@@ -82,10 +79,9 @@ class BookingThumbnail extends StatelessWidget {
                         Row(
                           children: [
                             const Expanded(
-                                child: AutoSizeText(
+                                child: Text(
                               "327 Northwest 39th Street\nMiami, Florida 33127",
-                              presetFontSizes: [14, 12],
-                              minFontSize: 8,
+                              style: TextStyle(fontSize: 12),
                               maxLines: 2,
                             )),
                             SizedBox(
@@ -118,7 +114,7 @@ class BookingThumbnail extends StatelessWidget {
                                   )
                                 : Row(
                                     children: [
-                                      const AutoSizeText("3"),
+                                      const Text("3"),
                                       const SizedBox(
                                         width: 5,
                                       ),
@@ -129,7 +125,7 @@ class BookingThumbnail extends StatelessWidget {
                                       const SizedBox(
                                         width: 5,
                                       ),
-                                      const AutoSizeText("6"),
+                                      const Text("6"),
                                       const SizedBox(
                                         width: 5,
                                       ),
@@ -140,7 +136,7 @@ class BookingThumbnail extends StatelessWidget {
                                     ],
                                   ),
                             const Spacer(),
-                            AutoSizeText(
+                            Text(
                               "Total: \$45.00",
                               style: TextStyle(
                                   color: theme.primaryColor,
