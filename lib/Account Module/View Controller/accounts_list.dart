@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-
 import '../../../Account Module/View Model/account_controller.dart';
 
 class AccountsList extends StatelessWidget {
@@ -8,7 +7,6 @@ class AccountsList extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final height = Get.height;
     final width = Get.width;
     final theme = Theme.of(context);
     return Column(
@@ -26,26 +24,26 @@ class AccountsList extends StatelessWidget {
                     height: 30 + MediaQuery.of(context).padding.top,
                   ),
                   Row(
-                    children: [
-                      const Expanded(
+                    children: const [
+                      Expanded(
                         child: SizedBox(),
                         flex: 3,
                       ),
-                      const Text(
+                      Text(
                         "Account",
                         style: TextStyle(color: Colors.white, fontSize: 18),
                         textAlign: TextAlign.center,
                       ),
-                      const Expanded(
+                      Expanded(
                         child: SizedBox(),
                         flex: 2,
                       ),
-                      const Icon(
+                      Icon(
                         Icons.notifications_outlined,
                         color: Colors.white,
                       ),
                       SizedBox(
-                        width: width * 0.05,
+                        width: 25,
                       )
                     ],
                   ),
@@ -63,7 +61,7 @@ class AccountsList extends StatelessWidget {
                 ],
               ),
               Positioned(
-                  bottom: -height * 0.04,
+                  bottom: -32,
                   right: 0,
                   left: 0,
                   child: Center(
@@ -74,19 +72,19 @@ class AccountsList extends StatelessWidget {
                           borderRadius: BorderRadius.circular(100),
                           child: Image.asset(
                             "assets/images/person.png",
-                            height: height * 0.08,
-                            width: height * 0.08,
+                            height: 60,
+                            width: 60,
                           )),
                     ),
                   ))
             ],
           ),
         ),
-        SizedBox(
-          height: height * 0.06,
+        const SizedBox(
+          height: 50,
         ),
         Padding(
-          padding: EdgeInsets.symmetric(horizontal: width * 0.03),
+          padding: const EdgeInsets.symmetric(horizontal: 12),
           child: Material(
             elevation: 8,
             shape: RoundedRectangleBorder(
@@ -252,7 +250,7 @@ class AccountsList extends StatelessWidget {
           height: 20,
         ),
         Padding(
-          padding: EdgeInsets.symmetric(horizontal: width * 0.03),
+          padding: const EdgeInsets.symmetric(horizontal: 12),
           child: Material(
             elevation: 8,
             shape: RoundedRectangleBorder(

@@ -1,7 +1,7 @@
 import 'package:get/get.dart';
 import 'package:flutter/material.dart';
-import '../View/manage_offers.dart';
-import '../View/properties_list_page.dart';
+import 'package:green_and_clean/Dashboard%20Module/View%20Controller/manage_offers.dart';
+import 'package:green_and_clean/Dashboard%20Module/View%20Controller/properties_list_page.dart';
 
 class DashboardController extends GetxController {
   int dashboardStackIndex = 0;

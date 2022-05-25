@@ -7,9 +7,7 @@ class AddPropertySuccessPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final height = Get.height;
     final width = Get.width;
-    final theme = Theme.of(context);
     return Scaffold(
       backgroundColor: const Color.fromARGB(255, 6, 140, 250),
       body: Column(

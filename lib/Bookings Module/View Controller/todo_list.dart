@@ -1,4 +1,3 @@
-import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
@@ -9,7 +8,6 @@ class ToDoList extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final height = Get.height;
     final width = Get.width;
     final theme = Theme.of(context);
     return Scaffold(
@@ -25,7 +23,7 @@ class ToDoList extends StatelessWidget {
             ),
             Expanded(
                 child: Container(
-              padding: EdgeInsets.symmetric(horizontal: width * 0.05),
+              padding: const EdgeInsets.symmetric(horizontal: 18),
               decoration: const BoxDecoration(
                   color: Colors.white,
                   borderRadius: BorderRadius.only(

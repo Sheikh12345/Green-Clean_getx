@@ -1,26 +1,23 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:green_and_clean/Account%20Module/View%20Model/account_controller.dart';
+import 'package:green_and_clean/Bookings%20Module/View%20Model/bookings_controller.dart';
 import 'package:green_and_clean/Utils/widgets/appbar.dart';
 import 'package:green_and_clean/Utils/widgets/booking_thumbnail.dart';
 
-class BookingsPage extends StatelessWidget {
-  BookingsPage({Key? key}) : super(key: key);
-  final controller = Get.put(AccountController());
+class BookingsList extends GetView<BookingsController> {
+  const BookingsList({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
-    final height = Get.height;
     final width = Get.width;
     final theme = Theme.of(context);
     return Container(
       color: theme.primaryColor,
       child: Column(
         children: [
-          AppBarView(
+          const AppBarView(
             title: "Bookings",
-            enableBackButton: true,
-            backButtonOnPressed: () => Get.find<AccountController>()
-                .setIndex(Get.find<AccountController>().accountStackIndex - 2),
+            enableBackButton: false,
             enableTrailingButton: false,
           ),
           Expanded(
@@ -32,8 +29,8 @@ class BookingsPage extends StatelessWidget {
                     topLeft: Radius.circular(25))),
             child: Column(
               children: [
-                SizedBox(
-                  height: height * 0.04,
+                const SizedBox(
+                  height: 20,
                 ),
                 Card(
                   shape: RoundedRectangleBorder(
@@ -42,8 +39,8 @@ class BookingsPage extends StatelessWidget {
                     decoration: BoxDecoration(
                         color: const Color(0xff19E6FF).withOpacity(0.2),
                         borderRadius: BorderRadius.circular(50)),
-                    padding: EdgeInsets.symmetric(
-                        horizontal: width * 0.05, vertical: height * 0.02),
+                    padding: const EdgeInsets.symmetric(
+                        horizontal: 18, vertical: 15),
                     width: width,
                     child: Obx(() => Row(
                           mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -59,12 +56,12 @@ class BookingsPage extends StatelessWidget {
                                         ? Border(
                                             bottom: BorderSide(
                                                 color: theme.primaryColor,
-                                                width: 2))
+                                                width: 1.5))
                                         : null),
                                 duration: const Duration(milliseconds: 500),
                                 child: Center(
                                   child: Text(
-                                    "Accepted",
+                                    "Fixed",
                                     style: TextStyle(
                                         color: controller.bookingType.value == 0
                                             ? Colors.black
@@ -84,12 +81,12 @@ class BookingsPage extends StatelessWidget {
                                         ? Border(
                                             bottom: BorderSide(
                                                 color: theme.primaryColor,
-                                                width: 2))
+                                                width: 1.5))
                                         : null),
                                 duration: const Duration(milliseconds: 500),
                                 child: Center(
                                   child: Text(
-                                    "In Progress",
+                                    "Offers",
                                     style: TextStyle(
                                         color: controller.bookingType.value == 1
                                             ? Colors.black
@@ -109,12 +106,13 @@ class BookingsPage extends StatelessWidget {
                                         ? Border(
                                             bottom: BorderSide(
                                                 color: theme.primaryColor,
-                                                width: 2))
+                                                width: 1.5),
+                                          )
                                         : null),
                                 duration: const Duration(milliseconds: 500),
                                 child: Center(
                                   child: Text(
-                                    "Completed",
+                                    "Per Hour",
                                     style: TextStyle(
                                         color: controller.bookingType.value == 2
                                             ? Colors.black
@@ -127,18 +125,19 @@ class BookingsPage extends StatelessWidget {
                         )),
                   ),
                 ),
-                SizedBox(
-                  height: height * 0.03,
+                const SizedBox(
+                  height: 10,
                 ),
                 Expanded(
-                  child: ListView.builder(
-                    padding: const EdgeInsets.all(0),
-                    itemBuilder: (_, index) => BookingThumbnail(
-                      accountBooking: true,
-                      onPressed: () {},
-                    ),
-                  ),
-                )
+                    child: ListView.builder(
+                        padding: const EdgeInsets.all(0),
+                        itemBuilder: (_, index) => BookingThumbnail(
+                              accountBooking: false,
+                              onPressed: () => Get.find<BookingsController>()
+                                  .setIndex(Get.find<BookingsController>()
+                                          .bookingStackIndex +
+                                      1),
+                            )))
               ],
             ),
           ))

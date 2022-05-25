@@ -9,8 +9,6 @@ class CleanersList extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final height = Get.height;
-    final width = Get.width;
     final theme = Theme.of(context);
     return Container(
       color: theme.primaryColor,
@@ -34,8 +32,8 @@ class CleanersList extends StatelessWidget {
                       topRight: Radius.circular(25),
                       topLeft: Radius.circular(25))),
               child: ListView.builder(
-                padding: EdgeInsets.symmetric(
-                    horizontal: width * 0.05, vertical: height * 0.02),
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 15, vertical: 15),
                 itemBuilder: (_, index) => const CleanerDetailThumbnail(),
               ),
             ),
@@ -51,9 +49,7 @@ class CleanerDetailThumbnail extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final height = Get.height;
     final width = Get.width;
-    final theme = Theme.of(context);
     return GestureDetector(
       onTap: () {
         Get.find<HomeController>()
@@ -76,8 +72,8 @@ class CleanerDetailThumbnail extends StatelessWidget {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
-                        SizedBox(
-                          height: height * 0.02,
+                        const SizedBox(
+                          height: 15,
                         ),
                         Material(
                           elevation: 3,
@@ -90,8 +86,8 @@ class CleanerDetailThumbnail extends StatelessWidget {
                                 width: width * 0.18,
                               )),
                         ),
-                        SizedBox(
-                          height: height * 0.01,
+                        const SizedBox(
+                          height: 6,
                         ),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.center,
@@ -104,8 +100,8 @@ class CleanerDetailThumbnail extends StatelessWidget {
                             )
                           ],
                         ),
-                        SizedBox(
-                          height: height * 0.01,
+                        const SizedBox(
+                          height: 6,
                         ),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.center,
@@ -119,8 +115,8 @@ class CleanerDetailThumbnail extends StatelessWidget {
                             )
                           ],
                         ),
-                        SizedBox(
-                          height: height * 0.02,
+                        const SizedBox(
+                          height: 15,
                         ),
                         const Center(
                           child: Text(
@@ -129,8 +125,8 @@ class CleanerDetailThumbnail extends StatelessWidget {
                             maxLines: 1,
                           ),
                         ),
-                        SizedBox(
-                          height: height * 0.01,
+                        const SizedBox(
+                          height: 6,
                         ),
                       ],
                     ),
@@ -139,24 +135,24 @@ class CleanerDetailThumbnail extends StatelessWidget {
                   flex: 7,
                   child: Column(
                     children: [
-                      SizedBox(
-                        height: height * 0.01,
+                      const SizedBox(
+                        height: 6,
                       ),
                       const Center(
                         child: Text(
                           "Mayra Q.",
                         ),
                       ),
-                      SizedBox(
-                        height: height * 0.01,
+                      const SizedBox(
+                        height: 6,
                       ),
                       const Center(
                         child: Text(
                           "House/Standard Cleaning",
                         ),
                       ),
-                      SizedBox(
-                        height: height * 0.02,
+                      const SizedBox(
+                        height: 15,
                       ),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -192,11 +188,11 @@ class CleanerDetailThumbnail extends StatelessWidget {
                               icon: const Icon(Icons.arrow_forward_ios_sharp))
                         ],
                       ),
-                      SizedBox(
-                        height: height * 0.02,
+                      const SizedBox(
+                        height: 15,
                       ),
                       SizedBox(
-                        height: height * 0.05,
+                        height: 40,
                         child: Row(
                           crossAxisAlignment: CrossAxisAlignment.center,
                           children: [
@@ -211,7 +207,7 @@ class CleanerDetailThumbnail extends StatelessWidget {
                               ),
                               style: ElevatedButton.styleFrom(
                                   elevation: 0,
-                                  fixedSize: Size(width * 0.5, height * 0.5),
+                                  fixedSize: const Size(40, 40),
                                   shape: const RoundedRectangleBorder(
                                       borderRadius: BorderRadius.zero)),
                             )),
@@ -225,7 +221,7 @@ class CleanerDetailThumbnail extends StatelessWidget {
                               ),
                               style: ElevatedButton.styleFrom(
                                   elevation: 0,
-                                  fixedSize: Size(width * 0.5, height * 0.5),
+                                  fixedSize: const Size(40, 40),
                                   shape: const RoundedRectangleBorder(
                                       borderRadius: BorderRadius.only(
                                           bottomRight: Radius.circular(10))),

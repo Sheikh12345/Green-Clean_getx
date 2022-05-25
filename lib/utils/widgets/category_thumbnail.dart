@@ -22,13 +22,13 @@ class CategoryThumbnail extends StatelessWidget {
       onTap: onPressed,
       child: Container(
         width: halfWidth ? width / 2 : width,
-        height: halfWidth ? 130 : 130,
-        decoration: BoxDecoration(borderRadius: BorderRadius.circular(25)),
+        height: halfWidth ? 134 : 149,
+        decoration: BoxDecoration(borderRadius: BorderRadius.circular(20)),
         child: Card(
           elevation: 5,
           clipBehavior: Clip.antiAlias,
           shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(25.0),
+            borderRadius: BorderRadius.circular(20.0),
           ),
           child: Stack(
             fit: StackFit.expand,

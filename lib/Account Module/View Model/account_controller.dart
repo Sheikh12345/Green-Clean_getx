@@ -1,8 +1,8 @@
 import 'package:get/get.dart';
 import 'package:flutter/material.dart';
-import 'package:green_and_clean/Account%20Module/View/accounts_list.dart';
-import 'package:green_and_clean/Account%20Module/View/profile_page.dart';
-import '../View/bookings.dart';
+import 'package:green_and_clean/Account%20Module/View%20Controller/accounts_list.dart';
+import 'package:green_and_clean/Account%20Module/View%20Controller/bookings.dart';
+import 'package:green_and_clean/Account%20Module/View%20Controller/profile_page.dart';
 
 class AccountController extends GetxController {
   int accountStackIndex = 0;

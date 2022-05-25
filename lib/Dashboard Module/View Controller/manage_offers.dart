@@ -9,8 +9,6 @@ class ManageOffers extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final height = Get.height;
-    final width = Get.width;
     final theme = Theme.of(context);
     return Container(
       color: theme.primaryColor,

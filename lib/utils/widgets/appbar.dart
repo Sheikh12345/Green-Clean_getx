@@ -18,12 +18,10 @@ class AppBarView extends StatelessWidget {
   final Function()? trailingButtonOnPressed;
   @override
   Widget build(BuildContext context) {
-    final height = Get.height;
     final width = Get.width;
     return Padding(
       padding: EdgeInsets.only(
-          top: (height * 0.03) + MediaQuery.of(context).padding.top,
-          bottom: height * 0.03),
+          top: (20) + MediaQuery.of(context).padding.top, bottom: 20),
       child: Row(
         children: [
           enableBackButton

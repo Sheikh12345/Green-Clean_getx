@@ -52,19 +52,19 @@ class ProfilePage extends StatelessWidget {
                         )
                       ],
                     ),
-                    SizedBox(
-                      height: height * 0.04,
+                    const SizedBox(
+                      height: 30,
                     ),
                     const Text("mayra.querales@gmail.com",
                         style: TextStyle(color: Colors.white, fontSize: 14),
                         textAlign: TextAlign.center),
-                    SizedBox(
-                      height: height * 0.06,
+                    const SizedBox(
+                      height: 50,
                     )
                   ],
                 ),
                 Positioned(
-                    bottom: -height * 0.04,
+                    bottom: -32,
                     right: 0,
                     left: 0,
                     child: Center(
@@ -75,8 +75,8 @@ class ProfilePage extends StatelessWidget {
                             borderRadius: BorderRadius.circular(100),
                             child: Image.asset(
                               "assets/images/person.png",
-                              height: height * 0.08,
-                              width: height * 0.08,
+                              height: 60,
+                              width: 60,
                             )),
                       ),
                     )),
@@ -94,13 +94,12 @@ class ProfilePage extends StatelessWidget {
               ],
             ),
           ),
-          SizedBox(
-            height: height * 0.06,
+          const SizedBox(
+            height: 50,
           ),
-          Padding(
-            padding: EdgeInsets.only(
-                left: width * 0.03, right: width * 0.03, bottom: height * 0.01),
-            child: const TextField(
+          const Padding(
+            padding: EdgeInsets.only(left: 10, right: 10, bottom: 7),
+            child: TextField(
               style: TextStyle(color: Colors.black),
               decoration: InputDecoration(
                   hintText: "Full Name",
@@ -115,10 +114,9 @@ class ProfilePage extends StatelessWidget {
               textAlign: TextAlign.center,
             ),
           ),
-          Padding(
-            padding: EdgeInsets.only(
-                left: width * 0.03, right: width * 0.03, bottom: height * 0.01),
-            child: const TextField(
+          const Padding(
+            padding: EdgeInsets.only(left: 10, right: 10, bottom: 7),
+            child: TextField(
               style: TextStyle(color: Colors.black),
               decoration: InputDecoration(
                   hintText: "Email",
@@ -133,10 +131,9 @@ class ProfilePage extends StatelessWidget {
               textAlign: TextAlign.center,
             ),
           ),
-          Padding(
-            padding: EdgeInsets.only(
-                left: width * 0.03, right: width * 0.03, bottom: height * 0.01),
-            child: const TextField(
+          const Padding(
+            padding: EdgeInsets.only(left: 10, right: 10, bottom: 7),
+            child: TextField(
               style: TextStyle(color: Colors.black),
               decoration: InputDecoration(
                   hintText: "Mobile Number",
@@ -151,10 +148,9 @@ class ProfilePage extends StatelessWidget {
               textAlign: TextAlign.center,
             ),
           ),
-          Padding(
-            padding: EdgeInsets.only(
-                left: width * 0.03, right: width * 0.03, bottom: height * 0.01),
-            child: const TextField(
+          const Padding(
+            padding: EdgeInsets.only(left: 10, right: 10, bottom: 7),
+            child: TextField(
               style: TextStyle(color: Colors.black),
               decoration: InputDecoration(
                   hintText: "Address",
@@ -169,10 +165,9 @@ class ProfilePage extends StatelessWidget {
               textAlign: TextAlign.center,
             ),
           ),
-          Padding(
-            padding: EdgeInsets.only(
-                left: width * 0.03, right: width * 0.03, bottom: height * 0.01),
-            child: const TextField(
+          const Padding(
+            padding: EdgeInsets.only(left: 10, right: 10, bottom: 7),
+            child: TextField(
               style: TextStyle(color: Colors.black),
               decoration: InputDecoration(
                 hintText: "Apt",
@@ -186,13 +181,10 @@ class ProfilePage extends StatelessWidget {
           ),
           Row(
             children: [
-              Expanded(
+              const Expanded(
                   child: Padding(
-                padding: EdgeInsets.only(
-                    left: width * 0.03,
-                    right: width * 0.03,
-                    bottom: height * 0.01),
-                child: const TextField(
+                padding: EdgeInsets.only(left: 10, right: 10, bottom: 7),
+                child: TextField(
                   style: TextStyle(color: Colors.black),
                   decoration: InputDecoration(
                     hintText: "City",
@@ -207,13 +199,10 @@ class ProfilePage extends StatelessWidget {
               SizedBox(
                 width: width * 0.05,
               ),
-              Expanded(
+              const Expanded(
                   child: Padding(
-                padding: EdgeInsets.only(
-                    left: width * 0.03,
-                    right: width * 0.03,
-                    bottom: height * 0.01),
-                child: const TextField(
+                padding: EdgeInsets.only(left: 10, right: 10, bottom: 7),
+                child: TextField(
                   style: TextStyle(color: Colors.black),
                   decoration: InputDecoration(
                     hintText: "State",
@@ -227,10 +216,9 @@ class ProfilePage extends StatelessWidget {
               ))
             ],
           ),
-          Padding(
-            padding: EdgeInsets.only(
-                left: width * 0.03, right: width * 0.03, bottom: height * 0.01),
-            child: const TextField(
+          const Padding(
+            padding: EdgeInsets.only(left: 10, right: 10, bottom: 7),
+            child: TextField(
               style: TextStyle(color: Colors.black),
               decoration: InputDecoration(
                   hintText: "Old Password",
@@ -245,10 +233,9 @@ class ProfilePage extends StatelessWidget {
               textAlign: TextAlign.center,
             ),
           ),
-          Padding(
-            padding: EdgeInsets.only(
-                left: width * 0.03, right: width * 0.03, bottom: height * 0.01),
-            child: const TextField(
+          const Padding(
+            padding: EdgeInsets.only(left: 10, right: 10, bottom: 7),
+            child: TextField(
               style: TextStyle(color: Colors.black),
               decoration: InputDecoration(
                   hintText: "New Password",
@@ -263,10 +250,9 @@ class ProfilePage extends StatelessWidget {
               textAlign: TextAlign.center,
             ),
           ),
-          Padding(
-            padding: EdgeInsets.only(
-                left: width * 0.03, right: width * 0.03, bottom: height * 0.01),
-            child: const TextField(
+          const Padding(
+            padding: EdgeInsets.only(left: 10, right: 10, bottom: 7),
+            child: TextField(
               style: TextStyle(color: Colors.black),
               decoration: InputDecoration(
                   hintText: "Confirm New Password",
@@ -285,13 +271,10 @@ class ProfilePage extends StatelessWidget {
             height: 10,
           ),
           GestureDetector(
-            onTap: () {
-              // Get.find<HomeController>().setIndex(
-              //     Get.find<HomeController>().homeStackIndex + 1);
-            },
+            onTap: () {},
             child: Container(
-              width: AppConfig(context).width * 0.6,
-              height: 50,
+              width: AppConfig(context).width * 0.5,
+              height: 40,
               decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(10),
                   color: theme.primaryColor),

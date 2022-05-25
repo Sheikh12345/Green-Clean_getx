@@ -9,11 +9,9 @@ class CleaningSchedulePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final height = Get.height;
     final width = Get.width;
     final theme = Theme.of(context);
     return Container(
-      height: height,
       color: theme.primaryColor,
       child: Column(
         children: [
@@ -36,8 +34,8 @@ class CleaningSchedulePage extends StatelessWidget {
               child: SingleChildScrollView(
                 child: Column(
                   children: [
-                    SizedBox(
-                      height: height * 0.03,
+                    const SizedBox(
+                      height: 20,
                     ),
                     Padding(
                         padding: EdgeInsets.symmetric(horizontal: width * 0.05),
@@ -61,8 +59,8 @@ class CleaningSchedulePage extends StatelessWidget {
                                   borderSide:
                                       BorderSide(color: Colors.blue.shade800))),
                         )),
-                    SizedBox(
-                      height: height * 0.03,
+                    const SizedBox(
+                      height: 20,
                     ),
                     const Text(
                       "When would you like the service?",
@@ -211,8 +209,8 @@ class CleaningSchedulePage extends StatelessWidget {
                         ],
                       ),
                     ),
-                    SizedBox(
-                      height: height * 0.02,
+                    const SizedBox(
+                      height: 15,
                     ),
                     Padding(
                       padding: const EdgeInsets.symmetric(horizontal: 40),
@@ -241,8 +239,8 @@ class CleaningSchedulePage extends StatelessWidget {
                         ],
                       ),
                     ),
-                    SizedBox(
-                      height: height * 0.02,
+                    const SizedBox(
+                      height: 10,
                     )
                   ],
                 ),
@@ -273,7 +271,6 @@ class ServiceCard extends StatelessWidget {
   final String text;
   @override
   Widget build(BuildContext context) {
-    final height = Get.height;
     final width = Get.width;
     final theme = Theme.of(context);
 

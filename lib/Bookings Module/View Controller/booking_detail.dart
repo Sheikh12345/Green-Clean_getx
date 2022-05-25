@@ -1,4 +1,3 @@
-import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
@@ -11,7 +10,6 @@ class BookingDetail extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final height = Get.height;
     final width = Get.width;
     final theme = Theme.of(context);
     return Container(
@@ -39,14 +37,14 @@ class BookingDetail extends StatelessWidget {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        SizedBox(
-                          height: height * 0.02,
+                        const SizedBox(
+                          height: 15,
                         ),
                         const Text(
                           "Vacation Rental",
                         ),
-                        SizedBox(
-                          height: height * 0.02,
+                        const SizedBox(
+                          height: 15,
                         ),
                         Row(
                           children: [
@@ -58,25 +56,25 @@ class BookingDetail extends StatelessWidget {
                                 flex: 6,
                                 child: Column(
                                   crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    const Text(
+                                  children: const [
+                                    Text(
                                       "Glamourn 6BR@Midtown",
                                       maxLines: 1,
                                       style: TextStyle(
                                           color: Color(0xff0707070),
                                           fontSize: 14),
                                     ),
-                                    const SizedBox(
+                                    SizedBox(
                                       height: 3,
                                     ),
-                                    const Text(
+                                    Text(
                                       "327 Northwest 39th Street",
                                       maxLines: 1,
                                       style: TextStyle(
                                           color: Color(0xff0707070),
                                           fontSize: 12),
                                     ),
-                                    const Text(
+                                    Text(
                                       "Miami, Florida 33127",
                                       style: TextStyle(
                                           color: Color(0xff0707070),
@@ -84,7 +82,7 @@ class BookingDetail extends StatelessWidget {
                                       maxLines: 1,
                                     ),
                                     SizedBox(
-                                      height: height * 0.02,
+                                      height: 15,
                                     ),
                                   ],
                                 )),
@@ -97,8 +95,8 @@ class BookingDetail extends StatelessWidget {
                                                 color: Colors.grey))),
                                     child: Column(
                                       children: [
-                                        SizedBox(
-                                          height: height * 0.01,
+                                        const SizedBox(
+                                          height: 7,
                                         ),
                                         Row(
                                           mainAxisAlignment:
@@ -111,8 +109,8 @@ class BookingDetail extends StatelessWidget {
                                             Text('6')
                                           ],
                                         ),
-                                        SizedBox(
-                                          height: height * 0.01,
+                                        const SizedBox(
+                                          height: 7,
                                         ),
                                         Row(
                                           mainAxisAlignment:
@@ -129,8 +127,8 @@ class BookingDetail extends StatelessWidget {
                                     )))
                           ],
                         ),
-                        SizedBox(
-                          height: height * 0.03,
+                        const SizedBox(
+                          height: 20,
                         ),
                         const Divider(
                           thickness: 1,
@@ -138,8 +136,8 @@ class BookingDetail extends StatelessWidget {
                         const Text(
                           "Cleaner",
                         ),
-                        SizedBox(
-                          height: height * 0.02,
+                        const SizedBox(
+                          height: 15,
                         ),
                         Row(
                           children: [
@@ -159,8 +157,8 @@ class BookingDetail extends StatelessWidget {
                                           width: width * 0.15,
                                         )),
                                   ),
-                                  SizedBox(
-                                    height: height * 0.01,
+                                  const SizedBox(
+                                    height: 7,
                                   ),
                                   Row(
                                     mainAxisAlignment: MainAxisAlignment.center,
@@ -239,8 +237,8 @@ class BookingDetail extends StatelessWidget {
                                           ),
                                         ],
                                       ),
-                                      SizedBox(
-                                        height: height * 0.02,
+                                      const SizedBox(
+                                        height: 15,
                                       ),
                                     ],
                                   ),
@@ -248,16 +246,15 @@ class BookingDetail extends StatelessWidget {
                             Expanded(
                                 flex: 2,
                                 child: Container(
-                                    padding:
-                                        EdgeInsets.only(left: width * 0.02),
+                                    padding: const EdgeInsets.only(left: 2),
                                     decoration: const BoxDecoration(
                                         border: Border(
                                             left: BorderSide(
                                                 color: Colors.grey))),
                                     child: Column(
                                       children: [
-                                        SizedBox(
-                                          height: height * 0.01,
+                                        const SizedBox(
+                                          height: 7,
                                         ),
                                         Row(
                                           mainAxisAlignment:
@@ -266,7 +263,7 @@ class BookingDetail extends StatelessWidget {
                                             const Flexible(
                                                 child: Text(
                                               'Chat',
-                                              style: TextStyle(fontSize: 10),
+                                              style: TextStyle(fontSize: 12),
                                               maxLines: 1,
                                             )),
                                             const SizedBox(
@@ -278,8 +275,8 @@ class BookingDetail extends StatelessWidget {
                                             ),
                                           ],
                                         ),
-                                        SizedBox(
-                                          height: height * 0.015,
+                                        const SizedBox(
+                                          height: 10,
                                         ),
                                         Container(
                                           padding: const EdgeInsets.all(5),
@@ -301,14 +298,14 @@ class BookingDetail extends StatelessWidget {
                                     )))
                           ],
                         ),
-                        SizedBox(
-                          height: height * 0.02,
+                        const SizedBox(
+                          height: 15,
                         ),
                         const Divider(
                           thickness: 1,
                         ),
-                        SizedBox(
-                          height: height * 0.02,
+                        const SizedBox(
+                          height: 15,
                         ),
                         Row(
                           children: [
@@ -316,18 +313,18 @@ class BookingDetail extends StatelessWidget {
                             const Spacer(),
                             Image.asset(
                               "assets/images/hostaway.png",
-                              width: width * 0.2,
+                              width: 80,
                             )
                           ],
                         ),
-                        SizedBox(
-                          height: height * 0.02,
+                        const SizedBox(
+                          height: 15,
                         ),
                         const Divider(
                           thickness: 1,
                         ),
-                        SizedBox(
-                          height: height * 0.02,
+                        const SizedBox(
+                          height: 15,
                         ),
                         Row(
                           children: [
@@ -339,14 +336,14 @@ class BookingDetail extends StatelessWidget {
                             )
                           ],
                         ),
-                        SizedBox(
-                          height: height * 0.02,
+                        const SizedBox(
+                          height: 15,
                         ),
                         const Divider(
                           thickness: 1,
                         ),
-                        SizedBox(
-                          height: height * 0.02,
+                        const SizedBox(
+                          height: 15,
                         ),
                         Row(
                           children: [
@@ -375,8 +372,8 @@ class BookingDetail extends StatelessWidget {
                             Expanded(
                                 flex: 4,
                                 child: Container(
-                                  margin: EdgeInsets.only(left: width * 0.03),
-                                  padding: EdgeInsets.only(left: width * 0.03),
+                                  margin: const EdgeInsets.only(left: 8),
+                                  padding: const EdgeInsets.only(left: 8),
                                   decoration: const BoxDecoration(
                                       border: Border(
                                           left:
@@ -399,8 +396,8 @@ class BookingDetail extends StatelessWidget {
                                           )
                                         ],
                                       ),
-                                      SizedBox(
-                                        height: height * 0.02,
+                                      const SizedBox(
+                                        height: 15,
                                       ),
                                       Row(
                                         mainAxisAlignment:
@@ -423,14 +420,14 @@ class BookingDetail extends StatelessWidget {
                                 ))
                           ],
                         ),
-                        SizedBox(
-                          height: height * 0.02,
+                        const SizedBox(
+                          height: 15,
                         ),
                         const Divider(
                           thickness: 1,
                         ),
-                        SizedBox(
-                          height: height * 0.02,
+                        const SizedBox(
+                          height: 15,
                         ),
                         Row(
                           children: [
@@ -456,14 +453,14 @@ class BookingDetail extends StatelessWidget {
                             )
                           ],
                         ),
-                        SizedBox(
-                          height: height * 0.02,
+                        const SizedBox(
+                          height: 15,
                         ),
                         const Divider(
                           thickness: 1,
                         ),
-                        SizedBox(
-                          height: height * 0.02,
+                        const SizedBox(
+                          height: 15,
                         ),
                         Row(
                           children: [
@@ -478,14 +475,14 @@ class BookingDetail extends StatelessWidget {
                             )
                           ],
                         ),
-                        SizedBox(
-                          height: height * 0.02,
+                        const SizedBox(
+                          height: 15,
                         ),
                         const Divider(
                           thickness: 1,
                         ),
-                        SizedBox(
-                          height: height * 0.02,
+                        const SizedBox(
+                          height: 15,
                         ),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -494,7 +491,7 @@ class BookingDetail extends StatelessWidget {
                               child: MaterialButton(
                                 color: Colors.red,
                                 minWidth: width * 0.4,
-                                height: height * 0.06,
+                                height: 45,
                                 shape: RoundedRectangleBorder(
                                     borderRadius: BorderRadius.circular(5)),
                                 onPressed: () {
@@ -519,7 +516,7 @@ class BookingDetail extends StatelessWidget {
                                               .bookingStackIndex +
                                           1);
                                 },
-                                height: height * 0.06,
+                                height: 45,
                                 shape: RoundedRectangleBorder(
                                     borderRadius: BorderRadius.circular(5)),
                                 child: const Text(
@@ -529,8 +526,8 @@ class BookingDetail extends StatelessWidget {
                             ),
                           ],
                         ),
-                        SizedBox(
-                          height: height * 0.02,
+                        const SizedBox(
+                          height: 10,
                         ),
                       ],
                     ),

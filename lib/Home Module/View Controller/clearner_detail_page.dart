@@ -8,14 +8,13 @@ class CleanerDetailPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final height = Get.height;
     final width = Get.width;
     final theme = Theme.of(context);
     return SingleChildScrollView(
       child: Column(
         children: [
           SizedBox(
-            height: height * 0.25,
+            height: 190,
             width: width,
             child: Stack(
               fit: StackFit.expand,
@@ -39,7 +38,7 @@ class CleanerDetailPage extends StatelessWidget {
                         ))),
                 Positioned(
                   child: Container(
-                    height: height * 0.06,
+                    height: 40,
                     color: Colors.black45,
                     child: const Center(
                         child: Text(
@@ -54,8 +53,8 @@ class CleanerDetailPage extends StatelessWidget {
               ],
             ),
           ),
-          SizedBox(
-            height: height * 0.02,
+          const SizedBox(
+            height: 15,
           ),
           Padding(
             padding: EdgeInsets.symmetric(horizontal: width * 0.05),
@@ -92,8 +91,8 @@ class CleanerDetailPage extends StatelessWidget {
                                             width: width * 0.18,
                                           )),
                                     ),
-                                    SizedBox(
-                                      height: height * 0.01,
+                                    const SizedBox(
+                                      height: 10,
                                     ),
                                     Row(
                                       mainAxisAlignment:
@@ -135,16 +134,16 @@ class CleanerDetailPage extends StatelessWidget {
                                     ),
                                   ],
                                 ),
-                                SizedBox(
-                                  height: height * 0.01,
+                                const SizedBox(
+                                  height: 5,
                                 ),
                                 const Center(
                                   child: Text(
                                     "House/Standard Cleaning",
                                   ),
                                 ),
-                                SizedBox(
-                                  height: height * 0.01,
+                                const SizedBox(
+                                  height: 5,
                                 ),
                                 Row(
                                   mainAxisAlignment: MainAxisAlignment.center,
@@ -156,27 +155,27 @@ class CleanerDetailPage extends StatelessWidget {
                                     Text("3.3 Mi")
                                   ],
                                 ),
-                                SizedBox(
-                                  height: height * 0.02,
+                                const SizedBox(
+                                  height: 10,
                                 ),
                                 const Center(
                                   child: Text("English/Spanish"),
                                 ),
-                                SizedBox(
-                                  height: height * 0.03,
+                                const SizedBox(
+                                  height: 25,
                                 ),
                               ],
                             ))
                       ],
                     ),
-                    SizedBox(
-                      height: height * 0.01,
+                    const SizedBox(
+                      height: 5,
                     ),
                     const Divider(
                       thickness: 2,
                     ),
-                    SizedBox(
-                      height: height * 0.01,
+                    const SizedBox(
+                      height: 10,
                     ),
                     const Text(
                       "Please select your prefered pricing option",
@@ -193,7 +192,7 @@ class CleanerDetailPage extends StatelessWidget {
                           Get.find<HomeController>().homeStackIndex + 1),
                       child: Container(
                         width: width,
-                        height: height * 0.075,
+                        height: 55,
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(10),
                             color: theme.primaryColor),
@@ -205,15 +204,15 @@ class CleanerDetailPage extends StatelessWidget {
                         ),
                       ),
                     ),
-                    SizedBox(
-                      height: height * 0.02,
+                    const SizedBox(
+                      height: 15,
                     ),
                     GestureDetector(
                       onTap: () => Get.find<HomeController>().setIndex(
                           Get.find<HomeController>().homeStackIndex + 1),
                       child: Container(
                         width: width,
-                        height: height * 0.075,
+                        height: 55,
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(10),
                             color: Colors.lightBlue),
@@ -225,15 +224,15 @@ class CleanerDetailPage extends StatelessWidget {
                         ),
                       ),
                     ),
-                    SizedBox(
-                      height: height * 0.02,
+                    const SizedBox(
+                      height: 15,
                     ),
                     GestureDetector(
                       onTap: () => Get.find<HomeController>().setIndex(
                           Get.find<HomeController>().homeStackIndex + 1),
                       child: Container(
                         width: width,
-                        height: height * 0.075,
+                        height: 55,
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(10),
                             color: Colors.black54),
@@ -245,8 +244,8 @@ class CleanerDetailPage extends StatelessWidget {
                         ),
                       ),
                     ),
-                    SizedBox(
-                      height: height * 0.04,
+                    const SizedBox(
+                      height: 20,
                     ),
                   ],
                 ),

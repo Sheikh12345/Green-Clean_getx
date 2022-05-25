@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
-import 'package:green_and_clean/Add%20Property%20Module/View/select_property_type.dart';
+import 'package:green_and_clean/Add%20Property%20Module/View%20Controller/select_property_type.dart';
 import 'package:green_and_clean/Utils/Constants/size.dart';
 
 import '../View Model/addproperty_controller.dart';

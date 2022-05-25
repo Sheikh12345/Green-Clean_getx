@@ -1,8 +1,8 @@
 import 'package:get/get.dart';
 import 'package:flutter/material.dart';
-import 'package:green_and_clean/Bookings%20Module/View/booking_detail.dart';
-import 'package:green_and_clean/Bookings%20Module/View/bookings_list.dart';
-import 'package:green_and_clean/Home%20Module/View/review_page.dart';
+import 'package:green_and_clean/Bookings%20Module/View%20Controller/booking_detail.dart';
+import 'package:green_and_clean/Bookings%20Module/View%20Controller/bookings_list.dart';
+import 'package:green_and_clean/Home%20Module/View%20Controller/review_page.dart';
 
 class BookingsController extends GetxController {
   int bookingStackIndex = 0;

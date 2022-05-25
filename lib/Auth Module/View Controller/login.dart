@@ -21,7 +21,7 @@ class LoginPage extends StatelessWidget {
         child: SafeArea(
           child: Container(
             height: height - MediaQuery.of(context).padding.top,
-            padding: EdgeInsets.symmetric(horizontal: width * 0.05),
+            padding: const EdgeInsets.symmetric(horizontal: 15),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               mainAxisAlignment: MainAxisAlignment.center,
@@ -85,8 +85,8 @@ class LoginPage extends StatelessWidget {
                           ),
                         ),
                       ),
-                      SizedBox(
-                        height: height * 0.07,
+                      const SizedBox(
+                        height: 45,
                       ),
                       GestureDetector(
                         onTap: () {

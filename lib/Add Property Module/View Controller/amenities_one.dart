@@ -76,18 +76,18 @@ class AmenitiesOnePage extends StatelessWidget {
                               const Expanded(flex: 2, child: SizedBox())
                             ],
                           ),
-                          SizedBox(
-                            height: height * 0.02,
+                          const SizedBox(
+                            height: 15,
                           ),
                           const Divider(
                             thickness: 2,
                           ),
-                          SizedBox(
-                            height: height * 0.02,
+                          const SizedBox(
+                            height: 15,
                           ),
                           const Text("Who provide the cleaning products?"),
-                          SizedBox(
-                            height: height * 0.02,
+                          const SizedBox(
+                            height: 15,
                           ),
                           Row(
                             children: [
@@ -124,8 +124,8 @@ class AmenitiesOnePage extends StatelessWidget {
                               )
                             ],
                           ),
-                          SizedBox(
-                            height: height * 0.04,
+                          const SizedBox(
+                            height: 25,
                           ),
                           const Text(
                               "Do you want the booking to be automatic?"),
@@ -184,9 +184,6 @@ class AmenitiesOnePage extends StatelessWidget {
                                         color: Colors.white, fontSize: 16),
                                   ),
                                 )),
-                          ),
-                          SizedBox(
-                            height: height * 0.04,
                           ),
                         ],
                       ),

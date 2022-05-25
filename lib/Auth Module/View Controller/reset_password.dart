@@ -17,7 +17,7 @@ class ResetPasswordPage extends StatelessWidget {
         child: SizedBox(
           height: height - MediaQuery.of(context).padding.top,
           child: Padding(
-            padding: EdgeInsets.symmetric(horizontal: width * 0.05),
+            padding: const EdgeInsets.symmetric(horizontal: 18),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [

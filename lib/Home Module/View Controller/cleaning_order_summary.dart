@@ -10,7 +10,6 @@ class CleaningOrderSummary extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final height = Get.height;
     final width = Get.width;
     final theme = Theme.of(context);
     return Container(
@@ -37,8 +36,8 @@ class CleaningOrderSummary extends StatelessWidget {
             child: SingleChildScrollView(
               child: Column(
                 children: [
-                  SizedBox(
-                    height: height * 0.05,
+                  const SizedBox(
+                    height: 25,
                   ),
                   Card(
                     elevation: 8,
@@ -72,8 +71,8 @@ class CleaningOrderSummary extends StatelessWidget {
                                               width: width * 0.18,
                                             )),
                                       ),
-                                      SizedBox(
-                                        height: height * 0.01,
+                                      const SizedBox(
+                                        height: 6,
                                       ),
                                       Row(
                                         mainAxisAlignment:
@@ -115,16 +114,16 @@ class CleaningOrderSummary extends StatelessWidget {
                                       ),
                                     ],
                                   ),
-                                  SizedBox(
-                                    height: height * 0.01,
+                                  const SizedBox(
+                                    height: 6,
                                   ),
                                   const Center(
                                     child: Text(
                                       "House/Standard Cleaning",
                                     ),
                                   ),
-                                  SizedBox(
-                                    height: height * 0.01,
+                                  const SizedBox(
+                                    height: 6,
                                   ),
                                   Row(
                                     mainAxisAlignment: MainAxisAlignment.center,
@@ -136,14 +135,14 @@ class CleaningOrderSummary extends StatelessWidget {
                                       Text("3.3 Mi")
                                     ],
                                   ),
-                                  SizedBox(
-                                    height: height * 0.02,
+                                  const SizedBox(
+                                    height: 15,
                                   ),
                                   const Center(
                                     child: Text("English/Spanish"),
                                   ),
-                                  SizedBox(
-                                    height: height * 0.03,
+                                  const SizedBox(
+                                    height: 15,
                                   ),
                                 ],
                               ))
@@ -151,8 +150,8 @@ class CleaningOrderSummary extends StatelessWidget {
                       ),
                     ),
                   ),
-                  SizedBox(
-                    height: height * 0.03,
+                  const SizedBox(
+                    height: 20,
                   ),
                   Card(
                     elevation: 8,
@@ -161,28 +160,28 @@ class CleaningOrderSummary extends StatelessWidget {
                     ),
                     child: Column(
                       children: [
-                        SizedBox(
-                          height: height * 0.01,
+                        const SizedBox(
+                          height: 6,
                         ),
                         const Center(
                           child: Text(
                             "Order Summary",
                           ),
                         ),
-                        SizedBox(
-                          height: height * 0.01,
+                        const SizedBox(
+                          height: 6,
                         ),
                         const Center(
                           child: Text(
                             "House/Standard Cleaning",
                           ),
                         ),
-                        SizedBox(
-                          height: height * 0.02,
+                        const SizedBox(
+                          height: 15,
                         ),
                         Container(
-                            padding: EdgeInsets.symmetric(
-                                horizontal: width * 0.05, vertical: 5),
+                            padding: const EdgeInsets.symmetric(
+                                horizontal: 18, vertical: 5),
                             color: Colors.lightBlue,
                             child: Row(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -198,8 +197,8 @@ class CleaningOrderSummary extends StatelessWidget {
                               ],
                             )),
                         Container(
-                            padding: EdgeInsets.symmetric(
-                                horizontal: width * 0.05, vertical: 5),
+                            padding: const EdgeInsets.symmetric(
+                                horizontal: 18, vertical: 5),
                             child: Row(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: const [
@@ -212,8 +211,8 @@ class CleaningOrderSummary extends StatelessWidget {
                               ],
                             )),
                         Container(
-                            padding: EdgeInsets.symmetric(
-                                horizontal: width * 0.05, vertical: 5),
+                            padding: const EdgeInsets.symmetric(
+                                horizontal: 18, vertical: 5),
                             color: Colors.black26,
                             child: Row(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -227,8 +226,8 @@ class CleaningOrderSummary extends StatelessWidget {
                               ],
                             )),
                         Container(
-                            padding: EdgeInsets.symmetric(
-                                horizontal: width * 0.05, vertical: 5),
+                            padding: const EdgeInsets.symmetric(
+                                horizontal: 18, vertical: 5),
                             child: Row(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: const [
@@ -241,8 +240,8 @@ class CleaningOrderSummary extends StatelessWidget {
                               ],
                             )),
                         Container(
-                            padding: EdgeInsets.symmetric(
-                                horizontal: width * 0.05, vertical: 5),
+                            padding: const EdgeInsets.symmetric(
+                                horizontal: 18, vertical: 5),
                             color: Colors.black26,
                             child: Row(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -256,8 +255,8 @@ class CleaningOrderSummary extends StatelessWidget {
                               ],
                             )),
                         Container(
-                            padding: EdgeInsets.symmetric(
-                                horizontal: width * 0.05, vertical: 5),
+                            padding: const EdgeInsets.symmetric(
+                                horizontal: 18, vertical: 5),
                             child: Row(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: const [
@@ -270,8 +269,8 @@ class CleaningOrderSummary extends StatelessWidget {
                               ],
                             )),
                         Container(
-                            padding: EdgeInsets.symmetric(
-                                horizontal: width * 0.05, vertical: 8),
+                            padding: const EdgeInsets.symmetric(
+                                horizontal: 18, vertical: 8),
                             decoration: const BoxDecoration(
                                 color: Colors.lightBlue,
                                 borderRadius: BorderRadius.only(
@@ -293,8 +292,8 @@ class CleaningOrderSummary extends StatelessWidget {
                       ],
                     ),
                   ),
-                  SizedBox(
-                    height: height * 0.03,
+                  const SizedBox(
+                    height: 25,
                   ),
                   Row(
                     children: [
@@ -335,8 +334,8 @@ class CleaningOrderSummary extends StatelessWidget {
                       )
                     ],
                   ),
-                  SizedBox(
-                    height: height * 0.03,
+                  const SizedBox(
+                    height: 20,
                   ),
                   GestureDetector(
                     onTap: () => Get.to(() => const OrderSuccessPage()),
@@ -354,8 +353,8 @@ class CleaningOrderSummary extends StatelessWidget {
                       ),
                     ),
                   ),
-                  SizedBox(
-                    height: height * 0.03,
+                  const SizedBox(
+                    height: 15,
                   )
                 ],
               ),

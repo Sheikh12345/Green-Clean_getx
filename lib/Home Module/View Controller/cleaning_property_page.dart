@@ -8,13 +8,12 @@ class CleaningPropertyPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final height = Get.height;
     final width = Get.width;
     return SingleChildScrollView(
       child: Column(
         children: [
           SizedBox(
-            height: height * 0.25,
+            height: 190,
             width: width,
             child: Stack(
               fit: StackFit.expand,
@@ -38,7 +37,7 @@ class CleaningPropertyPage extends StatelessWidget {
                         ))),
                 Positioned(
                   child: Container(
-                    height: height * 0.06,
+                    height: 40,
                     color: Colors.black45,
                     child: const Center(
                         child: Text(
@@ -53,16 +52,16 @@ class CleaningPropertyPage extends StatelessWidget {
               ],
             ),
           ),
-          SizedBox(
-            height: height * 0.02,
+          const SizedBox(
+            height: 15,
           ),
           const Text(
             "How many bedrooms?",
             style: TextStyle(
                 color: Colors.grey, fontWeight: FontWeight.w500, fontSize: 16),
           ),
-          SizedBox(
-            height: height * 0.02,
+          const SizedBox(
+            height: 15,
           ),
           Row(
             children: [
@@ -96,16 +95,16 @@ class CleaningPropertyPage extends StatelessWidget {
               const Expanded(child: SizedBox())
             ],
           ),
-          SizedBox(
-            height: height * 0.02,
+          const SizedBox(
+            height: 15,
           ),
           const Text(
             "How many bathrooms?",
             style: TextStyle(
                 color: Colors.grey, fontWeight: FontWeight.w500, fontSize: 16),
           ),
-          SizedBox(
-            height: height * 0.02,
+          const SizedBox(
+            height: 15,
           ),
           Row(
             children: [
@@ -139,11 +138,11 @@ class CleaningPropertyPage extends StatelessWidget {
               const Expanded(child: SizedBox())
             ],
           ),
-          SizedBox(
-            height: height * 0.02,
+          const SizedBox(
+            height: 15,
           ),
           Container(
-            height: height * 0.06,
+            height: 40,
             color: Colors.black45,
             child: const Center(
                 child: Text(
@@ -151,8 +150,8 @@ class CleaningPropertyPage extends StatelessWidget {
               style: TextStyle(color: Colors.white, fontSize: 18),
             )),
           ),
-          SizedBox(
-            height: height * 0.02,
+          const SizedBox(
+            height: 15,
           ),
           ListTile(
             leading: const Icon(Icons.kitchen_outlined),
@@ -208,8 +207,8 @@ class CleaningPropertyPage extends StatelessWidget {
             ),
             dense: true,
           ),
-          SizedBox(
-            height: height * 0.02,
+          const SizedBox(
+            height: 15,
           ),
           Padding(
             padding: EdgeInsets.symmetric(horizontal: width * 0.05),

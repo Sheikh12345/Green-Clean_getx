@@ -9,14 +9,12 @@ class SmsVerificationPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final height = Get.height;
-    final width = Get.width;
-    final theme = Theme.of(context);
     return Scaffold(
         body: SingleChildScrollView(
       child: SizedBox(
         height: height - MediaQuery.of(context).padding.top,
         child: Padding(
-          padding: EdgeInsets.symmetric(horizontal: width * 0.05),
+          padding: const EdgeInsets.symmetric(horizontal: 18),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -56,7 +54,7 @@ class SmsVerificationPage extends StatelessWidget {
                 height: 40,
               ),
               Padding(
-                padding: EdgeInsets.symmetric(horizontal: width * 0.1),
+                padding: const EdgeInsets.symmetric(horizontal: 20),
                 child: PinCodeTextField(
                   appContext: context,
                   length: 4,

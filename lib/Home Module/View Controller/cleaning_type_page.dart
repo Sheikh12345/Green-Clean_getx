@@ -9,11 +9,10 @@ class CleaningTypePage extends StatelessWidget {
   final String imageURL;
   @override
   Widget build(BuildContext context) {
-    final height = Get.height;
     final width = Get.width;
     return Column(children: [
       SizedBox(
-        height: height * 0.25,
+        height: 190,
         width: width,
         child: Stack(
           fit: StackFit.expand,
@@ -37,7 +36,7 @@ class CleaningTypePage extends StatelessWidget {
                     ))),
             Positioned(
               child: Container(
-                height: height * 0.06,
+                height: 40,
                 color: Colors.black45,
                 child: const Center(
                     child: Text(
@@ -52,16 +51,16 @@ class CleaningTypePage extends StatelessWidget {
           ],
         ),
       ),
-      SizedBox(
-        height: height * 0.02,
+      const SizedBox(
+        height: 15,
       ),
       const Text(
         "Please select type of cleaning",
         style: TextStyle(
             color: Colors.grey, fontWeight: FontWeight.w500, fontSize: 16),
       ),
-      SizedBox(
-        height: height * 0.02,
+      const SizedBox(
+        height: 15,
       ),
       Padding(
         padding: EdgeInsets.symmetric(horizontal: width * 0.05),

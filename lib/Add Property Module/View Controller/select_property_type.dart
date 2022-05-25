@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:green_and_clean/Add%20Property%20Module/View/addproperty_page.dart';
+import 'package:green_and_clean/Add%20Property%20Module/View%20Controller/addproperty_page.dart';
 import 'package:green_and_clean/Utils/widgets/category_thumbnail.dart';
 
 import '../../Utils/widgets/appbar.dart';

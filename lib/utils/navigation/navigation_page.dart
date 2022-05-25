@@ -19,6 +19,7 @@ class NavigationPage extends StatelessWidget {
                 showElevation: true, // use this to remove appBar's elevation
                 onItemSelected: controller.setIndex,
                 backgroundColor: theme.primaryColor,
+
                 items: [
                   BottomNavyBarItem(
                     icon: const Icon(Icons.home),

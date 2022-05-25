@@ -7,40 +7,38 @@ class AddPaymentMethod extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final height = Get.height;
     final width = Get.width;
     final theme = Theme.of(context);
     return Scaffold(
       resizeToAvoidBottomInset: true,
-      body: SingleChildScrollView(
-        child: Container(
-          height: height,
-          color: theme.primaryColor,
-          child: Column(
-            children: [
-              AppBarView(
-                title: "Add payment method",
-                enableBackButton: true,
-                backButtonOnPressed: () => Get.back(),
-                enableTrailingButton: false,
-              ),
-              Expanded(
-                  child: Container(
-                padding: EdgeInsets.symmetric(horizontal: width * 0.05),
-                decoration: const BoxDecoration(
-                    color: Colors.white,
-                    borderRadius: BorderRadius.only(
-                        topRight: Radius.circular(25),
-                        topLeft: Radius.circular(25))),
+      body: Container(
+        color: theme.primaryColor,
+        child: Column(
+          children: [
+            AppBarView(
+              title: "Add payment method",
+              enableBackButton: true,
+              backButtonOnPressed: () => Get.back(),
+              enableTrailingButton: false,
+            ),
+            Expanded(
+                child: Container(
+              padding: EdgeInsets.symmetric(horizontal: width * 0.05),
+              decoration: const BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.only(
+                      topRight: Radius.circular(25),
+                      topLeft: Radius.circular(25))),
+              child: SingleChildScrollView(
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.stretch,
                   children: [
-                    SizedBox(
-                      height: height * 0.03,
+                    const SizedBox(
+                      height: 20,
                     ),
                     Image.asset("assets/images/cards.png"),
-                    SizedBox(
-                      height: height * 0.03,
+                    const SizedBox(
+                      height: 20,
                     ),
                     const Center(
                         child: Text(
@@ -50,8 +48,8 @@ class AddPaymentMethod extends StatelessWidget {
                           fontWeight: FontWeight.w500,
                           fontSize: 16),
                     )),
-                    SizedBox(
-                      height: height * 0.02,
+                    const SizedBox(
+                      height: 15,
                     ),
                     Card(
                       elevation: 8,
@@ -80,8 +78,8 @@ class AddPaymentMethod extends StatelessWidget {
                                   hintStyle:
                                       const TextStyle(color: Colors.white)),
                             ),
-                            SizedBox(
-                              height: height * 0.02,
+                            const SizedBox(
+                              height: 15,
                             ),
                             Row(
                               children: [
@@ -180,21 +178,21 @@ class AddPaymentMethod extends StatelessWidget {
                                     ))
                               ],
                             ),
-                            SizedBox(
-                              height: height * 0.05,
+                            const SizedBox(
+                              height: 25,
                             )
                           ],
                         ),
                       ),
                     ),
-                    SizedBox(
-                      height: height * 0.02,
+                    const SizedBox(
+                      height: 15,
                     ),
                     GestureDetector(
                       onTap: () => Get.back(),
                       child: Container(
                         width: width,
-                        height: height * 0.07,
+                        height: 50,
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(10),
                             color: theme.primaryColor),
@@ -208,9 +206,9 @@ class AddPaymentMethod extends StatelessWidget {
                     ),
                   ],
                 ),
-              ))
-            ],
-          ),
+              ),
+            ))
+          ],
         ),
       ),
     );

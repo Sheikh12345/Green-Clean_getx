@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:green_and_clean/Add%20Property%20Module/View/select_property_type.dart';
+import 'package:green_and_clean/Add%20Property%20Module/View%20Controller/select_property_type.dart';
 import 'package:green_and_clean/Utils/widgets/appbar.dart';
 import '../../../Dashboard Module/View Model/dashboard_controller.dart';
 
@@ -9,7 +9,6 @@ class PropertiesListPage extends GetView<DashboardController> {
 
   @override
   Widget build(BuildContext context) {
-    final height = Get.height;
     final width = Get.width;
     final theme = Theme.of(context);
     return Container(
@@ -32,7 +31,7 @@ class PropertiesListPage extends GetView<DashboardController> {
               slivers: [
                 SliverToBoxAdapter(
                   child: Padding(
-                    padding: EdgeInsets.all(width * 0.05),
+                    padding: const EdgeInsets.all(15),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
@@ -42,8 +41,8 @@ class PropertiesListPage extends GetView<DashboardController> {
                             fontSize: 20,
                           ),
                         ),
-                        SizedBox(
-                          height: height * 0.01,
+                        const SizedBox(
+                          height: 10,
                         ),
                         Card(
                           elevation: 8,
@@ -58,8 +57,8 @@ class PropertiesListPage extends GetView<DashboardController> {
                                     fontSize: 16,
                                   ),
                                 ),
-                                SizedBox(
-                                  height: height * 0.01,
+                                const SizedBox(
+                                  height: 10,
                                 ),
                                 Row(
                                   children: [
@@ -75,8 +74,7 @@ class PropertiesListPage extends GetView<DashboardController> {
                                       child: Column(
                                         children: [
                                           Container(
-                                            padding:
-                                                EdgeInsets.all(height * 0.025),
+                                            padding: const EdgeInsets.all(20),
                                             decoration: const BoxDecoration(
                                                 color: Colors.blueGrey,
                                                 shape: BoxShape.circle),
@@ -105,8 +103,7 @@ class PropertiesListPage extends GetView<DashboardController> {
                                         child: Column(
                                       children: [
                                         Container(
-                                          padding:
-                                              EdgeInsets.all(height * 0.025),
+                                          padding: const EdgeInsets.all(20),
                                           decoration: const BoxDecoration(
                                               color: Colors.red,
                                               shape: BoxShape.circle),
@@ -134,8 +131,7 @@ class PropertiesListPage extends GetView<DashboardController> {
                                         child: Column(
                                       children: [
                                         Container(
-                                          padding:
-                                              EdgeInsets.all(height * 0.025),
+                                          padding: const EdgeInsets.all(20),
                                           decoration: BoxDecoration(
                                               color: theme.primaryColor,
                                               shape: BoxShape.circle),
@@ -177,8 +173,8 @@ class PropertiesListPage extends GetView<DashboardController> {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           const Text("What do you want to clean?"),
-                          SizedBox(
-                            height: height * 0.02,
+                          const SizedBox(
+                            height: 18,
                           ),
                           Row(
                             children: [
@@ -192,7 +188,7 @@ class PropertiesListPage extends GetView<DashboardController> {
                                       child: Image.asset(
                                         "assets/images/home.jpeg",
                                         fit: BoxFit.cover,
-                                        height: width * 0.2,
+                                        height: 70,
                                       ),
                                     ),
                                     const SizedBox(
@@ -216,7 +212,7 @@ class PropertiesListPage extends GetView<DashboardController> {
                                       borderRadius: BorderRadius.circular(10),
                                       child: Image.asset(
                                           "assets/images/apartment.png",
-                                          height: width * 0.2,
+                                          height: 70,
                                           fit: BoxFit.cover),
                                     ),
                                     const SizedBox(
@@ -240,7 +236,7 @@ class PropertiesListPage extends GetView<DashboardController> {
                                       borderRadius: BorderRadius.circular(10),
                                       child: Image.asset(
                                           "assets/images/vacation.png",
-                                          height: width * 0.2,
+                                          height: 70,
                                           fit: BoxFit.cover),
                                     ),
                                     const SizedBox(
@@ -265,7 +261,7 @@ class PropertiesListPage extends GetView<DashboardController> {
                                       child: Image.asset(
                                         "assets/images/hotel.png",
                                         fit: BoxFit.cover,
-                                        height: width * 0.2,
+                                        height: 70,
                                       ),
                                     ),
                                     const SizedBox(
@@ -429,14 +425,14 @@ class MyProperties extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final height = Get.height;
     final width = Get.width;
     final theme = Theme.of(context);
     return SliverList(
         delegate: SliverChildBuilderDelegate((_, index) {
       return Padding(
-        padding: EdgeInsets.symmetric(horizontal: width * 0.05, vertical: 10),
+        padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
         child: Card(
+          elevation: 2,
           child: Padding(
             padding: const EdgeInsets.all(8.0),
             child: Row(
@@ -470,8 +466,8 @@ class MyProperties extends StatelessWidget {
                                     "Miami, Florida 33127",
                                     maxLines: 1,
                                   ),
-                                  SizedBox(
-                                    height: height * 0.02,
+                                  const SizedBox(
+                                    height: 15,
                                   ),
                                   Row(
                                     children: [
@@ -551,8 +547,8 @@ class MyProperties extends StatelessWidget {
                                 Border(left: BorderSide(color: Colors.grey))),
                         child: Column(
                           children: [
-                            SizedBox(
-                              height: height * 0.01,
+                            const SizedBox(
+                              height: 6,
                             ),
                             Row(
                               mainAxisAlignment: MainAxisAlignment.center,
@@ -564,8 +560,8 @@ class MyProperties extends StatelessWidget {
                                 Text('6')
                               ],
                             ),
-                            SizedBox(
-                              height: height * 0.01,
+                            const SizedBox(
+                              height: 6,
                             ),
                             Row(
                               mainAxisAlignment: MainAxisAlignment.center,

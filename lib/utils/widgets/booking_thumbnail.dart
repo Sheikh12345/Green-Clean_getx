@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:get/get.dart';
 
 class BookingThumbnail extends StatelessWidget {
   const BookingThumbnail(
@@ -10,14 +9,12 @@ class BookingThumbnail extends StatelessWidget {
   final void Function() onPressed;
   @override
   Widget build(BuildContext context) {
-    final height = Get.height;
-    final width = Get.width;
     final theme = Theme.of(context);
     return GestureDetector(
       onTap: onPressed,
       child: Card(
         elevation: 5,
-        margin: EdgeInsets.symmetric(horizontal: width * 0.05, vertical: 8),
+        margin: const EdgeInsets.symmetric(horizontal: 15, vertical: 8),
         child: Padding(
           padding: const EdgeInsets.all(8.0),
           child: Row(
@@ -25,27 +22,27 @@ class BookingThumbnail extends StatelessWidget {
               Expanded(
                   flex: 3,
                   child: Column(
-                    children: [
-                      const Text(
+                    children: const [
+                      Text(
                         "22",
                         style: TextStyle(
                             fontWeight: FontWeight.w600, fontSize: 18),
                       ),
                       SizedBox(
-                        height: height * 0.015,
+                        height: 10,
                       ),
-                      const Text("February"),
+                      Text("February"),
                       SizedBox(
-                        height: height * 0.01,
+                        height: 7,
                       ),
-                      const Text(
+                      Text(
                         "Start at 2:00 PM",
                         style: TextStyle(fontSize: 12),
                       ),
                       SizedBox(
-                        height: height * 0.01,
+                        height: 7,
                       ),
-                      const Text(
+                      Text(
                         "End at 5:00 PM",
                         style: TextStyle(fontSize: 12),
                       )
@@ -58,8 +55,8 @@ class BookingThumbnail extends StatelessWidget {
                     child: Column(
                       children: [
                         Row(
-                          children: [
-                            const Expanded(
+                          children: const [
+                            Expanded(
                                 child: Text(
                               "Glomoum 6BR @Midtown",
                               style: TextStyle(
@@ -68,29 +65,26 @@ class BookingThumbnail extends StatelessWidget {
                             )),
                             Icon(
                               FontAwesomeIcons.circleArrowRight,
-                              size: height * 0.02,
+                              size: 18,
                               color: Colors.black,
                             )
                           ],
                         ),
-                        SizedBox(
-                          height: height * 0.02,
+                        const SizedBox(
+                          height: 18,
                         ),
                         Row(
-                          children: [
-                            const Expanded(
+                          children: const [
+                            Expanded(
                                 child: Text(
                               "327 Northwest 39th Street\nMiami, Florida 33127",
                               style: TextStyle(fontSize: 12),
                               maxLines: 2,
                             )),
-                            SizedBox(
-                              width: width * 0.05,
-                            ),
                           ],
                         ),
-                        SizedBox(
-                          height: height * 0.02,
+                        const SizedBox(
+                          height: 18,
                         ),
                         Row(
                           children: [
@@ -113,25 +107,25 @@ class BookingThumbnail extends StatelessWidget {
                                     ],
                                   )
                                 : Row(
-                                    children: [
-                                      const Text("3"),
-                                      const SizedBox(
+                                    children: const [
+                                      Text("3"),
+                                      SizedBox(
                                         width: 5,
                                       ),
                                       Icon(
                                         Icons.bathtub,
-                                        size: height * 0.03,
+                                        size: 20,
                                       ),
-                                      const SizedBox(
+                                      SizedBox(
                                         width: 5,
                                       ),
-                                      const Text("6"),
-                                      const SizedBox(
+                                      Text("6"),
+                                      SizedBox(
                                         width: 5,
                                       ),
                                       Icon(
                                         Icons.bed_rounded,
-                                        size: height * 0.03,
+                                        size: 20,
                                       ),
                                     ],
                                   ),

@@ -1,24 +1,25 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:green_and_clean/Bookings%20Module/View%20Model/bookings_controller.dart';
+import 'package:green_and_clean/Account%20Module/View%20Model/account_controller.dart';
 import 'package:green_and_clean/Utils/widgets/appbar.dart';
 import 'package:green_and_clean/Utils/widgets/booking_thumbnail.dart';
 
-class BookingsList extends GetView<BookingsController> {
-  const BookingsList({Key? key}) : super(key: key);
-
+class BookingsPage extends StatelessWidget {
+  BookingsPage({Key? key}) : super(key: key);
+  final controller = Get.put(AccountController());
   @override
   Widget build(BuildContext context) {
-    final height = Get.height;
     final width = Get.width;
     final theme = Theme.of(context);
     return Container(
       color: theme.primaryColor,
       child: Column(
         children: [
-          const AppBarView(
+          AppBarView(
             title: "Bookings",
-            enableBackButton: false,
+            enableBackButton: true,
+            backButtonOnPressed: () => Get.find<AccountController>()
+                .setIndex(Get.find<AccountController>().accountStackIndex - 2),
             enableTrailingButton: false,
           ),
           Expanded(
@@ -40,8 +41,8 @@ class BookingsList extends GetView<BookingsController> {
                     decoration: BoxDecoration(
                         color: const Color(0xff19E6FF).withOpacity(0.2),
                         borderRadius: BorderRadius.circular(50)),
-                    padding: EdgeInsets.symmetric(
-                        horizontal: width * 0.05, vertical: 15),
+                    padding: const EdgeInsets.symmetric(
+                        horizontal: 18, vertical: 15),
                     width: width,
                     child: Obx(() => Row(
                           mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -57,12 +58,12 @@ class BookingsList extends GetView<BookingsController> {
                                         ? Border(
                                             bottom: BorderSide(
                                                 color: theme.primaryColor,
-                                                width: 1.5))
+                                                width: 2))
                                         : null),
                                 duration: const Duration(milliseconds: 500),
                                 child: Center(
                                   child: Text(
-                                    "Fixed",
+                                    "Accepted",
                                     style: TextStyle(
                                         color: controller.bookingType.value == 0
                                             ? Colors.black
@@ -82,12 +83,12 @@ class BookingsList extends GetView<BookingsController> {
                                         ? Border(
                                             bottom: BorderSide(
                                                 color: theme.primaryColor,
-                                                width: 1.5))
+                                                width: 2))
                                         : null),
                                 duration: const Duration(milliseconds: 500),
                                 child: Center(
                                   child: Text(
-                                    "Offers",
+                                    "In Progress",
                                     style: TextStyle(
                                         color: controller.bookingType.value == 1
                                             ? Colors.black
@@ -107,13 +108,12 @@ class BookingsList extends GetView<BookingsController> {
                                         ? Border(
                                             bottom: BorderSide(
                                                 color: theme.primaryColor,
-                                                width: 1.5),
-                                          )
+                                                width: 2))
                                         : null),
                                 duration: const Duration(milliseconds: 500),
                                 child: Center(
                                   child: Text(
-                                    "Per Hour",
+                                    "Completed",
                                     style: TextStyle(
                                         color: controller.bookingType.value == 2
                                             ? Colors.black
@@ -127,18 +127,17 @@ class BookingsList extends GetView<BookingsController> {
                   ),
                 ),
                 const SizedBox(
-                  height: 5,
+                  height: 10,
                 ),
                 Expanded(
-                    child: ListView.builder(
-                        padding: const EdgeInsets.all(0),
-                        itemBuilder: (_, index) => BookingThumbnail(
-                              accountBooking: false,
-                              onPressed: () => Get.find<BookingsController>()
-                                  .setIndex(Get.find<BookingsController>()
-                                          .bookingStackIndex +
-                                      1),
-                            )))
+                  child: ListView.builder(
+                    padding: const EdgeInsets.all(0),
+                    itemBuilder: (_, index) => BookingThumbnail(
+                      accountBooking: true,
+                      onPressed: () {},
+                    ),
+                  ),
+                )
               ],
             ),
           ))

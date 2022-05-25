@@ -8,7 +8,6 @@ class AddPropertyPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final height = Get.height;
     final width = Get.width;
     final theme = Theme.of(context);
     return Scaffold(
@@ -24,7 +23,7 @@ class AddPropertyPage extends StatelessWidget {
             ),
             Expanded(
                 child: Container(
-                    padding: EdgeInsets.symmetric(horizontal: width * 0.05),
+                    padding: const EdgeInsets.symmetric(horizontal: 18),
                     decoration: const BoxDecoration(
                         color: Colors.white,
                         borderRadius: BorderRadius.only(
@@ -34,8 +33,8 @@ class AddPropertyPage extends StatelessWidget {
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          SizedBox(
-                            height: height * 0.02,
+                          const SizedBox(
+                            height: 15,
                           ),
                           Row(
                             children: [
@@ -47,8 +46,8 @@ class AddPropertyPage extends StatelessWidget {
                                     borderRadius: BorderRadius.circular(100),
                                     child: Image.asset(
                                       "assets/images/home.jpeg",
-                                      width: width * 0.18,
-                                      height: width * 0.18,
+                                      width: 65,
+                                      height: 65,
                                       fit: BoxFit.cover,
                                     )),
                               ),
@@ -63,8 +62,8 @@ class AddPropertyPage extends StatelessWidget {
                                   label: const Text("Add Image"))
                             ],
                           ),
-                          SizedBox(
-                            height: height * 0.02,
+                          const SizedBox(
+                            height: 15,
                           ),
                           TextField(
                             textAlign: TextAlign.center,
@@ -76,8 +75,8 @@ class AddPropertyPage extends StatelessWidget {
                               ),
                             ),
                           ),
-                          SizedBox(
-                            height: height * 0.02,
+                          const SizedBox(
+                            height: 15,
                           ),
                           TextField(
                             textAlign: TextAlign.center,
@@ -89,8 +88,8 @@ class AddPropertyPage extends StatelessWidget {
                               ),
                             ),
                           ),
-                          SizedBox(
-                            height: height * 0.02,
+                          const SizedBox(
+                            height: 15,
                           ),
                           Row(
                             children: [
@@ -107,8 +106,8 @@ class AddPropertyPage extends StatelessWidget {
                                   ),
                                 ),
                               ),
-                              SizedBox(
-                                width: width * 0.05,
+                              const SizedBox(
+                                width: 15,
                               ),
                               Flexible(
                                 child: TextField(
@@ -125,8 +124,8 @@ class AddPropertyPage extends StatelessWidget {
                               )
                             ],
                           ),
-                          SizedBox(
-                            height: height * 0.02,
+                          const SizedBox(
+                            height: 15,
                           ),
                           Row(
                             children: [
@@ -143,8 +142,8 @@ class AddPropertyPage extends StatelessWidget {
                                   ),
                                 ),
                               ),
-                              SizedBox(
-                                width: width * 0.05,
+                              const SizedBox(
+                                width: 15,
                               ),
                               Flexible(
                                 child: TextField(
@@ -161,8 +160,8 @@ class AddPropertyPage extends StatelessWidget {
                               )
                             ],
                           ),
-                          SizedBox(
-                            height: height * 0.04,
+                          const SizedBox(
+                            height: 25,
                           ),
                           const Text("Do you have a channel manager?"),
                           Row(
@@ -199,8 +198,8 @@ class AddPropertyPage extends StatelessWidget {
                               )
                             ],
                           ),
-                          SizedBox(
-                            height: height * 0.02,
+                          const SizedBox(
+                            height: 15,
                           ),
                           const Text(
                               "Do you want to connect using your channel manager or iCal?"),
@@ -238,43 +237,43 @@ class AddPropertyPage extends StatelessWidget {
                               )
                             ],
                           ),
-                          SizedBox(
-                            height: height * 0.02,
+                          const SizedBox(
+                            height: 15,
                           ),
                           const Text(
                               "Please select your channel manager or iCal to connect"),
-                          SizedBox(
-                            height: height * 0.02,
+                          const SizedBox(
+                            height: 15,
                           ),
                           Card(
                             child: Row(
                               children: [
                                 Image.asset(
                                   "assets/images/airbnb.png",
-                                  width: width * 0.3,
+                                  width: 110,
                                 ),
                                 const Spacer(),
                                 const Icon(Icons.arrow_forward_rounded)
                               ],
                             ),
                           ),
-                          SizedBox(
-                            height: height * 0.02,
+                          const SizedBox(
+                            height: 15,
                           ),
                           Card(
                             child: Row(
                               children: [
                                 Image.asset(
                                   "assets/images/vrbo.png",
-                                  width: width * 0.3,
+                                  width: 110,
                                 ),
                                 const Spacer(),
                                 const Icon(Icons.arrow_forward_rounded)
                               ],
                             ),
                           ),
-                          SizedBox(
-                            height: height * 0.02,
+                          const SizedBox(
+                            height: 15,
                           ),
                           Card(
                             child: Padding(
@@ -283,7 +282,7 @@ class AddPropertyPage extends StatelessWidget {
                                 children: [
                                   Image.asset(
                                     "assets/images/booking.png",
-                                    width: width * 0.3,
+                                    width: 110,
                                   ),
                                   const Spacer(),
                                   const Icon(Icons.arrow_forward_rounded)
@@ -291,8 +290,8 @@ class AddPropertyPage extends StatelessWidget {
                               ),
                             ),
                           ),
-                          SizedBox(
-                            height: height * 0.02,
+                          const SizedBox(
+                            height: 15,
                           ),
                           Card(
                             child: Padding(
@@ -301,7 +300,7 @@ class AddPropertyPage extends StatelessWidget {
                                 children: [
                                   Image.asset(
                                     "assets/images/tripadvisor.png",
-                                    width: width * 0.3,
+                                    width: 110,
                                   ),
                                   const Spacer(),
                                   const Icon(Icons.arrow_forward_rounded)
@@ -309,38 +308,38 @@ class AddPropertyPage extends StatelessWidget {
                               ),
                             ),
                           ),
-                          SizedBox(
-                            height: height * 0.02,
+                          const SizedBox(
+                            height: 15,
                           ),
                           Card(
                             child: Row(
                               children: [
                                 Image.asset(
                                   "assets/images/hostaway.png",
-                                  width: width * 0.3,
+                                  width: 110,
                                 ),
                                 const Spacer(),
                                 const Icon(Icons.arrow_forward_rounded)
                               ],
                             ),
                           ),
-                          SizedBox(
-                            height: height * 0.02,
+                          const SizedBox(
+                            height: 15,
                           ),
                           Card(
                             child: Row(
                               children: [
                                 Image.asset(
                                   "assets/images/guest.png",
-                                  width: width * 0.3,
+                                  width: 110,
                                 ),
                                 const Spacer(),
                                 const Icon(Icons.arrow_forward_rounded)
                               ],
                             ),
                           ),
-                          SizedBox(
-                            height: height * 0.02,
+                          const SizedBox(
+                            height: 15,
                           ),
                           Card(
                             child: Padding(
@@ -357,8 +356,8 @@ class AddPropertyPage extends StatelessWidget {
                               ),
                             ),
                           ),
-                          SizedBox(
-                            height: height * 0.02,
+                          const SizedBox(
+                            height: 15,
                           ),
                           GestureDetector(
                             onTap: () {
@@ -377,8 +376,8 @@ class AddPropertyPage extends StatelessWidget {
                                   ),
                                 )),
                           ),
-                          SizedBox(
-                            height: height * 0.04,
+                          const SizedBox(
+                            height: 10,
                           ),
                         ],
                       ),

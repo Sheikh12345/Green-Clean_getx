@@ -1,13 +1,13 @@
 import 'package:get/get.dart';
 import 'package:flutter/material.dart';
-import '../View/cleaners_list.dart';
-import '../View/cleaning_category_page.dart';
-import '../View/cleaning_order_summary.dart';
-import '../View/cleaning_property_page.dart';
-import '../View/cleaning_schedule_page.dart';
-import '../View/cleaning_type_page.dart';
-import '../View/clearner_detail_page.dart';
-import '../View/make_offer_page.dart';
+import 'package:green_and_clean/Home%20Module/View%20Controller/cleaners_list.dart';
+import 'package:green_and_clean/Home%20Module/View%20Controller/cleaning_category_page.dart';
+import 'package:green_and_clean/Home%20Module/View%20Controller/cleaning_order_summary.dart';
+import 'package:green_and_clean/Home%20Module/View%20Controller/cleaning_property_page.dart';
+import 'package:green_and_clean/Home%20Module/View%20Controller/cleaning_schedule_page.dart';
+import 'package:green_and_clean/Home%20Module/View%20Controller/cleaning_type_page.dart';
+import 'package:green_and_clean/Home%20Module/View%20Controller/clearner_detail_page.dart';
+import 'package:green_and_clean/Home%20Module/View%20Controller/make_offer_page.dart';
 
 class HomeController extends GetxController {
   RxInt bedrooms = 0.obs;
@@ -37,7 +37,6 @@ class HomeController extends GetxController {
         return const CleanersList();
       case 5:
         return const CleanerDetailPage();
-
       case 6:
         return const MakeOfferPage();
       case 7:
