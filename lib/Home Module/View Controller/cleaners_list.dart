@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
+import 'package:green_and_clean/Home%20Module/View%20Controller/clearner_detail_page.dart';
 import 'package:green_and_clean/Utils/widgets/appbar.dart';
-import '../../../Home Module/View Model/home_controller.dart';
+import 'package:persistent_bottom_nav_bar/persistent-tab-view.dart';
 
 class CleanersList extends StatelessWidget {
   const CleanersList({Key? key}) : super(key: key);
@@ -10,35 +11,36 @@ class CleanersList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
-    return Container(
-      color: theme.primaryColor,
-      child: Column(
-        children: [
-          AppBarView(
-            title: "Available Cleaners",
-            enableBackButton: true,
-            backButtonOnPressed: () {
-              Get.find<HomeController>()
-                  .setIndex(Get.find<HomeController>().homeStackIndex - 1);
-            },
-            enableTrailingButton: true,
-            trailingButtonOnPressed: () {},
-          ),
-          Expanded(
-            child: Container(
-              decoration: const BoxDecoration(
-                  color: Colors.white,
-                  borderRadius: BorderRadius.only(
-                      topRight: Radius.circular(25),
-                      topLeft: Radius.circular(25))),
-              child: ListView.builder(
-                padding:
-                    const EdgeInsets.symmetric(horizontal: 15, vertical: 15),
-                itemBuilder: (_, index) => const CleanerDetailThumbnail(),
-              ),
+    return Scaffold(
+      body: Container(
+        color: theme.primaryColor,
+        child: Column(
+          children: [
+            AppBarView(
+              title: "Available Cleaners",
+              enableBackButton: true,
+              backButtonOnPressed: () {
+                Navigator.pop(context);
+              },
+              enableTrailingButton: true,
+              trailingButtonOnPressed: () {},
             ),
-          )
-        ],
+            Expanded(
+              child: Container(
+                decoration: const BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.only(
+                        topRight: Radius.circular(25),
+                        topLeft: Radius.circular(25))),
+                child: ListView.builder(
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: 15, vertical: 15),
+                  itemBuilder: (_, index) => const CleanerDetailThumbnail(),
+                ),
+              ),
+            )
+          ],
+        ),
       ),
     );
   }
@@ -52,8 +54,12 @@ class CleanerDetailThumbnail extends StatelessWidget {
     final width = Get.width;
     return GestureDetector(
       onTap: () {
-        Get.find<HomeController>()
-            .setIndex(Get.find<HomeController>().homeStackIndex + 1);
+        pushNewScreen(
+          context,
+          screen: const CleanerDetailPage(),
+          withNavBar: true, // OPTIONAL VALUE. True by default.
+          pageTransitionAnimation: PageTransitionAnimation.cupertino,
+        );
       },
       child: SizedBox(
         width: width,

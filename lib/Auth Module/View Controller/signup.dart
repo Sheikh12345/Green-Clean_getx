@@ -3,7 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
 import 'package:green_and_clean/Auth%20Module/View%20Model/auth_view_model.dart';
-import 'package:green_and_clean/Utils/navigation/navigation_page.dart';
+
+import '../../Navigation Module/navigation_page.dart';
 
 class SignUpPage extends StatelessWidget {
   SignUpPage({Key? key}) : super(key: key);
@@ -133,7 +134,7 @@ class SignUpPage extends StatelessWidget {
                     const SizedBox(height: 35),
                     GestureDetector(
                       onTap: () {
-                        Get.to(() => const NavigationPage());
+                        Get.to(() => NavigationPage());
                       },
                       child: Container(
                         decoration: BoxDecoration(

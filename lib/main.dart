@@ -22,7 +22,7 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       title: 'Green & Clean',
       theme: ThemeData(
-          fontFamily: 'LuxoraGrotest',
+          fontFamily: 'Roboto',
           inputDecorationTheme: const InputDecorationTheme(
               hintStyle: TextStyle(color: Color(0xffb6b7b7)),
               prefixIconColor: Color(0xffb6b7b7)),

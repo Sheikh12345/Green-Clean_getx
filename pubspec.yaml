@@ -81,24 +81,21 @@ flutter:
   # list giving the asset and other descriptors for the font. For
   # example:
   fonts:
-    - family: LuxoraGrotest
+    - family: Roboto
       fonts:
-        - asset: assets/fonts/LuxoraGrotesk-Regular.ttf
-        - asset: assets/fonts/LuxoraGrotesk-Bold.ttf
-        - asset: assets/fonts/LuxoraGrotesk-BoldItalic.ttf
-        - asset: assets/fonts/LuxoraGrotesk-Book.ttf
-        - asset: assets/fonts/LuxoraGrotesk-BookItalic.ttf
-        - asset: assets/fonts/LuxoraGrotesk-Heavy.ttf
-        - asset: assets/fonts/LuxoraGrotesk-HeavyItalic.ttf
-        - asset: assets/fonts/LuxoraGrotesk-Italic.ttf
-        - asset: assets/fonts/LuxoraGrotesk-Light.ttf
-        - asset: assets/fonts/LuxoraGrotesk-LightItalic.ttf
-        - asset: assets/fonts/LuxoraGrotesk-Medium.ttf
-        - asset: assets/fonts/LuxoraGrotesk-MediumItalic.ttf
-        - asset: assets/fonts/LuxoraGrotesk-Thin.ttf
-        - asset: assets/fonts/LuxoraGrotesk-ThinItalic.ttf
-        - asset: assets/fonts/LuxoraGrotesk-Italic.ttf
-          style: italic
+        - asset: assets/fonts/Roboto-Regular.ttf
+        - asset: assets/fonts/Roboto-Black.ttf
+        - asset: assets/fonts/Roboto-BlackItalic.ttf
+        - asset: assets/fonts/Roboto-Bold.ttf
+        - asset: assets/fonts/Roboto-BoldItalic.ttf
+        - asset: assets/fonts/Roboto-Italic.ttf
+        - asset: assets/fonts/Roboto-Light.ttf
+        - asset: assets/fonts/Roboto-LightItalic.ttf
+        - asset: assets/fonts/Roboto-Medium.ttf
+        - asset: assets/fonts/Roboto-MediumItalic.ttf
+        - asset: assets/fonts/Roboto-Thin.ttf
+        - asset: assets/fonts/Roboto-ThinItalic.ttf
+       
   #   - family: Trajan Pro
   #     fonts:
   #       - asset: fonts/TrajanPro.ttf

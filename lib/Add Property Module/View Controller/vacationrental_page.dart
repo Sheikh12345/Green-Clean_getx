@@ -7,8 +7,8 @@ import 'package:green_and_clean/Utils/Constants/size.dart';
 import '../View Model/addproperty_controller.dart';
 
 class VacationRentalPage extends GetView<AddPropertyController> {
-  const VacationRentalPage({Key? key}) : super(key: key);
-
+  VacationRentalPage({Key? key}) : super(key: key);
+  final addPropertyController = Get.put(AddPropertyController());
   @override
   Widget build(BuildContext context) {
     final height = AppConfig(context).height;
@@ -32,7 +32,7 @@ class VacationRentalPage extends GetView<AddPropertyController> {
                   left: 10,
                   child: IconButton(
                       onPressed: () {
-                        Get.back();
+                        Navigator.pop(context);
                       },
                       icon: const Icon(
                         FontAwesomeIcons.circleArrowLeft,

@@ -43,7 +43,7 @@ class CategoryThumbnail extends StatelessWidget {
                 bottom: 0,
                 left: 0,
                 child: Container(
-                  width: width * 0.35,
+                  width: width * 0.4,
                   padding: const EdgeInsets.all(8),
                   decoration: const BoxDecoration(
                       color: Colors.black54,
@@ -52,7 +52,7 @@ class CategoryThumbnail extends StatelessWidget {
                   child: Center(
                       child: Text(
                     title,
-                    style: const TextStyle(color: Colors.white, fontSize: 13),
+                    style: const TextStyle(color: Colors.white, fontSize: 16),
                     maxLines: 1,
                     overflow: TextOverflow.ellipsis,
                   )),
