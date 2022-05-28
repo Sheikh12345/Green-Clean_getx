@@ -32,7 +32,7 @@ class ToDoList extends StatelessWidget {
               child: Column(
                 children: [
                   const SizedBox(
-                    height: 20,
+                    height: 30,
                   ),
                   Row(
                     children: [
@@ -47,18 +47,21 @@ class ToDoList extends StatelessWidget {
                             children: const [
                               Text(
                                 "Glamourn 6BR@Midtown",
-                                style: TextStyle(fontSize: 14),
+                                style: TextStyle(
+                                    fontSize: 14, color: Color(0xff707070)),
                               ),
                               SizedBox(
                                 height: 5,
                               ),
                               Text(
                                 "327 Northwest 39th Street",
-                                style: TextStyle(fontSize: 12),
+                                style: TextStyle(
+                                    fontSize: 12, color: Color(0xff707070)),
                               ),
                               Text(
                                 "Miami, Florida 33127",
-                                style: TextStyle(fontSize: 12),
+                                style: TextStyle(
+                                    fontSize: 12, color: Color(0xff707070)),
                               ),
                               SizedBox(
                                 height: 10,

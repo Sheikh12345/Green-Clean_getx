@@ -30,7 +30,10 @@ class NewPasswordPage extends StatelessWidget {
                         onPressed: () {
                           Get.back();
                         },
-                        icon: const Icon(FontAwesomeIcons.circleArrowLeft))
+                        icon: const Icon(
+                          FontAwesomeIcons.circleArrowLeft,
+                          size: 22,
+                        ))
                   ],
                 ),
                 const SizedBox(
@@ -46,7 +49,7 @@ class NewPasswordPage extends StatelessWidget {
                           "New Password",
                           textAlign: TextAlign.center,
                           style: TextStyle(
-                            fontSize: 25,
+                            fontSize: 28,
                           ),
                         )),
                         const SizedBox(
@@ -75,7 +78,7 @@ class NewPasswordPage extends StatelessWidget {
                                   authController.isPasswordVisible.value
                                       ? Icons.visibility
                                       : Icons.visibility_off,
-                                  color: Colors.blue.shade800,
+                                  color: const Color(0xff707070),
 
                                   size: 22,
                                 ),
@@ -107,7 +110,7 @@ class NewPasswordPage extends StatelessWidget {
                                   authController.isConfirmPasswordVisible.value
                                       ? Icons.visibility
                                       : Icons.visibility_off,
-                                  color: Colors.blue.shade800,
+                                  color: const Color(0xff707070),
                                   size: 22,
                                 ),
                                 onPressed: () {
@@ -130,10 +133,10 @@ class NewPasswordPage extends StatelessWidget {
                             Get.to(() => const SmsVerificationPage());
                           },
                           child: Container(
+                            height: 56,
                             decoration: BoxDecoration(
                                 color: theme.primaryColor,
                                 borderRadius: BorderRadius.circular(10)),
-                            padding: const EdgeInsets.all(15),
                             child: const Center(
                               child: Text(
                                 "Submit",

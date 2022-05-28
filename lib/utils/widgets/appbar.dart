@@ -32,6 +32,7 @@ class AppBarView extends StatelessWidget {
                     child: const FaIcon(
                       FontAwesomeIcons.circleArrowLeft,
                       color: Colors.white,
+                      size: 20,
                     ),
                   ),
                 )

@@ -31,13 +31,15 @@ class CleaningPropertyPage extends StatelessWidget {
                       top: 5 + kToolbarHeight / 3,
                       left: 10,
                       child: IconButton(
-                          onPressed: () {
-                            Navigator.pop(context);
-                          },
-                          icon: const Icon(
-                            FontAwesomeIcons.circleArrowLeft,
-                            color: Colors.white,
-                          ))),
+                        onPressed: () {
+                          Navigator.pop(context);
+                        },
+                        icon: const FaIcon(
+                          FontAwesomeIcons.circleArrowLeft,
+                          color: Colors.white,
+                          size: 20,
+                        ),
+                      )),
                   Positioned(
                     child: Container(
                       height: 46,
@@ -68,17 +70,14 @@ class CleaningPropertyPage extends StatelessWidget {
             const SizedBox(
               height: 27,
             ),
-            Row(
-              children: [
-                const Expanded(
-                    child: Icon(
-                  Icons.bed,
-                  size: 30,
-                )),
-                Expanded(
-                  flex: 2,
-                  child: Obx(() => Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceAround,
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 30.0),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  const Icon(Icons.bed, size: 30, color: Color(0xff707070)),
+                  const Spacer(),
+                  Obx(() => Row(
                         children: [
                           IconButton(
                               onPressed: () {
@@ -88,7 +87,13 @@ class CleaningPropertyPage extends StatelessWidget {
                                 }
                               },
                               icon: const Icon(Icons.remove_circle)),
+                          const SizedBox(
+                            width: 20,
+                          ),
                           Text(Get.find<HomeController>().bedrooms.toString()),
+                          const SizedBox(
+                            width: 20,
+                          ),
                           IconButton(
                               onPressed: () {
                                 Get.find<HomeController>().bedrooms++;
@@ -96,9 +101,12 @@ class CleaningPropertyPage extends StatelessWidget {
                               icon: const Icon(Icons.add_circle)),
                         ],
                       )),
-                ),
-                const Expanded(child: SizedBox())
-              ],
+                  const SizedBox(
+                    width: 30,
+                  ),
+                  const Spacer(),
+                ],
+              ),
             ),
             const SizedBox(
               height: 31,
@@ -113,17 +121,15 @@ class CleaningPropertyPage extends StatelessWidget {
             const SizedBox(
               height: 31,
             ),
-            Row(
-              children: [
-                const Expanded(
-                    child: Icon(
-                  Icons.bathtub_outlined,
-                  size: 30,
-                )),
-                Expanded(
-                  flex: 2,
-                  child: Obx(() => Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceAround,
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 30.0),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  const Icon(Icons.bathtub_outlined,
+                      size: 30, color: Color(0xff707070)),
+                  const Spacer(),
+                  Obx(() => Row(
                         children: [
                           IconButton(
                               onPressed: () {
@@ -134,8 +140,16 @@ class CleaningPropertyPage extends StatelessWidget {
                                   Get.find<HomeController>().bathrooms--;
                                 }
                               },
-                              icon: const Icon(Icons.remove_circle)),
+                              icon: const Icon(
+                                Icons.remove_circle,
+                              )),
+                          const SizedBox(
+                            width: 20,
+                          ),
                           Text(Get.find<HomeController>().bathrooms.toString()),
+                          const SizedBox(
+                            width: 20,
+                          ),
                           IconButton(
                               onPressed: () {
                                 Get.find<HomeController>().bathrooms++;
@@ -143,16 +157,19 @@ class CleaningPropertyPage extends StatelessWidget {
                               icon: const Icon(Icons.add_circle)),
                         ],
                       )),
-                ),
-                const Expanded(child: SizedBox())
-              ],
+                  const Spacer(),
+                  const SizedBox(
+                    width: 30,
+                  )
+                ],
+              ),
             ),
             const SizedBox(
-              height: 31,
+              height: 25,
             ),
             Container(
               height: 36,
-              color: Colors.black45,
+              color: const Color(0xff000000).withOpacity(0.4),
               child: const Center(
                   child: Text(
                 "Add - Ons",
@@ -160,77 +177,135 @@ class CleaningPropertyPage extends StatelessWidget {
               )),
             ),
             const SizedBox(
-              height: 15,
+              height: 10,
             ),
-            ListTile(
-              leading: const Icon(
-                Icons.kitchen_outlined,
-                size: 28,
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 30),
+              child: Row(
+                children: [
+                  const Icon(Icons.kitchen_outlined,
+                      size: 28, color: Color(0xff707070)),
+                  const SizedBox(
+                    width: 28,
+                  ),
+                  const Text("Fridge",
+                      style: TextStyle(fontSize: 14, color: Color(0xff707070))),
+                  const Spacer(),
+                  Checkbox(
+                    value: false,
+                    onChanged: (val) {},
+                    side: const BorderSide(color: Colors.black, width: 1.5),
+                  ),
+                ],
               ),
-              title: const Text("Fridge", style: TextStyle(fontSize: 14)),
-              trailing: Checkbox(
-                value: false,
-                onChanged: (val) {},
-              ),
-              dense: true,
             ),
-            ListTile(
-              leading: const Icon(
-                Icons.microwave_outlined,
-                size: 28,
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 30),
+              child: Row(
+                children: [
+                  const Icon(Icons.microwave_outlined,
+                      size: 28, color: Color(0xff707070)),
+                  const SizedBox(
+                    width: 28,
+                  ),
+                  const Text("Microwave",
+                      style: TextStyle(fontSize: 14, color: Color(0xff707070))),
+                  const Spacer(),
+                  Checkbox(
+                    value: false,
+                    onChanged: (val) {},
+                    side: const BorderSide(color: Colors.black, width: 1.5),
+                  ),
+                ],
               ),
-              title: const Text("Microwave", style: TextStyle(fontSize: 14)),
-              trailing: Checkbox(
-                value: false,
-                onChanged: (val) {},
-              ),
-              dense: true,
             ),
-            ListTile(
-              leading: const Icon(Icons.inventory_2_outlined, size: 28),
-              title: const Text("Cabinets", style: TextStyle(fontSize: 14)),
-              trailing: Checkbox(
-                value: false,
-                onChanged: (val) {},
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 30),
+              child: Row(
+                children: [
+                  const Icon(Icons.inventory_2_outlined,
+                      size: 28, color: Color(0xff707070)),
+                  const SizedBox(
+                    width: 28,
+                  ),
+                  const Text("Cabinets",
+                      style: TextStyle(fontSize: 14, color: Color(0xff707070))),
+                  const Spacer(),
+                  Checkbox(
+                    value: false,
+                    onChanged: (val) {},
+                    side: const BorderSide(color: Colors.black, width: 1.5),
+                  ),
+                ],
               ),
-              dense: true,
             ),
-            ListTile(
-              leading: const Icon(Icons.iron_outlined, size: 28),
-              title: const Text("Ironing", style: TextStyle(fontSize: 14)),
-              trailing: Checkbox(
-                value: false,
-                onChanged: (val) {},
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 30),
+              child: Row(
+                children: [
+                  const Icon(Icons.iron_outlined,
+                      size: 28, color: Color(0xff707070)),
+                  const SizedBox(
+                    width: 28,
+                  ),
+                  const Text("Ironing",
+                      style: TextStyle(fontSize: 14, color: Color(0xff707070))),
+                  const Spacer(),
+                  Checkbox(
+                    value: false,
+                    onChanged: (val) {},
+                    side: const BorderSide(color: Colors.black, width: 1.5),
+                  ),
+                ],
               ),
-              dense: true,
             ),
-            ListTile(
-              leading:
-                  const Icon(Icons.local_laundry_service_outlined, size: 30),
-              title: const Text("Washing", style: TextStyle(fontSize: 14)),
-              trailing: Checkbox(
-                value: false,
-                onChanged: (val) {},
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 30),
+              child: Row(
+                children: [
+                  const Icon(Icons.local_laundry_service_outlined,
+                      size: 30, color: Color(0xff707070)),
+                  const SizedBox(
+                    width: 28,
+                  ),
+                  const Text("Washing",
+                      style: TextStyle(fontSize: 14, color: Color(0xff707070))),
+                  const Spacer(),
+                  Checkbox(
+                    value: false,
+                    onChanged: (val) {},
+                    side: const BorderSide(color: Colors.black, width: 1.5),
+                  ),
+                ],
               ),
-              dense: true,
             ),
-            ListTile(
-              leading: const Icon(Icons.dry_cleaning_outlined, size: 28),
-              title: const Text(
-                "Drying",
-                style: TextStyle(fontSize: 14),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 30),
+              child: Row(
+                children: [
+                  const Icon(Icons.dry_cleaning_outlined,
+                      size: 28, color: Color(0xff707070)),
+                  const SizedBox(
+                    width: 28,
+                  ),
+                  const Text(
+                    "Drying",
+                    style: TextStyle(fontSize: 14, color: Color(0xff707070)),
+                  ),
+                  const Spacer(),
+                  Checkbox(
+                    value: false,
+                    onChanged: (val) {},
+                    side: const BorderSide(color: Colors.black, width: 1.5),
+                  ),
+                ],
               ),
-              trailing: Checkbox(
-                value: false,
-                onChanged: (val) {},
-              ),
-              dense: true,
             ),
             const SizedBox(
               height: 15,
             ),
             Padding(
-              padding: EdgeInsets.symmetric(horizontal: width * 0.05),
+              padding: const EdgeInsets.symmetric(horizontal: 20),
               child: GestureDetector(
                 onTap: () {
                   pushNewScreen(
@@ -241,9 +316,9 @@ class CleaningPropertyPage extends StatelessWidget {
                   );
                 },
                 child: Container(
-                  padding: const EdgeInsets.symmetric(vertical: 10),
+                  height: 47,
                   decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(5),
+                      borderRadius: BorderRadius.circular(10),
                       border: Border.all(color: Colors.grey)),
                   child: Row(
                     children: const [

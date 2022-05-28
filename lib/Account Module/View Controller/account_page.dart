@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
 import 'package:green_and_clean/Account%20Module/View%20Controller/account_bookings.dart';
 import 'package:green_and_clean/Account%20Module/View%20Controller/profile_page.dart';
@@ -84,7 +85,7 @@ class AccountPage extends StatelessWidget {
             ),
           ),
           const SizedBox(
-            height: 50,
+            height: 60,
           ),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 12),
@@ -95,11 +96,11 @@ class AccountPage extends StatelessWidget {
                   side: const BorderSide(color: Colors.black38)),
               borderOnForeground: true,
               child: Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 8),
+                padding: const EdgeInsets.symmetric(horizontal: 10),
                 child: Column(
                   children: [
                     const SizedBox(
-                      height: 10,
+                      height: 15,
                     ),
                     GestureDetector(
                       onTap: () => pushNewScreen(
@@ -109,38 +110,39 @@ class AccountPage extends StatelessWidget {
                         pageTransitionAnimation:
                             PageTransitionAnimation.cupertino,
                       ),
-                      child: Padding(
-                        padding: const EdgeInsets.symmetric(vertical: 6.0),
-                        child: Row(
-                          children: [
-                            const Expanded(
-                              child: Icon(
-                                Icons.person,
-                                color: Color(0xff19E6FF),
-                              ),
-                              flex: 2,
+                      child: Row(
+                        children: [
+                          const Expanded(
+                            child: Icon(
+                              Icons.person,
+                              color: Color(0xff19E6FF),
                             ),
-                            Expanded(
-                                flex: 8,
-                                child: Container(
-                                  child: Row(
-                                    children: const [
-                                      Text(
-                                        "Profile",
-                                        style: TextStyle(fontSize: 14),
-                                      ),
-                                      Spacer(),
-                                      Icon(Icons.arrow_right_alt)
-                                    ],
+                            flex: 2,
+                          ),
+                          Expanded(
+                              flex: 8,
+                              child: Row(
+                                children: const [
+                                  Text(
+                                    "Profile",
+                                    style: TextStyle(fontSize: 14),
                                   ),
-                                  decoration: BoxDecoration(
-                                      border: Border(
-                                          bottom: BorderSide(
-                                              color: const Color(0xff707070)
-                                                  .withOpacity(0.3)))),
-                                ))
-                          ],
-                        ),
+                                  Spacer(),
+                                  Icon(
+                                    FontAwesomeIcons.arrowRight,
+                                    size: 15,
+                                  )
+                                ],
+                              ))
+                        ],
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.only(
+                        left: 70,
+                      ),
+                      child: Divider(
+                        color: const Color(0xff707070).withOpacity(0.5),
                       ),
                     ),
                     GestureDetector(
@@ -151,108 +153,111 @@ class AccountPage extends StatelessWidget {
                         pageTransitionAnimation:
                             PageTransitionAnimation.cupertino,
                       ),
-                      child: Padding(
-                        padding: const EdgeInsets.symmetric(vertical: 6.0),
-                        child: Row(
-                          children: [
-                            const Expanded(
-                              child: Icon(
-                                Icons.event_note,
-                                color: Color(0xff19E6FF),
-                              ),
-                              flex: 2,
+                      child: Row(
+                        children: [
+                          const Expanded(
+                            child: Icon(
+                              Icons.event_note,
+                              color: Color(0xff19E6FF),
                             ),
-                            Expanded(
-                                flex: 8,
-                                child: Container(
-                                  child: Row(
-                                    children: const [
-                                      Text(
-                                        "Bookings",
-                                        style: TextStyle(fontSize: 14),
-                                      ),
-                                      Spacer(),
-                                      Icon(Icons.arrow_right_alt)
-                                    ],
+                            flex: 2,
+                          ),
+                          Expanded(
+                              flex: 8,
+                              child: Row(
+                                children: const [
+                                  Text(
+                                    "Bookings",
+                                    style: TextStyle(fontSize: 14),
                                   ),
-                                  decoration: BoxDecoration(
-                                      border: Border(
-                                          bottom: BorderSide(
-                                              color: const Color(0xff707070)
-                                                  .withOpacity(0.3)))),
-                                ))
-                          ],
+                                  Spacer(),
+                                  Icon(
+                                    FontAwesomeIcons.arrowRight,
+                                    size: 15,
+                                  )
+                                ],
+                              ))
+                        ],
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.only(
+                        left: 70,
+                      ),
+                      child: Divider(
+                        color: const Color(0xff707070).withOpacity(0.5),
+                      ),
+                    ),
+                    Row(
+                      children: [
+                        const Expanded(
+                          child: Icon(
+                            Icons.notifications,
+                            color: Color(0xff19E6FF),
+                          ),
+                          flex: 2,
                         ),
-                      ),
+                        Expanded(
+                            flex: 8,
+                            child: Row(
+                              children: const [
+                                Text(
+                                  "Notifications",
+                                  style: TextStyle(fontSize: 14),
+                                ),
+                                Spacer(),
+                                Icon(
+                                  FontAwesomeIcons.arrowRight,
+                                  size: 15,
+                                )
+                              ],
+                            ))
+                      ],
                     ),
                     Padding(
-                      padding: const EdgeInsets.symmetric(vertical: 6.0),
-                      child: Row(
-                        children: [
-                          const Expanded(
-                            child: Icon(
-                              Icons.notifications,
-                              color: Color(0xff19E6FF),
-                            ),
-                            flex: 2,
-                          ),
-                          Expanded(
-                              flex: 8,
-                              child: Container(
-                                child: Row(
-                                  children: const [
-                                    Text(
-                                      "Notifications",
-                                      style: TextStyle(fontSize: 14),
-                                    ),
-                                    Spacer(),
-                                    Icon(Icons.arrow_right_alt)
-                                  ],
-                                ),
-                                decoration: BoxDecoration(
-                                    border: Border(
-                                        bottom: BorderSide(
-                                            color: const Color(0xff707070)
-                                                .withOpacity(0.3)))),
-                              ))
-                        ],
+                      padding: const EdgeInsets.only(
+                        left: 70,
+                      ),
+                      child: Divider(
+                        color: const Color(0xff707070).withOpacity(0.5),
                       ),
                     ),
-                    Padding(
-                      padding: const EdgeInsets.symmetric(vertical: 6.0),
-                      child: Row(
-                        children: [
-                          const Expanded(
-                            child: Icon(
-                              Icons.chat_bubble,
-                              color: Color(0xff19E6FF),
-                            ),
-                            flex: 2,
+                    Row(
+                      children: [
+                        const Expanded(
+                          child: Icon(
+                            Icons.chat_bubble,
+                            color: Color(0xff19E6FF),
                           ),
-                          Expanded(
-                              flex: 8,
-                              child: Container(
-                                child: Row(
-                                  children: const [
-                                    Text(
-                                      "Messages",
-                                      style: TextStyle(fontSize: 14),
-                                    ),
-                                    Spacer(),
-                                    Icon(Icons.arrow_right_alt)
-                                  ],
+                          flex: 2,
+                        ),
+                        Expanded(
+                            flex: 8,
+                            child: Row(
+                              children: const [
+                                Text(
+                                  "Messages",
+                                  style: TextStyle(fontSize: 14),
                                 ),
-                                decoration: BoxDecoration(
-                                    border: Border(
-                                        bottom: BorderSide(
-                                            color: const Color(0xff707070)
-                                                .withOpacity(0.3)))),
-                              ))
-                        ],
+                                Spacer(),
+                                Icon(
+                                  FontAwesomeIcons.arrowRight,
+                                  size: 15,
+                                )
+                              ],
+                            ))
+                      ],
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.only(
+                        left: 70,
+                      ),
+                      child: Divider(
+                        color: const Color(0xff707070).withOpacity(0.5),
                       ),
                     ),
                     const SizedBox(
-                      height: 20,
+                      height: 15,
                     )
                   ],
                 ),
@@ -260,7 +265,7 @@ class AccountPage extends StatelessWidget {
             ),
           ),
           const SizedBox(
-            height: 20,
+            height: 15,
           ),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 12),
@@ -275,109 +280,114 @@ class AccountPage extends StatelessWidget {
                 child: Column(
                   children: [
                     const SizedBox(
-                      height: 10,
+                      height: 15,
+                    ),
+                    Row(
+                      children: [
+                        const Expanded(
+                          child: Icon(
+                            Icons.settings,
+                            color: Color(0xff19E6FF),
+                          ),
+                          flex: 2,
+                        ),
+                        Expanded(
+                            flex: 8,
+                            child: Row(
+                              children: const [
+                                Text(
+                                  "Settings",
+                                  style: TextStyle(fontSize: 14),
+                                ),
+                                Spacer(),
+                                Icon(
+                                  FontAwesomeIcons.arrowRight,
+                                  size: 15,
+                                )
+                              ],
+                            ))
+                      ],
                     ),
                     Padding(
-                      padding: const EdgeInsets.symmetric(vertical: 6.0),
-                      child: Row(
-                        children: [
-                          const Expanded(
-                            child: Icon(
-                              Icons.settings,
-                              color: Color(0xff19E6FF),
-                            ),
-                            flex: 2,
-                          ),
-                          Expanded(
-                              flex: 8,
-                              child: Container(
-                                child: Row(
-                                  children: const [
-                                    Text(
-                                      "Settings",
-                                      style: TextStyle(fontSize: 14),
-                                    ),
-                                    Spacer(),
-                                    Icon(Icons.arrow_right_alt)
-                                  ],
-                                ),
-                                decoration: BoxDecoration(
-                                    border: Border(
-                                        bottom: BorderSide(
-                                            color: const Color(0xff707070)
-                                                .withOpacity(0.3)))),
-                              ))
-                        ],
+                      padding: const EdgeInsets.only(
+                        left: 70,
+                      ),
+                      child: Divider(
+                        color: const Color(0xff707070).withOpacity(0.5),
                       ),
                     ),
-                    Padding(
-                      padding: const EdgeInsets.symmetric(vertical: 6.0),
-                      child: Row(
-                        children: [
-                          const Expanded(
-                            child: Icon(
-                              Icons.credit_card,
-                              color: Color(0xff19E6FF),
-                            ),
-                            flex: 2,
+                    Row(
+                      children: [
+                        const Expanded(
+                          child: Icon(
+                            Icons.credit_card,
+                            color: Color(0xff19E6FF),
                           ),
-                          Expanded(
-                              flex: 8,
-                              child: Container(
-                                child: Row(
-                                  children: const [
-                                    Text(
-                                      "Payment Method",
-                                      style: TextStyle(fontSize: 14),
-                                    ),
-                                    Spacer(),
-                                    Icon(Icons.arrow_right_alt)
-                                  ],
+                          flex: 2,
+                        ),
+                        Expanded(
+                            flex: 8,
+                            child: Row(
+                              children: const [
+                                Text(
+                                  "Payment Method",
+                                  style: TextStyle(fontSize: 14),
                                 ),
-                                decoration: BoxDecoration(
-                                    border: Border(
-                                        bottom: BorderSide(
-                                            color: const Color(0xff707070)
-                                                .withOpacity(0.3)))),
-                              ))
-                        ],
-                      ),
+                                Spacer(),
+                                Icon(
+                                  FontAwesomeIcons.arrowRight,
+                                  size: 15,
+                                )
+                              ],
+                            ))
+                      ],
                     ),
                     Padding(
-                      padding: const EdgeInsets.symmetric(vertical: 6.0),
-                      child: Row(
-                        children: [
-                          const Expanded(
-                            child: Icon(
-                              Icons.notifications,
-                              color: Color(0xff19E6FF),
-                            ),
-                            flex: 2,
+                      padding: const EdgeInsets.only(
+                        left: 70,
+                      ),
+                      child: Divider(
+                        color: const Color(0xff707070).withOpacity(0.5),
+                      ),
+                    ),
+                    Row(
+                      children: [
+                        const Expanded(
+                          child: Icon(
+                            FontAwesomeIcons.link,
+                            size: 20,
+                            color: Color(0xff19E6FF),
                           ),
-                          Expanded(
-                              flex: 8,
-                              child: Container(
-                                child: Row(
-                                  children: const [
-                                    Text(
-                                      "Channel Manager",
-                                      style: TextStyle(fontSize: 14),
-                                    ),
-                                    Spacer(),
-                                    Icon(Icons.arrow_right_alt)
-                                  ],
-                                ),
-                                decoration: BoxDecoration(
-                                    border: Border(
-                                        bottom: BorderSide(
-                                            color: const Color(0xff707070)
-                                                .withOpacity(0.3)))),
-                              ))
-                        ],
+                          flex: 2,
+                        ),
+                        Expanded(
+                          flex: 8,
+                          child: Row(
+                            children: const [
+                              Text(
+                                "Channel Manager",
+                                style: TextStyle(fontSize: 14),
+                              ),
+                              Spacer(),
+                              Icon(
+                                FontAwesomeIcons.arrowRight,
+                                size: 15,
+                              )
+                            ],
+                          ),
+                        )
+                      ],
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.only(
+                        left: 70,
+                      ),
+                      child: Divider(
+                        color: const Color(0xff707070).withOpacity(0.5),
                       ),
                     ),
                     const SizedBox(
-                      height: 20,
+                      height: 15,
                     )
                   ],
                 ),

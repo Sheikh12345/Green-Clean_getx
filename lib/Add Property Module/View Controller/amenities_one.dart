@@ -32,161 +32,180 @@ class AmenitiesOnePage extends StatelessWidget {
                         borderRadius: BorderRadius.only(
                             topRight: Radius.circular(25),
                             topLeft: Radius.circular(25))),
-                    child: SingleChildScrollView(
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          const SizedBox(
-                            height: 15,
-                          ),
-                          Row(
-                            children: [
-                              Expanded(
-                                child: Image.asset("assets/images/home.png"),
-                                flex: 2,
-                              ),
-                              Expanded(
-                                  flex: 6,
-                                  child: Column(
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.start,
-                                    children: const [
-                                      Text(
-                                        "Glamourn 6BR@Midtown",
-                                        maxLines: 1,
-                                        style: TextStyle(fontSize: 14),
-                                      ),
-                                      SizedBox(
-                                        height: 5,
-                                      ),
-                                      Text(
-                                        "327 Northwest 39th Street",
-                                        style: TextStyle(fontSize: 12),
-                                      ),
-                                      Text(
-                                        "Miami, Florida 33127",
-                                        style: TextStyle(fontSize: 12),
-                                        maxLines: 1,
-                                      ),
-                                      SizedBox(
-                                        height: 10,
-                                      ),
-                                    ],
-                                  )),
-                              const Expanded(flex: 2, child: SizedBox())
-                            ],
-                          ),
-                          const SizedBox(
-                            height: 15,
-                          ),
-                          const Divider(
-                            thickness: 2,
-                          ),
-                          const SizedBox(
-                            height: 15,
-                          ),
-                          const Text("Who provide the cleaning products?"),
-                          const SizedBox(
-                            height: 15,
-                          ),
-                          Row(
-                            children: [
-                              Expanded(
-                                child: Container(
-                                  padding: const EdgeInsets.symmetric(
-                                      horizontal: 10.0),
-                                  decoration: BoxDecoration(
-                                    borderRadius: BorderRadius.circular(15.0),
-                                    border: Border.all(
-                                        color: Colors.grey,
-                                        style: BorderStyle.solid,
-                                        width: 0.80),
-                                  ),
-                                  child: DropdownButtonHideUnderline(
-                                    child: DropdownButton(
-                                      items: _dropdownValues
-                                          .map((value) => DropdownMenuItem(
-                                                child: Text(value),
-                                                value: value,
-                                              ))
-                                          .toList(),
-                                      onChanged: (String? value) {},
-                                      isExpanded: false,
-                                      value: _dropdownValues.first,
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        const SizedBox(
+                          height: 30,
+                        ),
+                        Row(
+                          children: [
+                            Expanded(
+                              child: Image.asset("assets/images/home.png"),
+                              flex: 2,
+                            ),
+                            Expanded(
+                                flex: 6,
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: const [
+                                    Text(
+                                      "Glamourn 6BR@Midtown",
+                                      maxLines: 1,
+                                      style: TextStyle(
+                                          fontSize: 16,
+                                          color: Color(0xff0C93D0)),
                                     ),
+                                    SizedBox(
+                                      height: 5,
+                                    ),
+                                    Text(
+                                      "327 Northwest 39th Street",
+                                      style: TextStyle(
+                                          fontSize: 14,
+                                          color: Color(0xff707070)),
+                                    ),
+                                    Text(
+                                      "Miami, Florida 33127",
+                                      style: TextStyle(
+                                          fontSize: 14,
+                                          color: Color(0xff707070)),
+                                      maxLines: 1,
+                                    ),
+                                    SizedBox(
+                                      height: 10,
+                                    ),
+                                  ],
+                                )),
+                            const Expanded(flex: 2, child: SizedBox())
+                          ],
+                        ),
+                        const SizedBox(
+                          height: 15,
+                        ),
+                        const Divider(
+                          thickness: 2,
+                        ),
+                        const SizedBox(
+                          height: 30,
+                        ),
+                        const Text(
+                          "Who provide the cleaning products?",
+                          style: TextStyle(color: Color(0xff707070)),
+                        ),
+                        const SizedBox(
+                          height: 30,
+                        ),
+                        Row(
+                          children: [
+                            Expanded(
+                              child: Container(
+                                padding: const EdgeInsets.symmetric(
+                                    horizontal: 10.0),
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(8.0),
+                                  border: Border.all(
+                                      color: Colors.grey,
+                                      style: BorderStyle.solid,
+                                      width: 0.80),
+                                ),
+                                child: DropdownButtonHideUnderline(
+                                  child: DropdownButton(
+                                    items: _dropdownValues
+                                        .map((value) => DropdownMenuItem(
+                                              child: Text(value),
+                                              value: value,
+                                            ))
+                                        .toList(),
+                                    onChanged: (String? value) {},
+                                    isExpanded: false,
+                                    style: const TextStyle(
+                                        color: Color(0xff707070)),
+                                    value: _dropdownValues.first,
                                   ),
                                 ),
-                                flex: 3,
                               ),
-                              const Expanded(
-                                child: SizedBox(),
-                                flex: 2,
-                              )
-                            ],
-                          ),
-                          const SizedBox(
-                            height: 25,
-                          ),
-                          const Text(
-                              "Do you want the booking to be automatic?"),
-                          Row(
-                            children: [
-                              Row(
-                                children: [
-                                  Radio(
-                                      value: 0,
-                                      groupValue: 0,
-                                      activeColor: Colors.blue.shade800,
-                                      onChanged: (val) {}),
-                                  const SizedBox(
-                                    width: 5,
-                                  ),
-                                  const Text("Yes")
-                                ],
-                              ),
-                              const Spacer(
-                                flex: 2,
-                              ),
-                              Row(
-                                children: [
-                                  Radio(
-                                      value: 1,
-                                      groupValue: 0,
-                                      activeColor: Colors.blue.shade800,
-                                      onChanged: (val) {}),
-                                  const SizedBox(
-                                    width: 5,
-                                  ),
-                                  const Text("No")
-                                ],
-                              ),
-                              const Spacer(
-                                flex: 3,
-                              )
-                            ],
-                          ),
-                          const SizedBox(
-                            height: 50,
-                          ),
-                          GestureDetector(
-                            onTap: () {
-                              Get.to(() => const AddPropertySuccessPage());
-                            },
-                            child: Container(
-                                padding: const EdgeInsets.all(15),
-                                decoration: BoxDecoration(
-                                    color: theme.primaryColor,
-                                    borderRadius: BorderRadius.circular(10)),
-                                child: const Center(
-                                  child: Text(
-                                    "Next",
-                                    style: TextStyle(
-                                        color: Colors.white, fontSize: 16),
-                                  ),
-                                )),
-                          ),
-                        ],
-                      ),
+                              flex: 3,
+                            ),
+                            const Expanded(
+                              child: SizedBox(),
+                              flex: 2,
+                            )
+                          ],
+                        ),
+                        const SizedBox(
+                          height: 30,
+                        ),
+                        const Text(
+                          "Do you want the booking to be automatic?",
+                          style: TextStyle(color: Color(0xff707070)),
+                        ),
+                        const SizedBox(
+                          height: 10,
+                        ),
+                        Row(
+                          children: [
+                            Row(
+                              children: [
+                                Radio(
+                                    value: 0,
+                                    groupValue: 0,
+                                    activeColor: Colors.blue.shade800,
+                                    onChanged: (val) {}),
+                                const SizedBox(
+                                  width: 5,
+                                ),
+                                const Text(
+                                  "Yes",
+                                  style: TextStyle(color: Color(0xff707070)),
+                                )
+                              ],
+                            ),
+                            const Spacer(
+                              flex: 2,
+                            ),
+                            Row(
+                              children: [
+                                Radio(
+                                    value: 1,
+                                    groupValue: 0,
+                                    activeColor: Colors.blue.shade800,
+                                    onChanged: (val) {}),
+                                const SizedBox(
+                                  width: 5,
+                                ),
+                                const Text(
+                                  "No",
+                                  style: TextStyle(color: Color(0xff707070)),
+                                )
+                              ],
+                            ),
+                            const Spacer(
+                              flex: 3,
+                            )
+                          ],
+                        ),
+                        const SizedBox(
+                          height: 50,
+                        ),
+                        GestureDetector(
+                          onTap: () {
+                            Get.to(() => const AddPropertySuccessPage());
+                          },
+                          child: Container(
+                              padding: const EdgeInsets.all(15),
+                              decoration: BoxDecoration(
+                                  color: theme.primaryColor,
+                                  borderRadius: BorderRadius.circular(10)),
+                              child: const Center(
+                                child: Text(
+                                  "Next",
+                                  style: TextStyle(
+                                      color: Colors.white, fontSize: 16),
+                                ),
+                              )),
+                        ),
+                      ],
                     )))
           ],
         ),

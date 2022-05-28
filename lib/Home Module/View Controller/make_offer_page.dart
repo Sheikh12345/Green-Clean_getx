@@ -16,7 +16,7 @@ class MakeOfferPage extends StatelessWidget {
       body: SingleChildScrollView(
         child: Column(children: [
           SizedBox(
-            height: 190,
+            height: 234,
             width: width,
             child: Stack(
               fit: StackFit.expand,
@@ -27,7 +27,7 @@ class MakeOfferPage extends StatelessWidget {
                   fit: BoxFit.fill,
                 )),
                 Positioned(
-                    top: kToolbarHeight / 3,
+                    top: 5 + kToolbarHeight / 3,
                     left: 10,
                     child: IconButton(
                         onPressed: () {
@@ -39,7 +39,7 @@ class MakeOfferPage extends StatelessWidget {
                         ))),
                 Positioned(
                   child: Container(
-                    height: 40,
+                    height: 46,
                     color: Colors.black45,
                     child: const Center(
                         child: Text(
@@ -57,76 +57,90 @@ class MakeOfferPage extends StatelessWidget {
           const SizedBox(
             height: 15,
           ),
-          Padding(
-            padding: const EdgeInsets.all(5),
-            child: Card(
-              elevation: 5,
-              shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(25)),
-              child: Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    const SizedBox(
-                      height: 20,
-                    ),
-                    const Text("Make an offer",
-                        style: TextStyle(
-                            fontSize: 18, fontWeight: FontWeight.w500)),
-                    const SizedBox(height: 20),
-                    const Icon(Icons.currency_exchange_outlined,
-                        size: 40, color: Colors.grey),
-                    const SizedBox(height: 30),
-                    Text("Enter Amount",
-                        style: TextStyle(
-                            fontSize: 16, color: Colors.grey.shade800)),
-                    const SizedBox(height: 30),
-                    const Padding(
-                      padding: EdgeInsets.symmetric(horizontal: 80),
-                      child: TextField(
-                        keyboardType: TextInputType.number,
-                        textAlign: TextAlign.center,
-                        decoration: InputDecoration(
-                            hintText: 'eg: 10',
-                            border: OutlineInputBorder(
-                                borderSide: BorderSide(color: Colors.grey)),
-                            focusedBorder: OutlineInputBorder(
-                                borderSide: BorderSide(color: Colors.grey))),
+          Container(
+            height: AppConfig(context).height - 294,
+            decoration: BoxDecoration(
+              boxShadow: kElevationToShadow[3],
+              color: Colors.white,
+              borderRadius: const BorderRadius.only(
+                  topLeft: Radius.circular(20), topRight: Radius.circular(20)),
+            ),
+            child: Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Column(
+                children: [
+                  const SizedBox(
+                    height: 5,
+                  ),
+                  Align(
+                    alignment: Alignment.centerRight,
+                    child: IconButton(
+                      icon: const Image(
+                        image: AssetImage("assets/icons/close_icon.png"),
                       ),
-                    ),
-                    const SizedBox(
-                      height: 50,
-                    ),
-                    GestureDetector(
-                      onTap: () {
-                        pushNewScreen(
-                          context,
-                          screen: const CleaningOrderSummary(),
-                          withNavBar: true, // OPTIONAL VALUE. True by default.
-                          pageTransitionAnimation:
-                              PageTransitionAnimation.cupertino,
-                        );
+                      onPressed: () {
+                        Navigator.pop(context);
                       },
-                      child: Container(
-                        width: AppConfig(context).width * 0.6,
-                        height: 50,
-                        decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(10),
-                            color: Colors.black45),
-                        child: const Center(
-                          child: Text(
-                            "Submit",
-                            style: TextStyle(color: Colors.white, fontSize: 18),
-                          ),
+                    ),
+                  ),
+                  const SizedBox(
+                    height: 23,
+                  ),
+                  const Text("Make an offer",
+                      style:
+                          TextStyle(fontSize: 22, fontWeight: FontWeight.w500)),
+                  const SizedBox(height: 20),
+                  const Image(
+                    image: AssetImage("assets/icons/money.png"),
+                  ),
+                  const SizedBox(height: 30),
+                  const Text("Enter Amount",
+                      style: TextStyle(fontSize: 16, color: Color(0xff050505))),
+                  const SizedBox(height: 30),
+                  const Padding(
+                    padding: EdgeInsets.symmetric(horizontal: 80),
+                    child: TextField(
+                      keyboardType: TextInputType.number,
+                      textAlign: TextAlign.center,
+                      decoration: InputDecoration(
+                          hintText: 'eg: 10',
+                          border: OutlineInputBorder(
+                              borderSide: BorderSide(color: Colors.grey)),
+                          focusedBorder: OutlineInputBorder(
+                              borderSide: BorderSide(color: Colors.grey))),
+                    ),
+                  ),
+                  const SizedBox(
+                    height: 60,
+                  ),
+                  GestureDetector(
+                    onTap: () {
+                      pushNewScreen(
+                        context,
+                        screen: const CleaningOrderSummary(),
+                        withNavBar: true, // OPTIONAL VALUE. True by default.
+                        pageTransitionAnimation:
+                            PageTransitionAnimation.cupertino,
+                      );
+                    },
+                    child: Container(
+                      width: AppConfig(context).width * 0.85,
+                      height: 55,
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(5),
+                          color: const Color(0xff4623F0)),
+                      child: const Center(
+                        child: Text(
+                          "Submit",
+                          style: TextStyle(color: Colors.white, fontSize: 18),
                         ),
                       ),
                     ),
-                    const SizedBox(
-                      height: 10,
-                    ),
-                  ],
-                ),
+                  ),
+                  const SizedBox(
+                    height: 10,
+                  ),
+                ],
               ),
             ),
           )

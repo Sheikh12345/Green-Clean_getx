@@ -30,7 +30,10 @@ class ResetPasswordPage extends StatelessWidget {
                         onPressed: () {
                           Get.back();
                         },
-                        icon: const Icon(FontAwesomeIcons.circleArrowLeft))
+                        icon: const Icon(
+                          FontAwesomeIcons.circleArrowLeft,
+                          size: 22,
+                        ))
                   ],
                 ),
                 const SizedBox(
@@ -44,7 +47,7 @@ class ResetPasswordPage extends StatelessWidget {
                         child: Text(
                           "Reset Password",
                           textAlign: TextAlign.center,
-                          style: TextStyle(fontSize: 25),
+                          style: TextStyle(fontSize: 28),
                         ),
                       ),
                       const SizedBox(
@@ -80,10 +83,10 @@ class ResetPasswordPage extends StatelessWidget {
                           Get.to(() => NewPasswordPage());
                         },
                         child: Container(
+                          height: 56,
                           decoration: BoxDecoration(
                               color: theme.primaryColor,
                               borderRadius: BorderRadius.circular(10)),
-                          padding: const EdgeInsets.all(15),
                           child: const Center(
                             child: Text(
                               "Send",

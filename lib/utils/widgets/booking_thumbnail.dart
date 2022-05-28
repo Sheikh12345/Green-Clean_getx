@@ -13,7 +13,7 @@ class BookingThumbnail extends StatelessWidget {
     return GestureDetector(
       onTap: onPressed,
       child: Card(
-        elevation: 5,
+        elevation: 2,
         margin: const EdgeInsets.symmetric(horizontal: 15, vertical: 8),
         child: Padding(
           padding: const EdgeInsets.all(8.0),
@@ -26,12 +26,17 @@ class BookingThumbnail extends StatelessWidget {
                       Text(
                         "22",
                         style: TextStyle(
-                            fontWeight: FontWeight.w600, fontSize: 18),
+                            fontWeight: FontWeight.w700, fontSize: 18),
                       ),
                       SizedBox(
                         height: 10,
                       ),
-                      Text("February"),
+                      Text(
+                        "February",
+                        style: TextStyle(
+                          fontWeight: FontWeight.w500,
+                        ),
+                      ),
                       SizedBox(
                         height: 7,
                       ),
@@ -60,7 +65,8 @@ class BookingThumbnail extends StatelessWidget {
                                 child: Text(
                               "Glomoum 6BR @Midtown",
                               style: TextStyle(
-                                  fontSize: 14, fontWeight: FontWeight.w600),
+                                fontSize: 16,
+                              ),
                               maxLines: 1,
                             )),
                             Icon(
@@ -71,14 +77,15 @@ class BookingThumbnail extends StatelessWidget {
                           ],
                         ),
                         const SizedBox(
-                          height: 18,
+                          height: 5,
                         ),
                         Row(
                           children: const [
                             Expanded(
                                 child: Text(
                               "327 Northwest 39th Street\nMiami, Florida 33127",
-                              style: TextStyle(fontSize: 12),
+                              style: TextStyle(
+                                  fontSize: 14, color: Color(0xff707070)),
                               maxLines: 2,
                             )),
                           ],

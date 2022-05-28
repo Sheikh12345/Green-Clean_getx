@@ -55,11 +55,17 @@ class AddPropertyPage extends StatelessWidget {
                                 width: 5,
                               ),
                               TextButton.icon(
-                                  icon: const Icon(Icons.add_circle_outline),
+                                  icon: const Icon(
+                                    Icons.add_circle_outline,
+                                    size: 20,
+                                  ),
                                   onPressed: () {},
                                   style: TextButton.styleFrom(
-                                      primary: Colors.blue.shade800),
-                                  label: const Text("Add Image"))
+                                      primary: Colors.black),
+                                  label: const Text(
+                                    "Add Image",
+                                    style: TextStyle(color: Color(0xff707070)),
+                                  ))
                             ],
                           ),
                           const SizedBox(
@@ -107,7 +113,7 @@ class AddPropertyPage extends StatelessWidget {
                                 ),
                               ),
                               const SizedBox(
-                                width: 15,
+                                width: 50,
                               ),
                               Flexible(
                                 child: TextField(
@@ -143,7 +149,7 @@ class AddPropertyPage extends StatelessWidget {
                                 ),
                               ),
                               const SizedBox(
-                                width: 15,
+                                width: 50,
                               ),
                               Flexible(
                                 child: TextField(
@@ -161,21 +167,45 @@ class AddPropertyPage extends StatelessWidget {
                             ],
                           ),
                           const SizedBox(
-                            height: 25,
+                            height: 30,
                           ),
-                          const Text("Do you have a channel manager?"),
+                          const Text("Do you have a channel manager?",
+                              style: TextStyle(color: Color(0xff707070))),
+                          const SizedBox(
+                            height: 20,
+                          ),
                           Row(
                             children: [
                               Row(
                                 children: [
-                                  Radio(
-                                      value: 0,
-                                      groupValue: 0,
-                                      onChanged: (val) {}),
                                   const SizedBox(
                                     width: 5,
                                   ),
-                                  const Text("Yes")
+                                  Container(
+                                    decoration: BoxDecoration(
+                                      border: Border.all(
+                                          color: Colors.black, width: 2),
+                                    ),
+                                    width: 20,
+                                    height: 20,
+                                    child: Theme(
+                                      data: ThemeData(
+                                          unselectedWidgetColor: Colors.white),
+                                      child: Checkbox(
+                                        checkColor: Colors.black,
+                                        activeColor: Colors.transparent,
+                                        value: true,
+                                        tristate: false,
+                                        onChanged: (bool? isChecked) {},
+                                      ),
+                                    ),
+                                  ),
+                                  const SizedBox(
+                                    width: 5,
+                                  ),
+                                  const Text("Yes",
+                                      style:
+                                          TextStyle(color: Color(0xff707070)))
                                 ],
                               ),
                               const Spacer(
@@ -183,14 +213,31 @@ class AddPropertyPage extends StatelessWidget {
                               ),
                               Row(
                                 children: [
-                                  Radio(
-                                      value: 1,
-                                      groupValue: 0,
-                                      onChanged: (val) {}),
+                                  Container(
+                                    decoration: BoxDecoration(
+                                      border: Border.all(
+                                          color: Colors.black, width: 2),
+                                    ),
+                                    width: 20,
+                                    height: 20,
+                                    child: Theme(
+                                      data: ThemeData(
+                                          unselectedWidgetColor: Colors.white),
+                                      child: Checkbox(
+                                        checkColor: Colors.black,
+                                        activeColor: Colors.transparent,
+                                        value: false,
+                                        tristate: false,
+                                        onChanged: (bool? isChecked) {},
+                                      ),
+                                    ),
+                                  ),
                                   const SizedBox(
                                     width: 5,
                                   ),
-                                  const Text("No")
+                                  const Text("No",
+                                      style:
+                                          TextStyle(color: Color(0xff707070)))
                                 ],
                               ),
                               const Spacer(
@@ -199,22 +246,46 @@ class AddPropertyPage extends StatelessWidget {
                             ],
                           ),
                           const SizedBox(
-                            height: 15,
+                            height: 30,
                           ),
                           const Text(
-                              "Do you want to connect using your channel manager or iCal?"),
+                              "Do you want to connect using your channel manager or iCal?",
+                              style: TextStyle(color: Color(0xff707070))),
+                          const SizedBox(
+                            height: 20,
+                          ),
                           Row(
                             children: [
                               Row(
                                 children: [
-                                  Radio(
-                                      value: 0,
-                                      groupValue: 0,
-                                      onChanged: (val) {}),
                                   const SizedBox(
                                     width: 5,
                                   ),
-                                  const Text("Yes")
+                                  Container(
+                                    decoration: BoxDecoration(
+                                      border: Border.all(
+                                          color: Colors.black, width: 2),
+                                    ),
+                                    width: 20,
+                                    height: 20,
+                                    child: Theme(
+                                      data: ThemeData(
+                                          unselectedWidgetColor: Colors.white),
+                                      child: Checkbox(
+                                        checkColor: Colors.black,
+                                        activeColor: Colors.transparent,
+                                        value: true,
+                                        tristate: false,
+                                        onChanged: (bool? isChecked) {},
+                                      ),
+                                    ),
+                                  ),
+                                  const SizedBox(
+                                    width: 5,
+                                  ),
+                                  const Text("Yes",
+                                      style:
+                                          TextStyle(color: Color(0xff707070)))
                                 ],
                               ),
                               const Spacer(
@@ -222,14 +293,31 @@ class AddPropertyPage extends StatelessWidget {
                               ),
                               Row(
                                 children: [
-                                  Radio(
-                                      value: 1,
-                                      groupValue: 0,
-                                      onChanged: (val) {}),
+                                  Container(
+                                    decoration: BoxDecoration(
+                                      border: Border.all(
+                                          color: Colors.black, width: 2),
+                                    ),
+                                    width: 20,
+                                    height: 20,
+                                    child: Theme(
+                                      data: ThemeData(
+                                          unselectedWidgetColor: Colors.white),
+                                      child: Checkbox(
+                                        checkColor: Colors.black,
+                                        activeColor: Colors.transparent,
+                                        value: false,
+                                        tristate: false,
+                                        onChanged: (bool? isChecked) {},
+                                      ),
+                                    ),
+                                  ),
                                   const SizedBox(
                                     width: 5,
                                   ),
-                                  const Text("No")
+                                  const Text("No",
+                                      style:
+                                          TextStyle(color: Color(0xff707070)))
                                 ],
                               ),
                               const Spacer(
@@ -238,126 +326,188 @@ class AddPropertyPage extends StatelessWidget {
                             ],
                           ),
                           const SizedBox(
-                            height: 15,
+                            height: 30,
                           ),
                           const Text(
-                              "Please select your channel manager or iCal to connect"),
+                              "Please select your channel manager or iCal to connect",
+                              style: TextStyle(color: Color(0xff707070))),
                           const SizedBox(
-                            height: 15,
+                            height: 30,
                           ),
-                          Card(
-                            child: Row(
-                              children: [
-                                Image.asset(
-                                  "assets/images/airbnb.png",
-                                  width: 110,
+                          SizedBox(
+                            height: 56,
+                            child: Card(
+                              child: Padding(
+                                padding: const EdgeInsets.symmetric(
+                                    horizontal: 5, vertical: 5),
+                                child: Row(
+                                  children: [
+                                    Image.asset(
+                                      "assets/images/airbnb.png",
+                                    ),
+                                    const Spacer(),
+                                    const Image(
+                                      height: 20,
+                                      image: AssetImage(
+                                          "assets/icons/straight_arrow.png"),
+                                    )
+                                  ],
                                 ),
-                                const Spacer(),
-                                const Icon(Icons.arrow_forward_rounded)
-                              ],
-                            ),
-                          ),
-                          const SizedBox(
-                            height: 15,
-                          ),
-                          Card(
-                            child: Row(
-                              children: [
-                                Image.asset(
-                                  "assets/images/vrbo.png",
-                                  width: 110,
-                                ),
-                                const Spacer(),
-                                const Icon(Icons.arrow_forward_rounded)
-                              ],
-                            ),
-                          ),
-                          const SizedBox(
-                            height: 15,
-                          ),
-                          Card(
-                            child: Padding(
-                              padding: const EdgeInsets.all(5.0),
-                              child: Row(
-                                children: [
-                                  Image.asset(
-                                    "assets/images/booking.png",
-                                    width: 110,
-                                  ),
-                                  const Spacer(),
-                                  const Icon(Icons.arrow_forward_rounded)
-                                ],
                               ),
                             ),
                           ),
                           const SizedBox(
                             height: 15,
                           ),
-                          Card(
-                            child: Padding(
-                              padding: const EdgeInsets.all(5.0),
-                              child: Row(
-                                children: [
-                                  Image.asset(
-                                    "assets/images/tripadvisor.png",
-                                    width: 110,
-                                  ),
-                                  const Spacer(),
-                                  const Icon(Icons.arrow_forward_rounded)
-                                ],
+                          SizedBox(
+                            height: 56,
+                            child: Card(
+                              child: Padding(
+                                padding: const EdgeInsets.symmetric(
+                                    horizontal: 5, vertical: 5),
+                                child: Row(
+                                  children: [
+                                    Image.asset(
+                                      "assets/images/vrbo.png",
+                                    ),
+                                    const Spacer(),
+                                    const Image(
+                                      height: 20,
+                                      image: AssetImage(
+                                          "assets/icons/straight_arrow.png"),
+                                    )
+                                  ],
+                                ),
                               ),
                             ),
                           ),
                           const SizedBox(
                             height: 15,
                           ),
-                          Card(
-                            child: Row(
-                              children: [
-                                Image.asset(
-                                  "assets/images/hostaway.png",
-                                  width: 110,
+                          SizedBox(
+                            height: 56,
+                            child: Card(
+                              child: Padding(
+                                padding: const EdgeInsets.symmetric(
+                                    horizontal: 5, vertical: 5),
+                                child: Row(
+                                  children: [
+                                    Image.asset(
+                                      "assets/images/booking.png",
+                                    ),
+                                    const Spacer(),
+                                    const Image(
+                                      height: 20,
+                                      image: AssetImage(
+                                          "assets/icons/straight_arrow.png"),
+                                    )
+                                  ],
                                 ),
-                                const Spacer(),
-                                const Icon(Icons.arrow_forward_rounded)
-                              ],
-                            ),
-                          ),
-                          const SizedBox(
-                            height: 15,
-                          ),
-                          Card(
-                            child: Row(
-                              children: [
-                                Image.asset(
-                                  "assets/images/guest.png",
-                                  width: 110,
-                                ),
-                                const Spacer(),
-                                const Icon(Icons.arrow_forward_rounded)
-                              ],
-                            ),
-                          ),
-                          const SizedBox(
-                            height: 15,
-                          ),
-                          Card(
-                            child: Padding(
-                              padding: const EdgeInsets.all(5.0),
-                              child: Row(
-                                children: [
-                                  Image.asset(
-                                    "assets/images/lodgify.png",
-                                    width: width * 0.3,
-                                  ),
-                                  const Spacer(),
-                                  const Icon(Icons.arrow_forward_rounded)
-                                ],
                               ),
                             ),
                           ),
                           const SizedBox(
                             height: 15,
+                          ),
+                          SizedBox(
+                            height: 56,
+                            child: Card(
+                              child: Padding(
+                                padding: const EdgeInsets.symmetric(
+                                    horizontal: 5, vertical: 5),
+                                child: Row(
+                                  children: [
+                                    Image.asset(
+                                      "assets/images/tripadvisor.png",
+                                    ),
+                                    const Spacer(),
+                                    const Image(
+                                      height: 20,
+                                      image: AssetImage(
+                                          "assets/icons/straight_arrow.png"),
+                                    )
+                                  ],
+                                ),
+                              ),
+                            ),
+                          ),
+                          const SizedBox(
+                            height: 15,
+                          ),
+                          SizedBox(
+                            height: 56,
+                            child: Card(
+                              child: Padding(
+                                padding: const EdgeInsets.symmetric(
+                                    horizontal: 5, vertical: 5),
+                                child: Row(
+                                  children: [
+                                    Image.asset(
+                                      "assets/images/hostaway.png",
+                                    ),
+                                    const Spacer(),
+                                    const Image(
+                                      height: 20,
+                                      image: AssetImage(
+                                          "assets/icons/straight_arrow.png"),
+                                    )
+                                  ],
+                                ),
+                              ),
+                            ),
+                          ),
+                          const SizedBox(
+                            height: 15,
+                          ),
+                          SizedBox(
+                            height: 56,
+                            child: Card(
+                              child: Padding(
+                                padding: const EdgeInsets.symmetric(
+                                    horizontal: 5, vertical: 5),
+                                child: Row(
+                                  children: [
+                                    Image.asset(
+                                      "assets/images/guest.png",
+                                    ),
+                                    const Spacer(),
+                                    const Image(
+                                      height: 20,
+                                      image: AssetImage(
+                                          "assets/icons/straight_arrow.png"),
+                                    )
+                                  ],
+                                ),
+                              ),
+                            ),
+                          ),
+                          const SizedBox(
+                            height: 15,
+                          ),
+                          SizedBox(
+                            height: 56,
+                            child: Card(
+                              child: Padding(
+                                padding: const EdgeInsets.symmetric(
+                                    horizontal: 5, vertical: 5),
+                                child: Row(
+                                  children: [
+                                    Image.asset(
+                                      "assets/images/lodgify.png",
+                                    ),
+                                    const Spacer(),
+                                    const Image(
+                                      height: 20,
+                                      image: AssetImage(
+                                          "assets/icons/straight_arrow.png"),
+                                    )
+                                  ],
+                                ),
+                              ),
+                            ),
+                          ),
+                          const SizedBox(
+                            height: 30,
                           ),
                           GestureDetector(
                             onTap: () {

@@ -9,7 +9,7 @@ class AddPropertySuccessPage extends StatelessWidget {
   Widget build(BuildContext context) {
     final width = Get.width;
     return Scaffold(
-      backgroundColor: const Color.fromARGB(255, 6, 140, 250),
+      backgroundColor: const Color(0xff0C93D0),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         mainAxisAlignment: MainAxisAlignment.center,
@@ -25,8 +25,7 @@ class AddPropertySuccessPage extends StatelessWidget {
           const Text(
             "Property Added Successfully !",
             textAlign: TextAlign.center,
-            style: TextStyle(
-                color: Color.fromARGB(255, 51, 245, 57), fontSize: 18),
+            style: TextStyle(color: Color(0xff60EF06), fontSize: 25),
           ),
           const SizedBox(height: 60),
           GestureDetector(
@@ -35,8 +34,8 @@ class AddPropertySuccessPage extends StatelessWidget {
             },
             child: Center(
               child: Container(
-                width: width * 0.5,
-                padding: const EdgeInsets.symmetric(vertical: 15),
+                width: width * 0.6,
+                padding: const EdgeInsets.symmetric(vertical: 20),
                 decoration: BoxDecoration(
                     border: Border.all(color: Colors.white),
                     borderRadius: BorderRadius.circular(5)),

@@ -40,14 +40,17 @@ class DashboardPage extends GetView<DashboardController> {
                         const Text(
                           "Dashboard",
                           style: TextStyle(
-                            fontSize: 20,
-                          ),
+                              fontSize: 20,
+                              color: Color(0xff707070),
+                              fontWeight: FontWeight.w400),
                         ),
                         const SizedBox(
                           height: 10,
                         ),
                         Card(
                           elevation: 8,
+                          shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(20)),
                           child: Padding(
                             padding: EdgeInsets.all(width * 0.04),
                             child: Column(
@@ -56,8 +59,7 @@ class DashboardPage extends GetView<DashboardController> {
                                 const Text(
                                   "Properties",
                                   style: TextStyle(
-                                    fontSize: 16,
-                                  ),
+                                      fontSize: 16, color: Color(0xff707070)),
                                 ),
                                 const SizedBox(
                                   height: 10,
@@ -79,16 +81,17 @@ class DashboardPage extends GetView<DashboardController> {
                                       child: Column(
                                         children: [
                                           Container(
-                                            padding: const EdgeInsets.all(20),
+                                            padding: const EdgeInsets.all(22),
                                             decoration: const BoxDecoration(
-                                                color: Colors.blueGrey,
+                                                color: Color(0xff117086),
                                                 shape: BoxShape.circle),
                                             child: const Center(
                                               child: Text(
                                                 "3",
                                                 style: TextStyle(
+                                                    fontWeight: FontWeight.w500,
                                                     color: Colors.white,
-                                                    fontSize: 14),
+                                                    fontSize: 18),
                                               ),
                                             ),
                                           ),
@@ -98,7 +101,9 @@ class DashboardPage extends GetView<DashboardController> {
                                           const Text(
                                             "Checking Out",
                                             maxLines: 1,
-                                            style: TextStyle(fontSize: 12),
+                                            style: TextStyle(
+                                                fontSize: 14,
+                                                color: Color(0xff707070)),
                                             textAlign: TextAlign.center,
                                           )
                                         ],
@@ -108,16 +113,17 @@ class DashboardPage extends GetView<DashboardController> {
                                         child: Column(
                                       children: [
                                         Container(
-                                          padding: const EdgeInsets.all(20),
+                                          padding: const EdgeInsets.all(22),
                                           decoration: const BoxDecoration(
-                                              color: Colors.red,
+                                              color: Color(0xffD31F1F),
                                               shape: BoxShape.circle),
                                           child: const Center(
                                             child: Text(
                                               "3",
                                               style: TextStyle(
+                                                  fontWeight: FontWeight.w500,
                                                   color: Colors.white,
-                                                  fontSize: 14),
+                                                  fontSize: 18),
                                             ),
                                           ),
                                         ),
@@ -127,7 +133,9 @@ class DashboardPage extends GetView<DashboardController> {
                                         const Text(
                                           "Waiting for Cleaning",
                                           maxLines: 1,
-                                          style: TextStyle(fontSize: 12),
+                                          style: TextStyle(
+                                              fontSize: 14,
+                                              color: Color(0xff707070)),
                                           textAlign: TextAlign.center,
                                         )
                                       ],
@@ -136,7 +144,7 @@ class DashboardPage extends GetView<DashboardController> {
                                         child: Column(
                                       children: [
                                         Container(
-                                          padding: const EdgeInsets.all(20),
+                                          padding: const EdgeInsets.all(22),
                                           decoration: BoxDecoration(
                                               color: theme.primaryColor,
                                               shape: BoxShape.circle),
@@ -144,8 +152,9 @@ class DashboardPage extends GetView<DashboardController> {
                                             child: Text(
                                               "3",
                                               style: TextStyle(
-                                                  fontSize: 14,
-                                                  color: Colors.white),
+                                                  fontSize: 18,
+                                                  color: Colors.white,
+                                                  fontWeight: FontWeight.w500),
                                             ),
                                           ),
                                         ),
@@ -155,7 +164,9 @@ class DashboardPage extends GetView<DashboardController> {
                                         const Text(
                                           "Active Cleaning",
                                           maxLines: 1,
-                                          style: TextStyle(fontSize: 12),
+                                          style: TextStyle(
+                                              fontSize: 14,
+                                              color: Color(0xff707070)),
                                           textAlign: TextAlign.center,
                                         )
                                       ],
@@ -177,7 +188,10 @@ class DashboardPage extends GetView<DashboardController> {
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          const Text("What do you want to clean?"),
+                          const Text(
+                            "What do you want to clean?",
+                            style: TextStyle(color: Color(0xff707070)),
+                          ),
                           const SizedBox(
                             height: 18,
                           ),
@@ -193,7 +207,7 @@ class DashboardPage extends GetView<DashboardController> {
                                       child: Image.asset(
                                         "assets/images/home.jpeg",
                                         fit: BoxFit.cover,
-                                        height: 70,
+                                        height: 80,
                                       ),
                                     ),
                                     const SizedBox(
@@ -201,7 +215,9 @@ class DashboardPage extends GetView<DashboardController> {
                                     ),
                                     const Text(
                                       "House",
-                                      style: TextStyle(fontSize: 12),
+                                      style: TextStyle(
+                                          fontSize: 12,
+                                          color: Color(0xff707070)),
                                       textAlign: TextAlign.center,
                                       maxLines: 1,
                                     )
@@ -217,7 +233,7 @@ class DashboardPage extends GetView<DashboardController> {
                                       borderRadius: BorderRadius.circular(10),
                                       child: Image.asset(
                                           "assets/images/apartment.png",
-                                          height: 70,
+                                          height: 80,
                                           fit: BoxFit.cover),
                                     ),
                                     const SizedBox(
@@ -225,7 +241,9 @@ class DashboardPage extends GetView<DashboardController> {
                                     ),
                                     const Text(
                                       "Apartment",
-                                      style: TextStyle(fontSize: 12),
+                                      style: TextStyle(
+                                          fontSize: 12,
+                                          color: Color(0xff707070)),
                                       textAlign: TextAlign.center,
                                       maxLines: 1,
                                     )
@@ -241,7 +259,7 @@ class DashboardPage extends GetView<DashboardController> {
                                       borderRadius: BorderRadius.circular(10),
                                       child: Image.asset(
                                           "assets/images/vacation.png",
-                                          height: 70,
+                                          height: 80,
                                           fit: BoxFit.cover),
                                     ),
                                     const SizedBox(
@@ -249,7 +267,9 @@ class DashboardPage extends GetView<DashboardController> {
                                     ),
                                     const Text(
                                       "Vacation Rental",
-                                      style: TextStyle(fontSize: 12),
+                                      style: TextStyle(
+                                          fontSize: 12,
+                                          color: Color(0xff707070)),
                                       textAlign: TextAlign.center,
                                       maxLines: 1,
                                     )
@@ -266,7 +286,7 @@ class DashboardPage extends GetView<DashboardController> {
                                       child: Image.asset(
                                         "assets/images/hotel.png",
                                         fit: BoxFit.cover,
-                                        height: 70,
+                                        height: 80,
                                       ),
                                     ),
                                     const SizedBox(
@@ -274,7 +294,9 @@ class DashboardPage extends GetView<DashboardController> {
                                     ),
                                     const Text(
                                       "Hotel",
-                                      style: TextStyle(fontSize: 12),
+                                      style: TextStyle(
+                                          fontSize: 12,
+                                          color: Color(0xff707070)),
                                       textAlign: TextAlign.center,
                                       maxLines: 1,
                                     )
@@ -290,10 +312,12 @@ class DashboardPage extends GetView<DashboardController> {
                 ),
                 SliverToBoxAdapter(
                     child: Card(
-                        elevation: 4,
+                        shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(20)),
+                        elevation: 2,
                         child: Padding(
                           padding: const EdgeInsets.symmetric(
-                              horizontal: 10, vertical: 10),
+                              horizontal: 20, vertical: 20),
                           child: SizedBox(
                             width: width,
                             child: Obx(
@@ -327,7 +351,7 @@ class DashboardPage extends GetView<DashboardController> {
                                                           .value ==
                                                       0
                                                   ? Colors.black
-                                                  : Colors.black38),
+                                                  : const Color(0xff707070)),
                                         ),
                                       ),
                                     ),
@@ -358,7 +382,7 @@ class DashboardPage extends GetView<DashboardController> {
                                                           .value ==
                                                       1
                                                   ? Colors.black
-                                                  : Colors.black38),
+                                                  : const Color(0xff707070)),
                                         ),
                                       ),
                                     ),
@@ -390,7 +414,7 @@ class DashboardPage extends GetView<DashboardController> {
                                                           .value ==
                                                       2
                                                   ? Colors.black
-                                                  : Colors.black38),
+                                                  : const Color(0xff707070)),
                                         ),
                                       ),
                                     ),
@@ -409,7 +433,10 @@ class DashboardPage extends GetView<DashboardController> {
                               Get.to(() => const SelectPropertyTypePage());
                             },
                             icon: const Icon(Icons.add_circle_outline),
-                            label: const Text("Add Properties"),
+                            label: const Text(
+                              "Add Properties",
+                              style: TextStyle(color: Color(0xff707070)),
+                            ),
                             style: TextButton.styleFrom(primary: Colors.black),
                           ),
                         )
@@ -437,6 +464,7 @@ class MyProperties extends StatelessWidget {
       return Padding(
         padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
         child: Card(
+          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
           elevation: 2,
           child: Padding(
             padding: const EdgeInsets.all(8.0),
@@ -446,6 +474,7 @@ class MyProperties extends StatelessWidget {
                   child: Column(
                     children: [
                       Row(
+                        crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Expanded(
                             child: Image.asset("assets/images/home.png"),
@@ -459,16 +488,24 @@ class MyProperties extends StatelessWidget {
                                   const Text(
                                     "Glamourn 6BR@Midtown",
                                     maxLines: 1,
+                                    style: TextStyle(
+                                        fontSize: 16,
+                                        fontWeight: FontWeight.w400,
+                                        color: Color(0xff707070)),
                                   ),
                                   const SizedBox(
                                     height: 5,
                                   ),
                                   const Text(
                                     "327 Northwest 39th Street",
+                                    style: TextStyle(
+                                        fontSize: 14, color: Color(0xff707070)),
                                     maxLines: 1,
                                   ),
                                   const Text(
                                     "Miami, Florida 33127",
+                                    style: TextStyle(
+                                        fontSize: 14, color: Color(0xff707070)),
                                     maxLines: 1,
                                   ),
                                   const SizedBox(
@@ -484,17 +521,20 @@ class MyProperties extends StatelessWidget {
                                             borderRadius:
                                                 BorderRadius.circular(50)),
                                         child: Row(
-                                          children: [
+                                          children: const [
                                             Icon(
                                               Icons.restore,
                                               color: Colors.white,
-                                              size: width * 0.05,
+                                              size: 20,
                                             ),
-                                            const Text(
+                                            SizedBox(
+                                              width: 5,
+                                            ),
+                                            Text(
                                               "Clean Now",
                                               style: TextStyle(
                                                   color: Colors.white,
-                                                  fontSize: 10),
+                                                  fontSize: 12),
                                             )
                                           ],
                                         ),
@@ -510,23 +550,23 @@ class MyProperties extends StatelessWidget {
                                             borderRadius:
                                                 BorderRadius.circular(50)),
                                         child: Row(
-                                          children: [
-                                            const SizedBox(
+                                          children: const [
+                                            SizedBox(
                                               width: 3,
                                             ),
                                             Icon(
                                               Icons.calendar_today,
                                               color: Colors.white,
-                                              size: width * 0.05,
+                                              size: 20,
                                             ),
-                                            const SizedBox(
-                                              width: 3,
+                                            SizedBox(
+                                              width: 5,
                                             ),
-                                            const Text(
+                                            Text(
                                               "Schedule",
                                               style: TextStyle(
                                                   color: Colors.white,
-                                                  fontSize: 10),
+                                                  fontSize: 12),
                                             ),
                                           ],
                                         ),

@@ -68,7 +68,7 @@ class AccountBookingsPage extends StatelessWidget {
                                           color:
                                               controller.bookingType.value == 0
                                                   ? Colors.black
-                                                  : Colors.black38),
+                                                  : const Color(0xff707070)),
                                     ),
                                   ),
                                 ),
@@ -78,7 +78,8 @@ class AccountBookingsPage extends StatelessWidget {
                                   controller.changeBookingType(1);
                                 },
                                 child: AnimatedContainer(
-                                  padding: const EdgeInsets.only(bottom: 5),
+                                  padding:
+                                      const EdgeInsets.only(bottom: 5, top: 5),
                                   decoration: BoxDecoration(
                                       border: controller.bookingType.value == 1
                                           ? Border(
@@ -94,7 +95,7 @@ class AccountBookingsPage extends StatelessWidget {
                                           color:
                                               controller.bookingType.value == 1
                                                   ? Colors.black
-                                                  : Colors.black38),
+                                                  : const Color(0xff707070)),
                                     ),
                                   ),
                                 ),
@@ -120,7 +121,7 @@ class AccountBookingsPage extends StatelessWidget {
                                           color:
                                               controller.bookingType.value == 2
                                                   ? Colors.black
-                                                  : Colors.black38),
+                                                  : const Color(0xff707070)),
                                     ),
                                   ),
                                 ),

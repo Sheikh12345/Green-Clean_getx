@@ -140,6 +140,7 @@ class CleanerDetailThumbnail extends StatelessWidget {
               Expanded(
                   flex: 7,
                   child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.end,
                     children: [
                       const SizedBox(
                         height: 6,
@@ -190,51 +191,76 @@ class CleanerDetailThumbnail extends StatelessWidget {
                           ),
                           IconButton(
                               onPressed: () {},
-                              iconSize: width * 0.06,
-                              icon: const Icon(Icons.arrow_forward_ios_sharp))
+                              icon: const Image(
+                                height: 16,
+                                image:
+                                    AssetImage("assets/images/right-arrow.png"),
+                              ))
                         ],
                       ),
                       const SizedBox(
-                        height: 15,
+                        height: 20,
                       ),
-                      SizedBox(
-                        height: 40,
-                        child: Row(
-                          crossAxisAlignment: CrossAxisAlignment.center,
-                          children: [
-                            Expanded(
-                                child: ElevatedButton.icon(
-                              onPressed: () {},
-                              icon: const Icon(
-                                  Icons.chat_bubble_outline_outlined),
-                              label: const Text(
-                                "Chat",
-                                maxLines: 1,
+                      Row(
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          Expanded(
+                            child: GestureDetector(
+                              onTap: () {},
+                              child: Container(
+                                height: 42,
+                                decoration: const BoxDecoration(
+                                  color: Colors.blue,
+                                ),
+                                child: Row(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: const [
+                                    Icon(
+                                      Icons.chat_bubble_outline_outlined,
+                                      color: Colors.white,
+                                    ),
+                                    SizedBox(
+                                      width: 10,
+                                    ),
+                                    Text(
+                                      "Chat",
+                                      style: TextStyle(color: Colors.white),
+                                    ),
+                                  ],
+                                ),
                               ),
-                              style: ElevatedButton.styleFrom(
-                                  elevation: 0,
-                                  fixedSize: const Size(40, 40),
-                                  shape: const RoundedRectangleBorder(
-                                      borderRadius: BorderRadius.zero)),
-                            )),
-                            Expanded(
-                                child: ElevatedButton.icon(
-                              onPressed: () {},
-                              icon: const FaIcon(FontAwesomeIcons.eye),
-                              label: const Text(
-                                "Profile",
-                                maxLines: 1,
+                            ),
+                          ),
+                          Expanded(
+                            child: GestureDetector(
+                              onTap: () {},
+                              child: Container(
+                                height: 42,
+                                decoration: const BoxDecoration(
+                                  color: Colors.lightBlue,
+                                  borderRadius: BorderRadius.only(
+                                      bottomRight: Radius.circular(10)),
+                                ),
+                                child: Row(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: const [
+                                    Icon(
+                                      FontAwesomeIcons.eye,
+                                      color: Colors.white,
+                                    ),
+                                    SizedBox(
+                                      width: 10,
+                                    ),
+                                    Text(
+                                      "Profile",
+                                      style: TextStyle(color: Colors.white),
+                                    ),
+                                  ],
+                                ),
                               ),
-                              style: ElevatedButton.styleFrom(
-                                  elevation: 0,
-                                  fixedSize: const Size(40, 40),
-                                  shape: const RoundedRectangleBorder(
-                                      borderRadius: BorderRadius.only(
-                                          bottomRight: Radius.circular(10))),
-                                  primary: Colors.lightBlue),
-                            ))
-                          ],
-                        ),
+                            ),
+                          ),
+                        ],
                       )
                     ],
                   ))

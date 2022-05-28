@@ -39,10 +39,11 @@ class BookingDetail extends StatelessWidget {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           const SizedBox(
-                            height: 15,
+                            height: 30,
                           ),
                           const Text(
                             "Vacation Rental",
+                            style: TextStyle(fontSize: 16),
                           ),
                           const SizedBox(
                             height: 15,
@@ -362,7 +363,7 @@ class BookingDetail extends StatelessWidget {
                                             "22",
                                             style: TextStyle(
                                                 fontSize: 18,
-                                                fontWeight: FontWeight.w600),
+                                                fontWeight: FontWeight.w800),
                                           ),
                                           SizedBox(
                                             height: 5,
@@ -474,8 +475,10 @@ class BookingDetail extends StatelessWidget {
                                     fontSize: 18, color: theme.primaryColor),
                               ),
                               const Spacer(),
-                              const Text(
+                              Text(
                                 "\$150.00",
+                                style: TextStyle(
+                                    fontSize: 18, color: theme.primaryColor),
                               )
                             ],
                           ),

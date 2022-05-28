@@ -38,12 +38,12 @@ class SelectPropertyTypePage extends StatelessWidget {
                     borderRadius: BorderRadius.only(
                         topRight: Radius.circular(25),
                         topLeft: Radius.circular(25))),
-                padding: const EdgeInsets.symmetric(horizontal: 10),
+                padding: const EdgeInsets.symmetric(horizontal: 15),
                 child: SingleChildScrollView(
                   child: Column(
                     children: [
-                      SizedBox(
-                        height: height * 0.02,
+                      const SizedBox(
+                        height: 30,
                       ),
                       const Text(
                         "Please select the type of property",
@@ -52,8 +52,8 @@ class SelectPropertyTypePage extends StatelessWidget {
                             fontWeight: FontWeight.w500,
                             fontSize: 16),
                       ),
-                      SizedBox(
-                        height: height * 0.02,
+                      const SizedBox(
+                        height: 40,
                       ),
                       Column(
                         children: [
@@ -66,6 +66,7 @@ class SelectPropertyTypePage extends StatelessWidget {
                                       title: "Vacation Rental",
                                       onPressed: () => Get.to(
                                           () => const AddPropertyPage()))),
+                              const SizedBox(width: 10),
                               Expanded(
                                 child: CategoryThumbnail(
                                     image: "assets/images/hotel.png",
@@ -89,6 +90,7 @@ class SelectPropertyTypePage extends StatelessWidget {
                                     onPressed: () =>
                                         Get.to(() => const AddPropertyPage())),
                               ),
+                              const SizedBox(width: 10),
                               Expanded(
                                 child: CategoryThumbnail(
                                     image: "assets/images/apartment.png",

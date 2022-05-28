@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
-import '../../Utils/Constants/size.dart';
 
 class ProfilePage extends StatelessWidget {
   const ProfilePage({Key? key}) : super(key: key);
@@ -88,6 +87,7 @@ class ProfilePage extends StatelessWidget {
                           icon: const FaIcon(
                             FontAwesomeIcons.circleArrowLeft,
                             color: Colors.white,
+                            size: 22,
                           )))
                 ],
               ),
@@ -96,7 +96,7 @@ class ProfilePage extends StatelessWidget {
               height: 50,
             ),
             const Padding(
-              padding: EdgeInsets.only(left: 10, right: 10, bottom: 7),
+              padding: EdgeInsets.only(left: 10, right: 10, bottom: 10),
               child: TextField(
                 style: TextStyle(color: Colors.black),
                 decoration: InputDecoration(
@@ -113,7 +113,7 @@ class ProfilePage extends StatelessWidget {
               ),
             ),
             const Padding(
-              padding: EdgeInsets.only(left: 10, right: 10, bottom: 7),
+              padding: EdgeInsets.only(left: 10, right: 10, bottom: 10),
               child: TextField(
                 style: TextStyle(color: Colors.black),
                 decoration: InputDecoration(
@@ -130,7 +130,7 @@ class ProfilePage extends StatelessWidget {
               ),
             ),
             const Padding(
-              padding: EdgeInsets.only(left: 10, right: 10, bottom: 7),
+              padding: EdgeInsets.only(left: 10, right: 10, bottom: 10),
               child: TextField(
                 style: TextStyle(color: Colors.black),
                 decoration: InputDecoration(
@@ -140,14 +140,14 @@ class ProfilePage extends StatelessWidget {
                     fillColor: Color.fromRGBO(235, 235, 235, 1),
                     border: InputBorder.none,
                     prefixIcon: Icon(
-                      Icons.map,
+                      Icons.phone,
                       color: Color.fromRGBO(25, 230, 255, 1),
                     )),
                 textAlign: TextAlign.center,
               ),
             ),
             const Padding(
-              padding: EdgeInsets.only(left: 10, right: 10, bottom: 7),
+              padding: EdgeInsets.only(left: 10, right: 10, bottom: 10),
               child: TextField(
                 style: TextStyle(color: Colors.black),
                 decoration: InputDecoration(
@@ -164,7 +164,7 @@ class ProfilePage extends StatelessWidget {
               ),
             ),
             const Padding(
-              padding: EdgeInsets.only(left: 10, right: 10, bottom: 7),
+              padding: EdgeInsets.only(left: 10, right: 10, bottom: 10),
               child: TextField(
                 style: TextStyle(color: Colors.black),
                 decoration: InputDecoration(
@@ -181,7 +181,7 @@ class ProfilePage extends StatelessWidget {
               children: [
                 const Expanded(
                     child: Padding(
-                  padding: EdgeInsets.only(left: 10, right: 10, bottom: 7),
+                  padding: EdgeInsets.only(left: 10, right: 10, bottom: 10),
                   child: TextField(
                     style: TextStyle(color: Colors.black),
                     decoration: InputDecoration(
@@ -199,7 +199,7 @@ class ProfilePage extends StatelessWidget {
                 ),
                 const Expanded(
                     child: Padding(
-                  padding: EdgeInsets.only(left: 10, right: 10, bottom: 7),
+                  padding: EdgeInsets.only(left: 10, right: 10, bottom: 10),
                   child: TextField(
                     style: TextStyle(color: Colors.black),
                     decoration: InputDecoration(
@@ -215,7 +215,7 @@ class ProfilePage extends StatelessWidget {
               ],
             ),
             const Padding(
-              padding: EdgeInsets.only(left: 10, right: 10, bottom: 7),
+              padding: EdgeInsets.only(left: 10, right: 10, bottom: 10),
               child: TextField(
                 style: TextStyle(color: Colors.black),
                 decoration: InputDecoration(
@@ -232,7 +232,7 @@ class ProfilePage extends StatelessWidget {
               ),
             ),
             const Padding(
-              padding: EdgeInsets.only(left: 10, right: 10, bottom: 7),
+              padding: EdgeInsets.only(left: 10, right: 10, bottom: 10),
               child: TextField(
                 style: TextStyle(color: Colors.black),
                 decoration: InputDecoration(
@@ -249,7 +249,7 @@ class ProfilePage extends StatelessWidget {
               ),
             ),
             const Padding(
-              padding: EdgeInsets.only(left: 10, right: 10, bottom: 7),
+              padding: EdgeInsets.only(left: 10, right: 10, bottom: 10),
               child: TextField(
                 style: TextStyle(color: Colors.black),
                 decoration: InputDecoration(
@@ -259,7 +259,7 @@ class ProfilePage extends StatelessWidget {
                     fillColor: Color.fromRGBO(235, 235, 235, 1),
                     border: InputBorder.none,
                     prefixIcon: Icon(
-                      Icons.person,
+                      Icons.lock,
                       color: Color.fromRGBO(25, 230, 255, 1),
                     )),
                 textAlign: TextAlign.center,
@@ -268,25 +268,6 @@ class ProfilePage extends StatelessWidget {
             const SizedBox(
               height: 10,
             ),
-            GestureDetector(
-              onTap: () {},
-              child: Container(
-                width: AppConfig(context).width * 0.5,
-                height: 40,
-                decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(10),
-                    color: theme.primaryColor),
-                child: const Center(
-                  child: Text(
-                    "Update",
-                    style: TextStyle(color: Colors.white),
-                  ),
-                ),
-              ),
-            ),
-            const SizedBox(
-              height: 10,
-            )
           ],
         ),
       ),

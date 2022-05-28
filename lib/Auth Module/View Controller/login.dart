@@ -30,7 +30,7 @@ class LoginPage extends StatelessWidget {
                   child: Text(
                     "Login",
                     style: TextStyle(
-                      fontSize: 25,
+                      fontSize: 28,
                     ),
                   ),
                 ),
@@ -71,7 +71,7 @@ class LoginPage extends StatelessWidget {
                                 authController.isPasswordVisible.value
                                     ? Icons.visibility
                                     : Icons.visibility_off,
-                                color: Colors.blue.shade800,
+                                color: const Color(0xffB6B7B7),
                                 size: 22,
                               ),
                               onPressed: () {
@@ -93,10 +93,10 @@ class LoginPage extends StatelessWidget {
                           Get.offAllNamed("/");
                         },
                         child: Container(
+                          height: 56,
                           decoration: BoxDecoration(
                               color: theme.primaryColor,
                               borderRadius: BorderRadius.circular(10)),
-                          padding: const EdgeInsets.all(15),
                           child: const Center(
                             child: Text(
                               "Login",
@@ -115,8 +115,8 @@ class LoginPage extends StatelessWidget {
                             recognizer: TapGestureRecognizer()
                               ..onTap =
                                   () => Get.to(() => const ResetPasswordPage()),
-                            style: TextStyle(
-                                color: Colors.blue[800],
+                            style: const TextStyle(
+                                color: Color(0xff707070),
                                 fontWeight: FontWeight.w500))
                       ])),
                     ],
@@ -127,7 +127,9 @@ class LoginPage extends StatelessWidget {
                 ),
                 Center(
                   child: Text.rich(TextSpan(children: [
-                    const TextSpan(text: "Don't have an Account? "),
+                    const TextSpan(
+                        text: "Don't have an Account? ",
+                        style: TextStyle(color: Color(0xff707070))),
                     TextSpan(
                         text: "Sign Up",
                         recognizer: TapGestureRecognizer()

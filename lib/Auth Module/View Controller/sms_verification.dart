@@ -27,7 +27,10 @@ class SmsVerificationPage extends StatelessWidget {
                       onPressed: () {
                         Get.back();
                       },
-                      icon: const Icon(FontAwesomeIcons.circleArrowLeft))
+                      icon: const Icon(
+                        FontAwesomeIcons.circleArrowLeft,
+                        size: 22,
+                      ))
                 ],
               ),
               const SizedBox(
@@ -36,7 +39,7 @@ class SmsVerificationPage extends StatelessWidget {
               const Center(
                 child: Text(
                   "We have sent an SMS\nverification code to\nyour Mobile.",
-                  style: TextStyle(fontSize: 18),
+                  style: TextStyle(fontSize: 20),
                   textAlign: TextAlign.center,
                 ),
               ),
@@ -54,7 +57,7 @@ class SmsVerificationPage extends StatelessWidget {
                 height: 40,
               ),
               Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 20),
+                padding: const EdgeInsets.symmetric(horizontal: 60),
                 child: PinCodeTextField(
                   appContext: context,
                   length: 4,
@@ -64,7 +67,7 @@ class SmsVerificationPage extends StatelessWidget {
                   pinTheme: PinTheme(
                       shape: PinCodeFieldShape.box,
                       borderRadius: BorderRadius.circular(10),
-                      fieldHeight: 50,
+                      fieldHeight: 40,
                       fieldWidth: 40,
                       activeFillColor: Colors.white,
                       selectedFillColor: Colors.white,

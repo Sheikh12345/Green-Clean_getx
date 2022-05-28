@@ -23,7 +23,7 @@ class AddPaymentMethod extends StatelessWidget {
             ),
             Expanded(
                 child: Container(
-              padding: EdgeInsets.symmetric(horizontal: width * 0.05),
+              padding: const EdgeInsets.symmetric(horizontal: 15),
               decoration: const BoxDecoration(
                   color: Colors.white,
                   borderRadius: BorderRadius.only(
@@ -34,29 +34,33 @@ class AddPaymentMethod extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.stretch,
                   children: [
                     const SizedBox(
-                      height: 20,
+                      height: 50,
                     ),
                     Image.asset("assets/images/cards.png"),
                     const SizedBox(
-                      height: 20,
+                      height: 40,
                     ),
                     const Center(
                         child: Text(
                       "Please add credit card or debit card detail",
-                      style: TextStyle(
-                          color: Colors.grey,
-                          fontWeight: FontWeight.w500,
-                          fontSize: 16),
+                      style: TextStyle(color: Color(0xff707070), fontSize: 16),
                     )),
                     const SizedBox(
-                      height: 15,
+                      height: 20,
                     ),
                     Card(
                       elevation: 8,
+                      shape: RoundedRectangleBorder(
+                          side: const BorderSide(
+                              color: Color(0xff707070), width: 0.5),
+                          borderRadius: BorderRadius.circular(12.0)),
                       child: Padding(
                         padding: const EdgeInsets.all(8.0),
                         child: Column(
                           children: [
+                            const SizedBox(
+                              height: 20,
+                            ),
                             TextField(
                               textAlign: TextAlign.center,
                               keyboardType: TextInputType.number,
@@ -71,15 +75,15 @@ class AddPaymentMethod extends StatelessWidget {
                                       borderSide: BorderSide(
                                           color: Colors.white, width: 1.5),
                                       borderRadius: BorderRadius.all(
-                                          Radius.circular(10))),
+                                          Radius.circular(12))),
                                   border: OutlineInputBorder(
-                                      borderRadius: BorderRadius.circular(10)),
+                                      borderRadius: BorderRadius.circular(12)),
                                   hintText: "Card Number",
                                   hintStyle:
                                       const TextStyle(color: Colors.white)),
                             ),
                             const SizedBox(
-                              height: 15,
+                              height: 30,
                             ),
                             Row(
                               children: [
@@ -102,12 +106,12 @@ class AddPaymentMethod extends StatelessWidget {
                                                       width: 1.5),
                                                   borderRadius:
                                                       BorderRadius.all(
-                                                          Radius.circular(10))),
+                                                          Radius.circular(12))),
                                           contentPadding:
                                               const EdgeInsets.symmetric(),
                                           border: OutlineInputBorder(
                                               borderRadius:
-                                                  BorderRadius.circular(10)),
+                                                  BorderRadius.circular(12)),
                                           hintText: "MM",
                                           hintStyle: const TextStyle(
                                               color: Colors.white)),
@@ -134,12 +138,12 @@ class AddPaymentMethod extends StatelessWidget {
                                                       width: 1.5),
                                                   borderRadius:
                                                       BorderRadius.all(
-                                                          Radius.circular(10))),
+                                                          Radius.circular(12))),
                                           contentPadding:
                                               const EdgeInsets.symmetric(),
                                           border: OutlineInputBorder(
                                               borderRadius:
-                                                  BorderRadius.circular(10)),
+                                                  BorderRadius.circular(12)),
                                           hintText: "YY",
                                           hintStyle: const TextStyle(
                                               color: Colors.white)),
@@ -165,13 +169,13 @@ class AddPaymentMethod extends StatelessWidget {
                                                       width: 1.5),
                                                   borderRadius:
                                                       BorderRadius.all(
-                                                          Radius.circular(10))),
+                                                          Radius.circular(12))),
                                           filled: true,
                                           contentPadding:
                                               const EdgeInsets.symmetric(),
                                           border: OutlineInputBorder(
                                               borderRadius:
-                                                  BorderRadius.circular(10)),
+                                                  BorderRadius.circular(12)),
                                           hintText: "CVC",
                                           hintStyle: const TextStyle(
                                               color: Colors.white)),
@@ -179,14 +183,14 @@ class AddPaymentMethod extends StatelessWidget {
                               ],
                             ),
                             const SizedBox(
-                              height: 25,
+                              height: 40,
                             )
                           ],
                         ),
                       ),
                     ),
                     const SizedBox(
-                      height: 15,
+                      height: 40,
                     ),
                     GestureDetector(
                       onTap: () => Get.back(),
@@ -194,7 +198,7 @@ class AddPaymentMethod extends StatelessWidget {
                         width: width,
                         height: 50,
                         decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(10),
+                            borderRadius: BorderRadius.circular(5),
                             color: theme.primaryColor),
                         child: const Center(
                           child: Text(

@@ -45,10 +45,10 @@ class CategoryThumbnail extends StatelessWidget {
                 child: Container(
                   width: width * 0.4,
                   padding: const EdgeInsets.all(8),
-                  decoration: const BoxDecoration(
-                      color: Colors.black54,
-                      borderRadius:
-                          BorderRadius.only(topRight: Radius.circular(25))),
+                  decoration: BoxDecoration(
+                      color: Colors.black.withOpacity(0.8),
+                      borderRadius: const BorderRadius.only(
+                          topRight: Radius.circular(25))),
                   child: Center(
                       child: Text(
                     title,

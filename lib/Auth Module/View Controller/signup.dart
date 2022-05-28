@@ -29,7 +29,10 @@ class SignUpPage extends StatelessWidget {
                       onPressed: () {
                         Get.back();
                       },
-                      icon: const Icon(FontAwesomeIcons.circleArrowLeft))
+                      icon: const Icon(
+                        FontAwesomeIcons.circleArrowLeft,
+                        size: 22,
+                      ))
                 ],
               ),
               const SizedBox(height: 30),
@@ -40,7 +43,7 @@ class SignUpPage extends StatelessWidget {
                     const Center(
                       child: Text(
                         "Sign Up",
-                        style: TextStyle(fontSize: 25),
+                        style: TextStyle(fontSize: 28),
                       ),
                     ),
                     const SizedBox(
@@ -108,7 +111,7 @@ class SignUpPage extends StatelessWidget {
                               authController.isPasswordVisible.value
                                   ? Icons.visibility
                                   : Icons.visibility_off,
-                              color: Colors.blue.shade800,
+                              color: const Color(0xffB6B7B7),
                               size: 22,
                             ),
                             onPressed: () {
@@ -125,10 +128,17 @@ class SignUpPage extends StatelessWidget {
                     const SizedBox(height: 35),
                     Row(
                       children: [
-                        Checkbox(value: true, onChanged: (val) {}),
+                        Checkbox(
+                          value: true,
+                          onChanged: (val) {},
+                          checkColor: Colors.white,
+                          activeColor: Colors.black,
+                        ),
                         const Flexible(
                             child: Text(
-                                "I accept terms & conditions and privacy policy."))
+                          "I accept terms & conditions and privacy policy.",
+                          style: TextStyle(color: Color(0xff707070)),
+                        ))
                       ],
                     ),
                     const SizedBox(height: 35),
@@ -137,14 +147,14 @@ class SignUpPage extends StatelessWidget {
                         Get.to(() => NavigationPage());
                       },
                       child: Container(
+                        height: 56,
                         decoration: BoxDecoration(
                             color: theme.primaryColor,
                             borderRadius: BorderRadius.circular(10)),
-                        padding: const EdgeInsets.all(15),
                         child: const Center(
                           child: Text(
                             "Sign Up",
-                            style: TextStyle(fontSize: 18, color: Colors.white),
+                            style: TextStyle(fontSize: 16, color: Colors.white),
                           ),
                         ),
                       ),
@@ -154,7 +164,9 @@ class SignUpPage extends StatelessWidget {
                     ),
                     Center(
                       child: Text.rich(TextSpan(children: [
-                        const TextSpan(text: "Already have an Account? "),
+                        const TextSpan(
+                            text: "Already have an Account? ",
+                            style: TextStyle(color: Color(0xff707070))),
                         TextSpan(
                             text: "Login",
                             recognizer: TapGestureRecognizer()
@@ -166,6 +178,9 @@ class SignUpPage extends StatelessWidget {
                     ),
                   ],
                 ),
+              ),
+              const SizedBox(
+                height: 10,
               )
             ],
           ),

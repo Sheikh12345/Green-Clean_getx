@@ -52,7 +52,8 @@ class BookingsPage extends StatelessWidget {
                                 bookingsController.changeBookingType(0);
                               },
                               child: AnimatedContainer(
-                                padding: const EdgeInsets.only(bottom: 5),
+                                padding:
+                                    const EdgeInsets.only(bottom: 5, top: 5),
                                 decoration: BoxDecoration(
                                     border:
                                         bookingsController.bookingType.value ==

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:green_and_clean/Utils/Constants/size.dart';
 import 'package:green_and_clean/Utils/widgets/appbar.dart';
 import 'add_payment_page.dart';
 import 'order_success_page.dart';
@@ -83,7 +84,9 @@ class CleaningOrderSummary extends StatelessWidget {
                                               color: Colors.orange,
                                               size: 14,
                                             ),
-                                            Text("(125)")
+                                            Text("(125)",
+                                                style: TextStyle(
+                                                    color: Color(0xff707070)))
                                           ],
                                         ),
                                       ],
@@ -101,10 +104,14 @@ class CleaningOrderSummary extends StatelessWidget {
                                           children: const [
                                             Text(
                                               "Mayra Q.",
+                                              style: TextStyle(
+                                                  fontSize: 16,
+                                                  fontWeight: FontWeight.w500,
+                                                  color: Color(0xff707070)),
                                             ),
-                                            Text(
-                                              "Miami, Florida",
-                                            ),
+                                            Text("Miami, Florida",
+                                                style: TextStyle(
+                                                    color: Color(0xff707070))),
                                           ],
                                         )),
                                         Icon(
@@ -117,9 +124,9 @@ class CleaningOrderSummary extends StatelessWidget {
                                       height: 6,
                                     ),
                                     const Center(
-                                      child: Text(
-                                        "House/Standard Cleaning",
-                                      ),
+                                      child: Text("House/Standard Cleaning",
+                                          style: TextStyle(
+                                              color: Color(0xff707070))),
                                     ),
                                     const SizedBox(
                                       height: 6,
@@ -132,14 +139,18 @@ class CleaningOrderSummary extends StatelessWidget {
                                           Icons.location_on_sharp,
                                           size: 14,
                                         ),
-                                        Text("3.3 Mi")
+                                        Text("3.3 Mi",
+                                            style: TextStyle(
+                                                color: Color(0xff707070)))
                                       ],
                                     ),
                                     const SizedBox(
                                       height: 15,
                                     ),
                                     const Center(
-                                      child: Text("English/Spanish"),
+                                      child: Text("English/Spanish",
+                                          style: TextStyle(
+                                              color: Color(0xff707070))),
                                     ),
                                     const SizedBox(
                                       height: 15,
@@ -164,17 +175,18 @@ class CleaningOrderSummary extends StatelessWidget {
                             height: 6,
                           ),
                           const Center(
-                            child: Text(
-                              "Order Summary",
-                            ),
+                            child: Text("Order Summary",
+                                style: TextStyle(
+                                    fontSize: 16,
+                                    fontWeight: FontWeight.w500,
+                                    color: Color(0xff707070))),
                           ),
                           const SizedBox(
                             height: 6,
                           ),
                           const Center(
-                            child: Text(
-                              "House/Standard Cleaning",
-                            ),
+                            child: Text("House/Standard Cleaning",
+                                style: TextStyle(color: Color(0xff707070))),
                           ),
                           const SizedBox(
                             height: 15,
@@ -300,22 +312,22 @@ class CleaningOrderSummary extends StatelessWidget {
                       ),
                     ),
                     const SizedBox(
-                      height: 25,
+                      height: 30,
                     ),
                     Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        Expanded(
-                          child: TextButton.icon(
-                            onPressed: () {
-                              Get.to(() => const AddPaymentMethod());
-                            },
-                            icon: const Icon(Icons.add_circle),
-                            label: const Text("Add Payment"),
-                            style: TextButton.styleFrom(primary: Colors.black),
-                          ),
+                        TextButton.icon(
+                          onPressed: () {
+                            Get.to(() => const AddPaymentMethod());
+                          },
+                          icon: const Icon(Icons.add_circle),
+                          label: const Text("Add Payment"),
+                          style: TextButton.styleFrom(primary: Colors.black),
                         ),
                         // const Spacer(),
-                        Expanded(
+                        SizedBox(
+                          width: AppConfig(context).width * 0.4,
                           child: TextField(
                             textAlign: TextAlign.center,
                             keyboardType: TextInputType.number,
@@ -327,22 +339,23 @@ class CleaningOrderSummary extends StatelessWidget {
                                 filled: true,
                                 focusedBorder: const OutlineInputBorder(
                                     borderSide: BorderSide(
-                                        color: Colors.grey, width: 1),
+                                        color: Color(0xff707070), width: 1),
                                     borderRadius:
                                         BorderRadius.all(Radius.circular(10))),
                                 contentPadding: const EdgeInsets.symmetric(),
                                 border: OutlineInputBorder(
                                     borderSide: const BorderSide(
-                                        color: Colors.grey, width: 1),
+                                        color: Color(0xff707070), width: 1),
                                     borderRadius: BorderRadius.circular(10)),
                                 hintText: "Promo code",
-                                hintStyle: const TextStyle(color: Colors.grey)),
+                                hintStyle:
+                                    const TextStyle(color: Colors.black)),
                           ),
                         )
                       ],
                     ),
                     const SizedBox(
-                      height: 20,
+                      height: 50,
                     ),
                     GestureDetector(
                       onTap: () => Get.to(() => const OrderSuccessPage()),
@@ -350,12 +363,15 @@ class CleaningOrderSummary extends StatelessWidget {
                         width: width,
                         height: 50,
                         decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(10),
+                            borderRadius: BorderRadius.circular(5),
                             color: theme.primaryColor),
                         child: const Center(
                           child: Text(
                             "Confirm & Pay",
-                            style: TextStyle(color: Colors.white, fontSize: 16),
+                            style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 16,
+                                fontWeight: FontWeight.w500),
                           ),
                         ),
                       ),

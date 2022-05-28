@@ -28,7 +28,7 @@ class VacationRentalPage extends GetView<AddPropertyController> {
                 fit: BoxFit.fill,
               )),
               Positioned(
-                  top: kToolbarHeight / 3,
+                  top: 5 + kToolbarHeight / 3,
                   left: 10,
                   child: IconButton(
                       onPressed: () {
@@ -37,6 +37,7 @@ class VacationRentalPage extends GetView<AddPropertyController> {
                       icon: const Icon(
                         FontAwesomeIcons.circleArrowLeft,
                         color: Colors.white,
+                        size: 20,
                       ))),
               Positioned(
                 child: Container(
@@ -59,9 +60,11 @@ class VacationRentalPage extends GetView<AddPropertyController> {
           height: height * 0.02,
         ),
         Card(
-            elevation: 4,
+            shape:
+                RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
+            elevation: 2,
             child: Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
+              padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
               child: SizedBox(
                 width: width,
                 child: Obx(
@@ -152,13 +155,19 @@ class VacationRentalPage extends GetView<AddPropertyController> {
                 ),
               ),
             )),
+        const SizedBox(
+          height: 5,
+        ),
         Obx(() => controller.propertiesListType.value == 0
             ? Align(
                 alignment: Alignment.centerLeft,
                 child: TextButton.icon(
                   onPressed: () => Get.to(() => const SelectPropertyTypePage()),
                   icon: const Icon(Icons.add_circle_outline),
-                  label: const Text("Add Properties"),
+                  label: const Text(
+                    "Add Properties",
+                    style: TextStyle(color: Color(0xff707070)),
+                  ),
                   style: TextButton.styleFrom(primary: Colors.black),
                 ),
               )
@@ -192,8 +201,9 @@ class VacationRentalPage extends GetView<AddPropertyController> {
                                               children: [
                                                 const Text(
                                                   "Glamourn 6BR@Midtown",
-                                                  style:
-                                                      TextStyle(fontSize: 14),
+                                                  style: TextStyle(
+                                                      fontSize: 14,
+                                                      color: Color(0xff707070)),
                                                   maxLines: 1,
                                                 ),
                                                 const SizedBox(
@@ -201,14 +211,16 @@ class VacationRentalPage extends GetView<AddPropertyController> {
                                                 ),
                                                 const Text(
                                                   "327 Northwest 39th Street",
-                                                  style:
-                                                      TextStyle(fontSize: 12),
+                                                  style: TextStyle(
+                                                      fontSize: 14,
+                                                      color: Color(0xff707070)),
                                                   maxLines: 1,
                                                 ),
                                                 const Text(
                                                   "Miami, Florida 33127",
-                                                  style:
-                                                      TextStyle(fontSize: 12),
+                                                  style: TextStyle(
+                                                      fontSize: 14,
+                                                      color: Color(0xff707070)),
                                                   maxLines: 1,
                                                 ),
                                                 SizedBox(

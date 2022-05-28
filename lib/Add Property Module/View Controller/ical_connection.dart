@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
 import 'package:green_and_clean/Utils/widgets/appbar.dart';
 import 'amenities.dart';
@@ -46,12 +47,16 @@ class IcalConnectionPage extends StatelessWidget {
                             child: Padding(
                               padding: const EdgeInsets.all(8.0),
                               child: Column(
+                                mainAxisAlignment: MainAxisAlignment.start,
                                 children: [
                                   Row(
                                     children: const [
-                                      Icon(Icons.link_outlined),
+                                      Icon(
+                                        FontAwesomeIcons.link,
+                                        size: 20,
+                                      ),
                                       SizedBox(
-                                        width: 5,
+                                        width: 10,
                                       ),
                                       Text("Please select a connection option")
                                     ],
@@ -62,7 +67,10 @@ class IcalConnectionPage extends StatelessWidget {
                                   Row(
                                     children: [
                                       Checkbox(
-                                          value: true, onChanged: (val) {}),
+                                          side: const BorderSide(
+                                              color: Colors.black, width: 1.5),
+                                          value: false,
+                                          onChanged: (val) {}),
                                       const SizedBox(
                                         width: 5,
                                       ),
@@ -78,7 +86,10 @@ class IcalConnectionPage extends StatelessWidget {
                           ),
                           Row(
                             children: const [
-                              Icon(Icons.file_present),
+                              Image(
+                                  height: 30,
+                                  image:
+                                      AssetImage("assets/icons/ical_icon.png")),
                               SizedBox(
                                 width: 5,
                               ),
@@ -100,7 +111,10 @@ class IcalConnectionPage extends StatelessWidget {
                             textAlign: TextAlign.center,
                             decoration: InputDecoration(
                               hintText: "Enter iCal link",
-                              prefixIcon: const Icon(Icons.file_present),
+                              prefixIcon: const Image(
+                                  height: 30,
+                                  image:
+                                      AssetImage("assets/icons/ical_icon.png")),
                               focusedBorder: UnderlineInputBorder(
                                   borderSide: BorderSide(
                                       color: Colors.blue.shade800, width: 1.5)),
@@ -124,7 +138,7 @@ class IcalConnectionPage extends StatelessWidget {
                           ),
                           GestureDetector(
                             onTap: () {
-                              Get.to(() => const AmenitiesPage());
+                              Get.to(() => AmenitiesPage());
                             },
                             child: Container(
                                 padding: const EdgeInsets.all(15),

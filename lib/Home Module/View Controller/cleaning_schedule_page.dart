@@ -37,7 +37,7 @@ class CleaningSchedulePage extends StatelessWidget {
                   child: Column(
                     children: [
                       const SizedBox(
-                        height: 30,
+                        height: 40,
                       ),
                       Padding(
                           padding:
@@ -50,7 +50,7 @@ class CleaningSchedulePage extends StatelessWidget {
                                     color: Colors.grey),
                                 hintText: "Enter cleaning location",
                                 suffixIcon: Icon(
-                                  Icons.location_searching,
+                                  Icons.my_location_outlined,
                                   color: Colors.blue.shade800,
                                 ),
                                 focusedBorder: OutlineInputBorder(
@@ -63,7 +63,7 @@ class CleaningSchedulePage extends StatelessWidget {
                                         color: Colors.blue.shade800))),
                           )),
                       const SizedBox(
-                        height: 40,
+                        height: 70,
                       ),
                       const Text(
                         "When would you like the service?",
@@ -73,7 +73,7 @@ class CleaningSchedulePage extends StatelessWidget {
                             fontSize: 16),
                       ),
                       const SizedBox(
-                        height: 30,
+                        height: 40,
                       ),
                       Padding(
                         padding: const EdgeInsets.symmetric(horizontal: 40),
@@ -169,7 +169,7 @@ class CleaningSchedulePage extends StatelessWidget {
                         ),
                       ),
                       const SizedBox(
-                        height: 40,
+                        height: 78,
                       ),
                       const Text(
                         "How often do you want this service?",
@@ -179,7 +179,7 @@ class CleaningSchedulePage extends StatelessWidget {
                             fontSize: 16),
                       ),
                       const SizedBox(
-                        height: 30,
+                        height: 40,
                       ),
                       Padding(
                         padding: const EdgeInsets.symmetric(horizontal: 40),
@@ -230,7 +230,7 @@ class CleaningSchedulePage extends StatelessWidget {
                         ),
                       ),
                       const SizedBox(
-                        height: 30,
+                        height: 40,
                       ),
                       Padding(
                         padding: const EdgeInsets.symmetric(horizontal: 40),

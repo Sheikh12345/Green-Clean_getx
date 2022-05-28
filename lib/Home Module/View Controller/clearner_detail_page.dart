@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
 import 'package:green_and_clean/Home%20Module/View%20Controller/make_offer_page.dart';
+import 'package:green_and_clean/Utils/Constants/size.dart';
 import 'package:persistent_bottom_nav_bar/persistent-tab-view.dart';
 
 class CleanerDetailPage extends StatelessWidget {
@@ -16,7 +17,7 @@ class CleanerDetailPage extends StatelessWidget {
         child: Column(
           children: [
             SizedBox(
-              height: 190,
+              height: 234,
               width: width,
               child: Stack(
                 fit: StackFit.expand,
@@ -27,7 +28,7 @@ class CleanerDetailPage extends StatelessWidget {
                     fit: BoxFit.fill,
                   )),
                   Positioned(
-                      top: kToolbarHeight / 3,
+                      top: 5 + kToolbarHeight / 3,
                       left: 10,
                       child: IconButton(
                           onPressed: () {
@@ -36,15 +37,19 @@ class CleanerDetailPage extends StatelessWidget {
                           icon: const Icon(
                             FontAwesomeIcons.circleArrowLeft,
                             color: Colors.white,
+                            size: 20,
                           ))),
                   Positioned(
                     child: Container(
-                      height: 40,
+                      height: 46,
                       color: Colors.black45,
                       child: const Center(
                           child: Text(
                         "Available HouseKeepers",
-                        style: TextStyle(color: Colors.white, fontSize: 18),
+                        style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 18,
+                            fontWeight: FontWeight.w500),
                       )),
                     ),
                     bottom: 0,
@@ -55,12 +60,15 @@ class CleanerDetailPage extends StatelessWidget {
               ),
             ),
             const SizedBox(
-              height: 15,
+              height: 20,
             ),
             Padding(
-              padding: EdgeInsets.symmetric(horizontal: width * 0.05),
+              padding: const EdgeInsets.symmetric(horizontal: 15),
               child: Card(
+                elevation: 5,
                 shape: RoundedRectangleBorder(
+                    side:
+                        const BorderSide(color: Color(0xff707070), width: 0.5),
                     borderRadius: BorderRadius.circular(10)),
                 child: Padding(
                   padding: const EdgeInsets.all(8.0),
@@ -105,7 +113,9 @@ class CleanerDetailPage extends StatelessWidget {
                                             color: Colors.orange,
                                             size: 14,
                                           ),
-                                          Text("(125)")
+                                          Text("(125)",
+                                              style: TextStyle(
+                                                  color: Color(0xff707070)))
                                         ],
                                       ),
                                     ],
@@ -123,10 +133,14 @@ class CleanerDetailPage extends StatelessWidget {
                                         children: const [
                                           Text(
                                             "Mayra Q.",
+                                            style: TextStyle(
+                                                fontWeight: FontWeight.w500,
+                                                color: Color(0xff707070),
+                                                fontSize: 16),
                                           ),
-                                          Text(
-                                            "Miami, Florida",
-                                          ),
+                                          Text("Miami, Florida",
+                                              style: TextStyle(
+                                                  color: Color(0xff707070))),
                                         ],
                                       )),
                                       Icon(
@@ -139,9 +153,9 @@ class CleanerDetailPage extends StatelessWidget {
                                     height: 5,
                                   ),
                                   const Center(
-                                    child: Text(
-                                      "House/Standard Cleaning",
-                                    ),
+                                    child: Text("House/Standard Cleaning",
+                                        style: TextStyle(
+                                            color: Color(0xff707070))),
                                   ),
                                   const SizedBox(
                                     height: 5,
@@ -153,17 +167,21 @@ class CleanerDetailPage extends StatelessWidget {
                                         Icons.location_on_sharp,
                                         size: 14,
                                       ),
-                                      Text("3.3 Mi")
+                                      Text("3.3 Mi",
+                                          style: TextStyle(
+                                              color: Color(0xff707070)))
                                     ],
                                   ),
                                   const SizedBox(
                                     height: 10,
                                   ),
                                   const Center(
-                                    child: Text("English/Spanish"),
+                                    child: Text("English/Spanish",
+                                        style: TextStyle(
+                                            color: Color(0xff707070))),
                                   ),
                                   const SizedBox(
-                                    height: 25,
+                                    height: 26,
                                   ),
                                 ],
                               ))
@@ -176,17 +194,17 @@ class CleanerDetailPage extends StatelessWidget {
                         thickness: 2,
                       ),
                       const SizedBox(
-                        height: 10,
+                        height: 22,
                       ),
                       const Text(
                         "Please select your prefered pricing option",
                         style: TextStyle(
-                            color: Colors.grey,
+                            color: Color(0xff707070),
                             fontWeight: FontWeight.w500,
                             fontSize: 14),
                       ),
                       const SizedBox(
-                        height: 20,
+                        height: 26,
                       ),
                       GestureDetector(
                         onTap: () => pushNewScreen(
@@ -197,22 +215,24 @@ class CleanerDetailPage extends StatelessWidget {
                               PageTransitionAnimation.cupertino,
                         ),
                         child: Container(
-                          width: width,
+                          width: AppConfig(context).width * 0.85,
                           height: 55,
                           decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(10),
+                              borderRadius: BorderRadius.circular(5),
                               color: theme.primaryColor),
                           child: const Center(
                             child: Text(
                               "\$60.00/Total",
-                              style:
-                                  TextStyle(color: Colors.white, fontSize: 16),
+                              style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 18,
+                                  fontWeight: FontWeight.w500),
                             ),
                           ),
                         ),
                       ),
                       const SizedBox(
-                        height: 15,
+                        height: 18,
                       ),
                       GestureDetector(
                         onTap: () => pushNewScreen(
@@ -223,22 +243,24 @@ class CleanerDetailPage extends StatelessWidget {
                               PageTransitionAnimation.cupertino,
                         ),
                         child: Container(
-                          width: width,
+                          width: AppConfig(context).width * 0.85,
                           height: 55,
                           decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(10),
+                              borderRadius: BorderRadius.circular(5),
                               color: Colors.lightBlue),
                           child: const Center(
                             child: Text(
                               "\$20.00/Hour",
-                              style:
-                                  TextStyle(color: Colors.white, fontSize: 16),
+                              style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 18,
+                                  fontWeight: FontWeight.w500),
                             ),
                           ),
                         ),
                       ),
                       const SizedBox(
-                        height: 15,
+                        height: 18,
                       ),
                       GestureDetector(
                         onTap: () => pushNewScreen(
@@ -249,22 +271,24 @@ class CleanerDetailPage extends StatelessWidget {
                               PageTransitionAnimation.cupertino,
                         ),
                         child: Container(
-                          width: width,
+                          width: AppConfig(context).width * 0.85,
                           height: 55,
                           decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(10),
+                              borderRadius: BorderRadius.circular(5),
                               color: Colors.black54),
                           child: const Center(
                             child: Text(
                               "Make Offer",
-                              style:
-                                  TextStyle(color: Colors.white, fontSize: 16),
+                              style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 18,
+                                  fontWeight: FontWeight.w500),
                             ),
                           ),
                         ),
                       ),
                       const SizedBox(
-                        height: 20,
+                        height: 40,
                       ),
                     ],
                   ),

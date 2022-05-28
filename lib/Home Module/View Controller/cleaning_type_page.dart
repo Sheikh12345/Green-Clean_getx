@@ -7,8 +7,10 @@ import 'package:green_and_clean/Utils/widgets/category_thumbnail.dart';
 import 'package:persistent_bottom_nav_bar/persistent-tab-view.dart';
 
 class CleaningTypePage extends StatelessWidget {
-  CleaningTypePage({Key? key, required this.imageURL}) : super(key: key);
+  CleaningTypePage({Key? key, required this.imageURL, required this.text})
+      : super(key: key);
   final String imageURL;
+  final String text;
   final homeController = Get.put(HomeController());
   @override
   Widget build(BuildContext context) {
@@ -24,27 +26,33 @@ class CleaningTypePage extends StatelessWidget {
               Positioned.fill(
                   child: Image.asset(
                 imageURL,
-                fit: BoxFit.fill,
+                fit: BoxFit.cover,
               )),
               Positioned(
-                  top: 5 + kToolbarHeight / 3,
-                  left: 10,
-                  child: IconButton(
-                      onPressed: () {
-                        Navigator.pop(context);
-                      },
-                      icon: const Icon(
-                        FontAwesomeIcons.circleArrowLeft,
-                        color: Colors.white,
-                      ))),
+                top: 5 + kToolbarHeight / 3,
+                left: 10,
+                child: IconButton(
+                  onPressed: () {
+                    Navigator.pop(context);
+                  },
+                  icon: const FaIcon(
+                    FontAwesomeIcons.circleArrowLeft,
+                    color: Colors.white,
+                    size: 20,
+                  ),
+                ),
+              ),
               Positioned(
                 child: Container(
                   height: 46,
                   color: Colors.black45,
-                  child: const Center(
+                  child: Center(
                       child: Text(
-                    "House",
-                    style: TextStyle(color: Colors.white, fontSize: 20),
+                    text,
+                    style: const TextStyle(
+                        color: Colors.white,
+                        fontSize: 20,
+                        fontWeight: FontWeight.w500),
                   )),
                 ),
                 bottom: 0,
@@ -59,8 +67,7 @@ class CleaningTypePage extends StatelessWidget {
         ),
         const Text(
           "Please select type of cleaning",
-          style: TextStyle(
-              color: Colors.grey, fontWeight: FontWeight.w500, fontSize: 16),
+          style: TextStyle(color: Color(0xff707070), fontSize: 16),
         ),
         const SizedBox(
           height: 35,
@@ -81,6 +88,9 @@ class CleaningTypePage extends StatelessWidget {
                   pageTransitionAnimation: PageTransitionAnimation.cupertino,
                 ),
               )),
+              const SizedBox(
+                width: 5,
+              ),
               Expanded(
                   child: CategoryThumbnail(
                 image: "assets/images/deep.png",

@@ -40,10 +40,7 @@ class HomePage extends StatelessWidget {
                   ),
                   const Text(
                     "Please select a cleaning category",
-                    style: TextStyle(
-                        color: Colors.grey,
-                        fontWeight: FontWeight.w500,
-                        fontSize: 16),
+                    style: TextStyle(color: Color(0xff707070), fontSize: 16),
                   ),
                   const SizedBox(
                     height: 36,
@@ -68,7 +65,8 @@ class HomePage extends StatelessWidget {
                     onPressed: () => pushNewScreen(
                       context,
                       screen: CleaningTypePage(
-                        imageURL: "assets/images/house_bg.png",
+                        imageURL: "assets/images/hotel.png",
+                        text: "Hotel",
                       ),
                       withNavBar: true, // OPTIONAL VALUE. True by default.
                       pageTransitionAnimation:
@@ -89,6 +87,7 @@ class HomePage extends StatelessWidget {
                           context,
                           screen: CleaningTypePage(
                             imageURL: "assets/images/house_bg.png",
+                            text: "House",
                           ),
                           withNavBar: true, // OPTIONAL VALUE. True by default.
                           pageTransitionAnimation:
@@ -103,7 +102,8 @@ class HomePage extends StatelessWidget {
                         onPressed: () => pushNewScreen(
                           context,
                           screen: CleaningTypePage(
-                            imageURL: "assets/images/house_bg.png",
+                            imageURL: "assets/images/apartment.png",
+                            text: "Apartment",
                           ),
                           withNavBar: true, // OPTIONAL VALUE. True by default.
                           pageTransitionAnimation:
