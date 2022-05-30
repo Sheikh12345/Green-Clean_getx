@@ -111,14 +111,14 @@ class AmenitiesOnePage extends StatelessWidget {
                                 ),
                                 child: DropdownButtonHideUnderline(
                                   child: DropdownButton(
+                                    isExpanded: true,
                                     items: _dropdownValues
                                         .map((value) => DropdownMenuItem(
-                                              child: Text(value),
+                                              child: Center(child: Text(value)),
                                               value: value,
                                             ))
                                         .toList(),
                                     onChanged: (String? value) {},
-                                    isExpanded: false,
                                     style: const TextStyle(
                                         color: Color(0xff707070)),
                                     value: _dropdownValues.first,
@@ -136,24 +136,47 @@ class AmenitiesOnePage extends StatelessWidget {
                         const SizedBox(
                           height: 30,
                         ),
-                        const Text(
-                          "Do you want the booking to be automatic?",
-                          style: TextStyle(color: Color(0xff707070)),
+                        Row(
+                          children: const [
+                            Text(
+                              "Do you want the booking to be automatic?",
+                              style: TextStyle(color: Color(0xff707070)),
+                            ),
+                            SizedBox(
+                              width: 2,
+                            ),
+                            Image(
+                                image: AssetImage("assets/icons/help_icon.png"))
+                          ],
                         ),
                         const SizedBox(
-                          height: 10,
+                          height: 25,
                         ),
                         Row(
                           children: [
                             Row(
                               children: [
-                                Radio(
-                                    value: 0,
-                                    groupValue: 0,
-                                    activeColor: Colors.blue.shade800,
-                                    onChanged: (val) {}),
+                                Container(
+                                  decoration: BoxDecoration(
+                                    border: Border.all(
+                                        color: Colors.black, width: 2),
+                                  ),
+                                  width: 20,
+                                  height: 20,
+                                  child: Theme(
+                                    data: ThemeData(
+                                        unselectedWidgetColor: Colors.white),
+                                    child: Checkbox(
+                                      checkColor: Colors.black,
+                                      activeColor: Colors.transparent,
+                                      value: true,
+                                      tristate: false,
+                                      onChanged: (bool? isChecked) {},
+                                    ),
+                                  ),
+                                ),
                                 const SizedBox(
-                                  width: 5,
+                                  width: 10,
                                 ),
                                 const Text(
                                   "Yes",
@@ -166,13 +189,27 @@ class AmenitiesOnePage extends StatelessWidget {
                             ),
                             Row(
                               children: [
-                                Radio(
-                                    value: 1,
-                                    groupValue: 0,
-                                    activeColor: Colors.blue.shade800,
-                                    onChanged: (val) {}),
+                                Container(
+                                  decoration: BoxDecoration(
+                                    border: Border.all(
+                                        color: Colors.black, width: 2),
+                                  ),
+                                  width: 20,
+                                  height: 20,
+                                  child: Theme(
+                                    data: ThemeData(
+                                        unselectedWidgetColor: Colors.white),
+                                    child: Checkbox(
+                                      checkColor: Colors.black,
+                                      activeColor: Colors.transparent,
+                                      value: false,
+                                      tristate: false,
+                                      onChanged: (bool? isChecked) {},
+                                    ),
+                                  ),
+                                ),
                                 const SizedBox(
-                                  width: 5,
+                                  width: 10,
                                 ),
                                 const Text(
                                   "No",

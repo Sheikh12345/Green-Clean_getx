@@ -43,12 +43,13 @@ class CleaningSchedulePage extends StatelessWidget {
                           padding:
                               EdgeInsets.symmetric(horizontal: width * 0.05),
                           child: TextField(
+                            textAlign: TextAlign.center,
                             decoration: InputDecoration(
                                 contentPadding: const EdgeInsets.symmetric(
                                     vertical: 10, horizontal: 5),
                                 prefixIcon: const Icon(Icons.location_on_sharp,
                                     color: Colors.grey),
-                                hintText: "Enter cleaning location",
+                                hintText: "Enter property location",
                                 suffixIcon: Icon(
                                   Icons.my_location_outlined,
                                   color: Colors.blue.shade800,

@@ -63,7 +63,7 @@ class CleanerDetailPage extends StatelessWidget {
               height: 20,
             ),
             Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 15),
+              padding: const EdgeInsets.symmetric(horizontal: 10),
               child: Card(
                 elevation: 5,
                 shape: RoundedRectangleBorder(
@@ -74,6 +74,9 @@ class CleanerDetailPage extends StatelessWidget {
                   padding: const EdgeInsets.all(8.0),
                   child: Column(
                     children: [
+                      const SizedBox(
+                        height: 5,
+                      ),
                       Row(
                         children: [
                           Expanded(
@@ -143,10 +146,11 @@ class CleanerDetailPage extends StatelessWidget {
                                                   color: Color(0xff707070))),
                                         ],
                                       )),
-                                      Icon(
-                                        Icons.forum_sharp,
-                                        color: theme.primaryColor,
-                                      ),
+                                      const Image(
+                                        height: 35,
+                                        image: AssetImage(
+                                            "assets/icons/chat_icon.png"),
+                                      )
                                     ],
                                   ),
                                   const SizedBox(

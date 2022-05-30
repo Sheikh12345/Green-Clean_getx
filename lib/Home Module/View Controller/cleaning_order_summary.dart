@@ -139,7 +139,7 @@ class CleaningOrderSummary extends StatelessWidget {
                                           Icons.location_on_sharp,
                                           size: 14,
                                         ),
-                                        Text("3.3 Mi",
+                                        Text("3.3 Mi Away",
                                             style: TextStyle(
                                                 color: Color(0xff707070)))
                                       ],

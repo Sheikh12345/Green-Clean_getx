@@ -64,8 +64,8 @@ class SelectPropertyTypePage extends StatelessWidget {
                                       image: "assets/images/vacation.png",
                                       halfWidth: true,
                                       title: "Vacation Rental",
-                                      onPressed: () => Get.to(
-                                          () => const AddPropertyPage()))),
+                                      onPressed: () =>
+                                          Get.to(() => AddPropertyPage()))),
                               const SizedBox(width: 10),
                               Expanded(
                                 child: CategoryThumbnail(
@@ -73,8 +73,8 @@ class SelectPropertyTypePage extends StatelessWidget {
                                     halfWidth: true,
                                     title: "Hotel",
                                     onPressed: () =>
-                                        Get.to(() => const AddPropertyPage())),
-                              ),
+                                        Get.to(() => AddPropertyPage())),
+                              )
                             ],
                           ),
                           const SizedBox(
@@ -88,7 +88,7 @@ class SelectPropertyTypePage extends StatelessWidget {
                                     halfWidth: true,
                                     title: "House",
                                     onPressed: () =>
-                                        Get.to(() => const AddPropertyPage())),
+                                        Get.to(() => AddPropertyPage())),
                               ),
                               const SizedBox(width: 10),
                               Expanded(
@@ -97,7 +97,7 @@ class SelectPropertyTypePage extends StatelessWidget {
                                     halfWidth: true,
                                     title: "Apartment",
                                     onPressed: () =>
-                                        Get.to(() => const AddPropertyPage())),
+                                        Get.to(() => AddPropertyPage())),
                               ),
                             ],
                           ),

@@ -99,9 +99,12 @@ class AmenitiesPage extends StatelessWidget {
                                       ],
                                     )),
                                 const Expanded(
-                                    flex: 2,
+                                    flex: 3,
                                     child: Center(
-                                      child: Text('Bedrooms'),
+                                      child: Text('Bedrooms',
+                                          style: TextStyle(
+                                            color: Color(0xff707070),
+                                          )),
                                     )),
                                 Flexible(
                                   flex: 2,
@@ -142,9 +145,12 @@ class AmenitiesPage extends StatelessWidget {
                                       ],
                                     )),
                                 const Flexible(
-                                    flex: 2,
+                                    flex: 3,
                                     child: Center(
-                                      child: Text('Bathrooms'),
+                                      child: Text('Bathrooms',
+                                          style: TextStyle(
+                                            color: Color(0xff707070),
+                                          )),
                                     )),
                                 Flexible(
                                   flex: 2,
@@ -186,9 +192,12 @@ class AmenitiesPage extends StatelessWidget {
                                       ],
                                     )),
                                 const Flexible(
-                                    flex: 2,
+                                    flex: 3,
                                     child: Center(
-                                      child: Text('Living Rooms'),
+                                      child: Text('Living Rooms',
+                                          style: TextStyle(
+                                            color: Color(0xff707070),
+                                          )),
                                     )),
                                 Flexible(
                                     flex: 2,
@@ -231,9 +240,12 @@ class AmenitiesPage extends StatelessWidget {
                                       ],
                                     )),
                                 const Flexible(
-                                    flex: 2,
+                                    flex: 3,
                                     child: Center(
-                                      child: Text('Dining Room'),
+                                      child: Text('Dining Room',
+                                          style: TextStyle(
+                                            color: Color(0xff707070),
+                                          )),
                                     )),
                                 Flexible(
                                   flex: 2,
@@ -276,9 +288,12 @@ class AmenitiesPage extends StatelessWidget {
                                       ],
                                     )),
                                 const Flexible(
-                                    flex: 2,
+                                    flex: 3,
                                     child: Center(
-                                      child: Text('Kitchen'),
+                                      child: Text('Kitchen',
+                                          style: TextStyle(
+                                            color: Color(0xff707070),
+                                          )),
                                     )),
                                 Flexible(
                                   flex: 2,
@@ -319,9 +334,12 @@ class AmenitiesPage extends StatelessWidget {
                                       ],
                                     )),
                                 const Flexible(
-                                    flex: 2,
+                                    flex: 3,
                                     child: Center(
-                                      child: Text('Patio'),
+                                      child: Text('Patio',
+                                          style: TextStyle(
+                                            color: Color(0xff707070),
+                                          )),
                                     )),
                                 Flexible(
                                   flex: 2,
@@ -362,10 +380,12 @@ class AmenitiesPage extends StatelessWidget {
                                       ],
                                     )),
                                 const Flexible(
-                                    flex: 2,
+                                    flex: 3,
                                     child: Center(
-                                      child: Text('Fridge'),
-                                    )),
+                                        child: Text('Fridge',
+                                            style: TextStyle(
+                                              color: Color(0xff707070),
+                                            )))),
                                 Flexible(
                                   flex: 2,
                                   child: Row(
@@ -405,9 +425,13 @@ class AmenitiesPage extends StatelessWidget {
                                       ],
                                     )),
                                 const Flexible(
-                                    flex: 2,
+                                    flex: 3,
                                     child: Center(
-                                      child: Text("TV's"),
+                                      child: Text(
+                                        "TV's",
+                                        style:
+                                            TextStyle(color: Color(0xff707070)),
+                                      ),
                                     )),
                                 Flexible(
                                   flex: 2,

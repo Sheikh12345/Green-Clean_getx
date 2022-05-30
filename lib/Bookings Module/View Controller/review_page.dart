@@ -26,7 +26,6 @@ class ReviewPage extends StatelessWidget {
             ),
             Expanded(
                 child: Container(
-                    height: 500,
                     decoration: const BoxDecoration(
                       color: Colors.white,
                     ),
@@ -34,17 +33,23 @@ class ReviewPage extends StatelessWidget {
                         child: Padding(
                       padding: const EdgeInsets.symmetric(vertical: 20),
                       child: ClipRRect(
-                        borderRadius: const BorderRadius.only(
-                            topLeft: Radius.circular(30.0),
-                            topRight: Radius.circular(30.0)),
+                        borderRadius: BorderRadius.circular(5.0),
                         child: Container(
+                          height: AppConfig(context).height - 180,
+                          margin: const EdgeInsets.only(top: 6.0),
                           decoration: const BoxDecoration(
-                            border: Border(
-                              top: BorderSide(width: 1.0, color: Colors.black),
-                            ),
+                            borderRadius: BorderRadius.vertical(
+                                top: Radius.circular(30.0)),
+                            color: Colors.white,
+                            boxShadow: [
+                              BoxShadow(
+                                color: Colors.grey,
+                                offset: Offset(0.0, 1.0), //(x,y)
+                                blurRadius: 5.0,
+                              ),
+                            ],
                           ),
                           child: Column(
-                            mainAxisAlignment: MainAxisAlignment.center,
                             children: [
                               const SizedBox(
                                 height: 20,

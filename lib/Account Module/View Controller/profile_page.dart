@@ -3,8 +3,8 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
 
 class ProfilePage extends StatelessWidget {
-  const ProfilePage({Key? key}) : super(key: key);
-
+  ProfilePage({Key? key}) : super(key: key);
+  final List<String> dropdownValues = ["Lorem ispsum", "Lorem ispsum"];
   @override
   Widget build(BuildContext context) {
     final height = Get.height;
@@ -197,21 +197,36 @@ class ProfilePage extends StatelessWidget {
                 SizedBox(
                   width: width * 0.05,
                 ),
-                const Expanded(
-                    child: Padding(
-                  padding: EdgeInsets.only(left: 10, right: 10, bottom: 10),
-                  child: TextField(
-                    style: TextStyle(color: Colors.black),
-                    decoration: InputDecoration(
-                      hintText: "State",
-                      hintStyle: TextStyle(color: Colors.black, fontSize: 14),
-                      filled: true,
-                      fillColor: Color.fromRGBO(235, 235, 235, 1),
-                      border: InputBorder.none,
+                Expanded(
+                  child: Padding(
+                    padding:
+                        const EdgeInsets.only(left: 10, right: 10, bottom: 10),
+                    child: Container(
+                      decoration: const BoxDecoration(
+                        color: Color.fromRGBO(235, 235, 235, 1),
+                      ),
+                      // dropdown below..
+                      child: DropdownButtonHideUnderline(
+                        child: DropdownButton(
+                            isExpanded: true,
+                            hint: const Center(
+                              child: Text(
+                                "Country",
+                                style: TextStyle(
+                                    color: Colors.black, fontSize: 14),
+                              ),
+                            ),
+                            items: dropdownValues
+                                .map((value) => DropdownMenuItem(
+                                      child: Text(value),
+                                      value: value,
+                                    ))
+                                .toList(),
+                            onChanged: (String? value) {}),
+                      ),
                     ),
-                    textAlign: TextAlign.center,
                   ),
-                ))
+                )
               ],
             ),
             const Padding(

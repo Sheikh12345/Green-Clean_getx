@@ -5,8 +5,8 @@ import 'package:green_and_clean/Utils/widgets/appbar.dart';
 import 'amenities.dart';
 
 class IcalConnectionPage extends StatelessWidget {
-  const IcalConnectionPage({Key? key}) : super(key: key);
-
+  IcalConnectionPage({Key? key}) : super(key: key);
+  final List<String> dropdownValues = ["Lorem ispsum", "Lorem ispsum"];
   @override
   Widget build(BuildContext context) {
     final height = Get.height;
@@ -108,7 +108,6 @@ class IcalConnectionPage extends StatelessWidget {
                           ),
                           const SizedBox(height: 25),
                           TextField(
-                            textAlign: TextAlign.center,
                             decoration: InputDecoration(
                               hintText: "Enter iCal link",
                               prefixIcon: const Image(
@@ -123,15 +122,27 @@ class IcalConnectionPage extends StatelessWidget {
                           const SizedBox(
                             height: 25,
                           ),
-                          TextField(
-                            textAlign: TextAlign.center,
-                            decoration: InputDecoration(
-                                hintText: "Enter Address",
-                                prefixIcon: const Icon(Icons.location_pin),
-                                focusedBorder: UnderlineInputBorder(
-                                    borderSide: BorderSide(
-                                        color: Colors.blue.shade800,
-                                        width: 1.5))),
+                          DropdownButtonFormField<String>(
+                            isExpanded: true,
+                            decoration: const InputDecoration(
+                              prefixIcon: Icon(Icons.location_pin),
+                            ),
+                            hint: Text(
+                              'Select Address',
+                              style: TextStyle(
+                                  color:
+                                      const Color(0xff707070).withOpacity(0.5)),
+                            ),
+                            items: <String>['A', 'B', 'C', 'D']
+                                .map((String value) {
+                              return DropdownMenuItem<String>(
+                                value: value,
+                                child: Text(
+                                  value,
+                                ),
+                              );
+                            }).toList(),
+                            onChanged: (_) {},
                           ),
                           const SizedBox(
                             height: 40,

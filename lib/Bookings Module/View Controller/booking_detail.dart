@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
+import 'package:green_and_clean/Bookings%20Module/View%20Controller/booking_done_page.dart';
 import 'package:green_and_clean/Bookings%20Module/View%20Controller/review_page.dart';
 import 'package:green_and_clean/Utils/widgets/appbar.dart';
 import 'package:persistent_bottom_nav_bar/persistent-tab-view.dart';
@@ -491,48 +492,29 @@ class BookingDetail extends StatelessWidget {
                           const SizedBox(
                             height: 15,
                           ),
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceAround,
-                            children: [
-                              Flexible(
-                                child: MaterialButton(
-                                  color: Colors.red,
-                                  minWidth: width * 0.4,
-                                  height: 45,
-                                  shape: RoundedRectangleBorder(
-                                      borderRadius: BorderRadius.circular(5)),
-                                  onPressed: () {
-                                    Navigator.pop(context);
-                                  },
-                                  child: const Text(
-                                    "DECLINE",
-                                    style: TextStyle(color: Colors.white),
+                          GestureDetector(
+                            onTap: () {
+                              pushNewScreen(
+                                context,
+                                screen: const BookingDonePage(),
+                                withNavBar:
+                                    true, // OPTIONAL VALUE. True by default.
+                                pageTransitionAnimation:
+                                    PageTransitionAnimation.cupertino,
+                              );
+                            },
+                            child: Container(
+                                padding: const EdgeInsets.all(15),
+                                decoration: BoxDecoration(
+                                    color: theme.primaryColor,
+                                    borderRadius: BorderRadius.circular(10)),
+                                child: const Center(
+                                  child: Text(
+                                    "Next",
+                                    style: TextStyle(
+                                        color: Colors.white, fontSize: 16),
                                   ),
-                                ),
-                              ),
-                              Flexible(
-                                child: MaterialButton(
-                                  color: const Color(0xff60EF06),
-                                  minWidth: width * 0.4,
-                                  onPressed: () {
-                                    pushNewScreen(
-                                      context,
-                                      screen: const ReviewPage(),
-                                      withNavBar:
-                                          true, // OPTIONAL VALUE. True by default.
-                                      pageTransitionAnimation:
-                                          PageTransitionAnimation.cupertino,
-                                    );
-                                  },
-                                  height: 45,
-                                  shape: RoundedRectangleBorder(
-                                      borderRadius: BorderRadius.circular(5)),
-                                  child: const Text(
-                                    "ACCEPT",
-                                  ),
-                                ),
-                              ),
-                            ],
+                                )),
                           ),
                           const SizedBox(
                             height: 10,

@@ -104,6 +104,8 @@ class MakeOfferPage extends StatelessWidget {
                       textAlign: TextAlign.center,
                       decoration: InputDecoration(
                           hintText: 'eg: 10',
+                          hintStyle: TextStyle(
+                              color: Colors.black, fontWeight: FontWeight.w500),
                           border: OutlineInputBorder(
                               borderSide: BorderSide(color: Colors.grey)),
                           focusedBorder: OutlineInputBorder(

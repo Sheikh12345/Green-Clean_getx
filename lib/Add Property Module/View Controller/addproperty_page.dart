@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
 import 'package:green_and_clean/Utils/widgets/appbar.dart';
 import 'ical_connection.dart';
 
 class AddPropertyPage extends StatelessWidget {
-  const AddPropertyPage({Key? key}) : super(key: key);
-
+  AddPropertyPage({Key? key}) : super(key: key);
+  final List<String> dropdownValues = ["Lorem ispsum", "Lorem ispsum"];
   @override
   Widget build(BuildContext context) {
     final width = Get.width;
@@ -131,39 +132,59 @@ class AddPropertyPage extends StatelessWidget {
                             ],
                           ),
                           const SizedBox(
-                            height: 15,
+                            height: 25,
                           ),
                           Row(
                             children: [
                               Flexible(
-                                child: TextField(
-                                  textAlign: TextAlign.center,
-                                  decoration: InputDecoration(
-                                    hintText: "State",
-                                    focusedBorder: UnderlineInputBorder(
-                                      borderSide: BorderSide(
-                                          color: Colors.blue.shade800,
-                                          width: 1.5),
+                                child: DropdownButton(
+                                    isExpanded: true,
+                                    underline: Container(
+                                      height: 1,
+                                      color: const Color(0xff707070)
+                                          .withOpacity(0.6),
                                     ),
-                                  ),
-                                ),
+                                    hint: Center(
+                                      child: Text("State",
+                                          style: TextStyle(
+                                              color: const Color(0xff707070)
+                                                  .withOpacity(0.5))),
+                                    ),
+                                    items: dropdownValues
+                                        .map((value) => DropdownMenuItem(
+                                              child: Text(value),
+                                              value: value,
+                                            ))
+                                        .toList(),
+                                    onChanged: (String? value) {}),
                               ),
                               const SizedBox(
                                 width: 50,
                               ),
                               Flexible(
-                                child: TextField(
-                                  textAlign: TextAlign.center,
-                                  decoration: InputDecoration(
-                                    hintText: "Country",
-                                    focusedBorder: UnderlineInputBorder(
-                                      borderSide: BorderSide(
-                                          color: Colors.blue.shade800,
-                                          width: 1.5),
+                                child: DropdownButton(
+                                    isExpanded: true,
+                                    underline: Container(
+                                      height: 1,
+                                      color: const Color(0xff707070)
+                                          .withOpacity(0.6),
                                     ),
-                                  ),
-                                ),
-                              )
+                                    hint: Center(
+                                      child: Text(
+                                        "Country",
+                                        style: TextStyle(
+                                            color: const Color(0xff707070)
+                                                .withOpacity(0.5)),
+                                      ),
+                                    ),
+                                    items: dropdownValues
+                                        .map((value) => DropdownMenuItem(
+                                              child: Text(value),
+                                              value: value,
+                                            ))
+                                        .toList(),
+                                    onChanged: (String? value) {}),
+                              ),
                             ],
                           ),
                           const SizedBox(
@@ -339,18 +360,17 @@ class AddPropertyPage extends StatelessWidget {
                             child: Card(
                               child: Padding(
                                 padding: const EdgeInsets.symmetric(
-                                    horizontal: 5, vertical: 5),
+                                    horizontal: 10, vertical: 5),
                                 child: Row(
                                   children: [
                                     Image.asset(
                                       "assets/images/airbnb.png",
                                     ),
                                     const Spacer(),
-                                    const Image(
-                                      height: 20,
-                                      image: AssetImage(
-                                          "assets/icons/straight_arrow.png"),
-                                    )
+                                    const Icon(
+                                      FontAwesomeIcons.rightLong,
+                                      size: 20,
+                                    ),
                                   ],
                                 ),
                               ),
@@ -364,18 +384,17 @@ class AddPropertyPage extends StatelessWidget {
                             child: Card(
                               child: Padding(
                                 padding: const EdgeInsets.symmetric(
-                                    horizontal: 5, vertical: 5),
+                                    horizontal: 10, vertical: 5),
                                 child: Row(
                                   children: [
                                     Image.asset(
                                       "assets/images/vrbo.png",
                                     ),
                                     const Spacer(),
-                                    const Image(
-                                      height: 20,
-                                      image: AssetImage(
-                                          "assets/icons/straight_arrow.png"),
-                                    )
+                                    const Icon(
+                                      FontAwesomeIcons.rightLong,
+                                      size: 20,
+                                    ),
                                   ],
                                 ),
                               ),
@@ -389,18 +408,17 @@ class AddPropertyPage extends StatelessWidget {
                             child: Card(
                               child: Padding(
                                 padding: const EdgeInsets.symmetric(
-                                    horizontal: 5, vertical: 5),
+                                    horizontal: 10, vertical: 5),
                                 child: Row(
                                   children: [
                                     Image.asset(
                                       "assets/images/booking.png",
                                     ),
                                     const Spacer(),
-                                    const Image(
-                                      height: 20,
-                                      image: AssetImage(
-                                          "assets/icons/straight_arrow.png"),
-                                    )
+                                    const Icon(
+                                      FontAwesomeIcons.rightLong,
+                                      size: 20,
+                                    ),
                                   ],
                                 ),
                               ),
@@ -414,18 +432,17 @@ class AddPropertyPage extends StatelessWidget {
                             child: Card(
                               child: Padding(
                                 padding: const EdgeInsets.symmetric(
-                                    horizontal: 5, vertical: 5),
+                                    horizontal: 10, vertical: 5),
                                 child: Row(
                                   children: [
                                     Image.asset(
                                       "assets/images/tripadvisor.png",
                                     ),
                                     const Spacer(),
-                                    const Image(
-                                      height: 20,
-                                      image: AssetImage(
-                                          "assets/icons/straight_arrow.png"),
-                                    )
+                                    const Icon(
+                                      FontAwesomeIcons.rightLong,
+                                      size: 20,
+                                    ),
                                   ],
                                 ),
                               ),
@@ -439,18 +456,17 @@ class AddPropertyPage extends StatelessWidget {
                             child: Card(
                               child: Padding(
                                 padding: const EdgeInsets.symmetric(
-                                    horizontal: 5, vertical: 5),
+                                    horizontal: 10, vertical: 5),
                                 child: Row(
                                   children: [
                                     Image.asset(
                                       "assets/images/hostaway.png",
                                     ),
                                     const Spacer(),
-                                    const Image(
-                                      height: 20,
-                                      image: AssetImage(
-                                          "assets/icons/straight_arrow.png"),
-                                    )
+                                    const Icon(
+                                      FontAwesomeIcons.rightLong,
+                                      size: 20,
+                                    ),
                                   ],
                                 ),
                               ),
@@ -464,18 +480,17 @@ class AddPropertyPage extends StatelessWidget {
                             child: Card(
                               child: Padding(
                                 padding: const EdgeInsets.symmetric(
-                                    horizontal: 5, vertical: 5),
+                                    horizontal: 10, vertical: 5),
                                 child: Row(
                                   children: [
                                     Image.asset(
                                       "assets/images/guest.png",
                                     ),
                                     const Spacer(),
-                                    const Image(
-                                      height: 20,
-                                      image: AssetImage(
-                                          "assets/icons/straight_arrow.png"),
-                                    )
+                                    const Icon(
+                                      FontAwesomeIcons.rightLong,
+                                      size: 20,
+                                    ),
                                   ],
                                 ),
                               ),
@@ -489,18 +504,17 @@ class AddPropertyPage extends StatelessWidget {
                             child: Card(
                               child: Padding(
                                 padding: const EdgeInsets.symmetric(
-                                    horizontal: 5, vertical: 5),
+                                    horizontal: 10, vertical: 5),
                                 child: Row(
                                   children: [
                                     Image.asset(
                                       "assets/images/lodgify.png",
                                     ),
                                     const Spacer(),
-                                    const Image(
-                                      height: 20,
-                                      image: AssetImage(
-                                          "assets/icons/straight_arrow.png"),
-                                    )
+                                    const Icon(
+                                      FontAwesomeIcons.rightLong,
+                                      size: 20,
+                                    ),
                                   ],
                                 ),
                               ),
@@ -511,7 +525,7 @@ class AddPropertyPage extends StatelessWidget {
                           ),
                           GestureDetector(
                             onTap: () {
-                              Get.to(() => const IcalConnectionPage());
+                              Get.to(() => IcalConnectionPage());
                             },
                             child: Container(
                                 padding: const EdgeInsets.all(15),

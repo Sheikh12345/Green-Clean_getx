@@ -212,14 +212,14 @@ class VacationRentalPage extends GetView<AddPropertyController> {
                                                 const Text(
                                                   "327 Northwest 39th Street",
                                                   style: TextStyle(
-                                                      fontSize: 14,
+                                                      fontSize: 12,
                                                       color: Color(0xff707070)),
                                                   maxLines: 1,
                                                 ),
                                                 const Text(
                                                   "Miami, Florida 33127",
                                                   style: TextStyle(
-                                                      fontSize: 14,
+                                                      fontSize: 12,
                                                       color: Color(0xff707070)),
                                                   maxLines: 1,
                                                 ),

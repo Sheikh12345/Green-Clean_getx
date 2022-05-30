@@ -105,7 +105,7 @@ class AccountPage extends StatelessWidget {
                     GestureDetector(
                       onTap: () => pushNewScreen(
                         context,
-                        screen: const ProfilePage(),
+                        screen: ProfilePage(),
                         withNavBar: true, // OPTIONAL VALUE. True by default.
                         pageTransitionAnimation:
                             PageTransitionAnimation.cupertino,
